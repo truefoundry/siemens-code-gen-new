@@ -7,6 +7,10 @@ import code_bert_score
 import nltk
 import logging
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Enable code evaluation from Huggingface
 os.environ["HF_ALLOW_CODE_EVAL"] = "1"
 
