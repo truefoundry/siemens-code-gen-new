@@ -1,0 +1,5 @@
+You will be then asked to write a test case for a new requirement that is provided to you.
+
+Now predict the output for the following input:
+
+```Input:

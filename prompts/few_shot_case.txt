@@ -1,0 +1,548 @@
+Here are some examples of test cases, based on which you should write a test case  in java language for the requirement provided to you.
+
+```
+Example 1:
+# Test Case 839: Admin - Top ribbon - Functionality check
+
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal | Landing page is displayed |
+| 2 | Click on "Contact" icon  on top ribbon | Popup with following text is displayed:Contact Support<br>For any questions regarding this portal feel free to reach out to our E-Support team: 800-242-3233<br>For reference check attached screenshot |
+| 3 | Click on "Close" button | Landing page is displayed |
+| 4 | Click on "Language" icon  on top ribbon | Options English and Deutsch are displayed. |
+| 5 | Click on "Deutsch" | Landing page is displayed. Language is changed to german language. |
+| 6 | Click on "Language" icon  on top ribbon and select "English" | Landing page is displayed. Language is changed to english language. |
+| 7 | Click on "Settings" icon  on top ribbon | Options "Theme" and "Email Notification Settings" are displayed. |
+| 8 | Click on "Email Notification Settings" | Email Notifications page is displayed.All notifications are turned on by default.<br>For reference check attached screenshot |
+| 9 | Change notifications from ON to OFF and back to ON | Messsage "Sucessfuly updated settings" is displayed after any notification option is changed |
+| 10 | Click on "My Digital Lab Assistant (vX.X.X)" on top ribbon | User is redirected to landing page |
+
+Code:
+```java
+package Admin;
+
+import CompositionRoot.IocBuilder;
+import Enums.*;
+import fate.core.ControlImplementations.CoreStartOptions;
+import fate.core.ControlImplementations.WaitFor;
+import fate.core.Enums.WebDrv;
+import fate.core.Results.ComparerOptions;
+import org.junit.jupiter.api.Test;
+
+import java.time.Duration;
+
+public class TC02_Top_Ribbon_Functionality_Check
+{
+    @Test
+    void Top_Ribbon_Functionality_Check()
+    {
+        IocBuilder.execute(Duration.ofMinutes(10), EResultData.ADMIN, "839", tc ->
+        {
+            //Step 1
+            tc.browser.start(WebDrv.EDGE, ETestData.QA_ENV_URL, new CoreStartOptions());
+            tc.browser.localLogin();
+            WaitFor.condition(() -> tc.tile.exists(ETile.REPORT_AN_ISSUE));
+            tc.addStepInfo("Landing page is Displayed", true, tc.button.exists(EButton.CONTACT),
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 2
+            tc.button.click(EButton.CONTACT);
+            WaitFor.condition(tc.modal::exists);
+            String modalTitle = "Contact Support";
+            String modalContent = "For any questions regarding this portal feel free to reach out to our E-Support team: 800-242-3233";
+            tc.stepEvaluator
+                    .add(() -> tc.modal.getTitle().equalsIgnoreCase(modalTitle), "modal title not found")
+                    .add(() -> tc.modal.getContent().equalsIgnoreCase(modalContent), "Modal content not found");
+            tc.addStepInfo("""
+                    Popup with following text is displayed:
+                    Contact Support
+                    For any questions regarding this portal feel free to reach out to our E-Support team: 800-242-3233
+                    For reference check attached screenshot
+                    """, "ok", tc.stepEvaluator.eval(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 3
+            tc.button.click(EButton.CLOSE);
+            tc.addStepInfo("Landing page is displayed", true, !tc.modal.exists(),
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 4
+            tc.menu.select(EMenu.LANGUAGE);
+            tc.addStepInfo("Options English and Deutsch are displayed.", true, tc.menu.isMenuItemsDisplayed()
+            , new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 5
+            tc.menu.selectFromDropDown(EMenu.LANGUAGE, "Deutsch");
+            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Willkommen"));
+            boolean isLanguageGM = tc.browser.getPageTitle().contains("Willkommen");
+            tc.addStepInfo("Landing page is displayed. Language is changed to german language.", true, isLanguageGM,
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 6
+            tc.menu.selectFromDropDown(EMenu.LANGUAGE, "English");
+            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Welcome"));
+            boolean isLanguageEN = tc.browser.getPageTitle().contains("Welcome");
+            tc.addStepInfo("Landing page is displayed. Language is changed to English language.", true, isLanguageEN,
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 7
+            tc.menu.select(EMenu.SETTINGS);
+            tc.addStepInfo("Options 'Theme' and 'Email Notification Settings' are displayed.", true, tc.menu.isMenuItemsDisplayed()
+                    , new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 8
+            tc.menu.selectFromDropDown(EMenu.SETTINGS, "User Settings");
+            WaitFor.specificTime(Duration.ofSeconds(2));
+            WaitFor.condition(() -> tc.toggle.exists(EToggle.byIndex(0)));
+            tc.addStepInfo("""
+                    Email Notifications page is displayedAll notifications are turned on by default.
+                    For reference check attached screenshot""", true, tc.toggle.exists(EToggle.byIndex(0))
+                    , new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 9
+            tc.stepEvaluator.reset();
+            tc.toggle.check(EToggle.byIndex(1));
+            tc.toggle.uncheck(EToggle.byIndex(1));
+            tc.stepEvaluator.add(() -> tc.browser.getMessage().contains("Successfully updated settings") ,
+                    "pop up not displayed after Unchecking toggle");
+            tc.addStepInfo("Messsage 'Sucessfuly updated settings' is displayed after any notification option is changed",
+                    "ok", tc.stepEvaluator.eval(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 10
+            tc.button.click(EButton.APP_NAME);
+            WaitFor.condition(() -> tc.tile.exists(ETile.QUESTIONS_ABOUT_AN_ORDER));
+            boolean isHopePageOpened = tc.browser.getPageTitle().contains("Welcome");
+            tc.addStepInfo("User is redirected to landing page", true, isHopePageOpened,
+                    new ComparerOptions().takeScreenShotPlatform());
+
+        });
+    }
+}
+```
+
+Example 2:
+# Test Case 840: Admin - Create request
+
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal | Landing page is displayed |
+| 2 | Click on tile "Report an issue with an order or delivery" | Page with details for reporting an issue is opened<br>- Part 1. Personal information |
+| 3 | Enter data in to following fields:- Name<br>- name of logged user, not possible to modify<br>- E-Mail<br>- email of logged user, not possible to modify<br>- @Mobile<br>- @Country<br>- @State<br>- Preferred @language<br><br>For reference check attached screenshot | User is able to enter information in specified fields |
+| 4 | Click "Next" button | Page with details for reporting an issue is opened<br>- Part 2. Request information |
+| 5 | Enter data in to following fields:- Request type<br>- Possible to select one from the list("Order Issue", "Question about Account", "Invoice inquiry", "Question about Order")<br>- Subject<br>- Reason<br>- Classification<br>- Siemens Healthineers Team<br>- Sold To<br>- Ship to<br>- Puchase Order or Order Number<br>- add multiple entries by clicking on "+ Add Order Number"<br>- Additional E-Mail<br>- add multiple entries by clicking on "+ Add E-Mail"<br><br>For reference check attached screenshot | User is able to enter information in specified fields |
+| 6 | In section Attachments click on icon "Browse files", select files that will be attached to this issue and click "Open" | Icon with name of each individual file is created in section Attachments |
+| 7 | Drag and drop file from your computer in to section Attachments | Icon with name of file is created in section Attachments |
+| 8 | Click "Next" button | Page with details for reporting an issue is opened<br>- 3. Check your information |
+| 9 | Verify that the content of fields on the screenFor reference check attached screenshot | Values of the fields are the same as were entered in step 3 and 5 |
+| 10 | Check the checkboxes:- "Informational Only" or "Refer Out Request adter Submission" | Checkboxes can be checked.When one of checkboxes "Informational Only" or "Refer Out Request adter Submission" is checked the other is greyed out and impossible to check |
+| 11 | Click "Save + Submit" button | Popup with following text is diplayed:Save & Submit Request<br>Are you sure you want to submit this request? You will not be able to make any changes after submission<br><br>For reference check attached screenshot |
+| 12 | Click "Yes, submit" button | Popup with following test is diplayed:Congratulations! Your issue has been reported.<br><br>For reference check attached screenshot |
+| 13 | Click "Go back to the dashboard" button | Landing page is displayed |
+| 14 | Verify that notification was not sent to email addresses menitoned in fields E-Mail and Additional E-Mail . For reference check attached screenshot . | Notification email was not received by email addresses menitoned in fields E-Mail and Additional E-Mail |
+| 15 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard . For reference check attached screenshot . |
+| 16 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 17 | Enter request ID or part of Subject in to search field | Only requests matching search conditions are displayed |
+| 18 | Click on filtered request | Request detail page is opened on Comment tabFor reference check attached screenshot |
+| 19 | Verify content of fields on the screenFor reference check attached screenshot | Reason from step 5 is used as 1st comment |
+| 20 | Enter text, add attachment and submit new comment by clicking ">" icon | New comment is added |
+| 21 | Select tab "Request Information" and verify content of fields on the screenFor reference check attached screenshot | Values of the fields are the same as were entered in step 3 and 5 |
+| 22 | Select tab "Requestor Information" and verify content of fields on the screenFor reference check attached screenshot | Values of the fields are the same as were entered in step 3 and 5 |
+| 23 | Select tab "Request Overview" and verify content of fields on the screenFor reference check attached screenshot | Values of the fields are the same as were entered in step 3 and 5 |
+| 24 | Click on button "Back" | Page with dashboard with all requests created by the user is opened on tab My Dashboard |
+| 25 | Click on tab "Created Requests" and click on your request created in previous steps | Request detail page is opened on Comment tabFor reference check attached screenshot |
+| 26 | Select tab "Request Information" and click on the button "Delete" | Popup with following text is diplayed:Delete Request<br>Request will be removed from your list of saved requests.<br><br>For reference check attached screenshot |
+| 27 | Click "Confirm" button | Notification about successful operation is displayed on the bottom of the screen. User is redirecrted to Landing page |
+| 28 | Click on tile "Show me my Requests" and open tab "Created Requests" | Order selected in step 25 is no longer visible in the list. |
+
+Code:
+```java
+package Admin;
+
+import CompositionRoot.IocBuilder;
+import ControlImplementation.BrowserControl;
+import Enums.*;
+import fate.core.CompositionRoot.TcLog;
+import fate.core.ControlImplementations.*;
+import fate.core.Enums.WebDrv;
+import fate.core.Results.ComparerOptions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.nio.file.Path;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class TC03_Create_Request
+{
+    @ParameterizedTest(name = "840")
+    @MethodSource("DataProvider#TC03_Create_Request")
+    void Create_Request(Map<String,String> tcData)
+    {
+        IocBuilder.execute(Duration.ofMinutes(20), EResultData.ADMIN, "840", tc ->
+        {
+            final String number = tcData.get("Mobile");
+            final String country = tcData.get("Country");
+            final String state = tcData.get("State");
+            final String language = tcData.get("language");
+            final String emailId = "Test@yahoo.in";
+            final String classification = "Missing Product";
+            final String shsTeam = "QAP";
+            final String subject = Generator.getHashedName("Subject:");
+            final String reason = Generator.getHashedName("Reason:");
+            final String soldTo = Generator.getHashedName("soldTo:");
+            final String shipTo = Generator.getHashedName("shipTo:");
+            final String purchaseOrder = Generator.getHashedName("Order:");
+            String path = String.valueOf(DirectoryControl.getPathOfResourceFile(Path.of("MDLA_TEST.pdf")));
+
+
+            //Step 1
+            tc.browser.start(WebDrv.EDGE, ETestData.QA_ENV_URL, new CoreStartOptions());
+            tc.browser.localLogin();
+            WaitFor.condition(() -> tc.tile.exists(ETile.REPORT_AN_ISSUE));
+            tc.addStepInfo("Landing page is Displayed", "Landing page is Displayed", tc.button.exists(EButton.CONTACT) ?
+                    "Landing page is Displayed" : "Landing page is not Displayed", new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 2
+            tc.tile.open(ETile.REPORT_AN_ISSUE);
+            WaitFor.condition(() -> tc.edit.exists(EEdit.MOBILE));
+            tc.addStepInfo("Page with details for reporting an issue is opened - Part 1. Personal information",
+                    true, tc.progressBar.getNames().contains("Personal Information"), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 3
+            tc.edit.sendKeys(EEdit.MOBILE, number, true);
+            tc.combo.select(EComboBox.COUNTRY, country);
+            tc.combo.select(EComboBox.STATE, state);
+            tc.edit.sendKeys(EEdit.PREFERRED_LANGUAGE, language, true);
+            tc.stepEvaluator
+                    .add(() -> tc.edit.getValue(EEdit.MOBILE).equalsIgnoreCase(number), "Mobile is not editable")
+                    .add(() -> tc.edit.getValue(EEdit.PREFERRED_LANGUAGE).equalsIgnoreCase(language), "language is not editable");
+            tc.addStepInfo("User is able to enter information in specified fields", "ok",tc.stepEvaluator.eval()
+                    ,new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 4
+            tc.button.click(EButton.NEXT);
+            WaitFor.condition(() -> tc.edit.exists(EEdit.SUBJECT));
+            tc.addStepInfo("Page with details for reporting an issue is opened - Part 2. Request information",
+                    true, tc.progressBar.getNames().contains("Request Information"), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 5
+            tc.stepEvaluator.reset();
+            tc.edit.sendKeys(EEdit.SUBJECT, subject);
+            tc.edit.sendKeys(EEdit.REASON, reason);
+            WaitFor.specificTime(Duration.ofSeconds(1));
+            tc.combo.select(EComboBox.CLASSIFICATIONS, classification);
+            WaitFor.specificTime(Duration.ofSeconds(1));
+            tc.combo.select(EComboBox.SHS_TEAM, shsTeam);
+            tc.edit.sendKeys(EEdit.SOLD_TO, soldTo);
+            tc.edit.sendKeys(EEdit.SHIP_TO, shipTo);
+            tc.edit.sendKeys(EEdit.PURCHASE_ORDER, purchaseOrder);
+            tc.edit.sendKeys(EEdit.ADDITIONAL_EMAIL, emailId);
+            tc.stepEvaluator
+                    .add(() -> tc.edit.getValue(EEdit.SUBJECT).equalsIgnoreCase(subject), "subject is not editable")
+                    .add(() -> tc.edit.getValue(EEdit.REASON).equalsIgnoreCase(reason), "reason is not editable")
+                    .add(() -> tc.edit.getValue(EEdit.SOLD_TO).equalsIgnoreCase(soldTo), "Sold to is not editable")
+                    .add(() -> tc.edit.getValue(EEdit.SHIP_TO).equalsIgnoreCase(shipTo), "Ship to is not editable")
+                    .add(() -> tc.edit.getValue(EEdit.PURCHASE_ORDER).equalsIgnoreCase(purchaseOrder), "purchase order is not editable")
+                    .add(() -> tc.edit.getValue(EEdit.ADDITIONAL_EMAIL).equalsIgnoreCase(emailId), "emailID is not editable");
+            tc.addStepInfo("User is able to enter information in specified fields", "ok", tc.stepEvaluator
+                    .eval(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 6
+            tc.edit.sendKeys(EEdit.BROWSE_FILES_INPUT, path);
+            String selectedFile = tc.edit.getValue(EEdit.BROWSE_FILES_INPUT);
+            tc.addStepInfo("Icon with name of each individual file is created in section Attachments", true,
+                    path.contains(selectedFile), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 7
+            String selectedFile1 = tc.edit.getValue(EEdit.BROWSE_FILES_INPUT);
+            tc.addStepInfo("Icon with name of file is created in section Attachments", true,
+                    path.contains(selectedFile1), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 8
+            tc.button.click(EButton.NEXT);
+            WaitFor.condition(() -> tc.browser.getPageTitle().equalsIgnoreCase("Almost there! Please check your information."));
+            tc.addStepInfo("Page with details for reporting an issue is opened - 3. Check your information",
+                    true, tc.progressBar.getNames().contains("Check your Information"), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 9
+            tc.stepEvaluator.reset();
+            tc.stepEvaluator
+                    .add(() -> tc.edit.getValue(EEdit.SUBJECT).equals(subject), "subject is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.REASON).equals(reason), "reason is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.SOLD_TO).equals(soldTo), "Sold to is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.SHIP_TO).equals(shipTo), "Ship to is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.MOBILE).equals(number), "Mobile is is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.PREFERRED_LANGUAGE).equals(language), "language is not same as entered value");
+            tc.addStepInfo("Values of the fields are the same as were entered in step 3 and 5", "ok",
+                    tc.stepEvaluator.eval(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 10
+            tc.stepEvaluator.reset();
+            tc.checkBox.check(ECheckBox.INFORMATION_ONLY);
+            tc.stepEvaluator
+                    .add(() -> !tc.checkBox.isDisabled(ECheckBox.REFER_OUT_REQUEST_AFTER_SUBMISSION), "check box is not disabled")
+                    .add(() -> tc.checkBox.isChecked(ECheckBox.INFORMATION_ONLY), "check box is not checked");
+            tc.addStepInfo("""
+                    Checkboxes can be checked.           
+                    When one of checkboxes "Informational Only" or "Refer Out Request adter Submission" 
+                    is checked the other is greyed out and impossible to check
+                    """, "ok", tc.stepEvaluator.eval(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 11
+            tc.button.click(EButton.SAVE_PLUS_SUBMIT);
+            WaitFor.condition(tc.modal::exists);
+            String modalTitle1 = tc.modal.getTitle();
+            String modalContent1 = tc.modal.getContent();
+            boolean isModalPopped = modalTitle1.equalsIgnoreCase("Save & Submit request") && modalContent1
+                    .equalsIgnoreCase("Are you sure you want to submit this request? You will not be able to make any changes after submission.");
+            tc.addStepInfo("""
+                    Popup with following text is diplayed:              
+                    Save & Submit Request
+                    Are you sure you want to submit this request? You will not be able to make any changes after submission
+                    """, true, isModalPopped, new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 12
+            tc.button.click(EButton.YES_SUBMIT);
+            WaitFor.specificTime(Duration.ofSeconds(3));
+            WaitFor.condition(tc.modal::exists, Duration.ofSeconds(40));
+            String modalTitle2 = tc.modal.getTitle();
+            boolean isModalPopped2 = modalTitle2.contains("Congratulations");
+            tc.addStepInfo("popup with following test is diplayed:" +
+                    "Congratulations! Your issue has been reported.", true, isModalPopped2, new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 13
+            tc.button.click(EButton.GO_BACK_TO_THE_DASHBOARD);
+            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Welcome"));
+            tc.addStepInfo("Landing page is displayed", true, tc.browser.getPageTitle().contains("Welcome"),
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 14
+            tc.addStepInfo("Notification email was not received by email addresses menitoned in fields E-Mail and Additional E-Mail",
+                    true, true, new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 15
+            tc.tile.open(ETile.SHOW_ME_All_REQUESTS);
+            WaitFor.condition(() -> tc.tab.exists(ETab.MY_DASHBOARD));
+            tc.tab.select(ETab.MY_DASHBOARD);
+            tc.addStepInfo("Page with dashboard with all requests created by the user is opened on tab My Dashboard . For reference check attached screenshot .",
+                    true, tc.tab.isSelected(ETab.MY_DASHBOARD), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 16
+            tc.tab.select(ETab.CREATED_REQUESTS);
+            BrowserControl.waitForLoadingIndicator();
+            WaitFor.condition(() -> !tc.table.getItemsFromColumn(ETable.APP_TABLE, EColumn.byIndex(2)).isEmpty());
+            List<String> requests = tc.table.getItemsFromColumn(ETable.APP_TABLE, EColumn.byIndex(2));
+            tc.addStepInfo("Page with list of all requests created by the user is opened on tab My Dashboard " +
+                    "For reference check attached screenshot", true, !requests.isEmpty(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 17
+            tc.edit.sendKeys(EEdit.SEARCH, subject);
+            WaitFor.condition(() -> tc.table.getItemsFromColumn(ETable.APP_TABLE, EColumn.byIndex(2)).contains(subject));
+            boolean request = tc.table.getItemsFromColumn(ETable.APP_TABLE, EColumn.byIndex(2)).contains(subject);
+            tc.addStepInfo("Only requests matching search conditions are displayed", true,
+                    request, new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 18
+            tc.table.itemClick(ETable.APP_TABLE, EColumn.byIndex(2), subject);
+            WaitFor.condition(() -> tc.tab.exists(ETab.COMMENTS));
+            tc.addStepInfo("Request detail page is opened on Comment tab", true,
+                    tc.tab.isSelected(ETab.COMMENTS), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 19
+            WaitFor.condition(() -> this.getComment().contains(reason));
+            List<String> selectedReason = this.getComment();
+            tc.addStepInfo("Reason from step 5 is used as 1st comment", true,
+                    selectedReason.contains(reason), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 20
+            tc.button.click(EButton.REOPEN_REQUEST);
+            WaitFor.condition(tc.modal::exists);
+            tc.edit.sendKeys(EEdit.COMMENT_MODAL, "NA");
+            tc.button.click(EButton.REOPEN_REQUEST_MODAL);
+            WaitFor.specificTime(Duration.ofSeconds(2));
+            tc.edit.sendKeys(EEdit.COMMENT, reason+"_New");
+            tc.button.click(EButton.SEND_ICON);
+            WaitFor.condition(tc.modal::exists);
+            tc.button.click(EButton.SUBMIT_ANYWAY);
+            WaitFor.specificTime(Duration.ofSeconds(12));
+            List<String> selectedReason1 = this.getComment();
+            tc.addStepInfo("New comment is added", true,
+                    selectedReason1.contains(reason+"_New"), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 21
+            tc.stepEvaluator.reset();
+            tc.tab.select(ETab.REQUEST_INFORMATION);
+            WaitFor.condition(() -> tc.edit.getValue(EEdit.SHIP_TO).equalsIgnoreCase(shipTo));
+            tc.stepEvaluator
+                    .add(() -> tc.edit.getValue(EEdit.SUBJECT).equals(subject), "subject is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.REASON).equals(reason), "reason is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.SOLD_TO).equals(soldTo), "Sold to is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.SHIP_TO).equals(shipTo), "Ship to is not same as entered value");
+            tc.addStepInfo("Values of the fields are the same as were entered in step 3 and 5", "ok", tc.stepEvaluator.eval()
+            , new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 22
+            tc.stepEvaluator.reset();
+            tc.tab.select(ETab.REQUESTOR_INFORMATION);
+            WaitFor.condition(() -> tc.edit.getValue(EEdit.SHIP_TO).equalsIgnoreCase(shipTo));
+            tc.stepEvaluator
+                    .add(() -> tc.edit.getValue(EEdit.SOLD_TO).equals(soldTo), "Sold to is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.SHIP_TO).equals(shipTo), "Ship to is not same as entered value")
+                    .add(() -> tc.edit.getValue(EEdit.MOBILE).equals(number), "Mobile is is not same as entered value");
+            tc.addStepInfo("Values of the fields are the same as were entered in step 3 and 5", "ok", tc.stepEvaluator.eval()
+                    , new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 23
+            tc.stepEvaluator.reset();
+            tc.tab.select(ETab.REQUEST_OVERVIEW);
+            WaitFor.condition(() -> tc.edit.getValue(EEdit.SHIP_TO).equalsIgnoreCase(shipTo));
+            tc.stepEvaluator
+                    .add(() -> tc.edit.getValue(EEdit.REASON).equalsIgnoreCase(reason), "reason is not same as entered value")
+                    .add(() -> tc.edit.exists(EEdit.SOLD_TO), "Sold to is not same as entered value")
+                    .add(() -> tc.edit.exists(EEdit.SHIP_TO), "Ship to is not same as entered value");
+            tc.addStepInfo("Values of the fields are the same as were entered in step 3 and 5", "ok", tc.stepEvaluator.eval()
+                    , new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 24
+            tc.browser.navigateBack();
+            WaitFor.condition(() -> tc.tab.exists(ETab.MY_DASHBOARD));
+            tc.tab.select(ETab.MY_DASHBOARD);
+            tc.addStepInfo("Page with dashboard with all requests created by the user is opened on tab My Dashboard",
+                    true, tc.tab.isSelected(ETab.MY_DASHBOARD), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 25
+            tc.tab.select(ETab.CREATED_REQUESTS);
+            WaitFor.condition(() -> tc.table.exists(ETable.APP_TABLE));
+            tc.edit.sendKeys(EEdit.SEARCH, subject);
+            WaitFor.condition(() -> tc.table.getValue(ETable.APP_TABLE, EColumn.byIndex(2), 0).equalsIgnoreCase(subject));
+            tc.table.itemClick(ETable.APP_TABLE, EColumn.byIndex(2), subject);
+            WaitFor.condition(() -> tc.tab.exists(ETab.COMMENTS));
+            tc.addStepInfo("Request detail page is opened on Comment tab",
+                    true, tc.tab.isSelected(ETab.COMMENTS) ,new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 26
+            tc.tab.select(ETab.REQUEST_INFORMATION);
+            WaitFor.condition(() -> tc.button.exists(EButton.DELETE));
+            tc.button.click(EButton.byIndex(7));
+            WaitFor.condition(tc.modal::exists);
+            tc.addStepInfo("""
+                            Popup with following text is diplayed:                    
+                            Delete Request
+                            Request will be removed from your list of saved requests.""", true,
+                    tc.modal.exists(), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 27
+            tc.button.click(EButton.CONFIRM);
+            WaitFor.condition(() -> !tc.browser.getMessage().isEmpty(), Duration.ofMinutes(1));
+            tc.addStepInfo("Notification about successful operation is displayed on the bottom of the screen. User is redirecrted to Landing page",
+                    true, tc.browser.getMessage().equalsIgnoreCase("Request deleted successfully."),
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 28
+            tc.tile.open(ETile.SHOW_ME_All_REQUESTS);
+            WaitFor.condition(() -> tc.tab.exists(ETab.CREATED_REQUESTS));
+            tc.tab.select(ETab.CREATED_REQUESTS);
+            WaitFor.condition(() -> tc.table.exists(ETable.APP_TABLE));
+            boolean isRequestDeleted = tc.table.getItemsFromColumn(ETable.APP_TABLE, EColumn.byIndex(2)).
+                    contains(subject);
+            tc.addStepInfo("Order selected in step 25 is no longer visible in the list", true
+            , !isRequestDeleted, new ComparerOptions().takeScreenShotPlatform());
+
+        });
+    }
+
+    private List<String> getComment()
+    {
+        CoreCssControl css = IocBuilder.getContainer().getComponent(CoreCssControl.class);
+        List<String> comments = new ArrayList<>();
+        try
+        {
+            List<WebElement> eles = css.findControls(By.cssSelector("div[class=\"comment-html-content\"]"));
+            if (eles != null)
+            {
+                for(WebElement ele : eles)
+                {
+                    comments.add(ele.getText());
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            TcLog.error("Unable to fetch comment");
+        }
+        return comments;
+    }
+}
+```
+
+Example 3:
+# Test Case 841: Admin - Show me all Requests - Layout check
+
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal as Admin | Landing page is displayed |
+| 2 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab Created RequestsFor reference check attached screenshot |
+| 3 | Verify that page contains following tabs:Page contains tabs:<br>- My Dashboard<br>- Created Requests<br>- Submitted<br>- Under Review<br>- Pending Requestor Response<br>- Referred Out<br>- Referred Out to Me<br>- Resolved<br><br>For reference check attached screenshot | Page contains tabs:- My Dashboard<br>- Created Requests<br>- Submitted<br>- Under Review<br>- Pending Requestor Response<br>- Referred Out<br>- Referred Out to Me<br>- Resolved |
+
+Code:
+```java
+package Admin;
+
+import CompositionRoot.IocBuilder;
+import ControlImplementation.BrowserControl;
+import Enums.*;
+import fate.core.ControlImplementations.CoreStartOptions;
+import fate.core.ControlImplementations.WaitFor;
+import fate.core.Enums.WebDrv;
+import fate.core.Results.ComparerOptions;
+import org.junit.jupiter.api.Test;
+
+import java.time.Duration;
+import java.util.List;
+
+public class TC04_Show_Me_All_Requests_Layout_Check
+{
+    @Test
+    void Show_Me_All_Requests_Layout_Check()
+    {
+        IocBuilder.execute(Duration.ofMinutes(10), EResultData.ADMIN, "841", tc ->
+        {
+            //Step 1
+            tc.browser.start(WebDrv.EDGE, ETestData.QA_ENV_URL, new CoreStartOptions());
+            tc.browser.localLogin();
+            WaitFor.condition(() -> tc.tile.exists(ETile.REPORT_AN_ISSUE));
+            tc.addStepInfo("Landing page is Displayed", true, tc.button.exists(EButton.CONTACT),
+                    new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 2
+            WaitFor.condition(() -> tc.tile.exists(ETile.SHOW_ME_All_REQUESTS));
+            tc.tile.open(ETile.SHOW_ME_All_REQUESTS);
+            WaitFor.condition(() -> tc.tab.exists(ETab.byIndex(0)));
+            tc.addStepInfo("""
+                    Page with dashboard with all requests created by the user is opened on tab Created Requests            
+                    For reference check attached screenshot
+                    """, true, tc.tab.exists(ETab.byIndex(0)), new ComparerOptions().takeScreenShotPlatform());
+
+            //Step 3
+            BrowserControl.waitForLoadingIndicator();
+            List<String> actualTabs = tc.tab.getAllTabsNames();
+            tc.addStepInfo("""
+                    Page contains tabs:                 
+                    - My Dashboard
+                    - Created Requests
+                    - Submitted
+                    - Under Review
+                    - Pending Requestor Response
+                    - Referred Out
+                    - Referred Out to Me
+                    - Resolved
+                    """, true, !actualTabs.isEmpty(), new ComparerOptions().takeScreenShotPlatform());
+        });
+    }
+}
+```
+
+
