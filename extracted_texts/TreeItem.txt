@@ -1,0 +1,203 @@
+TreeItem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class TreeItem
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.CoreWinInteractables
+fate.core.CompositionRoot.WinApp.TreeItem
+
+
+
+
+All Implemented Interfaces:
+IWinInteractable
+
+
+public class TreeItem
+extends CoreWinInteractables
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TreeItem()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+expand(IWinInteractableNaming item,
+ IWinInteractableNaming... root)
+
+Expands the wanted control if it is not expanded
+
+org.openqa.selenium.WebElement
+findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+isExpanded(IWinInteractableNaming treeItem,
+ IWinInteractableNaming... root)
+
+Check if the Control is expanded
+
+
+
+
+
+Methods inherited from class fate.core.CompositionRoot.WinApp.CoreWinInteractables
+clear, click, exists, getAttribute, getHeight, getLocation, getRoot, getText, getWidth, hasFocus, isBlank, isEmpty, isEnabled, isOnScreen, isSelected, sendKeys, sendKeys, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TreeItem
+public TreeItem()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findControl
+public org.openqa.selenium.WebElement findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+
+
+
+isExpanded
+public boolean isExpanded(IWinInteractableNaming treeItem,
+ IWinInteractableNaming... root)
+Description copied from interface: IWinInteractable
+Check if the Control is expanded
+
+Parameters:
+treeItem - Name of wanted control.
+root - Identifier of the parent
+Returns:
+boolean true if the element is selected
+
+
+
+
+
+expand
+public void expand(IWinInteractableNaming item,
+ IWinInteractableNaming... root)
+Description copied from interface: IWinInteractable
+Expands the wanted control if it is not expanded
+
+Parameters:
+item - Name of wanted control.
+root - Identifier of the parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+

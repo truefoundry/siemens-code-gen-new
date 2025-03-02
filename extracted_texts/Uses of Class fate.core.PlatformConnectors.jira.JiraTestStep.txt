@@ -1,0 +1,112 @@
+Uses of Class fate.core.PlatformConnectors.jira.JiraTestStep
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PlatformConnectors.jira.JiraTestStep
+
+Packages that use JiraTestStep
+
+Package
+Description
+fate.core.PlatformConnectors.jira.testcaseresult
+ 
+
+
+
+
+
+Uses of JiraTestStep in fate.core.PlatformConnectors.jira.testcaseresult
+Methods in fate.core.PlatformConnectors.jira.testcaseresult that return types with arguments of type JiraTestStep
+
+Modifier and Type
+Method
+Description
+List<JiraTestStep>
+LatestTestResult.getScriptResults()
+ 
+List<JiraTestStep>
+TestResultToPush.getScriptResults()
+ 
+
+Method parameters in fate.core.PlatformConnectors.jira.testcaseresult with type arguments of type JiraTestStep
+
+Modifier and Type
+Method
+Description
+void
+LatestTestResult.setScriptResults(List<JiraTestStep> scriptResults)
+ 
+void
+TestResultToPush.setScriptResults(List<JiraTestStep> scriptResults)
+ 
+
+Constructor parameters in fate.core.PlatformConnectors.jira.testcaseresult with type arguments of type JiraTestStep
+
+Modifier
+Constructor
+Description
+ 
+TestResultToPush(String testCaseKey,
+ String testRunKey,
+ String status,
+ String environment,
+ String executionDate,
+ long executionTime,
+ List<JiraTestStep> scriptResults,
+ String comment,
+ List<String> issues)
+
+Standard constructor
+
+
+
+
+
+
+
+
+
+
+

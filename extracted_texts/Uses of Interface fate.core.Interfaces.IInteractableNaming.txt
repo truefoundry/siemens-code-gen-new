@@ -1,0 +1,407 @@
+Uses of Interface fate.core.Interfaces.IInteractableNaming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IInteractableNaming
+
+Packages that use IInteractableNaming
+
+Package
+Description
+fate.core.CompositionRoot.ElementStore
+ 
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.ControlImplementations
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of IInteractableNaming in fate.core.CompositionRoot.ElementStore
+Methods in fate.core.CompositionRoot.ElementStore with parameters of type IInteractableNaming
+
+Modifier and Type
+Method
+Description
+void
+ElementStore.addElement(@NotNull IInteractableNaming name,
+ @NotNull org.openqa.selenium.WebElement element,
+ @NotNull org.openqa.selenium.By root)
+
+Adds Element to store by its name
+
+org.openqa.selenium.WebElement
+ElementStore.getElement(@NotNull IInteractableNaming name,
+ @NotNull org.openqa.selenium.By root)
+
+Gets element by its name
+
+
+
+
+
+
+Uses of IInteractableNaming in fate.core.CompositionRoot.WinApp
+Methods in fate.core.CompositionRoot.WinApp with parameters of type IInteractableNaming
+
+Modifier and Type
+Method
+Description
+void
+SignInDialog.sendKeys(IInteractableNaming name,
+ String value,
+ boolean... check)
+
+Sends wanted value to wanted input field.
+
+
+
+
+
+
+Uses of IInteractableNaming in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type IInteractableNaming
+
+Modifier and Type
+Method
+Description
+IInteractable
+CoreInteractables.click(IInteractableNaming name)
+
+Clicks on a specified web element.
+
+boolean
+CoreInteractables.exists(IInteractableNaming name)
+
+Checks if a web element exists (can be found on the page).
+
+String
+CoreInteractables.getAttribute(IInteractableNaming name,
+ String attribute)
+
+Retrieves the value of an attribute for a web element.
+
+String
+CoreInteractables.getCssValue(IInteractableNaming name,
+ String value)
+
+Retrieves the CSS value of a specific property for a web element.
+
+int
+CoreCssControl.getElementsCount(IInteractableNaming identifier)
+
+Returns the count of elements that match the provided identifier.
+
+int
+CoreInteractables.getHeight(IInteractableNaming name)
+
+Retrieves the height of a web element.
+
+org.openqa.selenium.Point
+CoreInteractables.getLocation(IInteractableNaming name)
+
+Retrieves the location (coordinates) of a web element on the page.
+
+String
+CoreCssControl.getText(IInteractableNaming identifier)
+
+Returns text from wanted element.
+
+String
+CoreInteractables.getText(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+
+Retrieves the text of a web element.
+
+List<String>
+CoreCssControl.getTextFromElements(IInteractableNaming identifier)
+
+Returns the text from all elements that match the provided identifier.
+
+int
+CoreInteractables.getWidth(IInteractableNaming name)
+
+Retrieves the width of a web element.
+
+boolean
+CoreInteractables.hasFocus(IInteractableNaming name)
+
+Checks if a web element currently has focus (is active).
+
+boolean
+CoreInteractables.isBlank(IInteractableNaming name)
+
+Checks if a web element is blank (contains only whitespace or no value).
+
+boolean
+CoreInteractables.isClickable(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+
+Checks if a web element is clickable.
+
+boolean
+CoreInteractables.isDisplayed(IInteractableNaming name)
+
+Checks if a web element is displayed (visible on the page).
+
+boolean
+CoreInteractables.isEmpty(IInteractableNaming name)
+
+Checks if a web element is empty (contains no text or value).
+
+boolean
+CoreInteractables.isEnabled(IInteractableNaming name)
+
+Checks if a web element is enabled (can be interacted with).
+
+boolean
+CoreInteractables.isMandatory(IInteractableNaming name)
+
+Checks if a web element is mandatory by inspecting various properties such as label, 'required' attribute, and class.
+
+IInteractable
+CoreInteractables.moveMouseOver(IInteractableNaming name)
+
+Moves the mouse over a specified web element.
+
+IInteractable
+CoreInteractables.scrollIntoView(IInteractableNaming name)
+
+Scrolls the page to bring a specified web element into view using JavaScript.
+
+IInteractable
+CoreInteractables.sendKeys(IInteractableNaming name,
+ String keys,
+ boolean... clear)
+
+Sends keys to a web element (e.g., typing text into a field).
+
+IInteractable
+CoreInteractables.setAttribute(IInteractableNaming name,
+ String attribute,
+ String value)
+
+Sets a custom attribute for a web element using JavaScript.
+
+IInteractable
+CoreInteractables.waitForDisposal(IInteractableNaming control,
+ Duration... duration)
+
+Waits for a web element to be disposed (removed from the DOM) based on the given control's naming.
+
+IInteractable
+CoreInteractables.waitToBeClickable(IInteractableNaming name,
+ Duration... duration)
+
+Waits for a web element to become clickable within the given time.
+
+IInteractable
+CoreInteractables.waitToBeVisible(IInteractableNaming name,
+ Duration... duration)
+
+Waits for a web element to become visible within the given time.
+
+
+
+
+
+
+Uses of IInteractableNaming in fate.core.Interfaces
+Methods in fate.core.Interfaces with parameters of type IInteractableNaming
+
+Modifier and Type
+Method
+Description
+IInteractable
+IInteractable.click(IInteractableNaming name)
+
+Click this element.
+
+boolean
+IInteractable.exists(IInteractableNaming name)
+
+Checks existence of control in the DOM.
+
+String
+IInteractable.getAttribute(IInteractableNaming name,
+ String attribute)
+
+Get the value of the given attribute of the element.
+
+String
+IInteractable.getCssValue(IInteractableNaming name,
+ String value)
+
+Get the value of a given CSS property.
+
+int
+ICoreCssControl.getElementsCount(IInteractableNaming identifier)
+
+Returns the count of wanted elements.
+
+int
+IInteractable.getHeight(IInteractableNaming name)
+
+Returns height of wanted control.
+
+org.openqa.selenium.Point
+IInteractable.getLocation(IInteractableNaming name)
+
+Returns location of wanted control.
+
+String
+IInteractable.getText(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+
+Returns text from wanted element.
+
+List<String>
+ICoreCssControl.getTextFromElements(IInteractableNaming identifier)
+
+Returns text from wanted elements.
+
+int
+IInteractable.getWidth(IInteractableNaming name)
+
+Returns width of wanted control.
+
+boolean
+IInteractable.hasFocus(IInteractableNaming name)
+
+Checks if wanted element has focus.
+
+boolean
+IInteractable.isBlank(IInteractableNaming name)
+
+Checks if wanted control is empty or contain whitespace.
+
+boolean
+IInteractable.isClickable(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+
+Checks if wanted element is clickable.
+
+boolean
+IInteractable.isDisplayed(IInteractableNaming name)
+
+Checks if wanted control is displayed.
+
+boolean
+IInteractable.isEmpty(IInteractableNaming name)
+
+Checks if wanted control is empty.
+
+boolean
+IInteractable.isEnabled(IInteractableNaming name)
+
+Is the element currently enabled or not? This will generally return true for everything but
+ disabled input elements.
+
+boolean
+IInteractable.isMandatory(IInteractableNaming name)
+
+Checks if wanted control is mandatory based on multiple conditions:
+ 1: label contains *
+ 2: webElement found by 'findControl()' has an attribute 'required'
+ 3: webElements class name contains 'required'
+ 4: webElements parent element, has 'label' element containing *
+ 5: label with 'for' attribute which is the same as webElements 'id' contains *
+
+IInteractable
+IInteractable.moveMouseOver(IInteractableNaming name)
+
+Moves mouse over wanted control.
+
+IInteractable
+IInteractable.scrollIntoView(IInteractableNaming name)
+
+Scrolls wanted element into the view.
+
+IInteractable
+IInteractable.sendKeys(IInteractableNaming name,
+ String keys,
+ boolean... clear)
+
+Sends wanted string to wanted control.
+
+IInteractable
+IInteractable.setAttribute(IInteractableNaming name,
+ String attribute,
+ String value)
+
+Sets wanted attribute to wanted element.
+
+IInteractable
+IInteractable.waitForDisposal(IInteractableNaming control,
+ Duration... duration)
+
+Waits for disposal of wanted element.
+
+IInteractable
+IInteractable.waitToBeClickable(IInteractableNaming name,
+ Duration... duration)
+
+Waits for wanted control to become clickable.
+
+IInteractable
+IInteractable.waitToBeVisible(IInteractableNaming name,
+ Duration... duration)
+
+Waits for wanted control to become visible.
+
+
+
+
+
+
+
+
+
+
+

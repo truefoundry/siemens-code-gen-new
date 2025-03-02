@@ -1,0 +1,400 @@
+CoreExcelControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreExcelControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreExcelControl
+
+
+
+All Implemented Interfaces:
+IExcelWorkBook
+
+
+public class CoreExcelControl
+extends Object
+implements IExcelWorkBook
+Handles xls/xlsx file reading.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreExcelControl(Path filePath)
+
+Constructor that initializes the Excel workbook by loading the file from the provided path.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+Map<String,List<String>>
+compare(int sheet1Index,
+ int sheet2Index,
+ Path filePath)
+
+Comparing 2 Excel sheets from the same file or from 2 separate files.
+
+boolean
+compareFiles(Path filePath)
+
+Comparing 2 Excel files.
+
+String
+getCellValue(int sheetIndex,
+ int rowIndex,
+ int colIndex)
+
+Returns cell value from sheet(as String).
+
+List<String>
+getColumnItems(int sheetIndex,
+ int colIndex)
+
+Returns all cell values from wanted column.
+
+static List<String>
+getColumnNames(Path path,
+ String sheetName)
+
+Gets the first Row column names
+
+static List<String>
+getColumnValues(Path path,
+ String sheetName,
+ String columnIdentifier)
+
+Gets the values of the desired column
+
+static Map<Integer,List<String>>
+getCsvData(String filepath)
+
+Returns data from csv file in Map<rowNumber, data(as List<String>)>.
+
+static Map<Integer,List<String>>
+getRows(Path path,
+ String sheetName)
+
+Get the values of Excel rows
+
+Map<Integer,List<String>>
+getSheetData(int sheetIndex)
+
+Returns data from Excel sheet in Map<rowNumber, data(as List<String>)>.
+
+List<String>
+getSheetsName()
+ 
+boolean
+sheetContains(int sheetIndex,
+ String item)
+
+Checks whether sheet contains wanted item.
+
+static void
+updateSheet(Path path,
+ String updateStatement)
+
+Update the specified sheet according to the used update statement
+ ...
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreExcelControl
+public CoreExcelControl(Path filePath)
+Constructor that initializes the Excel workbook by loading the file from the provided path.
+
+Parameters:
+filePath - The path to the Excel file to be opened.
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+compare
+public Map<String,List<String>> compare(int sheet1Index,
+ int sheet2Index,
+ Path filePath)
+Comparing 2 Excel sheets from the same file or from 2 separate files.
+
+Parameters:
+sheet1Index - wanted sheet from initial file.
+sheet2Index - wanted sheet from initial file or from filePath parameter.
+filePath - File path - optional second file to compare.
+Returns:
+empty map if there are no differences, or map of rows which differ.
+
+
+
+
+
+compareFiles
+public boolean compareFiles(Path filePath)
+Comparing 2 Excel files.
+
+Parameters:
+filePath - File path to second file.
+
+
+
+
+
+getSheetData
+public Map<Integer,List<String>> getSheetData(int sheetIndex)
+Returns data from Excel sheet in Map<rowNumber, data(as List<String>)>.
+
+Specified by:
+getSheetData in interface IExcelWorkBook
+Parameters:
+sheetIndex - Index of sheet in workbook.
+Returns:
+sheet data as Map<rowNumber, data(as List<String>)>.
+
+
+
+
+
+getCellValue
+public String getCellValue(int sheetIndex,
+ int rowIndex,
+ int colIndex)
+Returns cell value from sheet(as String).
+
+Specified by:
+getCellValue in interface IExcelWorkBook
+Parameters:
+sheetIndex - Index of sheet in workbook.
+rowIndex - Row index.
+colIndex - Column index.
+Returns:
+Cell value as String.
+
+
+
+
+
+getColumnItems
+public List<String> getColumnItems(int sheetIndex,
+ int colIndex)
+Returns all cell values from wanted column.
+
+Specified by:
+getColumnItems in interface IExcelWorkBook
+Parameters:
+sheetIndex - Index of sheet in workbook.
+colIndex - Column index.
+Returns:
+Items from specified column as List.
+
+
+
+
+
+sheetContains
+public boolean sheetContains(int sheetIndex,
+ String item)
+Checks whether sheet contains wanted item.
+
+Parameters:
+sheetIndex - wanted sheet index
+item - wanted item
+
+
+
+
+
+getSheetsName
+public List<String> getSheetsName()
+
+Returns:
+all sheet names
+
+
+
+
+
+getCsvData
+public static Map<Integer,List<String>> getCsvData(String filepath)
+Returns data from csv file in Map<rowNumber, data(as List<String>)>.
+
+Parameters:
+filepath - Path to csv file.
+Returns:
+Csv data as Map<rowNumber, data(as List<String>)>.
+
+
+
+
+
+updateSheet
+public static void updateSheet(Path path,
+ String updateStatement)
+Update the specified sheet according to the used update statement
+ ...
+
+Parameters:
+path - Excel file path
+updateStatement - String of the update statement
+
+
+
+
+
+getColumnValues
+public static List<String> getColumnValues(Path path,
+ String sheetName,
+ String columnIdentifier)
+Gets the values of the desired column
+
+Parameters:
+path - Excel file path
+sheetName - String of sheet name
+columnIdentifier - columnName or index
+Returns:
+List of the column cells
+
+
+
+
+
+getColumnNames
+public static List<String> getColumnNames(Path path,
+ String sheetName)
+Gets the first Row column names
+
+Parameters:
+path - path of Excel file
+sheetName - String of sheet name
+Returns:
+list of column names
+
+
+
+
+
+getRows
+public static Map<Integer,List<String>> getRows(Path path,
+ String sheetName)
+Get the values of Excel rows
+
+Parameters:
+path - path of Excel file
+sheetName - String of sheet name
+Returns:
+Map<Integer, List < String>> contain the row number as a key and row values as a list of string
+
+
+
+
+
+
+
+
+
+
+
+
+
+

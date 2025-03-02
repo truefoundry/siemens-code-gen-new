@@ -1,0 +1,312 @@
+Table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class Table
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.CoreWinInteractables
+fate.core.CompositionRoot.WinApp.Table
+
+
+
+
+All Implemented Interfaces:
+IWinInteractable
+
+
+public class Table
+extends CoreWinInteractables
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Table()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.openqa.selenium.WebElement
+findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+List<String>
+getAllItems(IWinInteractableNaming table,
+ String column,
+ IWinInteractableNaming... root)
+
+Get the list of items for the wanted column
+
+int
+getColumnCount(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+
+Gets the column count of the wanted table
+
+List<String>
+getColumnNames(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+
+Gets the column names of the wanted table
+
+String
+getItem(IWinInteractableNaming table,
+ String column,
+ String identifier,
+ String wantedColumn,
+ IWinInteractableNaming... root)
+
+Get the value of cell by identifying it using the column and identifier
+
+int
+getRowCount(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+
+Gets the row count of the wanted table
+
+void
+setItemValue(IWinInteractableNaming table,
+ String column,
+ String identifier,
+ String wantedColumn,
+ String value,
+ IWinInteractableNaming... root)
+
+Set the item value by finding it using the column and identifier value
+
+
+
+
+
+Methods inherited from class fate.core.CompositionRoot.WinApp.CoreWinInteractables
+clear, click, exists, getAttribute, getHeight, getLocation, getRoot, getText, getWidth, hasFocus, isBlank, isEmpty, isEnabled, isOnScreen, isSelected, sendKeys, sendKeys, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface fate.core.Interfaces.IWinInteractable
+expand, isExpanded
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+Table
+public Table()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findControl
+public org.openqa.selenium.WebElement findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+
+
+
+getColumnNames
+public List<String> getColumnNames(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+Gets the column names of the wanted table
+
+Parameters:
+table - table name
+root - root Element
+Returns:
+list of the column names
+
+
+
+
+
+getColumnCount
+public int getColumnCount(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+Gets the column count of the wanted table
+
+Parameters:
+table - table name
+root - root Element
+Returns:
+column count
+
+
+
+
+
+getRowCount
+public int getRowCount(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+Gets the row count of the wanted table
+
+Parameters:
+table - table name
+root - root Element
+Returns:
+row count
+
+
+
+
+
+getItem
+public String getItem(IWinInteractableNaming table,
+ String column,
+ String identifier,
+ String wantedColumn,
+ IWinInteractableNaming... root)
+Get the value of cell by identifying it using the column and identifier
+
+Parameters:
+table - table name
+column - the identifier column name
+identifier - the identifier value
+wantedColumn - the wanted column
+root - root Element
+Returns:
+the value of found cell
+
+
+
+
+
+getAllItems
+public List<String> getAllItems(IWinInteractableNaming table,
+ String column,
+ IWinInteractableNaming... root)
+Get the list of items for the wanted column
+
+Parameters:
+table - table name
+column - the identifier column name
+root - root Element
+Returns:
+list of items' values
+
+
+
+
+
+setItemValue
+public void setItemValue(IWinInteractableNaming table,
+ String column,
+ String identifier,
+ String wantedColumn,
+ String value,
+ IWinInteractableNaming... root)
+Set the item value by finding it using the column and identifier value
+
+Parameters:
+table - table name
+column - the identifier column name
+identifier - the identifier value
+wantedColumn - the wanted column
+value - the new value for the wanted cell
+root - root Element
+
+
+
+
+
+
+
+
+
+
+
+
+
+

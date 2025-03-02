@@ -1,0 +1,392 @@
+AzureHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure
+Class AzureHandler
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.AzureHandler
+
+
+
+All Implemented Interfaces:
+IResultPlatformHandler
+
+
+public class AzureHandler
+extends Object
+implements IResultPlatformHandler
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+AzureHandler()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addStep(StepItem step)
+
+Adds a step information during the test run.
+
+boolean
+areStepsEqual()
+
+Compares the count of collected steps equals to count of steps from selected system.
+
+void
+deleteRun(int runID)
+
+Deletes a test run with wanted ID.
+
+void
+generateDocxReport(int runID,
+ int resID,
+ String outputFilePath)
+ 
+int
+getPlatformStepCount()
+
+Returns steps count from selected system, Jira, Azure etc.
+
+int
+getRun()
+
+Returns the ID of current run.
+
+String
+getTcState()
+
+Returns test case state from given platform.
+
+List<StepItem>
+getTestSteps()
+
+Returns all collected test steps while test run as object list.
+
+boolean
+isTestable()
+
+Checks if current test can be tested, function is matching the states of test case object on selected platform.
+
+static boolean
+isTestPassed(String testCaseId)
+ 
+String
+pushToPlatform(TcStates state,
+ long executionTime)
+
+Pushes test results to selected platform after test execution.
+
+void
+setAbortionReason(String reason)
+
+Sets a reason for abortion of test case.
+
+void
+setErrorScreenshot(File img)
+ 
+void
+updateRunState(int runID,
+ runStates state)
+
+Updates the state of current run.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface fate.core.Interfaces.IResultPlatformHandler
+getFullLog, saveScreenShotsAsFiles
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+AzureHandler
+public AzureHandler()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+areStepsEqual
+public boolean areStepsEqual()
+Description copied from interface: IResultPlatformHandler
+Compares the count of collected steps equals to count of steps from selected system.
+
+Specified by:
+areStepsEqual in interface IResultPlatformHandler
+Returns:
+Bool value if test steps matching remote platforms test steps.
+
+
+
+
+
+addStep
+public void addStep(StepItem step)
+Description copied from interface: IResultPlatformHandler
+Adds a step information during the test run.
+
+Specified by:
+addStep in interface IResultPlatformHandler
+Parameters:
+step - Add a test step to result.
+
+
+
+
+
+setAbortionReason
+public void setAbortionReason(String reason)
+Description copied from interface: IResultPlatformHandler
+Sets a reason for abortion of test case.
+
+Specified by:
+setAbortionReason in interface IResultPlatformHandler
+Parameters:
+reason - Reason for abortion.
+
+
+
+
+
+setErrorScreenshot
+public void setErrorScreenshot(File img)
+
+Specified by:
+setErrorScreenshot in interface IResultPlatformHandler
+
+
+
+
+
+getTcState
+public String getTcState()
+Description copied from interface: IResultPlatformHandler
+Returns test case state from given platform.
+
+Specified by:
+getTcState in interface IResultPlatformHandler
+Returns:
+Platform test case state.
+
+
+
+
+
+isTestable
+public boolean isTestable()
+Description copied from interface: IResultPlatformHandler
+Checks if current test can be tested, function is matching the states of test case object on selected platform.
+
+Specified by:
+isTestable in interface IResultPlatformHandler
+Returns:
+true if testable or false.
+
+
+
+
+
+pushToPlatform
+public String pushToPlatform(TcStates state,
+ long executionTime)
+Description copied from interface: IResultPlatformHandler
+Pushes test results to selected platform after test execution.
+
+Specified by:
+pushToPlatform in interface IResultPlatformHandler
+Parameters:
+state - State of test execution.
+executionTime - Duration of test execution.
+Returns:
+Empty string if everything was ok, or failure cause.
+
+
+
+
+
+getPlatformStepCount
+public int getPlatformStepCount()
+Description copied from interface: IResultPlatformHandler
+Returns steps count from selected system, Jira, Azure etc.
+
+Specified by:
+getPlatformStepCount in interface IResultPlatformHandler
+Returns:
+Amount of test steps from remote platform.
+
+
+
+
+
+getTestSteps
+public List<StepItem> getTestSteps()
+Description copied from interface: IResultPlatformHandler
+Returns all collected test steps while test run as object list. 'Local Step Objects'.
+
+Specified by:
+getTestSteps in interface IResultPlatformHandler
+Returns:
+All test steps as list.
+
+
+
+
+
+deleteRun
+public void deleteRun(int runID)
+Deletes a test run with wanted ID.
+
+Parameters:
+runID - TestRun ID
+
+
+
+
+
+getRun
+public int getRun()
+Returns the ID of current run.
+
+Returns:
+ID as int.
+
+
+
+
+
+updateRunState
+public void updateRunState(int runID,
+ runStates state)
+Updates the state of current run.
+
+Parameters:
+runID - Run ID as int.
+state - Wanted state as runStates.
+
+
+
+
+
+generateDocxReport
+public void generateDocxReport(int runID,
+ int resID,
+ String outputFilePath)
+
+
+
+
+isTestPassed
+public static boolean isTestPassed(String testCaseId)
+
+
+
+
+
+
+
+
+
+
+
+
+

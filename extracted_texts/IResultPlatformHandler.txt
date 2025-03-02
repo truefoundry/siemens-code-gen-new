@@ -1,0 +1,281 @@
+IResultPlatformHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IResultPlatformHandler
+
+
+
+All Known Implementing Classes:
+AzureHandler, JiraHandler
+
+
+public interface IResultPlatformHandler
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract MethodsDefault Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addStep(StepItem step)
+
+Adds a step information during the test run.
+
+boolean
+areStepsEqual()
+
+Compares the count of collected steps equals to count of steps from selected system.
+
+default String
+getFullLog()
+
+gets the full log which is saved in result during testing
+
+int
+getPlatformStepCount()
+
+Returns steps count from selected system, Jira, Azure etc.
+
+String
+getTcState()
+
+Returns test case state from given platform.
+
+List<StepItem>
+getTestSteps()
+
+Returns all collected test steps while test run as object list.
+
+boolean
+isTestable()
+
+Checks if current test can be tested, function is matching the states of test case object on selected platform.
+
+String
+pushToPlatform(TcStates state,
+ long executionTime)
+
+Pushes test results to selected platform after test execution.
+
+default void
+saveScreenShotsAsFiles()
+
+Saves screenshots to output folder as files, if selected.
+
+void
+setAbortionReason(String reason)
+
+Sets a reason for abortion of test case.
+
+void
+setErrorScreenshot(File img)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getTcState
+String getTcState()
+Returns test case state from given platform.
+
+Returns:
+Platform test case state.
+
+
+
+
+
+isTestable
+boolean isTestable()
+Checks if current test can be tested, function is matching the states of test case object on selected platform.
+
+Returns:
+true if testable or false.
+
+
+
+
+
+areStepsEqual
+boolean areStepsEqual()
+Compares the count of collected steps equals to count of steps from selected system.
+
+Returns:
+Bool value if test steps matching remote platforms test steps.
+
+
+
+
+
+addStep
+void addStep(StepItem step)
+Adds a step information during the test run.
+
+Parameters:
+step - Add a test step to result.
+
+
+
+
+
+setAbortionReason
+void setAbortionReason(String reason)
+Sets a reason for abortion of test case.
+
+Parameters:
+reason - Reason for abortion.
+
+
+
+
+
+setErrorScreenshot
+void setErrorScreenshot(File img)
+
+
+
+
+pushToPlatform
+String pushToPlatform(TcStates state,
+ long executionTime)
+Pushes test results to selected platform after test execution.
+
+Parameters:
+state - State of test execution.
+executionTime - Duration of test execution.
+Returns:
+Empty string if everything was ok, or failure cause.
+
+
+
+
+
+getPlatformStepCount
+int getPlatformStepCount()
+Returns steps count from selected system, Jira, Azure etc.
+
+Returns:
+Amount of test steps from remote platform.
+
+
+
+
+
+getTestSteps
+List<StepItem> getTestSteps()
+Returns all collected test steps while test run as object list. 'Local Step Objects'.
+
+Returns:
+All test steps as list.
+
+
+
+
+
+saveScreenShotsAsFiles
+default void saveScreenShotsAsFiles()
+Saves screenshots to output folder as files, if selected.
+
+
+
+
+getFullLog
+default String getFullLog()
+gets the full log which is saved in result during testing
+
+Returns:
+String of the concatenated logs
+
+
+
+
+
+
+
+
+
+
+
+
+
+

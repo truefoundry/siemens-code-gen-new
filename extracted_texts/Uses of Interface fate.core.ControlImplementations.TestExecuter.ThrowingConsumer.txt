@@ -1,0 +1,84 @@
+Uses of Interface fate.core.ControlImplementations.TestExecuter.ThrowingConsumer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.ControlImplementations.TestExecuter.ThrowingConsumer
+
+Packages that use TestExecuter.ThrowingConsumer
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+
+
+
+
+
+Uses of TestExecuter.ThrowingConsumer in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type TestExecuter.ThrowingConsumer
+
+Modifier and Type
+Method
+Description
+static <T extends AbstractCoreHandler>void
+TestExecuter.execute(Duration duration,
+ TestExecuter.ThrowingConsumer<T,Exception> testFunction,
+ T newTest,
+ TestExecuter.ThrowingConsumer<T,Exception>[] clean,
+ String... testCaseId)
+
+Executes a test with a specified duration, handles exceptions, and performs clean-up actions.
+
+
+
+
+
+
+
+
+
+
+

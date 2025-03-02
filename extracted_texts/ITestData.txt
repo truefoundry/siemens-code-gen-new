@@ -1,0 +1,143 @@
+ITestData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface ITestData
+
+
+
+public interface ITestData
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+IEmailConfig
+getEmailConfig()
+
+Returns Email configuration.
+
+String
+getName()
+
+Returns name of wanted user
+
+String
+getPass()
+
+Returns password of wanted user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getName
+String getName()
+Returns name of wanted user
+
+
+
+
+getPass
+String getPass()
+Returns password of wanted user.
+
+
+
+
+getEmailConfig
+IEmailConfig getEmailConfig()
+Returns Email configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+

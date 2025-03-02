@@ -1,0 +1,208 @@
+JiraTestStep
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira
+Class JiraTestStep
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.JiraTestStep
+
+
+
+public class JiraTestStep
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+JiraTestStep(int index,
+ String status,
+ String comment)
+
+Standard constructor for a test step
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getComment()
+ 
+int
+getIndex()
+ 
+String
+getStatus()
+ 
+void
+setComment(String comment)
+ 
+void
+setIndex(int index)
+ 
+void
+setStatus(String status)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+JiraTestStep
+public JiraTestStep(int index,
+ String status,
+ String comment)
+Standard constructor for a test step
+
+Parameters:
+index - Index of the test step
+status - Status of the test step
+comment - Comment for the test step
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getIndex
+public int getIndex()
+
+
+
+
+setIndex
+public void setIndex(int index)
+
+
+
+
+getStatus
+public String getStatus()
+
+
+
+
+setStatus
+public void setStatus(String status)
+
+
+
+
+getComment
+public String getComment()
+
+
+
+
+setComment
+public void setComment(String comment)
+
+
+
+
+
+
+
+
+
+
+
+
+

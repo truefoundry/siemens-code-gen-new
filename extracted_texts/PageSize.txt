@@ -1,0 +1,266 @@
+PageSize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Pdf
+Enum Class PageSize
+
+java.lang.Object
+java.lang.Enum<PageSize>
+fate.core.Pdf.PageSize
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<PageSize>, Constable
+
+
+public enum PageSize
+extends Enum<PageSize>
+This enum is used also for document
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+A0
+ 
+A1
+ 
+A2
+ 
+A3
+ 
+A4
+ 
+A5
+ 
+A6
+ 
+MIXED
+ 
+NOT_FOUND
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static PageSize
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PageSize[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+A0
+public static final PageSize A0
+
+
+
+
+A1
+public static final PageSize A1
+
+
+
+
+A2
+public static final PageSize A2
+
+
+
+
+A3
+public static final PageSize A3
+
+
+
+
+A4
+public static final PageSize A4
+
+
+
+
+A5
+public static final PageSize A5
+
+
+
+
+A6
+public static final PageSize A6
+
+
+
+
+NOT_FOUND
+public static final PageSize NOT_FOUND
+
+
+
+
+MIXED
+public static final PageSize MIXED
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static PageSize[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static PageSize valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+
+
+
+
+
+
+
+
+

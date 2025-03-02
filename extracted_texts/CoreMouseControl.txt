@@ -1,0 +1,469 @@
+CoreMouseControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreMouseControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreMouseControl
+
+
+
+public class CoreMouseControl
+extends Object
+Handles the mouse for UI tests
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreMouseControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+clickAndHold(org.openqa.selenium.WebElement element,
+ Duration duration)
+
+Clicks and holds left mouse button pressed in the middle of the provided element for specified duration time.
+
+void
+clickByCoordinates(int x,
+ int y)
+
+A method that performs click at a certain coordinates
+
+void
+clickByOffset(org.openqa.selenium.By sourceElement,
+ int x,
+ int y)
+
+A method that performs click at the location of the source element + offset.
+
+void
+dragAndDrop(org.openqa.selenium.By sourceElement,
+ org.openqa.selenium.By targetElement)
+
+A method that performs click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse.
+
+void
+dragAndDrop(org.openqa.selenium.Point sourceCoords,
+ org.openqa.selenium.Point targetCoords)
+
+Performs drag and drop action based on coordinates.
+
+void
+dragAndDrop(org.openqa.selenium.WebElement element,
+ int xOfDragLoc,
+ int yOfDragLoc,
+ int xOfDropLoc,
+ int yOfDropLoc)
+
+A method that performs click-and-hold at the location midpoint in addition to the drag offset values, then moves the
+ element by the drop offset values and finally releases the mouse.
+
+void
+dragAndDrop(org.openqa.selenium.WebElement sourceElement,
+ org.openqa.selenium.WebElement targetElement)
+
+A method that performs click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse.
+
+void
+dragAndDropByOffset(org.openqa.selenium.By sourceElement,
+ int x,
+ int y)
+
+A method that performs click-and-hold at the location of the source element, moves to the location of the offset, then releases the
+ mouse.
+
+void
+moveOverControl(org.openqa.selenium.By ctrlToMove,
+ String... sub)
+
+Moves mouse cursor to the middle of the wanted control.
+
+void
+moveOverControl(org.openqa.selenium.WebElement ctrlToMove,
+ String... sub)
+
+Moves mouse cursor to the middle of the wanted control.
+
+void
+moveOverControlWithOffset(org.openqa.selenium.By ctrlToMove,
+ int x,
+ int y,
+ String... sub)
+
+Moves mouse cursor to top left corner of the wanted control with wanted offset.
+
+void
+moveOverControlWithOffset(org.openqa.selenium.WebElement ctrlToMove,
+ int x,
+ int y,
+ String... sub)
+
+Moves mouse cursor to top left corner of the wanted control with wanted offset.
+
+void
+moveToCoordinates(int x,
+ int y,
+ Boolean... arg)
+
+Moves mouse cursor to wanted coordinates.
+
+void
+rightClick(org.openqa.selenium.WebElement ele)
+
+Performs right click on wanted element.
+
+void
+scrollByWheel(int deltaX,
+ int deltaY)
+
+Scrolls by provided amounts with the origin in the top left corner of the viewport.
+
+void
+scrollWheel(int x,
+ int y,
+ int wheelAmount)
+
+Scroll mouse wheel over a specific point to zoom in and out
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreMouseControl
+public CoreMouseControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+dragAndDrop
+public void dragAndDrop(org.openqa.selenium.WebElement sourceElement,
+ org.openqa.selenium.WebElement targetElement)
+A method that performs click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse.
+
+Parameters:
+sourceElement - Element to drag.
+targetElement - Element where to drop sourceElement.
+
+
+
+
+
+scrollByWheel
+public void scrollByWheel(int deltaX,
+ int deltaY)
+Scrolls by provided amounts with the origin in the top left corner of the viewport.
+
+Parameters:
+deltaX - The distance along X axis to scroll using the wheel. A negative value scrolls left.
+deltaY - The distance along Y axis to scroll using the wheel. A negative value scrolls up.
+
+
+
+
+
+dragAndDrop
+public void dragAndDrop(org.openqa.selenium.WebElement element,
+ int xOfDragLoc,
+ int yOfDragLoc,
+ int xOfDropLoc,
+ int yOfDropLoc)
+A method that performs click-and-hold at the location midpoint in addition to the drag offset values, then moves the
+ element by the drop offset values and finally releases the mouse.
+ Note: offset positive value of xOffset means that the mouse moves to right direction and the negative value means that the mouse moves to
+ left direction and the same for yOffset, positive value means mouse moves down and negative value means that mouse moves up.
+
+Parameters:
+element - Web element
+xOfDragLoc - xOffset value to shift the element's  drag x coordinate
+yOfDragLoc - yOffset value to shift the element's drag y coordinate
+xOfDropLoc - xOffset value to move the element to it horizontally
+yOfDropLoc - yOffset value to move the element to it vertically
+
+
+
+
+
+dragAndDrop
+public void dragAndDrop(org.openqa.selenium.By sourceElement,
+ org.openqa.selenium.By targetElement)
+A method that performs click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse.
+
+Parameters:
+sourceElement - Element selector to drag.
+targetElement - Element selector where to drop sourceElement.
+
+
+
+
+
+dragAndDropByOffset
+public void dragAndDropByOffset(org.openqa.selenium.By sourceElement,
+ int x,
+ int y)
+A method that performs click-and-hold at the location of the source element, moves to the location of the offset, then releases the
+ mouse.
+
+Parameters:
+sourceElement - Element selector to drag.
+
+
+
+
+
+dragAndDrop
+public void dragAndDrop(org.openqa.selenium.Point sourceCoords,
+ org.openqa.selenium.Point targetCoords)
+Performs drag and drop action based on coordinates.
+
+Parameters:
+sourceCoords - source coordinates.
+targetCoords - target coordinates.
+
+
+
+
+
+rightClick
+public void rightClick(org.openqa.selenium.WebElement ele)
+Performs right click on wanted element.
+
+Parameters:
+ele - Wanted element for right click.
+
+
+
+
+
+moveToCoordinates
+public void moveToCoordinates(int x,
+ int y,
+ Boolean... arg)
+Moves mouse cursor to wanted coordinates.
+
+Parameters:
+x - x coord
+y - y coord
+arg - true, for mouse click after movement.
+
+
+
+
+
+moveOverControl
+public void moveOverControl(org.openqa.selenium.WebElement ctrlToMove,
+ String... sub)
+Moves mouse cursor to the middle of the wanted control.
+
+Parameters:
+ctrlToMove - as WebElement object
+sub - Wanted sub element inside wanted control.
+
+
+
+
+
+moveOverControl
+public void moveOverControl(org.openqa.selenium.By ctrlToMove,
+ String... sub)
+Moves mouse cursor to the middle of the wanted control.
+
+Parameters:
+ctrlToMove - By selector.
+sub - Wanted sub element inside wanted control.
+
+
+
+
+
+moveOverControlWithOffset
+public void moveOverControlWithOffset(org.openqa.selenium.WebElement ctrlToMove,
+ int x,
+ int y,
+ String... sub)
+Moves mouse cursor to top left corner of the wanted control with wanted offset.
+
+Parameters:
+ctrlToMove - as WebElement object
+
+
+
+
+
+moveOverControlWithOffset
+public void moveOverControlWithOffset(org.openqa.selenium.By ctrlToMove,
+ int x,
+ int y,
+ String... sub)
+Moves mouse cursor to top left corner of the wanted control with wanted offset.
+
+Parameters:
+ctrlToMove - as WebElement object
+
+
+
+
+
+clickByOffset
+public void clickByOffset(org.openqa.selenium.By sourceElement,
+ int x,
+ int y)
+A method that performs click at the location of the source element + offset.
+
+Parameters:
+sourceElement - Element selector to drag.
+
+
+
+
+
+clickByCoordinates
+public void clickByCoordinates(int x,
+ int y)
+A method that performs click at a certain coordinates
+
+Parameters:
+x - value of x position
+y - value of y position
+
+
+
+
+
+scrollWheel
+public void scrollWheel(int x,
+ int y,
+ int wheelAmount)
+Scroll mouse wheel over a specific point to zoom in and out
+
+Parameters:
+x - int value of the webElement centre
+y - int value of the webElement centre
+wheelAmount - the value of wheel movement (positive zoom in and negative value for zoom out)
+
+
+
+
+
+clickAndHold
+public void clickAndHold(@Nonnull
+ org.openqa.selenium.WebElement element,
+ @Nonnull
+ Duration duration)
+Clicks and holds left mouse button pressed in the middle of the provided element for specified duration time.
+
+
+
+
+
+
+
+
+
+
+
+
+

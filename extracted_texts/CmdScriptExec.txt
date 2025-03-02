@@ -1,0 +1,192 @@
+CmdScriptExec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CmdScriptExec
+
+java.lang.Object
+fate.core.ControlImplementations.CmdScriptExec
+
+
+
+public class CmdScriptExec
+extends Object
+Executes all the powershell scripts and commands
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static RunningProcess
+executeCommand(String command)
+
+Executes wanted cmd command.
+
+static RunningProcess
+executeCommand(String[] cmdarray)
+
+Executes wanted cmd command.
+
+static void
+executeJavaScript(String script,
+ org.openqa.selenium.WebElement... element)
+
+Executes a JavaScript, optional on wanted WebElement.
+
+static String
+executePowerShell(String command)
+
+Executes wanted PowerShell command.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+executePowerShell
+@CanIgnoreReturnValue
+public static String executePowerShell(String command)
+Executes wanted PowerShell command.
+
+Parameters:
+command - Command to execute.
+Returns:
+Standard output and errors.
+
+
+
+
+
+executeJavaScript
+public static void executeJavaScript(String script,
+ org.openqa.selenium.WebElement... element)
+Executes a JavaScript, optional on wanted WebElement.
+
+Parameters:
+script - Wanted script without 'arguments[0].' prefix if WebElement is selected.
+element - Wanted WebElement which should receive the script execution.
+
+
+
+
+
+executeCommand
+public static RunningProcess executeCommand(String command)
+Executes wanted cmd command.
+
+ Note that the command and its arguments may not contain whitespace as they are
+ split using a StringTokenizer, see Runtime.exec(String, String[], java.io.File).
+
+Parameters:
+command - Command to execute.
+Returns:
+a RunningProcess object.
+
+
+
+
+
+executeCommand
+public static RunningProcess executeCommand(String[] cmdarray)
+Executes wanted cmd command.
+
+Parameters:
+cmdarray - array containing the command to call and its arguments.
+Returns:
+a RunningProcess object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

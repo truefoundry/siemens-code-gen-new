@@ -1,0 +1,596 @@
+IWinInteractable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IWinInteractable
+
+
+
+All Known Implementing Classes:
+Button, CheckBox, ComboBox, CoreWinInteractables, DataItem, Dialog, Document, Edit, Header, Image, Link, List, ListItem, Menu, MenuBar, MenuItem, Pane, ProgressBar, RadioButton, ScrollBar, SplitButton, StatusBar, Tab, TabItem, Table, Text, TitleBar, ToolBar, Tree, TreeItem, Window
+
+
+public interface IWinInteractable
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract MethodsDefault Methods
+
+
+Modifier and Type
+Method
+Description
+IWinInteractable
+clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Clears the wanted element
+
+IWinInteractable
+click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Click this element.
+
+boolean
+exists(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks existence of control in the DOM.
+
+default void
+expand(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Expands the wanted control if it is not expanded
+
+@Nullable org.openqa.selenium.WebElement
+findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+String
+getAttribute(IWinInteractableNaming name,
+ String attribute,
+ IWinInteractableNaming... root)
+
+Get the value of the given attribute of the element.
+
+int
+getHeight(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns height of wanted control.
+
+org.openqa.selenium.Point
+getLocation(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns location of wanted control.
+
+String
+getText(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns text from wanted element.
+
+int
+getWidth(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns width of wanted control.
+
+boolean
+hasFocus(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks if wanted element has focus.
+
+boolean
+isBlank(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks if wanted control is empty or contain whitespace.
+
+boolean
+isEmpty(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks if wanted control is empty.
+
+boolean
+isEnabled(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Is the element currently enabled or not? This will generally return true for everything but
+ disabled input elements.
+
+default boolean
+isExpanded(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Check if the Control is expanded
+
+boolean
+isOnScreen(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Check "offscreen" property to detect whether the item is displayed on the current screen view or  not
+
+boolean
+isSelected(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Check if the Control is selected
+
+IWinInteractable
+sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted Keys to wanted control.
+
+IWinInteractable
+sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted String to wanted control.
+
+IWinInteractable
+waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for disposal of wanted element.
+
+IWinInteractable
+waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become clickable.
+
+IWinInteractable
+waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become visible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findControl
+@Nullable
+@Nullable org.openqa.selenium.WebElement findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+
+
+
+isEmpty
+boolean isEmpty(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Checks if wanted control is empty. Applies to Edit, Combo and TextArea.
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+Returns:
+true if wanted control has no value, otherwise false.
+
+
+
+
+
+isBlank
+boolean isBlank(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Checks if wanted control is empty or contain whitespace. Applies to Edit, Combo and TextArea.
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+Returns:
+true if wanted control has no value or has white space, otherwise false.
+
+
+
+
+
+sendKeys
+@CanIgnoreReturnValue
+IWinInteractable sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+Sends wanted Keys to wanted control.
+
+Parameters:
+name - Control identifier.
+root - Identifier of the parent
+keysToSend - Wanted sequence.
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+sendKeys
+@CanIgnoreReturnValue
+IWinInteractable sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+Sends wanted String to wanted control.
+
+Parameters:
+name - Control identifier.
+root - Identifier of the parent
+keysToSend - wanted String
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+clear
+@CanIgnoreReturnValue
+IWinInteractable clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Clears the wanted element
+
+Parameters:
+name - Control identifier.
+root - Identifier of the parent
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+hasFocus
+boolean hasFocus(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Checks if wanted element has focus.
+
+Parameters:
+name - Name of wanted element.
+root - Identifier of the parent
+Returns:
+true if focused, false in any other case.
+
+
+
+
+
+click
+@CanIgnoreReturnValue
+IWinInteractable click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Click this element. If this causes a new page to load, you
+ should discard all references to this element and any further
+ operations performed on this element will throw a
+ StaleElementReferenceException.
+ 
+ Note that if click() is done by sending a native event (which is
+ the default on most browsers/platforms) then the method will
+ _not_ wait for the next page to load and the caller should verify
+ that themselves.
+
+Parameters:
+name - Identifier of wanted control.
+root - Identifier of the parent
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+exists
+boolean exists(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Checks existence of control in the DOM. Existence of object does not necessarily mean that the object is visible or displayed.
+
+Parameters:
+name - - label name or index of wanted control.
+root - Identifier of the parent
+Returns:
+boolean value.
+
+
+
+
+
+isEnabled
+boolean isEnabled(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Is the element currently enabled or not? This will generally return true for everything but
+ disabled input elements.
+
+Parameters:
+name - Identifier of wanted control.
+root - Identifier of the parent
+Returns:
+True if the element is enabled, false otherwise.
+
+
+
+
+
+getLocation
+org.openqa.selenium.Point getLocation(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Returns location of wanted control.
+
+Parameters:
+name - name of wanted control.
+root - Identifier of the parent
+Returns:
+location as Point.
+
+
+
+
+
+getHeight
+int getHeight(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Returns height of wanted control.
+
+Parameters:
+name - identifier of wanted control.
+root - Identifier of the parent
+Returns:
+height as int.
+
+
+
+
+
+getWidth
+int getWidth(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Returns width of wanted control.
+
+Parameters:
+name - identifier of wanted control.
+root - Identifier of the parent
+Returns:
+width as int.
+
+
+
+
+
+getAttribute
+String getAttribute(IWinInteractableNaming name,
+ String attribute,
+ IWinInteractableNaming... root)
+Get the value of the given attribute of the element.
+
+Parameters:
+name - Identifier of wanted control.
+attribute - The name of the attribute.
+Returns:
+The attribute/property's current value or null as String if the value is not set.
+
+
+
+
+
+getText
+String getText(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Returns text from wanted element.
+
+Parameters:
+name - Identifier of wanted control.
+root - Identifier of the parent
+Returns:
+Text from wanted element.
+
+
+
+
+
+waitToBeClickable
+@CanIgnoreReturnValue
+IWinInteractable waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+Waits for wanted control to become clickable. Maximal wait time is 10 seconds.
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+duration - Duration to wait until timeout.
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+waitForDisposal
+@CanIgnoreReturnValue
+IWinInteractable waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+Waits for disposal of wanted element.
+
+Parameters:
+control - Enum for wanted element.
+root - Identifier of the parent
+duration - Optional waittime, default is 20 seconds.
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+waitToBeVisible
+@CanIgnoreReturnValue
+IWinInteractable waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+Waits for wanted control to become visible. Maximal wait time is 10 seconds.
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+duration - Duration to wait until timeout.
+Returns:
+IWinInteractable interface.
+
+
+
+
+
+isOnScreen
+boolean isOnScreen(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Check "offscreen" property to detect whether the item is displayed on the current screen view or  not
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+Returns:
+boolean true if the element appears in the screen view
+
+
+
+
+
+isSelected
+boolean isSelected(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Check if the Control is selected
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+Returns:
+boolean true if the element is selected
+
+
+
+
+
+isExpanded
+default boolean isExpanded(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Check if the Control is expanded
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+Returns:
+boolean true if the element is selected
+
+
+
+
+
+expand
+default void expand(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Expands the wanted control if it is not expanded
+
+Parameters:
+name - Name of wanted control.
+root - Identifier of the parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+

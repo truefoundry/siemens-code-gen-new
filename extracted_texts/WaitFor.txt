@@ -1,0 +1,398 @@
+WaitFor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class WaitFor
+
+java.lang.Object
+fate.core.ControlImplementations.WaitFor
+
+
+
+public class WaitFor
+extends Object
+Handles the Wait functions.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static boolean
+condition(BooleanSupplier isTrue,
+ Duration... durations)
+
+Waits for a condition to be true.
+
+static boolean
+disposal(org.openqa.selenium.By selector,
+ Duration... duration)
+
+Waits until wanted object disposes.
+
+static boolean
+disposal(org.openqa.selenium.WebElement element,
+ Duration... dur)
+
+Waits for disposal of wanted object.
+
+static boolean
+DOMElement(org.openqa.selenium.By by,
+ Duration... dur)
+
+Waits for DOM element.
+
+static boolean
+DOMElement(org.openqa.selenium.WebElement oldControl,
+ org.openqa.selenium.By elementSelector)
+
+Waits for DOM element.
+
+static boolean
+multipleDisposals(org.openqa.selenium.By selector)
+
+Waits until all wanted items are disposed.
+
+static boolean
+readyState()
+
+Waits until ready state of current window.
+
+static void
+specificTime(Duration timeToWait)
+
+Waits for wanted amount of time.
+
+static boolean
+text(org.openqa.selenium.By selector,
+ String text,
+ Duration... dur)
+
+Waits for text of wanted WebElement.
+
+static boolean
+toBeClickable(org.openqa.selenium.By selector,
+ Duration dur,
+ org.openqa.selenium.Point... location)
+
+Waits for wanted WebElement to be clickable.
+
+static boolean
+toBeClickable(org.openqa.selenium.WebElement ele,
+ Duration... dur)
+
+Waits for wanted WebElement to be clickable.
+
+static boolean
+toBeFresh(org.openqa.selenium.By selector,
+ Duration... dur)
+
+Waits for wanted element until being not staled and being fresh again
+
+static boolean
+toBeVisible(org.openqa.selenium.By selector,
+ Duration... dur)
+
+Waits for wanted WebElement to be visible.
+
+static boolean
+toBeVisible(org.openqa.selenium.WebElement ele,
+ Duration... dur)
+
+Waits for wanted WebElement to be visible.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+condition
+public static boolean condition(BooleanSupplier isTrue,
+ Duration... durations)
+Waits for a condition to be true. Default max wait is 20 seconds.
+
+ Exceptions that are thrown when executing isTrue are ignored.
+
+ The method returns if either the condition is true or the timeout is reached.
+
+Parameters:
+isTrue - a condition that must be true for the wait to finish
+durations - if given, durations[0] is the timeout and durations[1] the polling interval
+Returns:
+true if condition is met within the duration, false otherwise
+
+
+
+
+
+disposal
+public static boolean disposal(org.openqa.selenium.By selector,
+ Duration... duration)
+Waits until wanted object disposes.
+
+Parameters:
+selector - By selector.
+duration - Optional custom duration. Default wait is 20 seconds.
+Returns:
+true if element disposes within duration, false otherwise
+
+
+
+
+
+multipleDisposals
+public static boolean multipleDisposals(org.openqa.selenium.By selector)
+Waits until all wanted items are disposed.
+
+Parameters:
+selector - CssSelector for wanted items.
+Returns:
+true if multiple elements dispose within duration, false otherwise
+
+
+
+
+
+disposal
+public static boolean disposal(org.openqa.selenium.WebElement element,
+ Duration... dur)
+Waits for disposal of wanted object.
+
+Parameters:
+element - Element to be disposed.
+Returns:
+true if element disposes within duration, false otherwise
+
+
+
+
+
+DOMElement
+public static boolean DOMElement(org.openqa.selenium.By by,
+ Duration... dur)
+Waits for DOM element.
+
+Parameters:
+by - Selector
+Returns:
+true if DOM element is present within duration, false otherwise
+
+
+
+
+
+DOMElement
+public static boolean DOMElement(org.openqa.selenium.WebElement oldControl,
+ org.openqa.selenium.By elementSelector)
+Waits for DOM element.
+
+Parameters:
+oldControl - Old potentially stale control that should be ignored when checking for presence. Can be null if not needed.
+elementSelector - Selector statement.
+Returns:
+true if DOM element is present within duration, false otherwise
+
+
+
+
+
+text
+public static boolean text(org.openqa.selenium.By selector,
+ String text,
+ Duration... dur)
+Waits for text of wanted WebElement.
+
+Parameters:
+selector - selector query.
+text - text to wait for.
+dur - Optional duration to wait.
+Returns:
+true if element has text within duration, false otherwise
+
+
+
+
+
+toBeClickable
+public static boolean toBeClickable(org.openqa.selenium.By selector,
+ Duration dur,
+ org.openqa.selenium.Point... location)
+Waits for wanted WebElement to be clickable.
+
+Parameters:
+selector - selector query.
+Returns:
+true if element is clickable within duration, false otherwise
+
+
+
+
+
+specificTime
+public static void specificTime(Duration timeToWait)
+Waits for wanted amount of time.
+
+
+
+
+readyState
+public static boolean readyState()
+Waits until ready state of current window.
+
+Returns:
+true if ready state is done within duration, false otherwise
+
+
+
+
+
+toBeVisible
+public static boolean toBeVisible(org.openqa.selenium.By selector,
+ Duration... dur)
+Waits for wanted WebElement to be visible.
+
+Parameters:
+selector - selector query.
+dur - Wait time in seconds.
+Returns:
+true if element is visible within duration, false otherwise
+
+
+
+
+
+toBeVisible
+public static boolean toBeVisible(org.openqa.selenium.WebElement ele,
+ Duration... dur)
+Waits for wanted WebElement to be visible.
+
+Parameters:
+ele - Wanted element as WebElement.
+dur - Wait time in seconds.
+Returns:
+true if element is visible within duration, false otherwise
+
+
+
+
+
+toBeClickable
+public static boolean toBeClickable(org.openqa.selenium.WebElement ele,
+ Duration... dur)
+Waits for wanted WebElement to be clickable.
+
+Parameters:
+ele - Wanted element to wait for.
+dur - Wanted duration to wait.
+Returns:
+true if element is clickable within duration, false otherwise
+
+
+
+
+
+toBeFresh
+public static boolean toBeFresh(org.openqa.selenium.By selector,
+ Duration... dur)
+Waits for wanted element until being not staled and being fresh again
+
+Parameters:
+selector - selector query.
+dur - Wait time in seconds.
+Returns:
+true if element is fresh within duration, false otherwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+

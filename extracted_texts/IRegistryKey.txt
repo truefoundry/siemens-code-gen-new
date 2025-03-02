@@ -1,0 +1,159 @@
+IRegistryKey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IRegistryKey
+
+
+
+All Known Implementing Classes:
+WinRegistryKeys
+
+
+public interface IRegistryKey
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getCommand()
+
+Returns wanted query command.
+
+String
+getKey()
+
+Returns wanted registry key name.
+
+String
+getPath()
+
+Returns wanted query path.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getPath
+String getPath()
+Returns wanted query path.
+
+Returns:
+Query path as String.
+
+
+
+
+
+getCommand
+String getCommand()
+Returns wanted query command.
+
+Returns:
+Query command as String.
+
+
+
+
+
+getKey
+String getKey()
+Returns wanted registry key name.
+
+Returns:
+Key name as String.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

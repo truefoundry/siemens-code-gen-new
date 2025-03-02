@@ -1,0 +1,197 @@
+SignInDialog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class SignInDialog
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.SignInDialog
+
+
+
+public class SignInDialog
+extends Object
+Class to interact with Windows Sign In dialog.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+SignInDialog()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+cancel()
+
+Clicks Cancel button.
+
+boolean
+exists()
+ 
+void
+sendKeys(IInteractableNaming name,
+ String value,
+ boolean... check)
+
+Sends wanted value to wanted input field.
+
+void
+signIn()
+
+Clicks Sign In button.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+SignInDialog
+public SignInDialog()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+exists
+public boolean exists()
+
+
+
+
+sendKeys
+public void sendKeys(IInteractableNaming name,
+ String value,
+ boolean... check)
+Sends wanted value to wanted input field. NOTE! If you are using web application, use CoreStartOptions().addLogin("user", "pass")); to login!
+
+Parameters:
+name - name of wanted input field
+value - wanted value
+check - set to true to check input field after sendKeys and retry if set value is not correct
+
+
+
+
+
+signIn
+public void signIn()
+Clicks Sign In button.
+
+
+
+
+cancel
+public void cancel()
+Clicks Cancel button.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+Uses of Class fate.core.PlatformConnectors.jira.testcycle.TestCycleItems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PlatformConnectors.jira.testcycle.TestCycleItems
+
+Packages that use TestCycleItems
+
+Package
+Description
+fate.core.PlatformConnectors.jira.testcycle
+ 
+
+
+
+
+
+Uses of TestCycleItems in fate.core.PlatformConnectors.jira.testcycle
+Methods in fate.core.PlatformConnectors.jira.testcycle that return types with arguments of type TestCycleItems
+
+Modifier and Type
+Method
+Description
+List<TestCycleItems>
+TestCycle.getItems()
+ 
+
+Method parameters in fate.core.PlatformConnectors.jira.testcycle with type arguments of type TestCycleItems
+
+Modifier and Type
+Method
+Description
+void
+TestCycle.setItems(List<TestCycleItems> items)
+ 
+
+
+
+
+
+
+
+
+
+

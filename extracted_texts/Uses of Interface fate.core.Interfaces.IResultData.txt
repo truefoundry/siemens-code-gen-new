@@ -1,0 +1,114 @@
+Uses of Interface fate.core.Interfaces.IResultData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IResultData
+
+Packages that use IResultData
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.PlatformConnectors.alm
+ 
+
+
+
+
+
+Uses of IResultData in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot that return IResultData
+
+Modifier and Type
+Method
+Description
+IResultData
+CoreHandlerConfig.getTcPath()
+
+Retrieves the Test case path.
+
+
+Constructors in fate.core.CompositionRoot with parameters of type IResultData
+
+Modifier
+Constructor
+Description
+ 
+CoreHandlerConfig(IResultData iocTestPath,
+ String iocTcName)
+
+Constructor
+
+
+
+
+
+
+Uses of IResultData in fate.core.PlatformConnectors.alm
+Methods in fate.core.PlatformConnectors.alm with parameters of type IResultData
+
+Modifier and Type
+Method
+Description
+String
+ALMHandler.postRun(ProjectData config,
+ String tcName,
+ IResultData testSet,
+ TcStates state,
+ String steps)
+
+Posts the test run result to the ALM platform.
+
+
+
+
+
+
+
+
+
+
+

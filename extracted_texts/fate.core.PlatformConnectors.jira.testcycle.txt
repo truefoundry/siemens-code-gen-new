@@ -1,0 +1,103 @@
+fate.core.PlatformConnectors.jira.testcycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcycle
+
+
+package fate.core.PlatformConnectors.jira.testcycle
+
+
+
+
+Related Packages
+
+Package
+Description
+fate.core.PlatformConnectors.jira
+ 
+fate.core.PlatformConnectors.jira.testcase
+ 
+fate.core.PlatformConnectors.jira.testcaseresult
+ 
+
+
+
+
+
+Classes
+
+Class
+Description
+Summary
+
+Created by Michael on 08.04.2019.
+
+TestCycle
+
+Created by Michael on 08.04.2019.
+
+TestCycleItems
+
+Created by Michael on 08.04.2019.
+
+
+
+
+
+
+
+
+
+
+

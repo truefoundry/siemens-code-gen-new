@@ -1,0 +1,251 @@
+StepItem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Results
+Class StepItem
+
+java.lang.Object
+fate.core.Results.StepItem
+
+
+
+public class StepItem
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+StepItem(String stepName,
+ String testName)
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.apache.commons.lang3.tuple.Pair<File,Boolean>
+getScreenShot()
+ 
+String
+getStepActual()
+ 
+String
+getStepExpected()
+ 
+String
+getStepLogLine()
+ 
+String
+getStepName()
+ 
+TcStates
+getStepStatus()
+ 
+String
+getTestName()
+ 
+void
+setStepActual(String actual)
+ 
+void
+setStepExpected(String expected)
+ 
+void
+setStepStatus(TcStates state)
+ 
+void
+takeScreenshot(String filePath,
+ boolean asFile)
+
+Takes screenshot and holds the file in current step object.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+StepItem
+public StepItem(String stepName,
+ String testName)
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+takeScreenshot
+public void takeScreenshot(String filePath,
+ boolean asFile)
+Takes screenshot and holds the file in current step object.
+
+Parameters:
+asFile - If true, screenshot will be saved in output folder as file, otherwise pushed as attachment to selected system.
+
+
+
+
+
+getStepLogLine
+public String getStepLogLine()
+
+
+
+
+getTestName
+public String getTestName()
+
+
+
+
+getStepExpected
+public String getStepExpected()
+
+
+
+
+setStepExpected
+public void setStepExpected(String expected)
+
+
+
+
+getStepName
+public String getStepName()
+
+
+
+
+getStepActual
+public String getStepActual()
+
+
+
+
+setStepActual
+public void setStepActual(String actual)
+
+
+
+
+getStepStatus
+public TcStates getStepStatus()
+
+
+
+
+setStepStatus
+public void setStepStatus(TcStates state)
+
+
+
+
+getScreenShot
+public org.apache.commons.lang3.tuple.Pair<File,Boolean> getScreenShot()
+
+
+
+
+
+
+
+
+
+
+
+
+

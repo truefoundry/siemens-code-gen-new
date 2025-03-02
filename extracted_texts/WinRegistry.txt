@@ -1,0 +1,193 @@
+WinRegistry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class WinRegistry
+
+java.lang.Object
+fate.core.ControlImplementations.WinRegistry
+
+
+
+public class WinRegistry
+extends Object
+Handles registry based operations.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static String
+readRegistryKey(IRegistryKey regQuery)
+
+Executes registry query and returns keys value.
+
+static String
+readRegistryKey(String path,
+ String command,
+ String key)
+
+Executes registry query and returns keys value.
+
+static void
+setLoginPrompt(boolean activate)
+
+Activated or deactivates login prompt for username and password.
+
+static void
+setRegistryKey(String command,
+ String path,
+ String keyName,
+ WinRegistryKeyType keyType,
+ String keyValue)
+
+Manipulates wanted registry key on current machine.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setRegistryKey
+public static void setRegistryKey(String command,
+ String path,
+ String keyName,
+ WinRegistryKeyType keyType,
+ String keyValue)
+Manipulates wanted registry key on current machine.
+
+Parameters:
+command - Reg command e.g. "reg add", "reg delete" etc.
+path - Path to wanted key e.g. HKLM\Software etc.
+keyName - Name of wanted key.
+keyType - Type of wanted key.
+keyValue - Value to set into wanted key.
+
+
+
+
+
+setLoginPrompt
+public static void setLoginPrompt(boolean activate)
+Activated or deactivates login prompt for username and password.
+
+
+
+
+readRegistryKey
+public static String readRegistryKey(IRegistryKey regQuery)
+Executes registry query and returns keys value.
+
+Parameters:
+regQuery - WinRegistryKeys Enum with query data.
+Returns:
+Value of wanted registry key or MsgCode.NOT_FOUND.
+
+
+
+
+
+readRegistryKey
+public static String readRegistryKey(String path,
+ String command,
+ String key)
+Executes registry query and returns keys value.
+
+Returns:
+Value of wanted registry key or MsgCode.NOT_FOUND.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+RunningProcess
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class RunningProcess
+
+java.lang.Object
+fate.core.ControlImplementations.CoreCleaner
+fate.core.ControlImplementations.RunningProcess
+
+
+
+
+public class RunningProcess
+extends CoreCleaner
+Running process object class to access available info of runningProcesses in tasklist.
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+InputStream
+getErrorStream()
+
+Gets the error stream associated with this process.
+
+InputStream
+getInputStream()
+
+Gets the input stream associated with this process.
+
+int
+getMemUsage()
+
+Gets the memory usage of this process in kilobytes.
+
+String
+getName()
+
+Gets the name of this process.
+
+OutputStream
+getOutputStream()
+
+Gets the output stream associated with this process.
+
+String
+getPid()
+
+Gets the process ID (PID) as a string.
+
+int
+getPidInt()
+
+Gets the process ID (PID) as an integer.
+
+Process
+getProcess()
+
+Gets the underlying Process object for this running process.
+
+String
+getSessionName()
+
+Gets the session name associated with this process.
+
+String
+getSessionNum()
+
+Gets the session number associated with this process.
+
+boolean
+isAlive()
+
+Checks whether this process is still alive (running).
+
+
+
+
+
+Methods inherited from class fate.core.ControlImplementations.CoreCleaner
+addToGC, clean, countRunningProcesses, getAllProcesses, getHighestPid, getMemoryUsage, getProcessID, getRunningProcess, killAllByName, killByName, killByPid, quitDriver
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getProcess
+public Process getProcess()
+Gets the underlying Process object for this running process.
+
+Returns:
+The Process object associated with this running process.
+
+
+
+
+
+getInputStream
+public InputStream getInputStream()
+Gets the input stream associated with this process.
+
+Returns:
+The input stream.
+
+
+
+
+
+getErrorStream
+public InputStream getErrorStream()
+Gets the error stream associated with this process.
+
+Returns:
+The error stream.
+
+
+
+
+
+getOutputStream
+public OutputStream getOutputStream()
+Gets the output stream associated with this process.
+
+Returns:
+The output stream.
+
+
+
+
+
+isAlive
+public boolean isAlive()
+Checks whether this process is still alive (running).
+
+Returns:
+`true` if the process is alive, otherwise `false`.
+
+
+
+
+
+getName
+public String getName()
+Gets the name of this process.
+
+Returns:
+The name of the process.
+
+
+
+
+
+getPid
+public String getPid()
+Gets the process ID (PID) as a string.
+
+Returns:
+The process ID (PID) as a string.
+
+
+
+
+
+getPidInt
+public int getPidInt()
+Gets the process ID (PID) as an integer.
+
+Returns:
+The process ID (PID) as an integer.
+
+
+
+
+
+getSessionName
+public String getSessionName()
+Gets the session name associated with this process.
+
+Returns:
+The session name.
+
+
+
+
+
+getSessionNum
+public String getSessionNum()
+Gets the session number associated with this process.
+
+Returns:
+The session number.
+
+
+
+
+
+getMemUsage
+public int getMemUsage()
+Gets the memory usage of this process in kilobytes.
+
+Returns:
+The memory usage in kilobytes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

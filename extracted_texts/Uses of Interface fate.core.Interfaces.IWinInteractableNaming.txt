@@ -1,0 +1,540 @@
+Uses of Interface fate.core.Interfaces.IWinInteractableNaming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IWinInteractableNaming
+
+Packages that use IWinInteractableNaming
+
+Package
+Description
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of IWinInteractableNaming in fate.core.CompositionRoot.WinApp
+Methods in fate.core.CompositionRoot.WinApp with parameters of type IWinInteractableNaming
+
+Modifier and Type
+Method
+Description
+void
+CheckBox.check(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks the checkBox
+
+IWinInteractable
+CoreWinInteractables.clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+void
+Dialog.close(IWinInteractableNaming dialog)
+
+Closes the dialog
+
+void
+Window.close(IWinInteractableNaming window)
+
+Close the desired window
+
+boolean
+CoreWinInteractables.exists(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+void
+Tree.expand(IWinInteractableNaming item,
+ IWinInteractableNaming... root)
+ 
+void
+TreeItem.expand(IWinInteractableNaming item,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Button.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+CheckBox.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+ComboBox.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+DataItem.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Dialog.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Document.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Edit.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Header.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Image.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Link.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+List.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+ListItem.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Menu.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+MenuBar.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+MenuItem.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Pane.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+ProgressBar.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+RadioButton.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+ScrollBar.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+SplitButton.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+StatusBar.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Tab.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+TabItem.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Table.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Text.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+TitleBar.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+ToolBar.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Tree.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+TreeItem.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+Window.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+List<String>
+List.getAll(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+GetAll list Items for the wanted EList
+
+List<String>
+Header.getAllHeaders(IWinInteractableNaming header,
+ IWinInteractableNaming... root)
+
+Gets the headers items for the desired header
+
+List<String>
+Table.getAllItems(IWinInteractableNaming table,
+ String column,
+ IWinInteractableNaming... root)
+
+Get the list of items for the wanted column
+
+String
+CoreWinInteractables.getAttribute(IWinInteractableNaming name,
+ String attribute,
+ IWinInteractableNaming... root)
+ 
+int
+Table.getColumnCount(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+
+Gets the column count of the wanted table
+
+List<String>
+Table.getColumnNames(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+
+Gets the column names of the wanted table
+
+int
+CoreWinInteractables.getHeight(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+String
+Table.getItem(IWinInteractableNaming table,
+ String column,
+ String identifier,
+ String wantedColumn,
+ IWinInteractableNaming... root)
+
+Get the value of cell by identifying it using the column and identifier
+
+org.openqa.selenium.Point
+CoreWinInteractables.getLocation(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+org.openqa.selenium.WebElement
+CoreWinInteractables.getRoot(IWinInteractableNaming name)
+ 
+int
+Table.getRowCount(IWinInteractableNaming table,
+ IWinInteractableNaming... root)
+
+Gets the row count of the wanted table
+
+String
+CoreWinInteractables.getText(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+int
+CoreWinInteractables.getWidth(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+CoreWinInteractables.hasFocus(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+CoreWinInteractables.isBlank(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+CoreWinInteractables.isEmpty(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+CoreWinInteractables.isEnabled(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+Tree.isExpanded(IWinInteractableNaming item,
+ IWinInteractableNaming... root)
+ 
+boolean
+TreeItem.isExpanded(IWinInteractableNaming treeItem,
+ IWinInteractableNaming... root)
+ 
+boolean
+CoreWinInteractables.isOnScreen(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+boolean
+CoreWinInteractables.isSelected(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+void
+Dialog.maximize(IWinInteractableNaming dialog)
+
+Maximizes the dialog
+
+void
+Dialog.minimize(IWinInteractableNaming dialog)
+
+Minimizes the dialog
+
+void
+RadioButton.select(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Selects the wanted radioButton
+
+IWinInteractable
+CoreWinInteractables.sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+ 
+void
+Table.setItemValue(IWinInteractableNaming table,
+ String column,
+ String identifier,
+ String wantedColumn,
+ String value,
+ IWinInteractableNaming... root)
+
+Set the item value by finding it using the column and identifier value
+
+void
+CheckBox.uncheck(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Unchecks the checkBox
+
+IWinInteractable
+CoreWinInteractables.waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+
+
+
+
+
+Uses of IWinInteractableNaming in fate.core.Interfaces
+Methods in fate.core.Interfaces with parameters of type IWinInteractableNaming
+
+Modifier and Type
+Method
+Description
+IWinInteractable
+IWinInteractable.clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Clears the wanted element
+
+IWinInteractable
+IWinInteractable.click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Click this element.
+
+boolean
+IWinInteractable.exists(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks existence of control in the DOM.
+
+default void
+IWinInteractable.expand(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Expands the wanted control if it is not expanded
+
+@Nullable org.openqa.selenium.WebElement
+IWinInteractable.findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+String
+IWinInteractable.getAttribute(IWinInteractableNaming name,
+ String attribute,
+ IWinInteractableNaming... root)
+
+Get the value of the given attribute of the element.
+
+int
+IWinInteractable.getHeight(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns height of wanted control.
+
+org.openqa.selenium.Point
+IWinInteractable.getLocation(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns location of wanted control.
+
+String
+IWinInteractable.getText(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns text from wanted element.
+
+int
+IWinInteractable.getWidth(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Returns width of wanted control.
+
+boolean
+IWinInteractable.hasFocus(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks if wanted element has focus.
+
+boolean
+IWinInteractable.isBlank(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks if wanted control is empty or contain whitespace.
+
+boolean
+IWinInteractable.isEmpty(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks if wanted control is empty.
+
+boolean
+IWinInteractable.isEnabled(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Is the element currently enabled or not? This will generally return true for everything but
+ disabled input elements.
+
+default boolean
+IWinInteractable.isExpanded(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Check if the Control is expanded
+
+boolean
+IWinInteractable.isOnScreen(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Check "offscreen" property to detect whether the item is displayed on the current screen view or  not
+
+boolean
+IWinInteractable.isSelected(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Check if the Control is selected
+
+IWinInteractable
+IWinInteractable.sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted Keys to wanted control.
+
+IWinInteractable
+IWinInteractable.sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted String to wanted control.
+
+IWinInteractable
+IWinInteractable.waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for disposal of wanted element.
+
+IWinInteractable
+IWinInteractable.waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become clickable.
+
+IWinInteractable
+IWinInteractable.waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become visible.
+
+
+
+
+
+
+
+
+
+
+

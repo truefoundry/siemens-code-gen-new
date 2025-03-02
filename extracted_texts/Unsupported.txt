@@ -1,0 +1,75 @@
+Unsupported
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Field | 
+Optional | 
+Required
+
+
+Detail: 
+Field | 
+Element
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Annotations
+Annotation Interface Unsupported
+
+
+
+@Target(METHOD)
+@Retention(RUNTIME)
+public @interface Unsupported
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+Uses of Package fate.core.Email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Packagefate.core.Email
+
+Packages that use fate.core.Email
+
+Package
+Description
+fate.core.Email
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Classes in fate.core.Email used by fate.core.Email
+
+Class
+Description
+EMailData
+
+Represents the data of an email, including its ID, subject, content, sender, reply-to, IETC.
+
+IEmailConfig
+ 
+
+
+
+
+
+Classes in fate.core.Email used by fate.core.Interfaces
+
+Class
+Description
+IEmailConfig
+ 
+
+
+
+
+
+
+
+
+
+

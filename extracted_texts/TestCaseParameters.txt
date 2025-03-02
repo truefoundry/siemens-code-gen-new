@@ -1,0 +1,232 @@
+TestCaseParameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure
+Class TestCaseParameters
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.TestCaseParameters
+
+
+
+public class TestCaseParameters
+extends Object
+Retrieves the parameters from the azure test case.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestCaseParameters()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+deleteRowByMaturityDate(int tcID,
+ String colName,
+ String maturityDate)
+
+Delete the row from the sharedParameter endpoint  using the particular colName
+ As well as it rearranges the row id from 1 to n
+
+static Stream<Map<String,String>>
+getParametersFromJSON(org.json.JSONObject obj)
+
+In the fields Table1,insert the tag-name as key and the  value inside the tag ad value for that particular key
+ repeat it for each rows
+
+HashMap<Integer,ArrayList<String>>
+getSharedParametersRowData(int tcID)
+
+Retrives the data in the form of hashmap where key is the row index
+ and value is arraylist containing row values
+
+Stream<Map<String,String>>
+getTCDataFromJSON()
+ 
+void
+insertSharedParametersRowData(int tcID,
+ String maturityDate,
+ String internalDeal,
+ String mirrorDeal,
+ String externalDeal)
+
+Insert the Row in the table
+
+Map<String,List<String>>
+parseJSONtoXML(org.json.JSONObject obj)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TestCaseParameters
+public TestCaseParameters()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getTCDataFromJSON
+public Stream<Map<String,String>> getTCDataFromJSON()
+
+
+
+
+getParametersFromJSON
+public static Stream<Map<String,String>> getParametersFromJSON(org.json.JSONObject obj)
+In the fields Table1,insert the tag-name as key and the  value inside the tag ad value for that particular key
+ repeat it for each rows
+
+Parameters:
+obj - JSONObject
+Returns:
+Key is the table heading and column is the respective row
+
+
+
+
+
+parseJSONtoXML
+public Map<String,List<String>> parseJSONtoXML(org.json.JSONObject obj)
+
+
+
+
+getSharedParametersRowData
+public HashMap<Integer,ArrayList<String>> getSharedParametersRowData(int tcID)
+Retrives the data in the form of hashmap where key is the row index
+ and value is arraylist containing row values
+
+
+
+
+insertSharedParametersRowData
+public void insertSharedParametersRowData(int tcID,
+ String maturityDate,
+ String internalDeal,
+ String mirrorDeal,
+ String externalDeal)
+Insert the Row in the table
+
+
+
+
+deleteRowByMaturityDate
+public void deleteRowByMaturityDate(int tcID,
+ String colName,
+ String maturityDate)
+Delete the row from the sharedParameter endpoint  using the particular colName
+ As well as it rearranges the row id from 1 to n
+
+
+
+
+
+
+
+
+
+
+
+
+

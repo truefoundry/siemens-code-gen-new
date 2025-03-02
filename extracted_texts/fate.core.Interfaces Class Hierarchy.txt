@@ -1,0 +1,78 @@
+fate.core.Interfaces Class Hierarchy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Hierarchy For Package fate.core.Interfaces
+Package Hierarchies:
+
+All Packages
+
+
+
+Interface Hierarchy
+
+fate.core.Interfaces.IBrowserExtensions
+fate.core.Interfaces.ICoreWinFindControl
+fate.core.Interfaces.IExcelWorkBook
+fate.core.Interfaces.IInteractable
+
+fate.core.Interfaces.ICoreCssControl
+
+
+fate.core.Interfaces.IInteractableNaming
+fate.core.Interfaces.IRegistryKey
+fate.core.Interfaces.IResultData
+fate.core.Interfaces.IResultPlatformHandler
+fate.core.Interfaces.ITestData
+fate.core.Interfaces.IWinApplication
+fate.core.Interfaces.IWinInteractable
+fate.core.Interfaces.IWinInteractableNaming
+
+
+
+
+
+
+

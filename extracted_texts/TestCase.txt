@@ -1,0 +1,430 @@
+TestCase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcase
+Class TestCase
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcase.TestCase
+
+
+
+public class TestCase
+extends Object
+Represents a test case with metadata, status, and related information.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestCase()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getCreatedBy()
+ 
+String
+getCreatedOn()
+ 
+String
+getFolder()
+ 
+List<String>
+getIssueLinks()
+ 
+String
+getKey()
+ 
+String
+getLastTestResultStatus()
+ 
+String
+getLatestVersion()
+ 
+int
+getMajorVersion()
+ 
+String
+getName()
+ 
+String
+getOpdatedOn()
+ 
+Parameters
+getParameters()
+ 
+String
+getPriority()
+ 
+String
+getProjectKey()
+ 
+String
+getStatus()
+ 
+TestScript
+getTestScript()
+ 
+String
+getUpdatedBy()
+ 
+void
+setCreatedBy(String createdBy)
+ 
+void
+setCreatedOn(String createdOn)
+ 
+void
+setFolder(String folder)
+ 
+void
+setIssueLinks(List<String> issueLinks)
+ 
+void
+setKey(String key)
+ 
+void
+setLastTestResultStatus(String lastTestResultStatus)
+ 
+void
+setLatestVersion(String latestVersion)
+ 
+void
+setMajorVersion(int majorVersion)
+ 
+void
+setName(String name)
+ 
+void
+setParameters(Parameters parameters)
+ 
+void
+setPriority(String priority)
+ 
+void
+setProjectKey(String projectKey)
+ 
+void
+setStatus(String status)
+ 
+void
+setTestScript(TestScript testScript)
+ 
+void
+setUpdatedBy(String updatedBy)
+ 
+void
+setUpdatedOn(String updatedOn)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TestCase
+public TestCase()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getUpdatedBy
+public String getUpdatedBy()
+
+
+
+
+setUpdatedBy
+public void setUpdatedBy(String updatedBy)
+
+
+
+
+getOpdatedOn
+public String getOpdatedOn()
+
+
+
+
+setUpdatedOn
+public void setUpdatedOn(String updatedOn)
+
+
+
+
+getMajorVersion
+public int getMajorVersion()
+
+
+
+
+setMajorVersion
+public void setMajorVersion(int majorVersion)
+
+
+
+
+getPriority
+public String getPriority()
+
+
+
+
+setPriority
+public void setPriority(String priority)
+
+
+
+
+getCreatedOn
+public String getCreatedOn()
+
+
+
+
+setCreatedOn
+public void setCreatedOn(String createdOn)
+
+
+
+
+getProjectKey
+public String getProjectKey()
+
+
+
+
+setProjectKey
+public void setProjectKey(String projectKey)
+
+
+
+
+getFolder
+public String getFolder()
+
+
+
+
+setFolder
+public void setFolder(String folder)
+
+
+
+
+getCreatedBy
+public String getCreatedBy()
+
+
+
+
+setCreatedBy
+public void setCreatedBy(String createdBy)
+
+
+
+
+getLatestVersion
+public String getLatestVersion()
+
+
+
+
+setLatestVersion
+public void setLatestVersion(String latestVersion)
+
+
+
+
+getTestScript
+public TestScript getTestScript()
+
+
+
+
+setTestScript
+public void setTestScript(TestScript testScript)
+
+
+
+
+getIssueLinks
+public List<String> getIssueLinks()
+
+
+
+
+setIssueLinks
+public void setIssueLinks(List<String> issueLinks)
+
+
+
+
+getLastTestResultStatus
+public String getLastTestResultStatus()
+
+
+
+
+setLastTestResultStatus
+public void setLastTestResultStatus(String lastTestResultStatus)
+
+
+
+
+getName
+public String getName()
+
+
+
+
+setName
+public void setName(String name)
+
+
+
+
+getParameters
+public Parameters getParameters()
+
+
+
+
+setParameters
+public void setParameters(Parameters parameters)
+
+
+
+
+getKey
+public String getKey()
+
+
+
+
+setKey
+public void setKey(String key)
+
+
+
+
+getStatus
+public String getStatus()
+
+
+
+
+setStatus
+public void setStatus(String status)
+
+
+
+
+
+
+
+
+
+
+
+
+

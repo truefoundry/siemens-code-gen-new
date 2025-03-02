@@ -1,0 +1,87 @@
+Uses of Class fate.core.PlatformConnectors.jira.testcycle.Summary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PlatformConnectors.jira.testcycle.Summary
+
+Packages that use Summary
+
+Package
+Description
+fate.core.PlatformConnectors.jira.testcycle
+ 
+
+
+
+
+
+Uses of Summary in fate.core.PlatformConnectors.jira.testcycle
+Methods in fate.core.PlatformConnectors.jira.testcycle that return Summary
+
+Modifier and Type
+Method
+Description
+Summary
+TestCycle.getExecutionResultsSummary()
+ 
+
+Methods in fate.core.PlatformConnectors.jira.testcycle with parameters of type Summary
+
+Modifier and Type
+Method
+Description
+void
+TestCycle.setExecutionResultsSummary(Summary executionResultsSummary)
+ 
+
+
+
+
+
+
+
+
+
+

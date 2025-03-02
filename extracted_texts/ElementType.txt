@@ -1,0 +1,426 @@
+ElementType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class ElementType
+
+java.lang.Object
+java.lang.Enum<ElementType>
+fate.core.Enums.ElementType
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<ElementType>, Constable
+
+
+public enum ElementType
+extends Enum<ElementType>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+ADMIN_HMENU
+ 
+BUTTON
+ 
+CHECKBOX
+ 
+COLLAPSIBLE
+ 
+COMBOBOX
+ 
+EDITBOX
+ 
+FINDER
+ 
+HEADLINE
+ 
+HORIZONTAL_SCROLL
+ 
+LABEL
+ 
+MASK
+ 
+NOT_AVAILABLE
+ 
+OPTION
+ 
+POPUP
+ 
+RADIOBTN
+ 
+REGION_ADMINISTRATIVE
+ 
+REGION_GEOGRAPHICAL
+ 
+SEARCH_CONTAINER
+ 
+SECTION
+ 
+SORT_ASC
+ 
+SORT_DESC
+ 
+SORT_NA
+ 
+SUB_WFMENU
+ 
+SUBMENU
+ 
+TABLE
+ 
+TEXTAREA
+ 
+VERTICAL_SCROLL
+ 
+WF_MENU
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static ElementType
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static ElementType[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+NOT_AVAILABLE
+public static final ElementType NOT_AVAILABLE
+
+
+
+
+SEARCH_CONTAINER
+public static final ElementType SEARCH_CONTAINER
+
+
+
+
+COMBOBOX
+public static final ElementType COMBOBOX
+
+
+
+
+OPTION
+public static final ElementType OPTION
+
+
+
+
+EDITBOX
+public static final ElementType EDITBOX
+
+
+
+
+BUTTON
+public static final ElementType BUTTON
+
+
+
+
+LABEL
+public static final ElementType LABEL
+
+
+
+
+TABLE
+public static final ElementType TABLE
+
+
+
+
+CHECKBOX
+public static final ElementType CHECKBOX
+
+
+
+
+RADIOBTN
+public static final ElementType RADIOBTN
+
+
+
+
+TEXTAREA
+public static final ElementType TEXTAREA
+
+
+
+
+ADMIN_HMENU
+public static final ElementType ADMIN_HMENU
+
+
+
+
+MASK
+public static final ElementType MASK
+
+
+
+
+REGION_ADMINISTRATIVE
+public static final ElementType REGION_ADMINISTRATIVE
+
+
+
+
+REGION_GEOGRAPHICAL
+public static final ElementType REGION_GEOGRAPHICAL
+
+
+
+
+WF_MENU
+public static final ElementType WF_MENU
+
+
+
+
+POPUP
+public static final ElementType POPUP
+
+
+
+
+SECTION
+public static final ElementType SECTION
+
+
+
+
+FINDER
+public static final ElementType FINDER
+
+
+
+
+COLLAPSIBLE
+public static final ElementType COLLAPSIBLE
+
+
+
+
+HEADLINE
+public static final ElementType HEADLINE
+
+
+
+
+SUBMENU
+public static final ElementType SUBMENU
+
+
+
+
+SUB_WFMENU
+public static final ElementType SUB_WFMENU
+
+
+
+
+SORT_ASC
+public static final ElementType SORT_ASC
+
+
+
+
+SORT_DESC
+public static final ElementType SORT_DESC
+
+
+
+
+SORT_NA
+public static final ElementType SORT_NA
+
+
+
+
+VERTICAL_SCROLL
+public static final ElementType VERTICAL_SCROLL
+
+
+
+
+HORIZONTAL_SCROLL
+public static final ElementType HORIZONTAL_SCROLL
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static ElementType[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static ElementType valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

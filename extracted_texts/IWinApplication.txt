@@ -1,0 +1,120 @@
+IWinApplication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IWinApplication
+
+
+
+All Known Implementing Classes:
+WinApplicationsIDs
+
+
+public interface IWinApplication
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getApplicationID()
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getApplicationID
+String getApplicationID()
+
+
+
+
+
+
+
+
+
+
+
+
+

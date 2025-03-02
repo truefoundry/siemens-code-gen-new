@@ -1,0 +1,177 @@
+ParamData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure.SharedParameters.POJO
+Class ParamData
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.ParamData
+
+
+
+public class ParamData
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ParamData()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+List<DataRow>
+getDataRow()
+ 
+String
+getLastId()
+ 
+void
+setDataRow(List<DataRow> dataRow)
+ 
+void
+setLastId(String lastId)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ParamData
+public ParamData()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getLastId
+public String getLastId()
+
+
+
+
+setLastId
+public void setLastId(String lastId)
+
+
+
+
+getDataRow
+public List<DataRow> getDataRow()
+
+
+
+
+setDataRow
+public void setDataRow(List<DataRow> dataRow)
+
+
+
+
+
+
+
+
+
+
+
+
+

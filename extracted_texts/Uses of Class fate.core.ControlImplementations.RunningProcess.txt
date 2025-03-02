@@ -1,0 +1,138 @@
+Uses of Class fate.core.ControlImplementations.RunningProcess
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.ControlImplementations.RunningProcess
+
+Packages that use RunningProcess
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.ControlImplementations
+ 
+
+
+
+
+
+Uses of RunningProcess in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot that return RunningProcess
+
+Modifier and Type
+Method
+Description
+RunningProcess
+WinDriverServer.getServerProcess()
+
+Provides the process information for the running server.
+
+RunningProcess
+WebDriverStore.getWinAppServerProcess()
+ 
+
+
+
+
+
+Uses of RunningProcess in fate.core.CompositionRoot.WinApp
+Methods in fate.core.CompositionRoot.WinApp that return RunningProcess
+
+Modifier and Type
+Method
+Description
+RunningProcess
+WinAppDriverContainer.getProcess()
+ 
+
+
+
+
+
+Uses of RunningProcess in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations that return RunningProcess
+
+Modifier and Type
+Method
+Description
+static RunningProcess
+CmdScriptExec.executeCommand(String command)
+
+Executes wanted cmd command.
+
+static RunningProcess
+CmdScriptExec.executeCommand(String[] cmdarray)
+
+Executes wanted cmd command.
+
+static RunningProcess
+CoreCleaner.getRunningProcess(String pid)
+
+Returns a running process name by its PID.
+
+
+Methods in fate.core.ControlImplementations that return types with arguments of type RunningProcess
+
+Modifier and Type
+Method
+Description
+static List<RunningProcess>
+CoreCleaner.getAllProcesses()
+
+Returns list of RunningProcess objects with all attributes available from task list.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+Uses of Enum Class fate.core.Enums.EType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.EType
+
+Packages that use EType
+
+Package
+Description
+fate.core.Enums
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of EType in fate.core.Enums
+Methods in fate.core.Enums that return EType
+
+Modifier and Type
+Method
+Description
+static EType
+EType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static EType[]
+EType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+Uses of EType in fate.core.Interfaces
+Methods in fate.core.Interfaces that return EType
+
+Modifier and Type
+Method
+Description
+EType
+IInteractableNaming.getType()
+
+Returns the type of wanted enum e.g.
+
+
+
+
+
+
+
+
+
+
+

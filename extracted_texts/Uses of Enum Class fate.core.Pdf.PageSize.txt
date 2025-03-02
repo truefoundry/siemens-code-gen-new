@@ -1,0 +1,102 @@
+Uses of Enum Class fate.core.Pdf.PageSize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Pdf.PageSize
+
+Packages that use PageSize
+
+Package
+Description
+fate.core.Pdf
+ 
+
+
+
+
+
+Uses of PageSize in fate.core.Pdf
+Methods in fate.core.Pdf that return PageSize
+
+Modifier and Type
+Method
+Description
+PageSize
+CorePdfControl.getCommonPageSizeOfPDFDocument(Path path)
+
+Get common size of all pages of pdf document.
+
+static PageSize
+PageSize.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PageSize[]
+PageSize.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+Methods in fate.core.Pdf that return types with arguments of type PageSize
+
+Modifier and Type
+Method
+Description
+@NotNull List<PageSize>
+CorePdfControl.getSizesForPages(File file)
+
+Get sizes for each page of document determined by path.
+
+
+
+
+
+
+
+
+
+
+

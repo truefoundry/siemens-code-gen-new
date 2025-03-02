@@ -1,0 +1,177 @@
+DataRow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure.SharedParameters.POJO
+Class DataRow
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.DataRow
+
+
+
+public class DataRow
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+DataRow()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getId()
+ 
+List<Kvp>
+getKvp()
+ 
+void
+setId(String id)
+ 
+void
+setKvp(List<Kvp> kvp)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+DataRow
+public DataRow()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getId
+public String getId()
+
+
+
+
+setId
+public void setId(String id)
+
+
+
+
+getKvp
+public List<Kvp> getKvp()
+
+
+
+
+setKvp
+public void setKvp(List<Kvp> kvp)
+
+
+
+
+
+
+
+
+
+
+
+
+

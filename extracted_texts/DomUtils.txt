@@ -1,0 +1,459 @@
+DomUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class DomUtils
+
+java.lang.Object
+fate.core.ControlImplementations.DomUtils
+
+
+
+public class DomUtils
+extends Object
+Handles elements based on dom structure.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static boolean
+checkAttributeValue(org.openqa.selenium.WebElement element,
+ String attrName,
+ String expectedValue,
+ BiPredicate<String,String> comparisonType,
+ boolean... trim)
+
+Verifies if value of element's attribute is as expected.
+
+static boolean
+checkTruthyAttribute(org.openqa.selenium.WebElement element,
+ String attrName,
+ List<String>... truthyValues)
+
+Verifies if element's attribute value matches any of expected truthy values in the list.
+
+static String
+extractSelectorString(org.openqa.selenium.By selector)
+
+Extracts the selector from By selector object, can be used to extend given selector and reuse it in new By object.
+
+static org.openqa.selenium.WebElement
+findShadowRootChild(org.openqa.selenium.By child,
+ org.openqa.selenium.By shadowRoot)
+
+Finds a nested child element in shadow root.
+
+static List<org.openqa.selenium.WebElement>
+findShadowRootChildren(org.openqa.selenium.By child,
+ org.openqa.selenium.By shadowRoot)
+
+Finds a nested child elements in shadow root.
+
+static org.openqa.selenium.By
+getElementsSelector(org.openqa.selenium.WebElement ele)
+
+Returns cssSelector for wanted WebElement.
+
+static String
+getExtractedSelector(org.openqa.selenium.WebElement element)
+
+Returns string selector which was extracted from given WebElements By selector.
+
+static org.openqa.selenium.SearchContext
+getNestedShadowRoot(List<String> parentTags)
+
+Will return shadow root element for the last parent element in the list.
+
+static org.openqa.selenium.WebElement
+getParentElement(org.openqa.selenium.WebElement obj,
+ int levelsAbove)
+
+Returns parent DOM object of given WebElement.
+
+static org.openqa.selenium.SearchContext
+getShadowRootElement(org.openqa.selenium.By parent)
+
+Returns '#shadow-root' element for specified parent.
+
+static org.openqa.selenium.WebElement
+getSpecificParent(org.openqa.selenium.By root,
+ String attribute,
+ String attValue,
+ int maxLevels)
+
+Returns specific parent within range of wanted parent levels.
+
+static org.openqa.selenium.WebElement
+getSpecificParent(org.openqa.selenium.WebElement root,
+ String attribute,
+ String attValue,
+ int maxLevels)
+
+Returns specific parent within range of wanted parent levels.
+
+static boolean
+isFresh(org.openqa.selenium.WebElement element)
+
+checks if the wanted element is fresh or staled
+
+static org.openqa.selenium.WebElement
+setRootElement(org.openqa.selenium.By modal,
+ org.openqa.selenium.By... providedRoot)
+
+Returns root element based on following priorities, logic: (sent root has the highest priority)
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findShadowRootChild
+@CheckForNull
+public static org.openqa.selenium.WebElement findShadowRootChild(@Nonnull
+ org.openqa.selenium.By child,
+ @Nonnull
+ org.openqa.selenium.By shadowRoot)
+Finds a nested child element in shadow root.
+
+Parameters:
+child - selector of nested child element in shadow root
+shadowRoot - selector of shadow root
+Returns:
+nested child element in shadow root if present or null otherwise
+
+
+
+
+
+findShadowRootChildren
+public static List<org.openqa.selenium.WebElement> findShadowRootChildren(@Nonnull
+ org.openqa.selenium.By child,
+ @Nonnull
+ org.openqa.selenium.By shadowRoot)
+Finds a nested child elements in shadow root.
+
+Parameters:
+child - selector of nested child elements in shadow root
+shadowRoot - selector of shadow root
+Returns:
+list of nested child elements in shadow root if present or empty list otherwise
+
+
+
+
+
+extractSelectorString
+public static String extractSelectorString(@Nonnull
+ org.openqa.selenium.By selector)
+Extracts the selector from By selector object, can be used to extend given selector and reuse it in new By object.
+
+Parameters:
+selector - By selector where to extract the string.
+Returns:
+Extracted string which can be used in new By selector object.
+
+
+
+
+
+getSpecificParent
+@CheckForNull
+public static org.openqa.selenium.WebElement getSpecificParent(org.openqa.selenium.By root,
+ String attribute,
+ String attValue,
+ int maxLevels)
+Returns specific parent within range of wanted parent levels.
+
+Parameters:
+root - Root object selector from where the search is started.
+attribute - Wanted attribute of parent object.
+attValue - Wanted value of parent object.
+maxLevels - Maximum range of wanted parent.
+Returns:
+Parent object as WebElement or null.
+
+
+
+
+
+getSpecificParent
+@CheckForNull
+public static org.openqa.selenium.WebElement getSpecificParent(org.openqa.selenium.WebElement root,
+ String attribute,
+ String attValue,
+ int maxLevels)
+                                                        throws org.openqa.selenium.StaleElementReferenceException
+Returns specific parent within range of wanted parent levels.
+
+Parameters:
+root - Root object from where the search is started.
+attribute - Wanted attribute of parent object.
+attValue - Wanted value of parent object.
+maxLevels - Maximum range of wanted parent.
+Returns:
+Parent object as WebElement or null.
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+getParentElement
+@CheckForNull
+public static org.openqa.selenium.WebElement getParentElement(@Nonnull
+ org.openqa.selenium.WebElement obj,
+ int levelsAbove)
+                                                       throws org.openqa.selenium.StaleElementReferenceException
+Returns parent DOM object of given WebElement.
+
+Parameters:
+obj - child object of wanted parent.
+levelsAbove - Parent level.
+Returns:
+Parent object
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+getExtractedSelector
+public static String getExtractedSelector(org.openqa.selenium.WebElement element)
+Returns string selector which was extracted from given WebElements By selector. Returned selector can be extended and reused in new By selector object.
+
+Parameters:
+element - WebElement where to extract the selector.
+Returns:
+Selector as string e.g. "ByCssSelector : div[class=test]" -> "div[class=test]"
+
+
+
+
+
+getElementsSelector
+public static org.openqa.selenium.By getElementsSelector(@Nonnull
+ org.openqa.selenium.WebElement ele)
+                                                  throws org.openqa.selenium.StaleElementReferenceException
+Returns cssSelector for wanted WebElement. Be aware of changing states or class, extracted selector won't fit to the object after some
+ iteration due to possible changes in class or style.
+
+Parameters:
+ele - Wanted WebElement from which to extract a cssSelector.
+Returns:
+By cssSelector.
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+setRootElement
+public static org.openqa.selenium.WebElement setRootElement(org.openqa.selenium.By modal,
+ org.openqa.selenium.By... providedRoot)
+Returns root element based on following priorities, logic: (sent root has the highest priority)
+ 
+ if 'providedRoot' is provided AND also 'modal' is visible checks for 'providedRoot' inside modal,
+ if no 'modal' is visible checks for 'providedRoot'
+ if no 'providedRoot' is provided checks for 'modal',
+ if no 'modal' or 'providedRoot' is found returns documents :root element as a root
+
+Parameters:
+modal - modal element selector (specific for each project)
+providedRoot - provided root element
+Returns:
+root element based on priority
+
+
+
+
+
+getShadowRootElement
+public static org.openqa.selenium.SearchContext getShadowRootElement(org.openqa.selenium.By parent)
+Returns '#shadow-root' element for specified parent.
+
+Parameters:
+parent - Parent element selector of wanted 'shadow-root' element.
+Returns:
+Shadow root element as WebElement.
+
+
+
+
+
+getNestedShadowRoot
+public static org.openqa.selenium.SearchContext getNestedShadowRoot(List<String> parentTags)
+Will return shadow root element for the last parent element in the list. Elements in the list have to be TAG NAMES and in the same hierarchy
+ as they are in the DOM.
+
+Parameters:
+parentTags - list of tags of all the parent elements
+Returns:
+shadow root element for the last parent in the list or null
+
+
+
+
+
+isFresh
+public static boolean isFresh(org.openqa.selenium.WebElement element)
+checks if the wanted element is fresh or staled
+
+Parameters:
+element - WebElement object to check its staleness state
+Returns:
+ExpectedCondition true if the element is not staled
+
+
+
+
+
+checkAttributeValue
+public static boolean checkAttributeValue(@Nonnull
+ org.openqa.selenium.WebElement element,
+ @Nonnull
+ String attrName,
+ @Nonnull
+ String expectedValue,
+ @Nonnull
+ BiPredicate<String,String> comparisonType,
+ boolean... trim)
+                                   throws org.openqa.selenium.StaleElementReferenceException
+Verifies if value of element's attribute is as expected.
+
+Parameters:
+element - wanted web element to check value of attribute
+attrName - name of the attribute to obtain from web element
+expectedValue - expected value to compare with the value of web element's attribute
+comparisonType - predicate to compare expected and actual attribute values
+                       Examples: String.contains(java.lang.CharSequence), String.equalsIgnoreCase(java.lang.String), String.equals(java.lang.Object), etc.
+trim - if true (or by default) the expected and actual attribute values are both trimmed
+Returns:
+true if element's attribute value fulfills the given comparison predicate or false otherwise (in case of error or not matched
+ comparison)
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+checkTruthyAttribute
+@SafeVarargs
+public static boolean checkTruthyAttribute(@Nonnull
+ org.openqa.selenium.WebElement element,
+ @Nonnull
+ String attrName,
+ List<String>... truthyValues)
+                                    throws org.openqa.selenium.StaleElementReferenceException
+Verifies if element's attribute value matches any of expected truthy values in the list.
+ Values are trimmed before comparison and case is ignored.
+
+Parameters:
+element - wanted web element to check value of attribute
+attrName - name of the attribute to obtain from web element
+truthyValues - list of truthy values
+Returns:
+true if element's attribute value is matches any expected value or false otherwise (in case of error or not matched
+ comparison)
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+
+
+
+
+
+
+
+
+

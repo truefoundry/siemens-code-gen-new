@@ -1,0 +1,297 @@
+TestResultToPush
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcaseresult
+Class TestResultToPush
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcaseresult.TestResultToPush
+
+
+
+public class TestResultToPush
+extends Object
+Created by Michael on 24.07.2018.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestResultToPush(String testCaseKey,
+ String testRunKey,
+ String status,
+ String environment,
+ String executionDate,
+ long executionTime,
+ List<JiraTestStep> scriptResults,
+ String comment,
+ List<String> issues)
+
+Standard constructor
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getEnvironment()
+ 
+List<String>
+getIssues()
+ 
+List<JiraTestStep>
+getScriptResults()
+ 
+String
+getTestCaseKey()
+ 
+String
+getTestRunKey()
+ 
+void
+setComment(String comment)
+ 
+void
+setEnvironment(String environment)
+ 
+void
+setExecutionDate(String executionDate)
+ 
+void
+setExecutionTime(long executionTime)
+ 
+void
+setIssues(List<String> issues)
+ 
+void
+setScriptResults(List<JiraTestStep> scriptResults)
+ 
+void
+setStatus(String status)
+ 
+void
+setTestCaseKey(String testCaseKey)
+ 
+void
+setTestRunKey(String testRunKey)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TestResultToPush
+public TestResultToPush(String testCaseKey,
+ String testRunKey,
+ String status,
+ String environment,
+ String executionDate,
+ long executionTime,
+ List<JiraTestStep> scriptResults,
+ String comment,
+ List<String> issues)
+Standard constructor
+
+Parameters:
+testCaseKey - Key of the testcase
+testRunKey - Key of the testrun
+status - Status
+environment - Environment
+executionDate - ExecutionDate
+executionTime - ExecutionTime
+comment - Comment
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getTestCaseKey
+public String getTestCaseKey()
+
+
+
+
+setTestCaseKey
+public void setTestCaseKey(String testCaseKey)
+
+
+
+
+getTestRunKey
+public String getTestRunKey()
+
+
+
+
+setTestRunKey
+public void setTestRunKey(String testRunKey)
+
+
+
+
+setStatus
+public void setStatus(String status)
+
+
+
+
+getEnvironment
+public String getEnvironment()
+
+
+
+
+setEnvironment
+public void setEnvironment(String environment)
+
+
+
+
+setComment
+public void setComment(String comment)
+
+
+
+
+setExecutionDate
+public void setExecutionDate(String executionDate)
+
+
+
+
+setExecutionTime
+public void setExecutionTime(long executionTime)
+
+
+
+
+getScriptResults
+public List<JiraTestStep> getScriptResults()
+
+
+
+
+setScriptResults
+public void setScriptResults(List<JiraTestStep> scriptResults)
+
+
+
+
+getIssues
+public List<String> getIssues()
+
+
+
+
+setIssues
+public void setIssues(List<String> issues)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+ParamNames
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure.SharedParameters.POJO
+Class ParamNames
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.ParamNames
+
+
+
+public class ParamNames
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ParamNames()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+List<String>
+getParam()
+ 
+void
+setParam(List<String> param)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ParamNames
+public ParamNames()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getParam
+public List<String> getParam()
+
+
+
+
+setParam
+public void setParam(List<String> param)
+
+
+
+
+
+
+
+
+
+
+
+
+

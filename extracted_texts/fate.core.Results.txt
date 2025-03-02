@@ -1,0 +1,88 @@
+fate.core.Results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Results
+
+
+package fate.core.Results
+
+
+
+
+Classes
+
+Class
+Description
+CleanUpOptions
+ 
+ComparerOptions
+ 
+ResultCollector
+ 
+StepItem
+ 
+TcResComparer
+
+Utility class for comparing values
+
+
+
+
+
+
+
+
+
+
+

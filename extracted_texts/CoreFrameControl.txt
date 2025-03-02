@@ -1,0 +1,370 @@
+CoreFrameControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreFrameControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreFrameControl
+
+
+
+public class CoreFrameControl
+extends Object
+Handles the frame selection.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreFrameControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+existsInCurrentFrame(String iframeID)
+
+Checks if wanted iFrame ID exists in current iFrame.
+
+String
+getFrameHRef(String frameID)
+
+Returns href of wanted frame.
+
+String
+getFrameTitle(String frameID)
+
+Returns title of wanted iFrame.
+
+List<String>
+getIFrames(boolean searchOnlyVisibleIframes)
+
+Returns all visible iFrames from current selected iFrame.
+
+String
+getIFramesAttribute(String attName)
+
+Returns wanted attribute of current iFrame.
+
+String
+getIFramesName()
+
+Returns the name of current selected iFrame.
+
+boolean
+isReadyStateComplete(String frameID)
+
+Returns ReadyStateComplete state of wanted iFrame.
+
+void
+switchToDefault()
+
+Switches to default content and waits 100 ms.
+
+void
+switchToFrame(int index)
+
+Switch to frame by index
+
+void
+switchToFrame(String frameID,
+ String... parent)
+
+Switches to wanted frame.
+
+void
+switchToFrame(org.openqa.selenium.By targetIframeSelector,
+ boolean searchFromDefaultContent,
+ org.openqa.selenium.By... parents)
+
+Switches to the requested  iframe.
+
+void
+switchToParentIFrame()
+
+Switches from current iFrame to parent iFrame.
+
+void
+waitUntilHRefExists(String frameID,
+ int maxWaitTime,
+ String href)
+
+Waits until wanted iFrame has a desired href.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreFrameControl
+public CoreFrameControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+switchToFrame
+public void switchToFrame(org.openqa.selenium.By targetIframeSelector,
+ boolean searchFromDefaultContent,
+ org.openqa.selenium.By... parents)
+Switches to the requested  iframe.
+
+Parameters:
+targetIframeSelector - a selector for the target iframe.
+searchFromDefaultContent - if true, switch to the default content iframe before searching for the requested iframe
+parents - if given, the program switches first sequentially to the iframes specified by parents and afterward to the iframe
+                                 specified by targetIframeSelector
+
+
+
+
+
+getIFrames
+public List<String> getIFrames(boolean searchOnlyVisibleIframes)
+Returns all visible iFrames from current selected iFrame. The function finds only direct child objects, nested objects are ignored.
+
+Parameters:
+searchOnlyVisibleIframes - Searches only in visible iFrames, invisible will be ignored.
+Returns:
+String list with iFrame id's.
+
+
+
+
+
+switchToDefault
+public void switchToDefault()
+Switches to default content and waits 100 ms.
+
+
+
+
+getFrameTitle
+public String getFrameTitle(String frameID)
+Returns title of wanted iFrame.
+
+Parameters:
+frameID - iFrame id.
+Returns:
+Name as string or MsgCode.NOT_FOUND.
+
+
+
+
+
+getFrameHRef
+public String getFrameHRef(String frameID)
+Returns href of wanted frame.
+
+Parameters:
+frameID - iFrame ID.
+Returns:
+href as string or MsgCode.NOT_FOUND
+
+
+
+
+
+switchToFrame
+public void switchToFrame(String frameID,
+ String... parent)
+Switches to wanted frame.
+
+Parameters:
+frameID - Name or ID of wanted iFrame.
+parent - Optional Name or ID of parent frame.
+
+
+
+
+
+getIFramesName
+public String getIFramesName()
+Returns the name of current selected iFrame.
+
+Returns:
+name as String or MsgCode.NOT_FOUND.
+
+
+
+
+
+isReadyStateComplete
+public boolean isReadyStateComplete(String frameID)
+Returns ReadyStateComplete state of wanted iFrame.
+
+Parameters:
+frameID - If of wanted iFrame.
+Returns:
+true if completed.
+
+
+
+
+
+waitUntilHRefExists
+public void waitUntilHRefExists(String frameID,
+ int maxWaitTime,
+ String href)
+Waits until wanted iFrame has a desired href.
+
+Parameters:
+frameID - IF of wanted iFrame.
+maxWaitTime - Max wait time.
+href - Desired href.
+
+
+
+
+
+switchToFrame
+public void switchToFrame(int index)
+Switch to frame by index
+
+Parameters:
+index - zero-based index
+
+
+
+
+
+getIFramesAttribute
+public String getIFramesAttribute(String attName)
+Returns wanted attribute of current iFrame.
+
+Parameters:
+attName - Attributes name of wanted iFrame.
+Returns:
+Attribute MsgCode.NOT_FOUND if nothing has been found.
+
+
+
+
+
+switchToParentIFrame
+public void switchToParentIFrame()
+Switches from current iFrame to parent iFrame.
+
+
+
+
+existsInCurrentFrame
+public boolean existsInCurrentFrame(String iframeID)
+Checks if wanted iFrame ID exists in current iFrame.
+
+Parameters:
+iframeID - Wanted iFrame.
+Returns:
+Bool value if wanted iFrame exists.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

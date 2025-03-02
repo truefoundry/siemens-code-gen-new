@@ -1,0 +1,239 @@
+HttpDeleteWithBody
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Http
+Class HttpDeleteWithBody
+
+java.lang.Object
+org.apache.http.message.AbstractHttpMessage
+org.apache.http.client.methods.AbstractExecutionAwareRequest
+org.apache.http.client.methods.HttpRequestBase
+org.apache.http.client.methods.HttpEntityEnclosingRequestBase
+fate.core.Http.HttpDeleteWithBody
+
+
+
+
+
+
+
+All Implemented Interfaces:
+Cloneable, org.apache.http.client.methods.AbortableHttpRequest, org.apache.http.client.methods.Configurable, org.apache.http.client.methods.HttpExecutionAware, org.apache.http.client.methods.HttpUriRequest, org.apache.http.HttpEntityEnclosingRequest, org.apache.http.HttpMessage, org.apache.http.HttpRequest
+
+
+public class HttpDeleteWithBody
+extends org.apache.http.client.methods.HttpEntityEnclosingRequestBase
+Extends HttpEntityEnclosingRequestBase to allow sending a body with a DELETE request.
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+static final String
+METHOD_NAME
+ 
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+HttpDeleteWithBody(String uri)
+
+Constructs an HttpDeleteWithBody with the specified URI.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getMethod()
+
+Returns the HTTP method name for this request.
+
+
+
+
+
+Methods inherited from class org.apache.http.client.methods.HttpEntityEnclosingRequestBase
+clone, expectContinue, getEntity, setEntity
+
+Methods inherited from class org.apache.http.client.methods.HttpRequestBase
+getConfig, getProtocolVersion, getRequestLine, getURI, releaseConnection, setConfig, setProtocolVersion, setURI, started, toString
+
+Methods inherited from class org.apache.http.client.methods.AbstractExecutionAwareRequest
+abort, completed, isAborted, reset, setCancellable, setConnectionRequest, setReleaseTrigger
+
+Methods inherited from class org.apache.http.message.AbstractHttpMessage
+addHeader, addHeader, containsHeader, getAllHeaders, getFirstHeader, getHeaders, getLastHeader, getParams, headerIterator, headerIterator, removeHeader, removeHeaders, setHeader, setHeader, setHeaders, setParams
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, wait, wait, wait
+
+Methods inherited from interface org.apache.http.HttpMessage
+addHeader, addHeader, containsHeader, getAllHeaders, getFirstHeader, getHeaders, getLastHeader, getParams, getProtocolVersion, headerIterator, headerIterator, removeHeader, removeHeaders, setHeader, setHeader, setHeaders, setParams
+
+Methods inherited from interface org.apache.http.HttpRequest
+getRequestLine
+
+Methods inherited from interface org.apache.http.client.methods.HttpUriRequest
+abort, isAborted
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+METHOD_NAME
+public static final String METHOD_NAME
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+HttpDeleteWithBody
+public HttpDeleteWithBody(String uri)
+Constructs an HttpDeleteWithBody with the specified URI.
+
+Parameters:
+uri - the URI for the DELETE request
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getMethod
+public String getMethod()
+Returns the HTTP method name for this request.
+
+Specified by:
+getMethod in interface org.apache.http.client.methods.HttpUriRequest
+Specified by:
+getMethod in class org.apache.http.client.methods.HttpRequestBase
+Returns:
+the method name "DELETE"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

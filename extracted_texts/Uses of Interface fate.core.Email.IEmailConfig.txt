@@ -1,0 +1,129 @@
+Uses of Interface fate.core.Email.IEmailConfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Email.IEmailConfig
+
+Packages that use IEmailConfig
+
+Package
+Description
+fate.core.Email
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of IEmailConfig in fate.core.Email
+Classes in fate.core.Email that implement IEmailConfig
+
+Modifier and Type
+Class
+Description
+class 
+EmailConfig
+
+Represents the configuration settings for an email, including email address, password,
+ proxy address, proxy port, and exchange server address.
+
+
+Methods in fate.core.Email that return IEmailConfig
+
+Modifier and Type
+Method
+Description
+IEmailConfig
+EmailConfig.setExchangeServerAddress(String address)
+
+Sets the exchange server address.
+
+IEmailConfig
+IEmailConfig.setExchangeServerAddress(String address)
+ 
+IEmailConfig
+EmailConfig.setProxyAddress(String address)
+
+Sets the proxy address.
+
+IEmailConfig
+IEmailConfig.setProxyAddress(String address)
+ 
+IEmailConfig
+EmailConfig.setProxyPort(int port)
+
+Sets the proxy port.
+
+IEmailConfig
+IEmailConfig.setProxyPort(int port)
+ 
+
+
+
+
+
+Uses of IEmailConfig in fate.core.Interfaces
+Methods in fate.core.Interfaces that return IEmailConfig
+
+Modifier and Type
+Method
+Description
+IEmailConfig
+ITestData.getEmailConfig()
+
+Returns Email configuration.
+
+
+
+
+
+
+
+
+
+
+

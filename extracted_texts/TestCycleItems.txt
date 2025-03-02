@@ -1,0 +1,376 @@
+TestCycleItems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcycle
+Class TestCycleItems
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcycle.TestCycleItems
+
+
+
+public class TestCycleItems
+extends Object
+Created by Michael on 08.04.2019. SRSNG-
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestCycleItems()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getActualEndDate()
+ 
+String
+getActualStartDate()
+ 
+String
+getAssignedTo()
+ 
+org.json.JSONObject
+getCustomFields()
+ 
+String
+getEnvironment()
+ 
+String
+getExecutedBy()
+ 
+String
+getExecutionDate()
+ 
+int
+getId()
+ 
+String
+getPlannedEndDate()
+ 
+String
+getPlannedStartDate()
+ 
+String
+getStatus()
+ 
+String
+getTestCaseKey()
+ 
+String
+getUserKey()
+ 
+void
+setActualEndDate(String actualEndDate)
+ 
+void
+setActualStartDate(String actualStartDate)
+ 
+void
+setAssignedTo(String assignedTo)
+ 
+void
+setCustomFields(org.json.JSONObject customFields)
+ 
+void
+setEnvironment(String environment)
+ 
+void
+setExecutedBy(String executedBy)
+ 
+void
+setExecutionDate(String executionDate)
+ 
+void
+setId(int id)
+ 
+void
+setPlannedEndDate(String plannedEndDate)
+ 
+void
+setPlannedStartDate(String plannedStartDate)
+ 
+void
+setStatus(String status)
+ 
+void
+setTestCaseKey(String testCaseKey)
+ 
+void
+setUserKey(String userKey)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TestCycleItems
+public TestCycleItems()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getId
+public int getId()
+
+
+
+
+setId
+public void setId(int id)
+
+
+
+
+getTestCaseKey
+public String getTestCaseKey()
+
+
+
+
+setTestCaseKey
+public void setTestCaseKey(String testCaseKey)
+
+
+
+
+getEnvironment
+public String getEnvironment()
+
+
+
+
+setEnvironment
+public void setEnvironment(String environment)
+
+
+
+
+getUserKey
+public String getUserKey()
+
+
+
+
+setUserKey
+public void setUserKey(String userKey)
+
+
+
+
+getExecutionDate
+public String getExecutionDate()
+
+
+
+
+setExecutionDate
+public void setExecutionDate(String executionDate)
+
+
+
+
+getStatus
+public String getStatus()
+
+
+
+
+setStatus
+public void setStatus(String status)
+
+
+
+
+getExecutedBy
+public String getExecutedBy()
+
+
+
+
+setExecutedBy
+public void setExecutedBy(String executedBy)
+
+
+
+
+getAssignedTo
+public String getAssignedTo()
+
+
+
+
+setAssignedTo
+public void setAssignedTo(String assignedTo)
+
+
+
+
+getPlannedStartDate
+public String getPlannedStartDate()
+
+
+
+
+setPlannedStartDate
+public void setPlannedStartDate(String plannedStartDate)
+
+
+
+
+getPlannedEndDate
+public String getPlannedEndDate()
+
+
+
+
+setPlannedEndDate
+public void setPlannedEndDate(String plannedEndDate)
+
+
+
+
+getActualStartDate
+public String getActualStartDate()
+
+
+
+
+setActualStartDate
+public void setActualStartDate(String actualStartDate)
+
+
+
+
+getActualEndDate
+public String getActualEndDate()
+
+
+
+
+setActualEndDate
+public void setActualEndDate(String actualEndDate)
+
+
+
+
+getCustomFields
+public org.json.JSONObject getCustomFields()
+
+
+
+
+setCustomFields
+public void setCustomFields(org.json.JSONObject customFields)
+
+
+
+
+
+
+
+
+
+
+
+
+

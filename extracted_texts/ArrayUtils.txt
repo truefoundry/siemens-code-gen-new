@@ -1,0 +1,235 @@
+ArrayUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class ArrayUtils
+
+java.lang.Object
+fate.core.ControlImplementations.ArrayUtils
+
+
+
+public class ArrayUtils
+extends Object
+Performs various operations on arrays.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static <T> boolean
+checkArrayItem(T[] array,
+ int... index)
+
+Checks if the item in the array is NOT NULL.
+
+static Optional<Boolean>
+getArrayItem(boolean[] array,
+ int... index)
+
+Obtains an item in the boolean array if it's available by index.
+
+static Optional<Double>
+getArrayItem(double[] array,
+ int... index)
+
+Obtains an item in the double array if it's available by index.
+
+static Optional<Integer>
+getArrayItem(int[] array,
+ int... index)
+
+Obtains an item in the int array if it's available by index.
+
+static <T> Optional<T>
+getArrayItem(T[] array,
+ int... index)
+
+Obtains an item in the array if it's NOT NULL by index.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+checkArrayItem
+public static <T> boolean checkArrayItem(@Nonnull
+ T[] array,
+ @Nonnull
+ int... index)
+Checks if the item in the array is NOT NULL. If it's a String array, verifies item is NOT blank.
+
+Parameters:
+array - Array of items to be checked.
+index - Optional index of the item to be checked. If not specified, first element will be checked (on zero index).
+Returns:
+true, if item on given index is NOT NULL and NOT blank in case of String,
+ otherwise returns false if length of array is zero or smaller than provided item's index.
+
+
+
+
+
+getArrayItem
+public static <T> Optional<T> getArrayItem(@Nonnull
+ T[] array,
+ @Nonnull
+ int... index)
+Obtains an item in the array if it's NOT NULL by index. If it's a String array, verifies item is NOT blank.
+
+Parameters:
+array - Array of items.
+index - Optional index of the item to be obtained. If not specified, first element will be obtained (on zero index).
+Returns:
+Optional describing the given value, if item on given index is NOT NULL and NOT blank in case of String,
+ otherwise returns empty Optional if length of array is zero or smaller than provided item's index.
+
+
+
+
+
+getArrayItem
+public static Optional<Integer> getArrayItem(@Nonnull
+ int[] array,
+ @Nonnull
+ int... index)
+Obtains an item in the int array if it's available by index.
+
+Parameters:
+array - Array of integers.
+index - Optional index of the item to be obtained. If not specified, first element will be obtained (on zero index).
+Returns:
+Array item, if item on given index is available,
+ otherwise returns empty Optional if length of array is zero or smaller than provided item's index.
+
+
+
+
+
+getArrayItem
+public static Optional<Double> getArrayItem(@Nonnull
+ double[] array,
+ @Nonnull
+ int... index)
+Obtains an item in the double array if it's available by index.
+
+Parameters:
+array - Array of doubles.
+index - Optional index of the item to be obtained. If not specified, first element will be obtained (on zero index).
+Returns:
+Array item, if item on given index is available,
+ otherwise returns empty Optional if length of array is zero or smaller than provided item's index.
+
+
+
+
+
+getArrayItem
+public static Optional<Boolean> getArrayItem(@Nonnull
+ boolean[] array,
+ @Nonnull
+ int... index)
+Obtains an item in the boolean array if it's available by index.
+
+Parameters:
+array - Array of booleans.
+index - Optional index of the item to be obtained. If not specified, first element will be obtained (on zero index).
+Returns:
+Array item, if item on given index is available,
+ otherwise returns empty Optional if length of array is zero or smaller than provided item's index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

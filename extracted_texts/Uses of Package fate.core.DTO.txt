@@ -1,0 +1,137 @@
+Uses of Package fate.core.DTO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Packagefate.core.DTO
+
+Packages that use fate.core.DTO
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.ControlImplementations
+ 
+fate.core.DTO
+ 
+fate.core.PlatformConnectors.alm
+ 
+fate.core.PlatformConnectors.jira
+ 
+
+
+
+
+
+Classes in fate.core.DTO used by fate.core.CompositionRoot
+
+Class
+Description
+ProjectData
+
+A utility class to store all the required project data.
+
+
+
+
+
+
+Classes in fate.core.DTO used by fate.core.ControlImplementations
+
+Class
+Description
+DateManipulator
+
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+
+
+
+
+
+Classes in fate.core.DTO used by fate.core.DTO
+
+Class
+Description
+DateManipulator
+
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+
+
+
+
+
+Classes in fate.core.DTO used by fate.core.PlatformConnectors.alm
+
+Class
+Description
+ProjectData
+
+A utility class to store all the required project data.
+
+
+
+
+
+
+Classes in fate.core.DTO used by fate.core.PlatformConnectors.jira
+
+Class
+Description
+ProjectData
+
+A utility class to store all the required project data.
+
+
+
+
+
+
+
+
+
+
+

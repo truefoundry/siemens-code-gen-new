@@ -1,0 +1,133 @@
+CoreOTP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.OTP
+Class CoreOTP
+
+java.lang.Object
+fate.core.OTP.CoreOTP
+
+
+
+public class CoreOTP
+extends Object
+Utility class for generating OTP (One-Time Password) using TOTP (Time-based One-Time Password).
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static String
+getOtp(String secret)
+
+Generates a TOTP-based OTP using the given secret.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getOtp
+public static String getOtp(String secret)
+Generates a TOTP-based OTP using the given secret.
+
+Parameters:
+secret - the shared secret key for OTP generation
+Returns:
+the generated OTP as a string, or a predefined "not available" message in case of errors
+
+
+
+
+
+
+
+
+
+
+
+
+
+

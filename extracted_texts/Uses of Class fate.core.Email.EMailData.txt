@@ -1,0 +1,81 @@
+Uses of Class fate.core.Email.EMailData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.Email.EMailData
+
+Packages that use EMailData
+
+Package
+Description
+fate.core.Email
+ 
+
+
+
+
+
+Uses of EMailData in fate.core.Email
+Methods in fate.core.Email that return types with arguments of type EMailData
+
+Modifier and Type
+Method
+Description
+static List<EMailData>
+Email.getMailInfos(ITestData user,
+ String queryString)
+
+Returns information about the emails matched by a query string.
+
+
+
+
+
+
+
+
+
+
+

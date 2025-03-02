@@ -1,0 +1,124 @@
+Uses of Class fate.core.DTO.DateManipulator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.DTO.DateManipulator
+
+Packages that use DateManipulator
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.DTO
+ 
+
+
+
+
+
+Uses of DateManipulator in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type DateManipulator
+
+Modifier and Type
+Method
+Description
+static String
+Generator.getSpecificDate(DateManipulator date,
+ DateFormat formatter)
+
+Returns manipulated date e.g.
+
+
+
+
+
+
+Uses of DateManipulator in fate.core.DTO
+Methods in fate.core.DTO that return DateManipulator
+
+Modifier and Type
+Method
+Description
+DateManipulator
+DateManipulator.setDay(int day)
+
+Sets the day.
+
+DateManipulator
+DateManipulator.setHour(int hour)
+
+Sets the hour.
+
+DateManipulator
+DateManipulator.setMinute(int minute)
+
+Sets the minute.
+
+DateManipulator
+DateManipulator.setMonth(int month)
+
+Sets the month.
+
+DateManipulator
+DateManipulator.setSecond(int second)
+
+Sets the second.
+
+DateManipulator
+DateManipulator.setYear(int year)
+
+Sets the year.
+
+
+
+
+
+
+
+
+
+
+

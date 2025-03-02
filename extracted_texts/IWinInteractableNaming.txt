@@ -1,0 +1,164 @@
+IWinInteractableNaming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IWinInteractableNaming
+
+
+
+public interface IWinInteractableNaming
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract MethodsDefault Methods
+
+
+Modifier and Type
+Method
+Description
+default int
+getIndex()
+
+Returns an int value if current enum is an integer otherwise -1.
+
+String
+getProperty()
+ 
+EWinType
+getType()
+
+Returns the type of wanted enum e.g.
+
+String
+getValue()
+
+Returns string value of enum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getValue
+String getValue()
+Returns string value of enum.
+
+Returns:
+value.
+
+
+
+
+
+getProperty
+String getProperty()
+
+Returns:
+String of property if custom is used
+
+
+
+
+
+getType
+EWinType getType()
+Returns the type of wanted enum e.g. If it's a simple name as a String, xpath, ...etc.
+
+
+
+
+getIndex
+default int getIndex()
+Returns an int value if current enum is an integer otherwise -1.
+
+Returns:
+Integer value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

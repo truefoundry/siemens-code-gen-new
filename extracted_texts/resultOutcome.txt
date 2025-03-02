@@ -1,0 +1,322 @@
+resultOutcome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure
+Enum Class resultOutcome
+
+java.lang.Object
+java.lang.Enum<resultOutcome>
+fate.core.PlatformConnectors.azure.resultOutcome
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<resultOutcome>, Constable
+
+
+public enum resultOutcome
+extends Enum<resultOutcome>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+ABORTED
+ 
+BLOCKED
+ 
+ERROR
+ 
+FAILED
+ 
+IN_PROGRESS
+ 
+INCONCLUSIVE
+ 
+NONE
+ 
+NOT_APPLICABLE
+ 
+NOT_EXECUTED
+ 
+NOT_IMPACTED
+ 
+PASSED
+ 
+PAUSED
+ 
+TIMEOUT
+ 
+UNSPECIFIED
+ 
+WARNING
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static resultOutcome
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static resultOutcome[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+UNSPECIFIED
+public static final resultOutcome UNSPECIFIED
+
+
+
+
+NONE
+public static final resultOutcome NONE
+
+
+
+
+PASSED
+public static final resultOutcome PASSED
+
+
+
+
+FAILED
+public static final resultOutcome FAILED
+
+
+
+
+INCONCLUSIVE
+public static final resultOutcome INCONCLUSIVE
+
+
+
+
+TIMEOUT
+public static final resultOutcome TIMEOUT
+
+
+
+
+ABORTED
+public static final resultOutcome ABORTED
+
+
+
+
+BLOCKED
+public static final resultOutcome BLOCKED
+
+
+
+
+NOT_EXECUTED
+public static final resultOutcome NOT_EXECUTED
+
+
+
+
+WARNING
+public static final resultOutcome WARNING
+
+
+
+
+ERROR
+public static final resultOutcome ERROR
+
+
+
+
+NOT_APPLICABLE
+public static final resultOutcome NOT_APPLICABLE
+
+
+
+
+PAUSED
+public static final resultOutcome PAUSED
+
+
+
+
+IN_PROGRESS
+public static final resultOutcome IN_PROGRESS
+
+
+
+
+NOT_IMPACTED
+public static final resultOutcome NOT_IMPACTED
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static resultOutcome[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static resultOutcome valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

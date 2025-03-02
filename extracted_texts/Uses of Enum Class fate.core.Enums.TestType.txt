@@ -1,0 +1,136 @@
+Uses of Enum Class fate.core.Enums.TestType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.TestType
+
+Packages that use TestType
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.Enums
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of TestType in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot that return TestType
+
+Modifier and Type
+Method
+Description
+TestType
+AbstractCoreHandler.getType()
+
+Returns Type of current Handler.
+
+
+Methods in fate.core.CompositionRoot with parameters of type TestType
+
+Modifier and Type
+Method
+Description
+static AbstractCoreHandler
+CoreIocBuilder.getHandler(TestType type)
+
+Retrieves a test handler of the specified type.
+
+void
+AbstractCoreHandler.setType(TestType type)
+
+Determination of test type, UI or API test.
+
+
+
+
+
+
+Uses of TestType in fate.core.Enums
+Methods in fate.core.Enums that return TestType
+
+Modifier and Type
+Method
+Description
+static TestType
+TestType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static TestType[]
+TestType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+Uses of TestType in fate.core.Interfaces
+Methods in fate.core.Interfaces that return TestType
+
+Modifier and Type
+Method
+Description
+TestType
+IResultData.getType()
+ 
+
+
+
+
+
+
+
+
+
+

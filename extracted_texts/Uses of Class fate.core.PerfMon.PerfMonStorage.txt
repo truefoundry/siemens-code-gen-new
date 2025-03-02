@@ -1,0 +1,80 @@
+Uses of Class fate.core.PerfMon.PerfMonStorage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PerfMon.PerfMonStorage
+
+Packages that use PerfMonStorage
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+
+
+
+
+
+Uses of PerfMonStorage in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot that return PerfMonStorage
+
+Modifier and Type
+Method
+Description
+static PerfMonStorage
+CoreIocBuilder.getPerfMonStorage()
+
+Retrieves the PerfMonStorage instance.
+
+
+
+
+
+
+
+
+
+
+

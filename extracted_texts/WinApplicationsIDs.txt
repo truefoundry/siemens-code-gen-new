@@ -1,0 +1,223 @@
+WinApplicationsIDs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class WinApplicationsIDs
+
+java.lang.Object
+java.lang.Enum<WinApplicationsIDs>
+fate.core.Enums.WinApplicationsIDs
+
+
+
+
+All Implemented Interfaces:
+IWinApplication, Serializable, Comparable<WinApplicationsIDs>, Constable
+
+
+public enum WinApplicationsIDs
+extends Enum<WinApplicationsIDs>
+implements IWinApplication
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+CALC
+ 
+ROOT
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getApplicationID()
+ 
+static WinApplicationsIDs
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static WinApplicationsIDs[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+ROOT
+public static final WinApplicationsIDs ROOT
+
+
+
+
+CALC
+public static final WinApplicationsIDs CALC
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static WinApplicationsIDs[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static WinApplicationsIDs valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getApplicationID
+public String getApplicationID()
+
+Specified by:
+getApplicationID in interface IWinApplication
+
+
+
+
+
+
+
+
+
+
+
+
+
+

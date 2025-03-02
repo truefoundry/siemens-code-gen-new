@@ -1,0 +1,221 @@
+Uses of Enum Class fate.core.Enums.TcStates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.TcStates
+
+Packages that use TcStates
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.Enums
+ 
+fate.core.Interfaces
+ 
+fate.core.PlatformConnectors.alm
+ 
+fate.core.PlatformConnectors.azure
+ 
+fate.core.PlatformConnectors.jira
+ 
+fate.core.Results
+ 
+
+
+
+
+
+Uses of TcStates in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+void
+AbstractCoreHandler.abortTest(String message,
+ TcStates state)
+
+Stops the test immediately, result is failed.
+
+void
+AbstractCoreHandler.setTestResultState(TcStates state)
+
+Setting up test result state mainly if test found error during execution
+
+
+
+
+
+
+Uses of TcStates in fate.core.Enums
+Methods in fate.core.Enums that return TcStates
+
+Modifier and Type
+Method
+Description
+static TcStates
+TcStates.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static TcStates[]
+TcStates.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+Uses of TcStates in fate.core.Interfaces
+Methods in fate.core.Interfaces with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+String
+IResultPlatformHandler.pushToPlatform(TcStates state,
+ long executionTime)
+
+Pushes test results to selected platform after test execution.
+
+
+
+
+
+
+Uses of TcStates in fate.core.PlatformConnectors.alm
+Methods in fate.core.PlatformConnectors.alm with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+String
+ALMHandler.postRun(ProjectData config,
+ String tcName,
+ IResultData testSet,
+ TcStates state,
+ String steps)
+
+Posts the test run result to the ALM platform.
+
+void
+ALMHandler.updateRun(ProjectData config,
+ String runID,
+ TcStates state,
+ String comments)
+
+Updated existing run.
+
+
+
+
+
+
+Uses of TcStates in fate.core.PlatformConnectors.azure
+Methods in fate.core.PlatformConnectors.azure with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+String
+AzureHandler.pushToPlatform(TcStates state,
+ long executionTime)
+ 
+
+
+
+
+
+Uses of TcStates in fate.core.PlatformConnectors.jira
+Methods in fate.core.PlatformConnectors.jira with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+String
+JiraHandler.pushToPlatform(TcStates state,
+ long executionTime)
+ 
+
+
+
+
+
+Uses of TcStates in fate.core.Results
+Methods in fate.core.Results that return TcStates
+
+Modifier and Type
+Method
+Description
+TcStates
+StepItem.getStepStatus()
+ 
+
+Methods in fate.core.Results with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+void
+ResultCollector.setState(TcStates state)
+ 
+void
+StepItem.setStepStatus(TcStates state)
+ 
+
+
+
+
+
+
+
+
+
+

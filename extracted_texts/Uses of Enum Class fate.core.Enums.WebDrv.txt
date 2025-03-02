@@ -1,0 +1,129 @@
+Uses of Enum Class fate.core.Enums.WebDrv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.WebDrv
+
+Packages that use WebDrv
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Enums
+ 
+
+
+
+
+
+Uses of WebDrv in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type WebDrv
+
+Modifier and Type
+Method
+Description
+static String
+WebDriverObtainer.getBrowserVersion(WebDrv drv,
+ boolean shortVersion)
+
+Returns version of wanted local browser installation.
+
+static Path
+WebDriverObtainer.getDriversPath(WebDrv drv,
+ String version)
+
+Retrieves the path to the specified WebDriver for a given browser and version.
+
+static Path
+DirectoryControl.getPathOfWebDriverFile(WebDrv driver)
+
+Returns the path for wanted WebDriver from resources "Drivers" folder.
+
+static Path
+WebDriverObtainer.obtainDriver(WebDrv drv,
+ String... version)
+
+Downloads wanted WebDriver for wanted Browser and adds it to correct resource folder.
+
+UUID
+CoreBrowserControl.start(WebDrv wDriver,
+ String strURL,
+ CoreStartOptions... options)
+
+Starts with wanted browser and wanted URL.
+
+
+
+
+
+
+Uses of WebDrv in fate.core.Enums
+Methods in fate.core.Enums that return WebDrv
+
+Modifier and Type
+Method
+Description
+static WebDrv
+WebDrv.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static WebDrv[]
+WebDrv.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+
+
+
+
+

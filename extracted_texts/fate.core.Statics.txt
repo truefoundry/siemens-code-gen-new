@@ -1,0 +1,78 @@
+fate.core.Statics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Statics
+
+
+package fate.core.Statics
+
+
+
+
+Classes
+
+Class
+Description
+MsgCode
+ 
+
+
+
+
+
+
+
+
+
+

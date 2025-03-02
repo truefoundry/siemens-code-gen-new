@@ -1,0 +1,244 @@
+ElementStore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.ElementStore
+Class ElementStore
+
+java.lang.Object
+fate.core.CompositionRoot.ElementStore.ElementStore
+
+
+
+public class ElementStore
+extends Object
+This class provides the possibility to store several WebElements to check their staleness status
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ElementStore()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addElement(@NotNull IInteractableNaming name,
+ @NotNull org.openqa.selenium.WebElement element,
+ @NotNull org.openqa.selenium.By root)
+
+Adds Element to store by its name
+
+void
+addElement(@NotNull org.openqa.selenium.By name,
+ @NotNull org.openqa.selenium.WebElement element)
+
+Adds Element to store by its name
+
+org.openqa.selenium.WebElement
+getElement(@NotNull IInteractableNaming name,
+ @NotNull org.openqa.selenium.By root)
+
+Gets element by its name
+
+org.openqa.selenium.WebElement
+getElement(@NotNull org.openqa.selenium.By name)
+
+Gets element by its name
+
+void
+resetStore()
+
+Deletes all stored Element
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ElementStore
+public ElementStore()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+resetStore
+public void resetStore()
+Deletes all stored Element
+
+
+
+
+addElement
+public void addElement(@NotNull
+ @NotNull IInteractableNaming name,
+ @NotNull
+ @NotNull org.openqa.selenium.WebElement element,
+ @NotNull
+ @NotNull org.openqa.selenium.By root)
+Adds Element to store by its name
+
+Parameters:
+name - IIntractableNaming of the element
+element - WebElement
+root - Root element of wanted element.
+
+
+
+
+
+addElement
+public void addElement(@NotNull
+ @NotNull org.openqa.selenium.By name,
+ @NotNull
+ @NotNull org.openqa.selenium.WebElement element)
+Adds Element to store by its name
+
+Parameters:
+name - IIntractableNaming of the element
+element - WebElement
+
+
+
+
+
+getElement
+@CheckForNull
+public org.openqa.selenium.WebElement getElement(@NotNull
+ @NotNull IInteractableNaming name,
+ @NotNull
+ @NotNull org.openqa.selenium.By root)
+Gets element by its name
+
+Parameters:
+name - IIntractableNaming object for the name of desired WebElement
+root - Root element of wanted element.
+Returns:
+The found WebElement or null
+
+
+
+
+
+getElement
+@CheckForNull
+public org.openqa.selenium.WebElement getElement(@NotNull
+ @NotNull org.openqa.selenium.By name)
+Gets element by its name
+
+Parameters:
+name - IIntractableNaming object for the name of desired WebElement
+Returns:
+The found WebElement or null
+
+
+
+
+
+
+
+
+
+
+
+
+
+

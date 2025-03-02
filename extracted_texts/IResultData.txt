@@ -1,0 +1,158 @@
+IResultData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IResultData
+
+
+
+public interface IResultData
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getPath()
+ 
+String
+getPlanID()
+
+Returns ID of test plan.
+
+ResultPlatform
+getPlatform()
+ 
+String
+getSuiteID()
+
+Returns ID of test suite.
+
+TestType
+getType()
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getPlatform
+ResultPlatform getPlatform()
+
+
+
+
+getPlanID
+String getPlanID()
+Returns ID of test plan.
+
+
+
+
+getSuiteID
+String getSuiteID()
+Returns ID of test suite.
+
+
+
+
+getType
+TestType getType()
+
+
+
+
+getPath
+String getPath()
+
+
+
+
+
+
+
+
+
+
+
+
+

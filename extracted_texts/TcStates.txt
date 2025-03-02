@@ -1,0 +1,316 @@
+TcStates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class TcStates
+
+java.lang.Object
+java.lang.Enum<TcStates>
+fate.core.Enums.TcStates
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<TcStates>, Constable
+
+
+public enum TcStates
+extends Enum<TcStates>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+ABORTED
+ 
+BLOCKED
+ 
+ERROR
+ 
+FAILED
+ 
+INCONCLUSIVE
+ 
+NA
+ 
+NO_RUN
+ 
+NOT_COMPLETED
+ 
+OK
+ 
+PASSED
+ 
+PAUSED
+ 
+TIMEOUT
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getALMValue()
+ 
+String
+getAzureValue()
+ 
+String
+getJiraValue()
+ 
+static TcStates
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static TcStates[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+ABORTED
+public static final TcStates ABORTED
+
+
+
+
+INCONCLUSIVE
+public static final TcStates INCONCLUSIVE
+
+
+
+
+TIMEOUT
+public static final TcStates TIMEOUT
+
+
+
+
+OK
+public static final TcStates OK
+
+
+
+
+ERROR
+public static final TcStates ERROR
+
+
+
+
+FAILED
+public static final TcStates FAILED
+
+
+
+
+BLOCKED
+public static final TcStates BLOCKED
+
+
+
+
+PASSED
+public static final TcStates PASSED
+
+
+
+
+PAUSED
+public static final TcStates PAUSED
+
+
+
+
+NO_RUN
+public static final TcStates NO_RUN
+
+
+
+
+NOT_COMPLETED
+public static final TcStates NOT_COMPLETED
+
+
+
+
+NA
+public static final TcStates NA
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static TcStates[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static TcStates valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getALMValue
+public String getALMValue()
+
+
+
+
+getJiraValue
+public String getJiraValue()
+
+
+
+
+getAzureValue
+public String getAzureValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

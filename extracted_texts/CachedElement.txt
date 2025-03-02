@@ -1,0 +1,132 @@
+CachedElement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.ElementStore
+Class CachedElement
+
+java.lang.Object
+fate.core.CompositionRoot.ElementStore.CachedElement
+
+
+
+public class CachedElement
+extends Object
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.openqa.selenium.WebElement
+getElement()
+ 
+String
+getId()
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getElement
+public org.openqa.selenium.WebElement getElement()
+
+
+
+
+getId
+public String getId()
+
+
+
+
+
+
+
+
+
+
+
+
+

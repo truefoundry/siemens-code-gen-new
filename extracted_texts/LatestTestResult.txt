@@ -1,0 +1,375 @@
+LatestTestResult
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcaseresult
+Class LatestTestResult
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcaseresult.LatestTestResult
+
+
+
+public class LatestTestResult
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+LatestTestResult()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getActualEndDate()
+ 
+String
+getActualStartDate()
+ 
+String
+getEnvironment()
+ 
+String
+getExecutedBy()
+ 
+long
+getId()
+ 
+String[]
+getIssueLinks()
+ 
+String
+getKey()
+ 
+List<JiraTestStep>
+getScriptResults()
+ 
+String
+getTestCaseKey()
+ 
+String
+getUserKey()
+ 
+boolean
+isAutomated()
+ 
+void
+setActualEndDate(String actualEndDate)
+ 
+void
+setActualStartDate(String actualStartDate)
+ 
+void
+setAutomated(boolean automated)
+ 
+void
+setComment(String comment)
+ 
+void
+setEnvironment(String environment)
+ 
+void
+setExecutedBy(String executedBy)
+ 
+void
+setExecutionDate(String executionDate)
+ 
+void
+setExecutionTime(long executionTime)
+ 
+void
+setId(long id)
+ 
+void
+setIssueLinks(String[] issueLinks)
+ 
+void
+setKey(String key)
+ 
+void
+setScriptResults(List<JiraTestStep> scriptResults)
+ 
+void
+setStatus(String status)
+ 
+void
+setTestCaseKey(String testCaseKey)
+ 
+void
+setUserKey(String userKey)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+LatestTestResult
+public LatestTestResult()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getTestCaseKey
+public String getTestCaseKey()
+
+
+
+
+setTestCaseKey
+public void setTestCaseKey(String testCaseKey)
+
+
+
+
+setStatus
+public void setStatus(String status)
+
+
+
+
+getEnvironment
+public String getEnvironment()
+
+
+
+
+setEnvironment
+public void setEnvironment(String environment)
+
+
+
+
+setComment
+public void setComment(String comment)
+
+
+
+
+setExecutionDate
+public void setExecutionDate(String executionDate)
+
+
+
+
+setExecutionTime
+public void setExecutionTime(long executionTime)
+
+
+
+
+getScriptResults
+public List<JiraTestStep> getScriptResults()
+
+
+
+
+setScriptResults
+public void setScriptResults(List<JiraTestStep> scriptResults)
+
+
+
+
+getExecutedBy
+public String getExecutedBy()
+
+
+
+
+setExecutedBy
+public void setExecutedBy(String executedBy)
+
+
+
+
+getActualEndDate
+public String getActualEndDate()
+
+
+
+
+setActualEndDate
+public void setActualEndDate(String actualEndDate)
+
+
+
+
+getUserKey
+public String getUserKey()
+
+
+
+
+setUserKey
+public void setUserKey(String userKey)
+
+
+
+
+isAutomated
+public boolean isAutomated()
+
+
+
+
+setAutomated
+public void setAutomated(boolean automated)
+
+
+
+
+getActualStartDate
+public String getActualStartDate()
+
+
+
+
+setActualStartDate
+public void setActualStartDate(String actualStartDate)
+
+
+
+
+getId
+public long getId()
+
+
+
+
+setId
+public void setId(long id)
+
+
+
+
+getKey
+public String getKey()
+
+
+
+
+setKey
+public void setKey(String key)
+
+
+
+
+getIssueLinks
+public String[] getIssueLinks()
+
+
+
+
+setIssueLinks
+public void setIssueLinks(String[] issueLinks)
+
+
+
+
+
+
+
+
+
+
+
+
+

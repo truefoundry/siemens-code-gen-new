@@ -1,0 +1,112 @@
+TestTimeout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Field | 
+Optional | 
+Required
+
+
+Detail: 
+Field | 
+Element
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Annotations
+Annotation Interface TestTimeout
+
+
+
+@Target(METHOD)
+@Retention(RUNTIME)
+public @interface TestTimeout
+
+
+
+
+
+
+Required Element Summary
+Required Elements
+
+Modifier and Type
+Required Element
+Description
+int
+value
+ 
+
+
+
+
+
+
+
+
+
+
+Element Details
+
+
+
+value
+int value
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,271 @@
+HttpResponse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Http
+Class HttpResponse
+
+java.lang.Object
+fate.core.Http.HttpResponse
+
+
+
+public class HttpResponse
+extends Object
+Represents an HTTP response with an entity, status code, and headers.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+HttpResponse(String entity,
+ int statusCode,
+ HttpHeaders headers)
+
+Constructs an HttpResponse object.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getEntity()
+
+Retrieves the response entity.
+
+String
+getHeaderFirstValue(String headerName)
+
+gets the first value of the wanted header
+
+Map<String,List<String>>
+getHeaders()
+
+gets all headers with names
+
+List<String>
+getHeaderValues(String headerName)
+
+gets the values of the wanted header name
+
+int
+getStatusCode()
+
+Retrieves the HTTP status code.
+
+void
+setEntity(String entity)
+
+Sets the response entity.
+
+void
+setStatusCode(int statusCode)
+
+Sets the HTTP status code.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+HttpResponse
+public HttpResponse(String entity,
+ int statusCode,
+ HttpHeaders headers)
+Constructs an HttpResponse object.
+
+Parameters:
+entity - the body of the response as a string
+statusCode - the HTTP status code
+headers - the HTTP headers
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getEntity
+public String getEntity()
+Retrieves the response entity.
+
+Returns:
+the response entity as a string
+
+
+
+
+
+setEntity
+public void setEntity(String entity)
+Sets the response entity.
+
+Parameters:
+entity - the response entity as a string
+
+
+
+
+
+getStatusCode
+public int getStatusCode()
+Retrieves the HTTP status code.
+
+Returns:
+the status code
+
+
+
+
+
+setStatusCode
+public void setStatusCode(int statusCode)
+Sets the HTTP status code.
+
+Parameters:
+statusCode - the status code
+
+
+
+
+
+getHeaders
+public Map<String,List<String>> getHeaders()
+gets all headers with names
+
+Returns:
+a Map<String, List<String>>  object
+
+
+
+
+
+getHeaderValues
+public List<String> getHeaderValues(String headerName)
+gets the values of the wanted header name
+
+Parameters:
+headerName - String of header name
+Returns:
+List of header values
+
+
+
+
+
+getHeaderFirstValue
+public String getHeaderFirstValue(String headerName)
+gets the first value of the wanted header
+
+Parameters:
+headerName - String of the header name
+Returns:
+String of the header value
+
+
+
+
+
+
+
+
+
+
+
+
+
+

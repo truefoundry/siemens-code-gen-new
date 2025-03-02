@@ -1,0 +1,194 @@
+WindowsUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class WindowsUtils
+
+java.lang.Object
+fate.core.ControlImplementations.WindowsUtils
+
+
+
+public class WindowsUtils
+extends Object
+Utility class for obtaining Window handles.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static void
+changeLanguage(String... lang)
+
+Changes input language.
+
+static String
+getCurrentEnvironmentUser()
+
+Returns current Windows system user.
+
+static String
+getEnvironmentVariable(String name)
+
+Returns wanted environment variable.
+
+static InetSocketAddress
+getSystemProxy()
+
+Returns a proxy which is currently is used by the system.
+
+static void
+minimizeAllWindows()
+
+Minimized all windows on desktop.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getSystemProxy
+@CheckForNull
+public static InetSocketAddress getSystemProxy()
+Returns a proxy which is currently is used by the system.
+
+Returns:
+Proxy object.
+
+
+
+
+
+changeLanguage
+public static void changeLanguage(String... lang)
+Changes input language.
+
+Parameters:
+lang - Wanted language e.g. "de-DE". Several languages can be added to input e.g. "de-De, en-US". First code will be the active one.
+
+
+
+
+
+minimizeAllWindows
+public static void minimizeAllWindows()
+Minimized all windows on desktop.
+
+
+
+
+getCurrentEnvironmentUser
+public static String getCurrentEnvironmentUser()
+Returns current Windows system user.
+
+Returns:
+Username as string.
+
+
+
+
+
+getEnvironmentVariable
+public static String getEnvironmentVariable(String name)
+Returns wanted environment variable.
+
+Parameters:
+name - Name of wanted var.
+Returns:
+Value of wanted var or MsgCode.NOT_FOUND
+
+
+
+
+
+
+
+
+
+
+
+
+
+

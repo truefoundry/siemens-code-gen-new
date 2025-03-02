@@ -1,0 +1,209 @@
+CleanUpOptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Results
+Class CleanUpOptions
+
+java.lang.Object
+fate.core.Results.CleanUpOptions
+
+
+
+public class CleanUpOptions
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CleanUpOptions()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+isPushResults()
+
+Checks if test results should be pushed.
+
+boolean
+isTestIsBroken()
+
+Checks if test state is broken.
+
+CleanUpOptions
+setPushResults(boolean pushResults)
+
+Sets the push state for test results.
+
+CleanUpOptions
+setTestIsBroken(boolean testIsBroken)
+
+Sets the state of test case, broken test are those which are failing because of implementation issues.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CleanUpOptions
+public CleanUpOptions()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+isTestIsBroken
+public boolean isTestIsBroken()
+Checks if test state is broken.
+
+Returns:
+Bool value for test broken state.
+
+
+
+
+
+setTestIsBroken
+public CleanUpOptions setTestIsBroken(boolean testIsBroken)
+Sets the state of test case, broken test are those which are failing because of implementation issues.
+
+Parameters:
+testIsBroken - boolean value.
+Returns:
+Options object.
+
+
+
+
+
+isPushResults
+public boolean isPushResults()
+Checks if test results should be pushed.
+
+Returns:
+Bool value, if result has been already pushed.
+
+
+
+
+
+setPushResults
+public CleanUpOptions setPushResults(boolean pushResults)
+Sets the push state for test results. false if no results should be pushed to test platform.
+
+Parameters:
+pushResults - boolean value.
+Returns:
+Options object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

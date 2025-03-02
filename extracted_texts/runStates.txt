@@ -1,0 +1,242 @@
+runStates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure
+Enum Class runStates
+
+java.lang.Object
+java.lang.Enum<runStates>
+fate.core.PlatformConnectors.azure.runStates
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<runStates>, Constable
+
+
+public enum runStates
+extends Enum<runStates>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+ABORTED
+ 
+COMPLETED
+ 
+IN_PROGRESS
+ 
+NOT_STARTED
+ 
+WAITING
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static runStates
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static runStates[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+NOT_STARTED
+public static final runStates NOT_STARTED
+
+
+
+
+IN_PROGRESS
+public static final runStates IN_PROGRESS
+
+
+
+
+COMPLETED
+public static final runStates COMPLETED
+
+
+
+
+ABORTED
+public static final runStates ABORTED
+
+
+
+
+WAITING
+public static final runStates WAITING
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static runStates[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static runStates valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

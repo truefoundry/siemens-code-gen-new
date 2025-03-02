@@ -1,0 +1,81 @@
+Uses of Class fate.core.Http.HttpRequest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.Http.HttpRequest
+
+Packages that use HttpRequest
+
+Package
+Description
+fate.core.Http
+ 
+
+
+
+
+
+Uses of HttpRequest in fate.core.Http
+Methods in fate.core.Http with parameters of type HttpRequest
+
+Modifier and Type
+Method
+Description
+static HttpResponse
+HttpCall.executeRequest(HttpRequest req,
+ boolean... ignoreWait)
+
+Executes the given HTTP request.
+
+
+
+
+
+
+
+
+
+
+

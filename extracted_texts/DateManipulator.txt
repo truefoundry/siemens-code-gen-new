@@ -1,0 +1,346 @@
+DateManipulator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.DTO
+Class DateManipulator
+
+java.lang.Object
+fate.core.DTO.DateManipulator
+
+
+
+public class DateManipulator
+extends Object
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+DateManipulator()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+int
+getDay()
+
+Gets the day.
+
+int
+getHour()
+
+Gets the hour.
+
+int
+getMinute()
+
+Gets the minute.
+
+int
+getMonth()
+
+Gets the month.
+
+int
+getSecond()
+
+Gets the second.
+
+int
+getYear()
+
+Gets the year.
+
+DateManipulator
+setDay(int day)
+
+Sets the day.
+
+DateManipulator
+setHour(int hour)
+
+Sets the hour.
+
+DateManipulator
+setMinute(int minute)
+
+Sets the minute.
+
+DateManipulator
+setMonth(int month)
+
+Sets the month.
+
+DateManipulator
+setSecond(int second)
+
+Sets the second.
+
+DateManipulator
+setYear(int year)
+
+Sets the year.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+DateManipulator
+public DateManipulator()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getYear
+public int getYear()
+Gets the year.
+
+Returns:
+the year
+
+
+
+
+
+setYear
+public DateManipulator setYear(int year)
+Sets the year.
+
+Parameters:
+year - the year to set
+Returns:
+the current instance of DateManipulator for method chaining
+
+
+
+
+
+getMonth
+public int getMonth()
+Gets the month.
+
+Returns:
+the month
+
+
+
+
+
+setMonth
+public DateManipulator setMonth(int month)
+Sets the month.
+
+Parameters:
+month - the month to set
+Returns:
+the current instance of DateManipulator for method chaining
+
+
+
+
+
+getDay
+public int getDay()
+Gets the day.
+
+Returns:
+the day
+
+
+
+
+
+setDay
+public DateManipulator setDay(int day)
+Sets the day.
+
+Parameters:
+day - the day to set
+Returns:
+the current instance of DateManipulator for method chaining
+
+
+
+
+
+getHour
+public int getHour()
+Gets the hour.
+
+Returns:
+the hour
+
+
+
+
+
+setHour
+public DateManipulator setHour(int hour)
+Sets the hour.
+
+Parameters:
+hour - the hour to set
+Returns:
+the current instance of DateManipulator for method chaining
+
+
+
+
+
+getMinute
+public int getMinute()
+Gets the minute.
+
+Returns:
+the minute
+
+
+
+
+
+setMinute
+public DateManipulator setMinute(int minute)
+Sets the minute.
+
+Parameters:
+minute - the minute to set
+Returns:
+the current instance of DateManipulator for method chaining
+
+
+
+
+
+getSecond
+public int getSecond()
+Gets the second.
+
+Returns:
+the second
+
+
+
+
+
+setSecond
+public DateManipulator setSecond(int second)
+Sets the second.
+
+Parameters:
+second - the second to set
+Returns:
+the current instance of DateManipulator for method chaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+

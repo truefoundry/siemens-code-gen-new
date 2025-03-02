@@ -1,0 +1,86 @@
+fate.core.PlatformConnectors.alm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.alm
+
+
+package fate.core.PlatformConnectors.alm
+
+
+
+
+Classes
+
+Class
+Description
+ALMHandler
+ 
+ALMRestConnector
+
+This class keeps the state of the connection for the examples.
+
+Response
+
+This is a naive implementation of an HTTP response.
+
+
+
+
+
+
+
+
+
+
+

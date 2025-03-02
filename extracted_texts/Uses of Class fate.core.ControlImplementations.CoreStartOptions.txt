@@ -1,0 +1,195 @@
+Uses of Class fate.core.ControlImplementations.CoreStartOptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.ControlImplementations.CoreStartOptions
+
+Packages that use CoreStartOptions
+
+Package
+Description
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.ControlImplementations
+ 
+
+
+
+
+
+Uses of CoreStartOptions in fate.core.CompositionRoot.WinApp
+Methods in fate.core.CompositionRoot.WinApp with parameters of type CoreStartOptions
+
+Modifier and Type
+Method
+Description
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options)
+
+Starts an application with whether by using its path or its windowsID
+ some variables and packages are installed while starting the WinApp Driver for the first time as following:
+
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options,
+ String xpath,
+ int... index)
+ 
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options,
+ String property,
+ String value,
+ int... index)
+
+Starts a root WinAppDriver and switches to wanted application
+
+
+
+
+
+
+Uses of CoreStartOptions in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations that return CoreStartOptions
+
+Modifier and Type
+Method
+Description
+CoreStartOptions
+CoreStartOptions.addCapabilities(org.openqa.selenium.Capabilities caps)
+
+Adds browser capabilities to the current configuration.
+
+CoreStartOptions
+CoreStartOptions.addExtension(IBrowserExtensions extension)
+
+Adds wanted extension to current run.
+
+CoreStartOptions
+CoreStartOptions.addLogin(String user,
+ String pass)
+
+Adding user and password to URL in order to skip adfs login popup.
+
+CoreStartOptions
+CoreStartOptions.disableBrowsingDownloadProtection()
+
+Disables download protection.
+
+CoreStartOptions
+CoreStartOptions.disableProxy()
+
+Forcing to disable any possible proxy settings e.g.
+
+CoreStartOptions
+CoreStartOptions.enableBrowsingDownloadProtection()
+
+Enables download protection.
+
+CoreStartOptions
+CoreStartOptions.enableProxy()
+
+Enables possible proxy settings e.g.
+
+CoreStartOptions
+CoreStartOptions.setLogging(String type,
+ Level level)
+
+Configures the logging settings for the browser.
+
+CoreStartOptions
+CoreStartOptions.setPort(int port)
+
+Sets the port for the browser instance.
+
+CoreStartOptions
+CoreStartOptions.setProxy(String proxy)
+
+Adds a proxy to current execution.
+
+CoreStartOptions
+CoreStartOptions.setProxyAutoConfigScript(String proxyAutoConfigScriptUrl)
+
+Sets the URL for the proxy auto-config script.
+
+CoreStartOptions
+CoreStartOptions.setUrlAddress(String urlAddress)
+
+URL address for WinDriver.
+
+CoreStartOptions
+CoreStartOptions.startIncognito()
+
+Starts current browser in incognito mode.
+
+CoreStartOptions
+CoreStartOptions.useEntitlementLogin()
+
+Handles entitlement login.
+
+
+Methods in fate.core.ControlImplementations with parameters of type CoreStartOptions
+
+Modifier and Type
+Method
+Description
+UUID
+CoreBrowserControl.start(WebDrv wDriver,
+ String strURL,
+ CoreStartOptions... options)
+
+Starts with wanted browser and wanted URL.
+
+
+
+
+
+
+
+
+
+
+

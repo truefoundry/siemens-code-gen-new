@@ -1,0 +1,206 @@
+ADTestCase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure
+Class ADTestCase
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.ADTestCase
+
+
+
+public class ADTestCase
+extends Object
+Represents a test case in Azure DevOps, retrieving details such as revisions and step IDs.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ADTestCase(int planID,
+ int suiteID,
+ int testID)
+
+Creates an ADTestCase by fetching details from Azure DevOps using the provided IDs.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.json.JSONObject
+getEntity()
+
+Gets the test case entity as a JSONObject.
+
+int
+getRevision()
+
+Retrieves the revision number of the test case.
+
+List<Integer>
+getStepIDs()
+
+Retrieves the IDs of the test steps in the test case.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ADTestCase
+public ADTestCase(int planID,
+ int suiteID,
+ int testID)
+           throws InterruptedException
+Creates an ADTestCase by fetching details from Azure DevOps using the provided IDs.
+
+Parameters:
+planID - The test plan ID.
+suiteID - The test suite ID.
+testID - The test case ID.
+Throws:
+InterruptedException - If the thread is interrupted during execution.
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getEntity
+public org.json.JSONObject getEntity()
+Gets the test case entity as a JSONObject.
+
+Returns:
+The JSONObject representing the test case details.
+
+
+
+
+
+getRevision
+public int getRevision()
+Retrieves the revision number of the test case.
+
+Returns:
+The revision number, or 1 if unavailable.
+
+
+
+
+
+getStepIDs
+public List<Integer> getStepIDs()
+Retrieves the IDs of the test steps in the test case.
+
+Returns:
+A list of step IDs, or an empty list if unavailable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

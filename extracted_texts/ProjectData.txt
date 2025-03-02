@@ -1,0 +1,270 @@
+ProjectData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.DTO
+Class ProjectData
+
+java.lang.Object
+fate.core.DTO.ProjectData
+
+
+
+public class ProjectData
+extends Object
+A utility class to store all the required project data.
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+final String
+ENVIRONMENT
+ 
+final String
+PLATFORM_ORGANIZATION
+ 
+final String
+PLATFORM_PASS
+ 
+final String
+PLATFORM_PROJECT
+ 
+final String
+PLATFORM_URL
+ 
+final String
+PLATFORM_USER
+ 
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ProjectData(String platformUrl,
+ String platformUser,
+ String platformPass,
+ String platformOrga,
+ String platformProject,
+ String env)
+
+Collects configuration parameters for pushing into wanted system.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+activateResultPush(boolean activate)
+
+Activates / Deactivates result push to configured test management system.
+
+boolean
+isResultPushActivated()
+
+Returns actual status if test results should be pushed to configured management system or not.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+PLATFORM_URL
+public final String PLATFORM_URL
+
+
+
+
+PLATFORM_USER
+public final String PLATFORM_USER
+
+
+
+
+PLATFORM_PASS
+public final String PLATFORM_PASS
+
+
+
+
+PLATFORM_ORGANIZATION
+public final String PLATFORM_ORGANIZATION
+
+
+
+
+PLATFORM_PROJECT
+public final String PLATFORM_PROJECT
+
+
+
+
+ENVIRONMENT
+public final String ENVIRONMENT
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ProjectData
+public ProjectData(String platformUrl,
+ String platformUser,
+ String platformPass,
+ String platformOrga,
+ String platformProject,
+ String env)
+Collects configuration parameters for pushing into wanted system.
+
+Parameters:
+platformUrl - - URL to the system Jira, Azure or others.
+platformUser - - username for Jira, Azure or others.
+platformPass - - user password for Jira, Azure or others.
+platformOrga - - project domain or organization, Jira, Azure or others.
+platformProject - - project name,Jira, Azure or others.
+env - - Name of environment which executes tests. Can be empty.
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+activateResultPush
+public void activateResultPush(boolean activate)
+Activates / Deactivates result push to configured test management system.
+
+Parameters:
+activate - true = activate, false = deactivate.
+
+
+
+
+
+isResultPushActivated
+public boolean isResultPushActivated()
+Returns actual status if test results should be pushed to configured management system or not.
+
+Returns:
+boolean value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

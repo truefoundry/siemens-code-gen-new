@@ -1,0 +1,238 @@
+PrintWindow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class PrintWindow
+
+java.lang.Object
+java.lang.Enum<PrintWindow>
+fate.core.Enums.PrintWindow
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<PrintWindow>, Constable
+
+
+public enum PrintWindow
+extends Enum<PrintWindow>
+Print Window elements specified by List of parent elements for shadow root elements inside which the element is located (left) and selector of
+ wanted element for every supported browser (right).
+ NOTE: IE and FF are opening platform (e.g. Windows) print windows. Therefore, different handling is necessary.
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+CANCEL_BUTTON
+ 
+PRINTER_DESTINATION_SELECT
+ 
+SAVE_BUTTON
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.apache.commons.lang3.tuple.Pair<List<String>,String>
+chrome()
+ 
+org.apache.commons.lang3.tuple.Pair<List<String>,String>
+edge()
+ 
+static PrintWindow
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PrintWindow[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+SAVE_BUTTON
+public static final PrintWindow SAVE_BUTTON
+
+
+
+
+CANCEL_BUTTON
+public static final PrintWindow CANCEL_BUTTON
+
+
+
+
+PRINTER_DESTINATION_SELECT
+public static final PrintWindow PRINTER_DESTINATION_SELECT
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static PrintWindow[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static PrintWindow valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+chrome
+public org.apache.commons.lang3.tuple.Pair<List<String>,String> chrome()
+
+
+
+
+edge
+public org.apache.commons.lang3.tuple.Pair<List<String>,String> edge()
+
+
+
+
+
+
+
+
+
+
+
+
+

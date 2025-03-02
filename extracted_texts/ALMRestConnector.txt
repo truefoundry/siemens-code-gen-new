@@ -1,0 +1,192 @@
+ALMRestConnector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.alm
+Class ALMRestConnector
+
+java.lang.Object
+fate.core.PlatformConnectors.alm.ALMRestConnector
+
+
+
+public class ALMRestConnector
+extends Object
+This class keeps the state of the connection for the examples.
+ This class is a  thus sharing state singleton. All examples get
+ the instance in their default constructors - (cookies, server url).
+ 
+ Some simple methods are implemented to get commonly used paths.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ALMRestConnector()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+Map<String,String>
+getCookies()
+ 
+Response
+httpDelete(String url,
+ Map<String,String> headers)
+
+Executes an HTTP DELETE request.
+
+void
+setCookies(Map<String,String> cookies)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ALMRestConnector
+public ALMRestConnector()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getCookies
+public Map<String,String> getCookies()
+
+
+
+
+setCookies
+public void setCookies(Map<String,String> cookies)
+
+Parameters:
+cookies - the cookies to set
+
+
+
+
+
+httpDelete
+public Response httpDelete(String url,
+ Map<String,String> headers)
+                    throws IOException
+Executes an HTTP DELETE request.
+
+Parameters:
+url - The target URL.
+headers - The headers to include in the request.
+Returns:
+The HTTP response.
+Throws:
+IOException - If an I/O error occurs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

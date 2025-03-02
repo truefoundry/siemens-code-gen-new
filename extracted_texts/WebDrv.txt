@@ -1,0 +1,315 @@
+WebDrv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class WebDrv
+
+java.lang.Object
+java.lang.Enum<WebDrv>
+fate.core.Enums.WebDrv
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<WebDrv>, Constable
+
+
+public enum WebDrv
+extends Enum<WebDrv>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+CHROME
+ 
+CHROME_DEV
+ 
+CHROME_LINUX
+ 
+CHROME_UAT
+ 
+EDGE
+ 
+EDGE_DEV
+ 
+EDGE_UAT
+ 
+FIREFOX
+ 
+REMOTE_CHROME
+ 
+REMOTE_EDGE
+ 
+REMOTE_FIREFOX
+ 
+SYSTEM
+ 
+WIN_APP
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getConfigID()
+ 
+String
+getFileName()
+ 
+static WebDrv
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static WebDrv[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+CHROME
+public static final WebDrv CHROME
+
+
+
+
+CHROME_LINUX
+public static final WebDrv CHROME_LINUX
+
+
+
+
+REMOTE_CHROME
+public static final WebDrv REMOTE_CHROME
+
+
+
+
+CHROME_DEV
+public static final WebDrv CHROME_DEV
+
+
+
+
+CHROME_UAT
+public static final WebDrv CHROME_UAT
+
+
+
+
+FIREFOX
+public static final WebDrv FIREFOX
+
+
+
+
+REMOTE_FIREFOX
+public static final WebDrv REMOTE_FIREFOX
+
+
+
+
+EDGE
+public static final WebDrv EDGE
+
+
+
+
+REMOTE_EDGE
+public static final WebDrv REMOTE_EDGE
+
+
+
+
+EDGE_DEV
+public static final WebDrv EDGE_DEV
+
+
+
+
+EDGE_UAT
+public static final WebDrv EDGE_UAT
+
+
+
+
+SYSTEM
+public static final WebDrv SYSTEM
+
+
+
+
+WIN_APP
+public static final WebDrv WIN_APP
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static WebDrv[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static WebDrv valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getFileName
+public String getFileName()
+
+
+
+
+getConfigID
+public String getConfigID()
+
+
+
+
+
+
+
+
+
+
+
+
+

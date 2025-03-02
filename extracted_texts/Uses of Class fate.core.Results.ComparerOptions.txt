@@ -1,0 +1,147 @@
+Uses of Class fate.core.Results.ComparerOptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.Results.ComparerOptions
+
+Packages that use ComparerOptions
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.Results
+ 
+
+
+
+
+
+Uses of ComparerOptions in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot with parameters of type ComparerOptions
+
+Modifier and Type
+Method
+Description
+void
+AbstractCoreHandler.addStepInfo(String stepName,
+ Comparable expected,
+ Comparable current,
+ ComparerOptions... options)
+
+Adds step information for the report.
+
+
+
+
+
+
+Uses of ComparerOptions in fate.core.Results
+Methods in fate.core.Results that return ComparerOptions
+
+Modifier and Type
+Method
+Description
+ComparerOptions
+ComparerOptions.abort()
+
+Aborts test if this step fails.
+
+ComparerOptions
+ComparerOptions.addScreenShotToPlatform(String filePath)
+
+Adds wanted image as attachment to test step.
+
+ComparerOptions
+TcResComparer.getOptions()
+ 
+ComparerOptions
+ComparerOptions.ignoreCase()
+
+Ignores upper and lower case for comparison, applies only to Strings.
+
+ComparerOptions
+ComparerOptions.removeSpaces()
+
+Removes white spaces before comparison, applies only to Strings.
+
+ComparerOptions
+ComparerOptions.setKnownBug(String bug)
+
+Sets known bug message after executing the step check, Useful to mark failed step as a known bug.
+
+ComparerOptions
+ComparerOptions.takeScreenShotLocal()
+
+Takes a screenshot of current step and saves it in local output directory "...\out\test\screens\testname_stepIndex.png"
+
+ComparerOptions
+ComparerOptions.takeScreenShotPlatform()
+
+Takes a screenshot of current step and uploads it to selected platform.
+
+
+Constructors in fate.core.Results with parameters of type ComparerOptions
+
+Modifier
+Constructor
+Description
+ 
+TcResComparer(Comparable<?> expected,
+ Comparable<?> actual,
+ ComparerOptions... options)
+
+Constructor to compare two Comparable objects with specified options.
+
+
+
+
+
+
+
+
+
+
+

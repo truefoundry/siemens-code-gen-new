@@ -1,0 +1,233 @@
+Uses of Interface fate.core.Interfaces.IInteractable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IInteractable
+
+Packages that use IInteractable
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of IInteractable in fate.core.ControlImplementations
+Classes in fate.core.ControlImplementations that implement IInteractable
+
+Modifier and Type
+Class
+Description
+class 
+CoreCssControl
+
+Handles the element extraction using locators.
+
+class 
+CoreInteractables
+
+Handles the basic element interactions.
+
+
+Methods in fate.core.ControlImplementations that return IInteractable
+
+Modifier and Type
+Method
+Description
+IInteractable
+CoreInteractables.click(IInteractableNaming name)
+
+Clicks on a specified web element.
+
+IInteractable
+CoreInteractables.moveMouseOver(IInteractableNaming name)
+
+Moves the mouse over a specified web element.
+
+IInteractable
+CoreInteractables.scrollIntoView(IInteractableNaming name)
+
+Scrolls the page to bring a specified web element into view using JavaScript.
+
+IInteractable
+CoreInteractables.sendKeys(IInteractableNaming name,
+ String keys,
+ boolean... clear)
+
+Sends keys to a web element (e.g., typing text into a field).
+
+IInteractable
+CoreInteractables.sendKeys(org.openqa.selenium.By element,
+ String keys,
+ boolean... clear)
+
+Sends keys (text) to a web element located by a By selector.
+
+IInteractable
+CoreInteractables.setAttribute(IInteractableNaming name,
+ String attribute,
+ String value)
+
+Sets a custom attribute for a web element using JavaScript.
+
+IInteractable
+CoreInteractables.waitForDisposal(IInteractableNaming control,
+ Duration... duration)
+
+Waits for a web element to be disposed (removed from the DOM) based on the given control's naming.
+
+IInteractable
+CoreInteractables.waitForDisposal(org.openqa.selenium.By selector,
+ Duration... duration)
+
+Waits for a web element to be disposed (removed from the DOM) based on the given selector.
+
+IInteractable
+CoreInteractables.waitToBeClickable(IInteractableNaming name,
+ Duration... duration)
+
+Waits for a web element to become clickable within the given time.
+
+IInteractable
+CoreInteractables.waitToBeVisible(IInteractableNaming name,
+ Duration... duration)
+
+Waits for a web element to become visible within the given time.
+
+
+
+
+
+
+Uses of IInteractable in fate.core.Interfaces
+Subinterfaces of IInteractable in fate.core.Interfaces
+
+Modifier and Type
+Interface
+Description
+interface 
+ICoreCssControl
+ 
+
+Methods in fate.core.Interfaces that return IInteractable
+
+Modifier and Type
+Method
+Description
+IInteractable
+IInteractable.click(IInteractableNaming name)
+
+Click this element.
+
+IInteractable
+IInteractable.moveMouseOver(IInteractableNaming name)
+
+Moves mouse over wanted control.
+
+IInteractable
+IInteractable.scrollIntoView(IInteractableNaming name)
+
+Scrolls wanted element into the view.
+
+IInteractable
+IInteractable.sendKeys(IInteractableNaming name,
+ String keys,
+ boolean... clear)
+
+Sends wanted string to wanted control.
+
+IInteractable
+IInteractable.sendKeys(org.openqa.selenium.By element,
+ String keys,
+ boolean... clear)
+
+Sends wanted string to wanted control.
+
+IInteractable
+IInteractable.setAttribute(IInteractableNaming name,
+ String attribute,
+ String value)
+
+Sets wanted attribute to wanted element.
+
+IInteractable
+IInteractable.waitForDisposal(IInteractableNaming control,
+ Duration... duration)
+
+Waits for disposal of wanted element.
+
+IInteractable
+IInteractable.waitForDisposal(org.openqa.selenium.By selector,
+ Duration... duration)
+
+Waits for disposal of wanted element.
+
+IInteractable
+IInteractable.waitToBeClickable(IInteractableNaming name,
+ Duration... duration)
+
+Waits for wanted control to become clickable.
+
+IInteractable
+IInteractable.waitToBeVisible(IInteractableNaming name,
+ Duration... duration)
+
+Waits for wanted control to become visible.
+
+
+
+
+
+
+
+
+
+
+

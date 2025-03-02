@@ -1,0 +1,95 @@
+fate.core.CompositionRoot.ElementStore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.ElementStore
+
+
+package fate.core.CompositionRoot.ElementStore
+
+
+
+
+Related Packages
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.CompositionRoot.WinApp
+ 
+
+
+
+
+
+Classes
+
+Class
+Description
+CachedElement
+ 
+ElementStore
+
+This class provides the possibility to store several WebElements to check their staleness status
+
+
+
+
+
+
+
+
+
+
+

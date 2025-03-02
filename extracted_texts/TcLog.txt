@@ -1,0 +1,363 @@
+TcLog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class TcLog
+
+java.lang.Object
+fate.core.CompositionRoot.TcLog
+
+
+
+public class TcLog
+extends Object
+Logger class for various logging functionalities within test cases.
+ Supports multiple log levels and formats, allowing detailed and structured logging.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static void
+action(String text,
+ Exception... e)
+
+Logs an action message.
+
+static void
+config(String text,
+ Exception... e)
+
+Logs a configuration-related message.
+
+static void
+debug(String text,
+ Exception... e)
+
+Logs a debug message.
+
+static void
+error(String text,
+ Exception... e)
+
+Logs an error message.
+
+static void
+fatal(String text,
+ Exception... e)
+
+Logs a fatal error message.
+
+static void
+info(String text,
+ Exception... e)
+
+Logs an informational message.
+
+static void
+knownBug(String text,
+ Exception... e)
+
+Logs a known bug message.
+
+static void
+perf(String text,
+ Exception... e)
+
+Logs a performance-related message.
+
+static void
+result(String text,
+ Exception... e)
+
+Logs a result message.
+
+static void
+step(String text,
+ Exception... e)
+
+Logs a step-related message.
+
+static void
+timeOut(String text,
+ Exception... e)
+
+Logs a timeout message.
+
+static void
+wait(String text,
+ Exception... e)
+
+Logs a wait message.
+
+static void
+warning(String text,
+ Exception... e)
+
+Logs a warning message.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+info
+public static void info(String text,
+ Exception... e)
+Logs an informational message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+timeOut
+public static void timeOut(String text,
+ Exception... e)
+Logs a timeout message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+action
+public static void action(String text,
+ Exception... e)
+Logs an action message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+knownBug
+public static void knownBug(String text,
+ Exception... e)
+Logs a known bug message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+debug
+public static void debug(String text,
+ Exception... e)
+Logs a debug message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+perf
+public static void perf(String text,
+ Exception... e)
+Logs a performance-related message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+error
+public static void error(String text,
+ Exception... e)
+Logs an error message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+fatal
+public static void fatal(String text,
+ Exception... e)
+Logs a fatal error message. This method also attempts to quit the WebDriver instance if available.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+result
+public static void result(String text,
+ Exception... e)
+Logs a result message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+step
+public static void step(String text,
+ Exception... e)
+Logs a step-related message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+wait
+public static void wait(String text,
+ Exception... e)
+Logs a wait message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+warning
+public static void warning(String text,
+ Exception... e)
+Logs a warning message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+config
+public static void config(String text,
+ Exception... e)
+Logs a configuration-related message.
+
+Parameters:
+text - The message text to log.
+e - Optional exceptions to include in the log.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+Uses of Enum Class fate.core.Enums.EWinType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.EWinType
+
+Packages that use EWinType
+
+Package
+Description
+fate.core.Enums
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of EWinType in fate.core.Enums
+Methods in fate.core.Enums that return EWinType
+
+Modifier and Type
+Method
+Description
+static EWinType
+EWinType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static EWinType[]
+EWinType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+Uses of EWinType in fate.core.Interfaces
+Methods in fate.core.Interfaces that return EWinType
+
+Modifier and Type
+Method
+Description
+EWinType
+IWinInteractableNaming.getType()
+
+Returns the type of wanted enum e.g.
+
+
+
+
+
+
+
+
+
+
+

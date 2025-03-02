@@ -1,0 +1,283 @@
+ResultCollector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Results
+Class ResultCollector
+
+java.lang.Object
+fate.core.Results.ResultCollector
+
+
+
+public class ResultCollector
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ResultCollector()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addLog(String log)
+
+Adds a log entry to log collection, used for exporting logs to text platforms.
+
+void
+addStep(String stepName,
+ TcResComparer comparer)
+
+Adds single test step to collector.
+
+static void
+catcher(AbstractCoreHandler tc,
+ Exception e)
+
+Exception handling.
+
+List<String>
+getFullLog()
+
+Returns fullLog which was collected while test execution.
+
+boolean
+isPushed()
+ 
+boolean
+isTestable()
+ 
+void
+push(CleanUpOptions options)
+ 
+void
+setAbortionReason(String reason)
+ 
+void
+setErrorScreenshot(File img)
+ 
+void
+setExecutionStart()
+ 
+void
+setExecutionStop()
+ 
+void
+setState(TcStates state)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ResultCollector
+public ResultCollector()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+isTestable
+public boolean isTestable()
+
+
+
+
+addLog
+public void addLog(String log)
+Adds a log entry to log collection, used for exporting logs to text platforms.
+
+Parameters:
+log - Entry as string.
+
+
+
+
+
+getFullLog
+public List<String> getFullLog()
+Returns fullLog which was collected while test execution.
+
+Returns:
+Logs as String list.
+
+
+
+
+
+catcher
+public static void catcher(AbstractCoreHandler tc,
+ Exception e)
+Exception handling.
+
+Parameters:
+tc - - Current test case.
+e - - Exception.
+
+
+
+
+
+setAbortionReason
+public void setAbortionReason(String reason)
+
+
+
+
+setErrorScreenshot
+public void setErrorScreenshot(File img)
+
+
+
+
+addStep
+public void addStep(String stepName,
+ TcResComparer comparer)
+Adds single test step to collector.
+
+Parameters:
+stepName - Name or description of step.
+comparer - Comparer object for current step.
+
+
+
+
+
+setState
+public void setState(TcStates state)
+
+
+
+
+isPushed
+public boolean isPushed()
+
+
+
+
+push
+public void push(CleanUpOptions options)
+
+
+
+
+setExecutionStart
+public void setExecutionStart()
+
+
+
+
+setExecutionStop
+public void setExecutionStop()
+
+
+
+
+
+
+
+
+
+
+
+
+

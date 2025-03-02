@@ -1,0 +1,196 @@
+ALMHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.alm
+Class ALMHandler
+
+java.lang.Object
+fate.core.PlatformConnectors.alm.ALMHandler
+
+
+
+public class ALMHandler
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ALMHandler()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+postRun(ProjectData config,
+ String tcName,
+ IResultData testSet,
+ TcStates state,
+ String steps)
+
+Posts the test run result to the ALM platform.
+
+void
+updateRun(ProjectData config,
+ String runID,
+ TcStates state,
+ String comments)
+
+Updated existing run.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ALMHandler
+public ALMHandler()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+postRun
+public String postRun(ProjectData config,
+ String tcName,
+ IResultData testSet,
+ TcStates state,
+ String steps)
+Posts the test run result to the ALM platform.
+
+Parameters:
+config - The project configuration containing platform details.
+tcName - The name of the test case being executed.
+testSet - The test set containing the results of the executed tests.
+state - The state of the test case execution.
+steps - The steps executed in the test case.
+Returns:
+The ID of the created test run in ALM, or an empty string if the operation fails.
+
+
+
+
+
+updateRun
+public void updateRun(ProjectData config,
+ String runID,
+ TcStates state,
+ String comments)
+Updated existing run.
+
+Parameters:
+config - The project configuration containing platform details.
+runID - - ID of existing run.
+state - - wanted state.
+comments - - updated comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

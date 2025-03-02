@@ -1,0 +1,369 @@
+CoreWinAppControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class CoreWinAppControl
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.CoreWinAppControl
+
+
+
+public abstract class CoreWinAppControl
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreWinAppControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+checkPrerequisites()
+
+Define all environment variable which required in order to start the appium winAppDriver
+
+void
+close()
+
+Closes window.
+
+UUID
+getActiveSession()
+ 
+String
+getHandleOfActiveWindow()
+
+Returns handle of active window.
+
+void
+maximize()
+
+Maximizes current window.
+
+void
+minimize()
+
+Minimized window.
+
+void
+quit()
+
+Quits the web driver, closing the web browser.
+
+void
+resize(int width,
+ int height)
+
+Resizes window.
+
+void
+restore()
+
+Restores window.
+
+void
+setWindowPosition(int x,
+ int y)
+
+Moves current window to wanted coordinates.
+
+UUID
+start(IWinApplication appID,
+ CoreStartOptions options)
+
+Starts an application with whether by using its path or its windowsID
+ some variables and packages are installed while starting the WinApp Driver for the first time as following:
+
+UUID
+start(IWinApplication appID,
+ CoreStartOptions options,
+ String xpath,
+ int... index)
+ 
+UUID
+start(IWinApplication appID,
+ CoreStartOptions options,
+ String property,
+ String value,
+ int... index)
+
+Starts a root WinAppDriver and switches to wanted application
+
+void
+switchToWinDriver(UUID driversID)
+
+Switches to wanted WinDriver instance.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreWinAppControl
+public CoreWinAppControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setWindowPosition
+public void setWindowPosition(int x,
+ int y)
+Moves current window to wanted coordinates.
+
+Parameters:
+x - X value
+y - Y value
+
+
+
+
+
+maximize
+public void maximize()
+Maximizes current window.
+
+
+
+
+start
+public UUID start(IWinApplication appID,
+ CoreStartOptions options,
+ String property,
+ String value,
+ int... index)
+Starts a root WinAppDriver and switches to wanted application
+
+Parameters:
+property - Wanted property
+value - Value of wanted property
+index - In case there are multiple windows of wanted application, index can be used to determine the wanted instance. Index is 0 based!
+
+
+
+
+
+start
+public UUID start(IWinApplication appID,
+ CoreStartOptions options,
+ String xpath,
+ int... index)
+
+
+
+
+start
+public UUID start(IWinApplication appID,
+ CoreStartOptions options)
+Starts an application with whether by using its path or its windowsID
+ some variables and packages are installed while starting the WinApp Driver for the first time as following:
+ download and install nodejs from ...
+ add to Path---> C:\Program Files\nodejs
+ run --> npm i appium-windows-driver  (to install node-modules , if it not existing in resources)
+ add APPIUM_BINARY_PATH --> C:\core\node_modules\appium\build\lib\main.js
+ run --> npm install -g appium@next
+ add to path %appdata%/npm
+ run ---> appium driver install windows
+ 
+
+Parameters:
+appID - application id/path
+options - CoreStartOptions could contains different ip
+Returns:
+UUID of the created windowsDriver
+
+
+
+
+
+close
+public void close()
+Closes window.
+
+
+
+
+quit
+public void quit()
+Quits the web driver, closing the web browser.
+ This is used for test cases in which the browser has to be stopped and restarted.
+
+
+
+
+switchToWinDriver
+public void switchToWinDriver(UUID driversID)
+Switches to wanted WinDriver instance.
+
+Parameters:
+driversID - WinDrivers ID which was provided by start(IWinApplication, CoreStartOptions)
+
+
+
+
+
+getHandleOfActiveWindow
+public String getHandleOfActiveWindow()
+Returns handle of active window.
+
+Returns:
+handle of wanted window as string.
+
+
+
+
+
+getActiveSession
+public UUID getActiveSession()
+
+
+
+
+resize
+public void resize(int width,
+ int height)
+Resizes window.
+
+Parameters:
+width - - wanted window width
+height - - wanted window height
+
+
+
+
+
+restore
+public void restore()
+Restores window.
+
+
+
+
+minimize
+public void minimize()
+Minimized window.
+
+
+
+
+checkPrerequisites
+public boolean checkPrerequisites()
+Define all environment variable which required in order to start the appium winAppDriver
+
+Returns:
+false, if there is a restart required to update the environment variable otherwise it returns true
+
+
+
+
+
+
+
+
+
+
+
+
+
+

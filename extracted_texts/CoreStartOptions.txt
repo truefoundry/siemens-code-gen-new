@@ -1,0 +1,537 @@
+CoreStartOptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreStartOptions
+
+java.lang.Object
+fate.core.ControlImplementations.CoreStartOptions
+
+
+
+public class CoreStartOptions
+extends Object
+This class allows to create a CoreStartOptions object using a fluent interface, making
+ the need for temporary variable redundant.
+
+ For example, instead of calling
+ 
+ CoreStartOptions opt = new CoreStartOptions();
+ opt.addExtension(BrowserExtensions.CLICK_ONE);
+ tc.browser.start(WebDrv.CHROME, EtestData.getUrl(), opt);
+ 
+
+ one can call
+ 
+ tc.browser.start(WebDrv.CHROME, EtestData.getUrl(),
+                  new CoreStartOptions().addExtension(BrowserExtensions.CLICK_ONE));
+ 
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreStartOptions()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+CoreStartOptions
+addCapabilities(org.openqa.selenium.Capabilities caps)
+
+Adds browser capabilities to the current configuration.
+
+CoreStartOptions
+addExtension(IBrowserExtensions extension)
+
+Adds wanted extension to current run.
+
+CoreStartOptions
+addLogin(String user,
+ String pass)
+
+Adding user and password to URL in order to skip adfs login popup.
+
+void
+addRequest(String request)
+
+Adds a request to the session.
+
+CoreStartOptions
+disableBrowsingDownloadProtection()
+
+Disables download protection.
+
+CoreStartOptions
+disableProxy()
+
+Forcing to disable any possible proxy settings e.g.
+
+CoreStartOptions
+enableBrowsingDownloadProtection()
+
+Enables download protection.
+
+CoreStartOptions
+enableProxy()
+
+Enables possible proxy settings e.g.
+
+org.openqa.selenium.Capabilities
+getCapabilities()
+
+Gets the current browser capabilities.
+
+String
+getPass()
+
+Retrieves the password used for login.
+
+int
+getPort()
+
+Gets the port number for the browser instance.
+
+String
+getProxyAutoConfigScript()
+
+Retrieves the current proxy auto-config script URL.
+
+List<String>
+getRequests()
+
+Retrieves the list of additional requests to make during the session.
+
+String
+getUrlAddress()
+
+Gets the URL address for the browser instance.
+
+String
+getUser()
+
+Retrieves the username used for login.
+
+boolean
+isHeadless()
+
+Checks if the browser is running in headless mode.
+
+void
+setHeadless(boolean headless)
+
+Sets whether the browser should run in headless mode.
+
+CoreStartOptions
+setLogging(String type,
+ Level level)
+
+Configures the logging settings for the browser.
+
+CoreStartOptions
+setPort(int port)
+
+Sets the port for the browser instance.
+
+CoreStartOptions
+setProxy(String proxy)
+
+Adds a proxy to current execution.
+
+CoreStartOptions
+setProxyAutoConfigScript(String proxyAutoConfigScriptUrl)
+
+Sets the URL for the proxy auto-config script.
+
+CoreStartOptions
+setUrlAddress(String urlAddress)
+
+URL address for WinDriver.
+
+CoreStartOptions
+startIncognito()
+
+Starts current browser in incognito mode.
+
+CoreStartOptions
+useEntitlementLogin()
+
+Handles entitlement login.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreStartOptions
+public CoreStartOptions()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+addCapabilities
+public CoreStartOptions addCapabilities(org.openqa.selenium.Capabilities caps)
+Adds browser capabilities to the current configuration.
+
+Parameters:
+caps - The capabilities to add.
+Returns:
+The current instance of this class.
+
+
+
+
+
+getCapabilities
+public org.openqa.selenium.Capabilities getCapabilities()
+Gets the current browser capabilities.
+
+Returns:
+The current capabilities.
+
+
+
+
+
+getPort
+public int getPort()
+Gets the port number for the browser instance.
+
+Returns:
+The port number.
+
+
+
+
+
+getUrlAddress
+public String getUrlAddress()
+Gets the URL address for the browser instance.
+
+Returns:
+The URL address.
+
+
+
+
+
+setPort
+public CoreStartOptions setPort(int port)
+Sets the port for the browser instance.
+
+Parameters:
+port - The port number.
+Returns:
+The current instance of this class.
+
+
+
+
+
+addLogin
+public CoreStartOptions addLogin(String user,
+ String pass)
+Adding user and password to URL in order to skip adfs login popup.
+
+Parameters:
+user - User name
+pass - Password
+Returns:
+Self reference
+
+
+
+
+
+setLogging
+public CoreStartOptions setLogging(String type,
+ Level level)
+Configures the logging settings for the browser.
+
+Parameters:
+type - The log type.
+level - The log level.
+Returns:
+The current instance of this class.
+
+
+
+
+
+setUrlAddress
+public CoreStartOptions setUrlAddress(String urlAddress)
+URL address for WinDriver.
+
+Parameters:
+urlAddress - Address without "http" prefix!
+
+
+
+
+
+addExtension
+@CanIgnoreReturnValue
+public CoreStartOptions addExtension(IBrowserExtensions extension)
+Adds wanted extension to current run.
+
+Parameters:
+extension - Wanted extension.
+
+
+
+
+
+disableBrowsingDownloadProtection
+public CoreStartOptions disableBrowsingDownloadProtection()
+Disables download protection.
+
+
+
+
+enableBrowsingDownloadProtection
+public CoreStartOptions enableBrowsingDownloadProtection()
+Enables download protection.
+
+
+
+
+startIncognito
+public CoreStartOptions startIncognito()
+Starts current browser in incognito mode.
+
+
+
+
+useEntitlementLogin
+@CanIgnoreReturnValue
+public CoreStartOptions useEntitlementLogin()
+Handles entitlement login.
+
+
+
+
+disableProxy
+@CanIgnoreReturnValue
+public CoreStartOptions disableProxy()
+Forcing to disable any possible proxy settings e.g. default settings for some specific environments.
+
+
+
+
+enableProxy
+@CanIgnoreReturnValue
+public CoreStartOptions enableProxy()
+Enables possible proxy settings e.g. default settings for some specific environments which doesn't work without proxy. e.g. AWS
+
+
+
+
+setProxy
+@CanIgnoreReturnValue
+public CoreStartOptions setProxy(String proxy)
+Adds a proxy to current execution.
+
+Parameters:
+proxy - Proxy Address.
+
+
+
+
+
+getProxyAutoConfigScript
+public String getProxyAutoConfigScript()
+Retrieves the current proxy auto-config script URL.
+
+Returns:
+The proxy auto-config script URL.
+
+
+
+
+
+setProxyAutoConfigScript
+public CoreStartOptions setProxyAutoConfigScript(String proxyAutoConfigScriptUrl)
+Sets the URL for the proxy auto-config script.
+
+Parameters:
+proxyAutoConfigScriptUrl - The URL of the proxy auto-config script.
+Returns:
+The current instance of this class.
+
+
+
+
+
+getUser
+public String getUser()
+Retrieves the username used for login.
+
+Returns:
+The username.
+
+
+
+
+
+getPass
+public String getPass()
+Retrieves the password used for login.
+
+Returns:
+The password.
+
+
+
+
+
+getRequests
+public List<String> getRequests()
+Retrieves the list of additional requests to make during the session.
+
+Returns:
+A list of requests.
+
+
+
+
+
+addRequest
+public void addRequest(String request)
+Adds a request to the session.
+
+Parameters:
+request - The request to add.
+
+
+
+
+
+isHeadless
+public boolean isHeadless()
+Checks if the browser is running in headless mode.
+
+Returns:
+true if headless mode is enabled, false otherwise.
+
+
+
+
+
+setHeadless
+public void setHeadless(boolean headless)
+Sets whether the browser should run in headless mode.
+
+Parameters:
+headless - true to enable headless mode, false to disable it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+Uses of Interface fate.core.Interfaces.ITestData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.ITestData
+
+Packages that use ITestData
+
+Package
+Description
+fate.core.Email
+ 
+
+
+
+
+
+Uses of ITestData in fate.core.Email
+Methods in fate.core.Email with parameters of type ITestData
+
+Modifier and Type
+Method
+Description
+static void
+Email.deleteEmail(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String subject)
+
+Deletes an email with wanted subject.
+
+static void
+Email.downloadAllAttachments(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String emailsSubject,
+ String pathWhereToSaveAttachments)
+
+Downloads all email attachments to wanted directory.
+
+static String
+Email.getContentOfEmail(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String emailsSubject)
+
+Returns text of email with wanted subject.
+
+static List<EMailData>
+Email.getMailInfos(ITestData user,
+ String queryString)
+
+Returns information about the emails matched by a query string.
+
+static boolean
+Email.isEmailExists(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String subject)
+
+Checks if wanted folder contains an email with wanted subject.
+
+static void
+Email.sendEmail(ITestData user,
+ String email,
+ String subject,
+ String text)
+
+Sends wanted mail to wanted address.
+
+
+
+
+
+
+
+
+
+
+

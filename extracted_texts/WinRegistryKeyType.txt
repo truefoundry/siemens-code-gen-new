@@ -1,0 +1,250 @@
+WinRegistryKeyType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class WinRegistryKeyType
+
+java.lang.Object
+java.lang.Enum<WinRegistryKeyType>
+fate.core.Enums.WinRegistryKeyType
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<WinRegistryKeyType>, Constable
+
+
+public enum WinRegistryKeyType
+extends Enum<WinRegistryKeyType>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+BINARY
+ 
+DWORD
+ 
+EXPANDABLE_STRING_VALUE
+ 
+MULTI_STRING_VALUE
+ 
+QWORD
+ 
+STRING
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static WinRegistryKeyType
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static WinRegistryKeyType[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+BINARY
+public static final WinRegistryKeyType BINARY
+
+
+
+
+STRING
+public static final WinRegistryKeyType STRING
+
+
+
+
+EXPANDABLE_STRING_VALUE
+public static final WinRegistryKeyType EXPANDABLE_STRING_VALUE
+
+
+
+
+MULTI_STRING_VALUE
+public static final WinRegistryKeyType MULTI_STRING_VALUE
+
+
+
+
+DWORD
+public static final WinRegistryKeyType DWORD
+
+
+
+
+QWORD
+public static final WinRegistryKeyType QWORD
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static WinRegistryKeyType[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static WinRegistryKeyType valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,206 @@
+Parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcase
+Class Parameters
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcase.Parameters
+
+
+
+public class Parameters
+extends Object
+Represents a container for variables and entries.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Parameters()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+List<String>
+getEntries()
+
+Retrieves the list of entries.
+
+List<String>
+getVariables()
+
+Retrieves the list of variables.
+
+void
+setEntries(List<String> entries)
+
+Sets the list of entries.
+
+void
+setVariables(List<String> variables)
+
+Sets the list of variables.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+Parameters
+public Parameters()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getVariables
+public List<String> getVariables()
+Retrieves the list of variables.
+
+Returns:
+An immutable list of variables.
+
+
+
+
+
+setVariables
+public void setVariables(List<String> variables)
+Sets the list of variables.
+
+Parameters:
+variables - A list of variable names or values.
+
+
+
+
+
+getEntries
+public List<String> getEntries()
+Retrieves the list of entries.
+
+Returns:
+An immutable list of entries.
+
+
+
+
+
+setEntries
+public void setEntries(List<String> entries)
+Sets the list of entries.
+
+Parameters:
+entries - A list of additional entries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,203 @@
+CoreIocBuilder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class CoreIocBuilder
+
+java.lang.Object
+fate.core.CompositionRoot.CoreIocBuilder
+
+
+
+public class CoreIocBuilder
+extends Object
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static void
+addComponent(Object component,
+ boolean asCache)
+
+Adds a component to the current container instance.
+
+static org.picocontainer.MutablePicoContainer
+getContainer()
+
+Retrieves the current container instance.
+
+static AbstractCoreHandler
+getHandler(TestType type)
+
+Retrieves a test handler of the specified type.
+
+static PerfMonStorage
+getPerfMonStorage()
+
+Retrieves the PerfMonStorage instance.
+
+static WebDriverStore
+getStore()
+
+Retrieves the WebDriverStore instance.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+addComponent
+public static void addComponent(Object component,
+ boolean asCache)
+Adds a component to the current container instance.
+
+ If the component already exists in the container, this method logs a message
+ and skips further action. Otherwise, the component is added with optional caching.
+
+Parameters:
+component - the component to add
+asCache - whether the component should be cached
+
+
+
+
+
+getContainer
+public static org.picocontainer.MutablePicoContainer getContainer()
+Retrieves the current container instance.
+
+Returns:
+the MutablePicoContainer instance
+
+
+
+
+
+getStore
+public static WebDriverStore getStore()
+Retrieves the WebDriverStore instance.
+
+Returns:
+the WebDriver store instance
+
+
+
+
+
+getPerfMonStorage
+public static PerfMonStorage getPerfMonStorage()
+Retrieves the PerfMonStorage instance.
+
+Returns:
+the performance monitoring storage instance
+
+
+
+
+
+getHandler
+@CheckForNull
+public static AbstractCoreHandler getHandler(TestType type)
+Retrieves a test handler of the specified type.
+
+Parameters:
+type - the type of test handler to retrieve
+Returns:
+the AbstractCoreHandler matching the specified type, or null if none is found
+
+
+
+
+
+
+
+
+
+
+
+
+
+

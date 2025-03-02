@@ -1,0 +1,253 @@
+ComparerOptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Results
+Class ComparerOptions
+
+java.lang.Object
+fate.core.Results.ComparerOptions
+
+
+
+public class ComparerOptions
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ComparerOptions()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+ComparerOptions
+abort()
+
+Aborts test if this step fails.
+
+ComparerOptions
+addScreenShotToPlatform(String filePath)
+
+Adds wanted image as attachment to test step.
+
+ComparerOptions
+ignoreCase()
+
+Ignores upper and lower case for comparison, applies only to Strings.
+
+ComparerOptions
+removeSpaces()
+
+Removes white spaces before comparison, applies only to Strings.
+
+ComparerOptions
+setKnownBug(String bug)
+
+Sets known bug message after executing the step check, Useful to mark failed step as a known bug.
+
+ComparerOptions
+takeScreenShotLocal()
+
+Takes a screenshot of current step and saves it in local output directory "...\out\test\screens\testname_stepIndex.png"
+
+ComparerOptions
+takeScreenShotPlatform()
+
+Takes a screenshot of current step and uploads it to selected platform.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ComparerOptions
+public ComparerOptions()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setKnownBug
+public ComparerOptions setKnownBug(String bug)
+Sets known bug message after executing the step check, Useful to mark failed step as a known bug.
+
+Parameters:
+bug - Known bug message.
+Returns:
+ComparerOptions as object.
+
+
+
+
+
+takeScreenShotLocal
+public ComparerOptions takeScreenShotLocal()
+Takes a screenshot of current step and saves it in local output directory "...\out\test\screens\testname_stepIndex.png"
+
+Returns:
+ComparerOptions as object.
+
+
+
+
+
+takeScreenShotPlatform
+public ComparerOptions takeScreenShotPlatform()
+Takes a screenshot of current step and uploads it to selected platform.
+
+Returns:
+ComparerOptions as object.
+
+
+
+
+
+addScreenShotToPlatform
+public ComparerOptions addScreenShotToPlatform(String filePath)
+Adds wanted image as attachment to test step.
+
+Parameters:
+filePath - Path to wanted image.
+Returns:
+ComparerOptions as object.
+
+
+
+
+
+removeSpaces
+public ComparerOptions removeSpaces()
+Removes white spaces before comparison, applies only to Strings.
+
+Returns:
+Self reference.
+
+
+
+
+
+ignoreCase
+public ComparerOptions ignoreCase()
+Ignores upper and lower case for comparison, applies only to Strings.
+
+Returns:
+Self reference.
+
+
+
+
+
+abort
+public ComparerOptions abort()
+Aborts test if this step fails.
+
+
+
+
+
+
+
+
+
+
+
+
+

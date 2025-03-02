@@ -1,0 +1,293 @@
+StepEvaluator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class StepEvaluator
+
+java.lang.Object
+fate.core.ControlImplementations.StepEvaluator
+
+
+
+public class StepEvaluator
+extends Object
+Handles the Steps in each test cases.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+StepEvaluator()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+StepEvaluator
+add(BooleanSupplier call,
+ String errorDescription)
+
+Adds evaluation function to evaluation list.
+
+<R> StepEvaluator
+add(R expectedValue,
+ Supplier<R> currentValueFunction,
+ String errorMessage)
+
+add check into evaluator check list
+
+<R> StepEvaluator
+add(R expectedValue,
+ R currentValue,
+ String errorMessage)
+
+add check into evaluator check list
+
+String
+eval(boolean... disableReset)
+
+Evaluates collected list and resets the evaluator state afterward.
+
+boolean
+evalAsBool()
+
+Checks if evaluation collection contains any errors.
+
+StepEvaluator
+expectedResults(int amount)
+
+Defines how many result are at least expected.
+
+int
+getErrorCount()
+
+Returns the amount of errors within internal collection.
+
+void
+reset()
+
+Resets internal collection.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+StepEvaluator
+public StepEvaluator()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+add
+public StepEvaluator add(BooleanSupplier call,
+ String errorDescription)
+Adds evaluation function to evaluation list.
+
+Parameters:
+call - Function call to evaluate.
+errorDescription - Error text in case evaluation will fail.
+
+
+
+
+
+add
+public <R> StepEvaluator add(R expectedValue,
+ Supplier<R> currentValueFunction,
+ String errorMessage)
+add check into evaluator check list
+
+Type Parameters:
+R - type of compared values
+Parameters:
+expectedValue - value compared with @currentValueFunction
+currentValueFunction - - function returning tested value
+errorMessage - message in case of error
+Returns:
+StepEvaluator itself
+
+
+
+
+
+add
+public <R> StepEvaluator add(R expectedValue,
+ R currentValue,
+ String errorMessage)
+add check into evaluator check list
+
+Type Parameters:
+R - type of compared values
+Parameters:
+expectedValue - value compared with @currentValue
+currentValue - - tested value
+errorMessage - message in case of error
+Returns:
+StepEvaluator itself
+
+
+
+
+
+eval
+public String eval(boolean... disableReset)
+Evaluates collected list and resets the evaluator state afterward.
+
+Parameters:
+disableReset - if true, will not reset evaluator after evaluation. By default reset is executed.
+Returns:
+"ok" if every evaluation passes or String with errors.
+
+
+
+
+
+expectedResults
+public StepEvaluator expectedResults(int amount)
+Defines how many result are at least expected. Evaluation will fail if amount does not match, even if available results are ok.
+
+Parameters:
+amount - Amount of evaluations which must be performed.
+Returns:
+Self reference.
+
+
+
+
+
+evalAsBool
+public boolean evalAsBool()
+Checks if evaluation collection contains any errors.
+
+Returns:
+true if internal collection has no errors, otherwise false.
+
+
+
+
+
+getErrorCount
+public int getErrorCount()
+Returns the amount of errors within internal collection.
+
+Returns:
+Amount of errors as int.
+
+
+
+
+
+reset
+public void reset()
+Resets internal collection.
+
+
+
+
+
+
+
+
+
+
+
+
+

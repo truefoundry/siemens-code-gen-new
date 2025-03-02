@@ -1,0 +1,131 @@
+fate.core.Enums
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+
+
+package fate.core.Enums
+
+
+
+
+Enum Classes
+
+Class
+Description
+AccessData
+
+General access data for platforms and users.
+
+AgentEnvProperties
+
+Used to set and read system environment variables from wanted machine.
+
+BrowserExtensions
+ 
+CoreProperties
+ 
+CssAttributes
+ 
+DriverType
+ 
+ElementType
+ 
+EType
+ 
+EWinType
+ 
+GeneralTimeouts
+ 
+GridParameter
+ 
+LogFormat
+ 
+LogLevel
+ 
+LogType
+ 
+PrintWindow
+
+Print Window elements specified by List of parent elements for shadow root elements inside which the element is located (left) and selector of
+ wanted element for every supported browser (right).
+
+PseudoElement
+ 
+ResultPlatform
+ 
+SelectorModificator
+ 
+TcStates
+ 
+TestType
+ 
+WebDrv
+ 
+WinApplicationsIDs
+ 
+WinRegistryKeys
+ 
+WinRegistryKeyType
+ 
+
+
+
+
+
+
+
+
+
+

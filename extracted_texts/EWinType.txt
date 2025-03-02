@@ -1,0 +1,248 @@
+EWinType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class EWinType
+
+java.lang.Object
+java.lang.Enum<EWinType>
+fate.core.Enums.EWinType
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<EWinType>, Constable
+
+
+public enum EWinType
+extends Enum<EWinType>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+AUTOMATIONID
+
+Element identification by AccessibilityId.
+
+CUSTOM
+
+Element identification by Custom.
+
+INDEX
+
+Element identification by index.
+
+NAME
+
+Element identification by simple name.
+
+XPATH
+
+Element identification by full xpath.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static EWinType
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static EWinType[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+NAME
+public static final EWinType NAME
+Element identification by simple name.
+
+
+
+
+AUTOMATIONID
+public static final EWinType AUTOMATIONID
+Element identification by AccessibilityId.
+
+
+
+
+CUSTOM
+public static final EWinType CUSTOM
+Element identification by Custom.
+
+
+
+
+INDEX
+public static final EWinType INDEX
+Element identification by index.
+
+
+
+
+XPATH
+public static final EWinType XPATH
+Element identification by full xpath.
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static EWinType[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static EWinType valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+JsonHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Http
+Class JsonHandler
+
+java.lang.Object
+fate.core.Http.JsonHandler
+
+
+
+public class JsonHandler
+extends Object
+Handles the Json data.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static org.json.JSONObject
+mapToJson(Object object,
+ boolean isPut)
+
+Maps the given object to a json.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+mapToJson
+public static org.json.JSONObject mapToJson(Object object,
+ boolean isPut)
+Maps the given object to a json.
+
+Parameters:
+object - object to be mapped
+isPut - boolean to determine if it is a POST or PUT method
+Returns:
+JSONObject object
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,214 @@
+TestScriptSteps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcase
+Class TestScriptSteps
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcase.TestScriptSteps
+
+
+
+public class TestScriptSteps
+extends Object
+Created by Michael on 28.02.2019. SRSNG-
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestScriptSteps()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getDescription()
+ 
+String
+getExpectedResult()
+ 
+int
+getId()
+ 
+int
+getIndex()
+ 
+void
+setDescription(String description)
+ 
+void
+setExpectedResult(String expectedResult)
+ 
+void
+setId(int id)
+ 
+void
+setIndex(int index)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TestScriptSteps
+public TestScriptSteps()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getExpectedResult
+public String getExpectedResult()
+
+
+
+
+setExpectedResult
+public void setExpectedResult(String expectedResult)
+
+
+
+
+getDescription
+public String getDescription()
+
+
+
+
+setDescription
+public void setDescription(String description)
+
+
+
+
+getIndex
+public int getIndex()
+
+
+
+
+setIndex
+public void setIndex(int index)
+
+
+
+
+getId
+public int getId()
+
+
+
+
+setId
+public void setId(int id)
+
+
+
+
+
+
+
+
+
+
+
+
+

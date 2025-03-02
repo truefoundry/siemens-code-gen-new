@@ -1,0 +1,266 @@
+GeneralTimeouts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class GeneralTimeouts
+
+java.lang.Object
+java.lang.Enum<GeneralTimeouts>
+fate.core.Enums.GeneralTimeouts
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<GeneralTimeouts>, Constable
+
+
+public enum GeneralTimeouts
+extends Enum<GeneralTimeouts>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+API_TIMEOUT
+ 
+ENV_TIMEOUT
+ 
+IMPLICITLY_WAIT
+ 
+PAGE_LOAD_TIME
+ 
+PAGE_RELOAD
+ 
+SCRIPT_TIMEOUT
+ 
+TMP_WAIT
+ 
+UI_TIMEOUT
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+Duration
+getDuration()
+ 
+static GeneralTimeouts
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static GeneralTimeouts[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+UI_TIMEOUT
+public static final GeneralTimeouts UI_TIMEOUT
+
+
+
+
+API_TIMEOUT
+public static final GeneralTimeouts API_TIMEOUT
+
+
+
+
+TMP_WAIT
+public static final GeneralTimeouts TMP_WAIT
+
+
+
+
+ENV_TIMEOUT
+public static final GeneralTimeouts ENV_TIMEOUT
+
+
+
+
+PAGE_RELOAD
+public static final GeneralTimeouts PAGE_RELOAD
+
+
+
+
+SCRIPT_TIMEOUT
+public static final GeneralTimeouts SCRIPT_TIMEOUT
+
+
+
+
+IMPLICITLY_WAIT
+public static final GeneralTimeouts IMPLICITLY_WAIT
+
+
+
+
+PAGE_LOAD_TIME
+public static final GeneralTimeouts PAGE_LOAD_TIME
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static GeneralTimeouts[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static GeneralTimeouts valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getDuration
+public Duration getDuration()
+
+
+
+
+
+
+
+
+
+
+
+
+

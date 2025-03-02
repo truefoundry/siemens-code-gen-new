@@ -1,0 +1,679 @@
+CoreInteractables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreInteractables
+
+java.lang.Object
+fate.core.ControlImplementations.CoreInteractables
+
+
+
+All Implemented Interfaces:
+IInteractable
+
+
+Direct Known Subclasses:
+CoreCssControl
+
+
+public abstract class CoreInteractables
+extends Object
+implements IInteractable
+Handles the basic element interactions.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreInteractables()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+IInteractable
+click(IInteractableNaming name)
+
+Clicks on a specified web element.
+
+boolean
+exists(IInteractableNaming name)
+
+Checks if a web element exists (can be found on the page).
+
+String
+getAttribute(IInteractableNaming name,
+ String attribute)
+
+Retrieves the value of an attribute for a web element.
+
+String
+getCssValue(IInteractableNaming name,
+ String value)
+
+Retrieves the CSS value of a specific property for a web element.
+
+int
+getHeight(IInteractableNaming name)
+
+Retrieves the height of a web element.
+
+org.openqa.selenium.Point
+getLocation(IInteractableNaming name)
+
+Retrieves the location (coordinates) of a web element on the page.
+
+String
+getText(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+
+Retrieves the text of a web element.
+
+int
+getWidth(IInteractableNaming name)
+
+Retrieves the width of a web element.
+
+boolean
+hasFocus(IInteractableNaming name)
+
+Checks if a web element currently has focus (is active).
+
+boolean
+isBlank(IInteractableNaming name)
+
+Checks if a web element is blank (contains only whitespace or no value).
+
+boolean
+isClickable(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+
+Checks if a web element is clickable.
+
+boolean
+isDisplayed(IInteractableNaming name)
+
+Checks if a web element is displayed (visible on the page).
+
+boolean
+isEmpty(IInteractableNaming name)
+
+Checks if a web element is empty (contains no text or value).
+
+boolean
+isEnabled(IInteractableNaming name)
+
+Checks if a web element is enabled (can be interacted with).
+
+boolean
+isMandatory(IInteractableNaming name)
+
+Checks if a web element is mandatory by inspecting various properties such as label, 'required' attribute, and class.
+
+IInteractable
+moveMouseOver(IInteractableNaming name)
+
+Moves the mouse over a specified web element.
+
+IInteractable
+scrollIntoView(IInteractableNaming name)
+
+Scrolls the page to bring a specified web element into view using JavaScript.
+
+IInteractable
+sendKeys(IInteractableNaming name,
+ String keys,
+ boolean... clear)
+
+Sends keys to a web element (e.g., typing text into a field).
+
+IInteractable
+sendKeys(org.openqa.selenium.By element,
+ String keys,
+ boolean... clear)
+
+Sends keys (text) to a web element located by a By selector.
+
+IInteractable
+setAttribute(IInteractableNaming name,
+ String attribute,
+ String value)
+
+Sets a custom attribute for a web element using JavaScript.
+
+IInteractable
+waitForDisposal(IInteractableNaming control,
+ Duration... duration)
+
+Waits for a web element to be disposed (removed from the DOM) based on the given control's naming.
+
+IInteractable
+waitForDisposal(org.openqa.selenium.By selector,
+ Duration... duration)
+
+Waits for a web element to be disposed (removed from the DOM) based on the given selector.
+
+IInteractable
+waitToBeClickable(IInteractableNaming name,
+ Duration... duration)
+
+Waits for a web element to become clickable within the given time.
+
+IInteractable
+waitToBeVisible(IInteractableNaming name,
+ Duration... duration)
+
+Waits for a web element to become visible within the given time.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreInteractables
+public CoreInteractables()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+isEmpty
+public boolean isEmpty(IInteractableNaming name)
+Checks if a web element is empty (contains no text or value).
+
+Specified by:
+isEmpty in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element is empty, false otherwise.
+
+
+
+
+
+isBlank
+public boolean isBlank(IInteractableNaming name)
+Checks if a web element is blank (contains only whitespace or no value).
+
+Specified by:
+isBlank in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element is blank, false otherwise.
+
+
+
+
+
+isClickable
+public boolean isClickable(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+Checks if a web element is clickable.
+
+Specified by:
+isClickable in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+rootElement - Optional root element for finding the control.
+Returns:
+true if the element is clickable, false otherwise.
+
+
+
+
+
+sendKeys
+public IInteractable sendKeys(IInteractableNaming name,
+ String keys,
+ boolean... clear)
+Sends keys to a web element (e.g., typing text into a field).
+ Optionally clears the field before entering the text.
+
+Specified by:
+sendKeys in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+keys - The keys or text to send.
+clear - Optional flag to clear the field before entering text.
+Returns:
+The current instance of this class.
+
+
+
+
+
+sendKeys
+public IInteractable sendKeys(org.openqa.selenium.By element,
+ String keys,
+ boolean... clear)
+Sends keys (text) to a web element located by a By selector.
+ Optionally clears the field before entering the text.
+
+Specified by:
+sendKeys in interface IInteractable
+Parameters:
+element - The By selector for the web element.
+keys - The keys or text to send.
+clear - Optional flag to clear the field before entering text.
+Returns:
+The current instance of this class.
+
+
+
+
+
+getText
+public String getText(IInteractableNaming name,
+ org.openqa.selenium.By... rootElement)
+Retrieves the text of a web element. If the element has a value attribute, it returns that value; otherwise, it returns the text.
+
+Specified by:
+getText in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+rootElement - Optional root element for finding the control.
+Returns:
+The text or value of the element, or a warning if the element is not found.
+
+
+
+
+
+moveMouseOver
+public IInteractable moveMouseOver(IInteractableNaming name)
+Moves the mouse over a specified web element.
+
+Specified by:
+moveMouseOver in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+The current instance of this class.
+
+
+
+
+
+hasFocus
+public boolean hasFocus(IInteractableNaming name)
+Checks if a web element currently has focus (is active).
+
+Specified by:
+hasFocus in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element has focus, false otherwise.
+
+
+
+
+
+click
+public IInteractable click(IInteractableNaming name)
+Clicks on a specified web element.
+ It checks if the element is visible, clickable, and not covered by another element.
+ If the element is not clickable, the click will be retried a few times.
+
+Specified by:
+click in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+The current instance of this class.
+
+
+
+
+
+isDisplayed
+public boolean isDisplayed(IInteractableNaming name)
+Checks if a web element is displayed (visible on the page).
+
+Specified by:
+isDisplayed in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element is displayed, false otherwise.
+
+
+
+
+
+exists
+public boolean exists(IInteractableNaming name)
+Checks if a web element exists (can be found on the page).
+
+Specified by:
+exists in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element exists, false otherwise.
+
+
+
+
+
+isEnabled
+public boolean isEnabled(IInteractableNaming name)
+Checks if a web element is enabled (can be interacted with).
+
+Specified by:
+isEnabled in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element is enabled, false otherwise.
+
+
+
+
+
+getLocation
+public org.openqa.selenium.Point getLocation(IInteractableNaming name)
+Retrieves the location (coordinates) of a web element on the page.
+
+Specified by:
+getLocation in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+The location of the element as a Point, or (-1, -1) if not found.
+
+
+
+
+
+getHeight
+public int getHeight(IInteractableNaming name)
+Retrieves the height of a web element.
+
+Specified by:
+getHeight in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+The height of the element, or -1 if not found.
+
+
+
+
+
+getWidth
+public int getWidth(IInteractableNaming name)
+Retrieves the width of a web element.
+
+Specified by:
+getWidth in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+The width of the element, or -1 if not found.
+
+
+
+
+
+getCssValue
+public String getCssValue(IInteractableNaming name,
+ String value)
+Retrieves the CSS value of a specific property for a web element.
+
+Specified by:
+getCssValue in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+value - The CSS property to retrieve.
+Returns:
+The CSS value, or a message if the element is not found.
+
+
+
+
+
+getAttribute
+public String getAttribute(IInteractableNaming name,
+ String attribute)
+Retrieves the value of an attribute for a web element.
+
+Specified by:
+getAttribute in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+attribute - The attribute to retrieve.
+Returns:
+The value of the attribute, or a message if the element is not found.
+
+
+
+
+
+setAttribute
+public IInteractable setAttribute(IInteractableNaming name,
+ String attribute,
+ String value)
+Sets a custom attribute for a web element using JavaScript.
+
+Specified by:
+setAttribute in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+attribute - The attribute to set.
+value - The value of the attribute.
+Returns:
+IInteractable interface.
+
+
+
+
+
+waitForDisposal
+public IInteractable waitForDisposal(org.openqa.selenium.By selector,
+ Duration... duration)
+Waits for a web element to be disposed (removed from the DOM) based on the given selector.
+
+Specified by:
+waitForDisposal in interface IInteractable
+Parameters:
+selector - The selector used to locate the web element.
+duration - The maximum duration to wait for the disposal.
+Returns:
+The current instance of this class.
+
+
+
+
+
+waitForDisposal
+public IInteractable waitForDisposal(IInteractableNaming control,
+ Duration... duration)
+Waits for a web element to be disposed (removed from the DOM) based on the given control's naming.
+
+Specified by:
+waitForDisposal in interface IInteractable
+Parameters:
+control - The naming reference to the control.
+duration - The maximum duration to wait for the disposal.
+Returns:
+The current instance of this class.
+
+
+
+
+
+waitToBeClickable
+@CanIgnoreReturnValue
+public IInteractable waitToBeClickable(IInteractableNaming name,
+ Duration... duration)
+Waits for a web element to become clickable within the given time.
+
+Specified by:
+waitToBeClickable in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+duration - The maximum duration to wait for the element to become clickable.
+Returns:
+The current instance of this class.
+
+
+
+
+
+waitToBeVisible
+@CanIgnoreReturnValue
+public IInteractable waitToBeVisible(IInteractableNaming name,
+ Duration... duration)
+Waits for a web element to become visible within the given time.
+
+Specified by:
+waitToBeVisible in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+duration - The maximum duration to wait for the element to become visible.
+Returns:
+The current instance of this class.
+
+
+
+
+
+scrollIntoView
+public IInteractable scrollIntoView(IInteractableNaming name)
+Scrolls the page to bring a specified web element into view using JavaScript.
+
+Specified by:
+scrollIntoView in interface IInteractable
+Parameters:
+name - The name or identifier for the web element to bring into view.
+Returns:
+The current instance of this class.
+
+
+
+
+
+isMandatory
+public boolean isMandatory(IInteractableNaming name)
+Checks if a web element is mandatory by inspecting various properties such as label, 'required' attribute, and class.
+
+Specified by:
+isMandatory in interface IInteractable
+Parameters:
+name - The name or identifier for the web element.
+Returns:
+true if the element is mandatory, false otherwise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

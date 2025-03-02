@@ -1,0 +1,81 @@
+Uses of Class fate.core.Results.TcResComparer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.Results.TcResComparer
+
+Packages that use TcResComparer
+
+Package
+Description
+fate.core.Results
+ 
+
+
+
+
+
+Uses of TcResComparer in fate.core.Results
+Methods in fate.core.Results with parameters of type TcResComparer
+
+Modifier and Type
+Method
+Description
+void
+ResultCollector.addStep(String stepName,
+ TcResComparer comparer)
+
+Adds single test step to collector.
+
+
+
+
+
+
+
+
+
+
+

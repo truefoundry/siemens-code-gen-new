@@ -1,0 +1,84 @@
+fate.core.PerfMon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PerfMon
+
+
+package fate.core.PerfMon
+
+
+
+
+Classes
+
+Class
+Description
+PerfMon
+
+A utility class for monitoring and measuring the performance of code blocks or functions.
+
+PerfMonStorage
+
+A utility class for monitoring the storage of code blocks or functions.
+
+
+
+
+
+
+
+
+
+
+

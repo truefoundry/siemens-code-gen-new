@@ -1,0 +1,168 @@
+WebDriverEventHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class WebDriverEventHandler
+
+java.lang.Object
+fate.core.ControlImplementations.WebDriverEventHandler
+
+
+
+All Implemented Interfaces:
+org.openqa.selenium.support.events.WebDriverListener
+
+
+public class WebDriverEventHandler
+extends Object
+implements org.openqa.selenium.support.events.WebDriverListener
+Handles the Event performed by WebDriver.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+WebDriverEventHandler()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+afterClick(org.openqa.selenium.WebElement element)
+
+listen to click on element in order to log in to adfs
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface org.openqa.selenium.support.events.WebDriverListener
+afterAccept, afterActiveElement, afterAddCookie, afterAlert, afterAnyAlertCall, afterAnyCall, afterAnyNavigationCall, afterAnyOptionsCall, afterAnyTargetLocatorCall, afterAnyTimeoutsCall, afterAnyWebDriverCall, afterAnyWebElementCall, afterAnyWindowCall, afterBack, afterClear, afterClose, afterDefaultContent, afterDeleteAllCookies, afterDeleteCookie, afterDeleteCookieNamed, afterDismiss, afterExecuteAsyncScript, afterExecuteScript, afterFindElement, afterFindElement, afterFindElements, afterFindElements, afterForward, afterFrame, afterFrame, afterFrame, afterFullscreen, afterGet, afterGetAttribute, afterGetCookieNamed, afterGetCookies, afterGetCssValue, afterGetCurrentUrl, afterGetLocation, afterGetPageSource, afterGetPosition, afterGetSize, afterGetSize, afterGetTagName, afterGetText, afterGetText, afterGetTitle, afterGetWindowHandle, afterGetWindowHandles, afterImplicitlyWait, afterIsDisplayed, afterIsEnabled, afterIsSelected, afterMaximize, afterNewWindow, afterPageLoadTimeout, afterParentFrame, afterPerform, afterQuit, afterRefresh, afterResetInputState, afterSendKeys, afterSendKeys, afterSetPosition, afterSetScriptTimeout, afterSetSize, afterSubmit, afterTo, afterTo, afterWindow, beforeAccept, beforeActiveElement, beforeAddCookie, beforeAlert, beforeAnyAlertCall, beforeAnyCall, beforeAnyNavigationCall, beforeAnyOptionsCall, beforeAnyTargetLocatorCall, beforeAnyTimeoutsCall, beforeAnyWebDriverCall, beforeAnyWebElementCall, beforeAnyWindowCall, beforeBack, beforeClear, beforeClick, beforeClose, beforeDefaultContent, beforeDeleteAllCookies, beforeDeleteCookie, beforeDeleteCookieNamed, beforeDismiss, beforeExecuteAsyncScript, beforeExecuteScript, beforeFindElement, beforeFindElement, beforeFindElements, beforeFindElements, beforeForward, beforeFrame, beforeFrame, beforeFrame, beforeFullscreen, beforeGet, beforeGetAttribute, beforeGetCookieNamed, beforeGetCookies, beforeGetCssValue, beforeGetCurrentUrl, beforeGetLocation, beforeGetPageSource, beforeGetPosition, beforeGetSize, beforeGetSize, beforeGetTagName, beforeGetText, beforeGetText, beforeGetTitle, beforeGetWindowHandle, beforeGetWindowHandles, beforeImplicitlyWait, beforeIsDisplayed, beforeIsEnabled, beforeIsSelected, beforeMaximize, beforeNewWindow, beforePageLoadTimeout, beforeParentFrame, beforePerform, beforeQuit, beforeRefresh, beforeResetInputState, beforeSendKeys, beforeSendKeys, beforeSetPosition, beforeSetScriptTimeout, beforeSetSize, beforeSubmit, beforeTo, beforeTo, beforeWindow, onError
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+WebDriverEventHandler
+public WebDriverEventHandler()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+afterClick
+public void afterClick(org.openqa.selenium.WebElement element)
+listen to click on element in order to log in to adfs
+
+Specified by:
+afterClick in interface org.openqa.selenium.support.events.WebDriverListener
+Parameters:
+element - the clicked on element
+
+
+
+
+
+
+
+
+
+
+
+
+
+

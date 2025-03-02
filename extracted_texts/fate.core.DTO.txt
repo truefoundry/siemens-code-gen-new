@@ -1,0 +1,84 @@
+fate.core.DTO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.DTO
+
+
+package fate.core.DTO
+
+
+
+
+Classes
+
+Class
+Description
+DateManipulator
+
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+ProjectData
+
+A utility class to store all the required project data.
+
+
+
+
+
+
+
+
+
+
+

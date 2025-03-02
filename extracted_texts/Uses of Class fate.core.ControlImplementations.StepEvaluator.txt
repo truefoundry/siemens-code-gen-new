@@ -1,0 +1,116 @@
+Uses of Class fate.core.ControlImplementations.StepEvaluator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.ControlImplementations.StepEvaluator
+
+Packages that use StepEvaluator
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.ControlImplementations
+ 
+
+
+
+
+
+Uses of StepEvaluator in fate.core.CompositionRoot
+Fields in fate.core.CompositionRoot declared as StepEvaluator
+
+Modifier and Type
+Field
+Description
+final StepEvaluator
+AbstractCoreHandler.stepEvaluator
+ 
+
+
+
+
+
+Uses of StepEvaluator in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations that return StepEvaluator
+
+Modifier and Type
+Method
+Description
+StepEvaluator
+StepEvaluator.add(BooleanSupplier call,
+ String errorDescription)
+
+Adds evaluation function to evaluation list.
+
+<R> StepEvaluator
+StepEvaluator.add(R expectedValue,
+ Supplier<R> currentValueFunction,
+ String errorMessage)
+
+add check into evaluator check list
+
+<R> StepEvaluator
+StepEvaluator.add(R expectedValue,
+ R currentValue,
+ String errorMessage)
+
+add check into evaluator check list
+
+StepEvaluator
+StepEvaluator.expectedResults(int amount)
+
+Defines how many result are at least expected.
+
+
+
+
+
+
+
+
+
+
+

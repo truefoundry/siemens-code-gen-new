@@ -1,0 +1,87 @@
+Uses of Class fate.core.PlatformConnectors.jira.testcase.Parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PlatformConnectors.jira.testcase.Parameters
+
+Packages that use Parameters
+
+Package
+Description
+fate.core.PlatformConnectors.jira.testcase
+ 
+
+
+
+
+
+Uses of Parameters in fate.core.PlatformConnectors.jira.testcase
+Methods in fate.core.PlatformConnectors.jira.testcase that return Parameters
+
+Modifier and Type
+Method
+Description
+Parameters
+TestCase.getParameters()
+ 
+
+Methods in fate.core.PlatformConnectors.jira.testcase with parameters of type Parameters
+
+Modifier and Type
+Method
+Description
+void
+TestCase.setParameters(Parameters parameters)
+ 
+
+
+
+
+
+
+
+
+
+

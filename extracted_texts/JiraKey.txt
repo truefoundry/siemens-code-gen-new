@@ -1,0 +1,258 @@
+JiraKey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira
+Enum Class JiraKey
+
+java.lang.Object
+java.lang.Enum<JiraKey>
+fate.core.PlatformConnectors.jira.JiraKey
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<JiraKey>, Constable
+
+
+public enum JiraKey
+extends Enum<JiraKey>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+JIRA_COMMENT
+ 
+JIRA_ENVIRONMENT
+ 
+JIRA_EXECUTION_DATE
+ 
+JIRA_EXECUTION_TIME
+ 
+JIRA_INDEX
+ 
+JIRA_SCRIPT_RESULTS
+ 
+JIRA_STATUS
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static JiraKey
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static JiraKey[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+JIRA_STATUS
+public static final JiraKey JIRA_STATUS
+
+
+
+
+JIRA_ENVIRONMENT
+public static final JiraKey JIRA_ENVIRONMENT
+
+
+
+
+JIRA_EXECUTION_TIME
+public static final JiraKey JIRA_EXECUTION_TIME
+
+
+
+
+JIRA_EXECUTION_DATE
+public static final JiraKey JIRA_EXECUTION_DATE
+
+
+
+
+JIRA_SCRIPT_RESULTS
+public static final JiraKey JIRA_SCRIPT_RESULTS
+
+
+
+
+JIRA_INDEX
+public static final JiraKey JIRA_INDEX
+
+
+
+
+JIRA_COMMENT
+public static final JiraKey JIRA_COMMENT
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static JiraKey[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static JiraKey valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

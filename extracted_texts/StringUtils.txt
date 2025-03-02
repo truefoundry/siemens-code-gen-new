@@ -1,0 +1,211 @@
+StringUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class StringUtils
+
+java.lang.Object
+fate.core.ControlImplementations.StringUtils
+
+
+
+public class StringUtils
+extends Object
+A utility class that provides helper methods for string manipulation.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static Boolean
+compareChars(String a,
+ String b)
+
+Checks if first char of 'a' is smaller than first char of 'b'.
+
+static int
+countWords(String text,
+ String word)
+
+counts occurrences of specific character sequence in text.
+
+static String
+decode(String toDecode)
+
+Decodes Base64 String.
+
+static String
+encode(byte[] toEncode)
+
+Encodes wanted byte array into Base64 String.
+
+static String
+encode(String toEncode)
+
+Encodes wanted String into Base64 String.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+countWords
+public static int countWords(String text,
+ String word)
+counts occurrences of specific character sequence in text.
+
+Parameters:
+text - text to search in.
+word - character sequence to search for.
+Returns:
+number of occurrences.
+
+
+
+
+
+compareChars
+public static Boolean compareChars(String a,
+ String b)
+Checks if first char of 'a' is smaller than first char of 'b'.
+
+Parameters:
+a - single char as String.
+b - single char as String.
+Returns:
+Boolean value.
+
+
+
+
+
+decode
+public static String decode(String toDecode)
+Decodes Base64 String.
+
+Parameters:
+toDecode - String to decode.
+Returns:
+decoded String
+
+
+
+
+
+encode
+public static String encode(String toEncode)
+Encodes wanted String into Base64 String.
+
+Parameters:
+toEncode - String to encode.
+Returns:
+encrypted Base64 String.
+
+
+
+
+
+encode
+public static String encode(byte[] toEncode)
+Encodes wanted byte array into Base64 String.
+
+Parameters:
+toEncode - array to encode.
+Returns:
+encrypted Base64 String.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+fate.core.OTP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.OTP
+
+
+package fate.core.OTP
+
+
+
+
+Classes
+
+Class
+Description
+CoreOTP
+
+Utility class for generating OTP (One-Time Password) using TOTP (Time-based One-Time Password).
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+Uses of Package fate.core.Pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Packagefate.core.Pdf
+
+Packages that use fate.core.Pdf
+
+Package
+Description
+fate.core.Pdf
+ 
+
+
+
+
+
+Classes in fate.core.Pdf used by fate.core.Pdf
+
+Class
+Description
+PageOrientation
+
+This enum is used also for document
+
+PageSize
+
+This enum is used also for document
+
+
+
+
+
+
+
+
+
+
+

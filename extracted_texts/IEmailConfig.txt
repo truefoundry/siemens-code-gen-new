@@ -1,0 +1,183 @@
+IEmailConfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Email
+Interface IEmailConfig
+
+
+
+All Known Implementing Classes:
+EmailConfig
+
+
+public interface IEmailConfig
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getEmail()
+ 
+String
+getEmailPassword()
+ 
+String
+getExchangeServerAddress()
+ 
+String
+getProxyAddress()
+ 
+int
+getProxyPort()
+ 
+IEmailConfig
+setExchangeServerAddress(String address)
+ 
+IEmailConfig
+setProxyAddress(String address)
+ 
+IEmailConfig
+setProxyPort(int port)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getEmail
+String getEmail()
+
+
+
+
+getEmailPassword
+String getEmailPassword()
+
+
+
+
+getProxyAddress
+String getProxyAddress()
+
+
+
+
+getProxyPort
+int getProxyPort()
+
+
+
+
+getExchangeServerAddress
+String getExchangeServerAddress()
+
+
+
+
+setProxyAddress
+IEmailConfig setProxyAddress(String address)
+
+
+
+
+setProxyPort
+IEmailConfig setProxyPort(int port)
+
+
+
+
+setExchangeServerAddress
+IEmailConfig setExchangeServerAddress(String address)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+Uses of Interface fate.core.Interfaces.IBrowserExtensions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IBrowserExtensions
+
+Packages that use IBrowserExtensions
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Enums
+ 
+
+
+
+
+
+Uses of IBrowserExtensions in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type IBrowserExtensions
+
+Modifier and Type
+Method
+Description
+CoreStartOptions
+CoreStartOptions.addExtension(IBrowserExtensions extension)
+
+Adds wanted extension to current run.
+
+
+
+
+
+
+Uses of IBrowserExtensions in fate.core.Enums
+Classes in fate.core.Enums that implement IBrowserExtensions
+
+Modifier and Type
+Class
+Description
+enum 
+BrowserExtensions
+ 
+
+
+
+
+
+
+
+
+
+

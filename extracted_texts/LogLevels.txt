@@ -1,0 +1,199 @@
+LogLevels
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class LogLevels
+
+java.lang.Object
+fate.core.CompositionRoot.LogLevels
+
+
+
+public class LogLevels
+extends Object
+The LogLevels class manages logging levels for an application,
+ specifically debug and performance logging.
+ It allows enabling and checking specific logging levels.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+LogLevels()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+isDebug()
+
+Checks if debug logging is enabled.
+
+boolean
+isPerformance()
+
+Checks if performance logging is enabled.
+
+void
+set(LogLevel... levels)
+
+Sets the logging levels based on the provided LogLevel values.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+LogLevels
+public LogLevels()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+set
+public void set(LogLevel... levels)
+Sets the logging levels based on the provided LogLevel values.
+
+ The following behavior is defined for each log level:
+ 
+DEBUG: Enables debug logging and disables performance logging.
+PERFORMANCE: Enables performance logging and disables debug logging.
+ALL: Enables both debug and performance logging.
+
+
+Parameters:
+levels - an array of LogLevel values to set the desired logging levels
+
+
+
+
+
+isDebug
+public boolean isDebug()
+Checks if debug logging is enabled.
+
+Returns:
+true if debug logging is enabled, false otherwise
+
+
+
+
+
+isPerformance
+public boolean isPerformance()
+Checks if performance logging is enabled.
+
+Returns:
+true if performance logging is enabled, false otherwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,448 @@
+TestCycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcycle
+Class TestCycle
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcycle.TestCycle
+
+
+
+public class TestCycle
+extends Object
+Created by Michael on 08.04.2019. SRSNG-
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestCycle()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+int
+getEstimatedTime()
+ 
+Summary
+getExecutionResultsSummary()
+ 
+int
+getExecutionTime()
+ 
+String
+getFolder()
+ 
+int
+getIssueCount()
+ 
+String
+getIssueKey()
+ 
+List<TestCycleItems>
+getItems()
+ 
+String
+getIteration()
+ 
+String
+getKey()
+ 
+String
+getName()
+ 
+String
+getOwner()
+ 
+String
+getPlannedEndDate()
+ 
+String
+getPlannedStartDate()
+ 
+String
+getProjectKey()
+ 
+String
+getStatus()
+ 
+int
+getTestCaseCount()
+ 
+String
+getVersion()
+ 
+void
+setEstimatedTime(int estimatedTime)
+ 
+void
+setExecutionResultsSummary(Summary executionResultsSummary)
+ 
+void
+setExecutionTime(int executionTime)
+ 
+void
+setFolder(String folder)
+ 
+void
+setIssueCount(int issueCount)
+ 
+void
+setIssueKey(String issueKey)
+ 
+void
+setItems(List<TestCycleItems> items)
+ 
+void
+setIteration(String iteration)
+ 
+void
+setKey(String key)
+ 
+void
+setName(String name)
+ 
+void
+setOwner(String owner)
+ 
+void
+setPlannedEndDate(String plannedEndDate)
+ 
+void
+setPlannedStartDate(String plannedStartDate)
+ 
+void
+setProjectKey(String projectKey)
+ 
+void
+setStatus(String status)
+ 
+void
+setTestCaseCount(int testCaseCount)
+ 
+void
+setVersion(String version)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+TestCycle
+public TestCycle()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getExecutionResultsSummary
+public Summary getExecutionResultsSummary()
+
+
+
+
+setExecutionResultsSummary
+public void setExecutionResultsSummary(Summary executionResultsSummary)
+
+
+
+
+getKey
+public String getKey()
+
+
+
+
+setKey
+public void setKey(String key)
+
+
+
+
+getProjectKey
+public String getProjectKey()
+
+
+
+
+setProjectKey
+public void setProjectKey(String projectKey)
+
+
+
+
+getName
+public String getName()
+
+
+
+
+setName
+public void setName(String name)
+
+
+
+
+getStatus
+public String getStatus()
+
+
+
+
+setStatus
+public void setStatus(String status)
+
+
+
+
+getIteration
+public String getIteration()
+
+
+
+
+setIteration
+public void setIteration(String iteration)
+
+
+
+
+getFolder
+public String getFolder()
+
+
+
+
+setFolder
+public void setFolder(String folder)
+
+
+
+
+getVersion
+public String getVersion()
+
+
+
+
+setVersion
+public void setVersion(String version)
+
+
+
+
+getIssueKey
+public String getIssueKey()
+
+
+
+
+setIssueKey
+public void setIssueKey(String issueKey)
+
+
+
+
+getOwner
+public String getOwner()
+
+
+
+
+setOwner
+public void setOwner(String owner)
+
+
+
+
+getPlannedStartDate
+public String getPlannedStartDate()
+
+
+
+
+setPlannedStartDate
+public void setPlannedStartDate(String plannedStartDate)
+
+
+
+
+getPlannedEndDate
+public String getPlannedEndDate()
+
+
+
+
+setPlannedEndDate
+public void setPlannedEndDate(String plannedEndDate)
+
+
+
+
+getEstimatedTime
+public int getEstimatedTime()
+
+
+
+
+setEstimatedTime
+public void setEstimatedTime(int estimatedTime)
+
+
+
+
+getExecutionTime
+public int getExecutionTime()
+
+
+
+
+setExecutionTime
+public void setExecutionTime(int executionTime)
+
+
+
+
+getTestCaseCount
+public int getTestCaseCount()
+
+
+
+
+setTestCaseCount
+public void setTestCaseCount(int testCaseCount)
+
+
+
+
+getIssueCount
+public int getIssueCount()
+
+
+
+
+setIssueCount
+public void setIssueCount(int issueCount)
+
+
+
+
+getItems
+public List<TestCycleItems> getItems()
+
+
+
+
+setItems
+public void setItems(List<TestCycleItems> items)
+
+
+
+
+
+
+
+
+
+
+
+
+

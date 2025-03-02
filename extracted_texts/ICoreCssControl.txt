@@ -1,0 +1,197 @@
+ICoreCssControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface ICoreCssControl
+
+
+
+All Superinterfaces:
+IInteractable
+
+
+All Known Implementing Classes:
+CoreCssControl
+
+
+public interface ICoreCssControl
+extends IInteractable
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+exists(org.openqa.selenium.By selector)
+
+Checks if wanted element exists.
+
+int
+getElementsCount(IInteractableNaming identifier)
+
+Returns the count of wanted elements.
+
+String
+getPropertyOfPseudoElement(String id,
+ PseudoElement pElement,
+ String property)
+
+Returns wanted property from wanted pseudo-element "::before, ::after"
+
+List<String>
+getTextFromElements(IInteractableNaming identifier)
+
+Returns text from wanted elements.
+
+
+
+
+
+Methods inherited from interface fate.core.Interfaces.IInteractable
+click, exists, getAttribute, getCssValue, getHeight, getLocation, getText, getWidth, hasFocus, isBlank, isClickable, isDisplayed, isEmpty, isEnabled, isMandatory, moveMouseOver, scrollIntoView, sendKeys, sendKeys, setAttribute, waitForDisposal, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getElementsCount
+int getElementsCount(IInteractableNaming identifier)
+Returns the count of wanted elements.
+
+Parameters:
+identifier - InteractableNaming enum of type EType.SELECTOR.
+Returns:
+count as int.
+
+
+
+
+
+getTextFromElements
+List<String> getTextFromElements(IInteractableNaming identifier)
+Returns text from wanted elements.
+
+Parameters:
+identifier - InteractableNaming enum of type EType.SELECTOR.
+Returns:
+String list with text from wanted elements.
+
+
+
+
+
+exists
+boolean exists(org.openqa.selenium.By selector)
+Checks if wanted element exists.
+
+Parameters:
+selector - By selector to identify wanted element.
+Returns:
+true if wanted element exists.
+
+
+
+
+
+getPropertyOfPseudoElement
+String getPropertyOfPseudoElement(String id,
+ PseudoElement pElement,
+ String property)
+Returns wanted property from wanted pseudo-element "::before, ::after"
+
+Parameters:
+id - ID for parent element which contains the pseudo element.
+pElement - Wanted pseudo element
+property - Wanted property.
+Returns:
+Property as string or MsgCode.EMPTY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

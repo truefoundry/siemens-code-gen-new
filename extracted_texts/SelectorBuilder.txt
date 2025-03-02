@@ -1,0 +1,397 @@
+SelectorBuilder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class SelectorBuilder
+
+java.lang.Object
+fate.core.ControlImplementations.SelectorBuilder
+
+
+
+public class SelectorBuilder
+extends Object
+Allows constructing selectors dynamically with multiple conditions and modifications.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+SelectorBuilder(String tag)
+
+Constructs a SelectorBuilder with the specified tag name.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.openqa.selenium.By
+build()
+
+Builds the final CSS selector from the accumulated conditions.
+
+SelectorBuilder
+setAriaLabel(String ariaLabel,
+ SelectorModificator... mod)
+
+Adds an aria-label condition to the selector.
+
+SelectorBuilder
+setClass(String eClass,
+ SelectorModificator... mod)
+
+Adds a class condition to the selector.
+
+SelectorBuilder
+setHref(String href,
+ SelectorModificator... mod)
+
+Adds a href condition to the selector.
+
+SelectorBuilder
+setId(String id,
+ SelectorModificator... mod)
+
+Adds an id condition to the selector.
+
+SelectorBuilder
+setLabel(String label,
+ SelectorModificator... mod)
+
+Adds a label condition to the selector.
+
+SelectorBuilder
+setName(String name,
+ SelectorModificator... mod)
+
+Adds a name condition to the selector.
+
+SelectorBuilder
+setRole(String role,
+ SelectorModificator... mod)
+
+Adds a role condition to the selector.
+
+SelectorBuilder
+setSrc(String src,
+ SelectorModificator... mod)
+
+Adds a src condition to the selector.
+
+SelectorBuilder
+setStyle(String style,
+ SelectorModificator... mod)
+
+Adds a style condition to the selector.
+
+SelectorBuilder
+setTarget(String target,
+ SelectorModificator... mod)
+
+Adds a target condition to the selector.
+
+SelectorBuilder
+setTitle(String title,
+ SelectorModificator... mod)
+
+Adds a title condition to the selector.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+SelectorBuilder
+public SelectorBuilder(@Nonnull
+ String tag)
+Constructs a SelectorBuilder with the specified tag name.
+
+Parameters:
+tag - The tag name to start building the selector.
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+build
+public org.openqa.selenium.By build()
+Builds the final CSS selector from the accumulated conditions.
+
+Returns:
+The By object containing the generated CSS selector.
+
+
+
+
+
+setId
+public SelectorBuilder setId(String id,
+ SelectorModificator... mod)
+Adds an id condition to the selector.
+
+Parameters:
+id - The id to match.
+mod - Optional modifier(s) for the id condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setName
+public SelectorBuilder setName(String name,
+ SelectorModificator... mod)
+Adds a name condition to the selector.
+
+Parameters:
+name - The name to match.
+mod - Optional modifier(s) for the name condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setClass
+public SelectorBuilder setClass(String eClass,
+ SelectorModificator... mod)
+Adds a class condition to the selector.
+
+Parameters:
+eClass - The class to match.
+mod - Optional modifier(s) for the class condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setTitle
+public SelectorBuilder setTitle(String title,
+ SelectorModificator... mod)
+Adds a title condition to the selector.
+
+Parameters:
+title - The title to match.
+mod - Optional modifier(s) for the title condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setStyle
+public SelectorBuilder setStyle(String style,
+ SelectorModificator... mod)
+Adds a style condition to the selector.
+
+Parameters:
+style - The style to match.
+mod - Optional modifier(s) for the style condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setRole
+public SelectorBuilder setRole(String role,
+ SelectorModificator... mod)
+Adds a role condition to the selector.
+
+Parameters:
+role - The role to match.
+mod - Optional modifier(s) for the role condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setSrc
+public SelectorBuilder setSrc(String src,
+ SelectorModificator... mod)
+Adds a src condition to the selector.
+
+Parameters:
+src - The source URL to match.
+mod - Optional modifier(s) for the src condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setHref
+public SelectorBuilder setHref(String href,
+ SelectorModificator... mod)
+Adds a href condition to the selector.
+
+Parameters:
+href - The href URL to match.
+mod - Optional modifier(s) for the href condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setTarget
+public SelectorBuilder setTarget(String target,
+ SelectorModificator... mod)
+Adds a target condition to the selector.
+
+Parameters:
+target - The target value to match.
+mod - Optional modifier(s) for the target condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setLabel
+public SelectorBuilder setLabel(String label,
+ SelectorModificator... mod)
+Adds a label condition to the selector.
+
+Parameters:
+label - The label value to match.
+mod - Optional modifier(s) for the label condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+setAriaLabel
+public SelectorBuilder setAriaLabel(String ariaLabel,
+ SelectorModificator... mod)
+Adds an aria-label condition to the selector.
+
+Parameters:
+ariaLabel - The aria-label value to match.
+mod - Optional modifier(s) for the aria-label condition.
+Returns:
+The updated SelectorBuilder instance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

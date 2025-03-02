@@ -1,0 +1,104 @@
+Uses of Enum Class fate.core.Enums.LogType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.LogType
+
+Packages that use LogType
+
+Package
+Description
+fate.core.Enums
+ 
+fate.core.PerfMon
+ 
+
+
+
+
+
+Uses of LogType in fate.core.Enums
+Methods in fate.core.Enums that return LogType
+
+Modifier and Type
+Method
+Description
+static LogType
+LogType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static LogType[]
+LogType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+Uses of LogType in fate.core.PerfMon
+Methods in fate.core.PerfMon with parameters of type LogType
+
+Modifier and Type
+Method
+Description
+void
+PerfMon.printResult(LogType log)
+
+Prints the performance result to the appropriate logging system.
+
+
+
+
+
+
+
+
+
+
+

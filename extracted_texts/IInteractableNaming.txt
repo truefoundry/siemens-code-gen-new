@@ -1,0 +1,183 @@
+IInteractableNaming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IInteractableNaming
+
+
+
+public interface IInteractableNaming
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract MethodsDefault Methods
+
+
+Modifier and Type
+Method
+Description
+default int
+getIndex()
+
+Returns an int value if current enum is an integer otherwise -1.
+
+default String
+getPrintable()
+
+Returns useful value of enum, String value if it's a name, number of index or otherwise enums name as a String.
+
+default org.openqa.selenium.By
+getSelector()
+
+Returns By Selector if wanted enum has any otherwise empty selector.
+
+EType
+getType()
+
+Returns the type of wanted enum e.g.
+
+String
+getValue()
+
+Returns string value of enum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getValue
+String getValue()
+Returns string value of enum.
+
+Returns:
+value.
+
+
+
+
+
+getPrintable
+default String getPrintable()
+Returns useful value of enum, String value if it's a name, number of index or otherwise enums name as a String.
+
+Returns:
+String value
+
+
+
+
+
+getSelector
+default org.openqa.selenium.By getSelector()
+Returns By Selector if wanted enum has any otherwise empty selector.
+
+Returns:
+By Selector.
+
+
+
+
+
+getType
+EType getType()
+Returns the type of wanted enum e.g. If it's a simple name as a String, css selector or index.
+
+
+
+
+getIndex
+default int getIndex()
+Returns an int value if current enum is an integer otherwise -1.
+
+Returns:
+Integer value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

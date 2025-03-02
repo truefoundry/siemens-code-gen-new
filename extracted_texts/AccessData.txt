@@ -1,0 +1,314 @@
+AccessData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class AccessData
+
+java.lang.Object
+java.lang.Enum<AccessData>
+fate.core.Enums.AccessData
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<AccessData>, Constable
+
+
+public enum AccessData
+extends Enum<AccessData>
+General access data for platforms and users.
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+EMAIL_ADDRESS
+ 
+EMAIL_PASS
+
+User password can expire, steps for reactivation:
+ Go to PasswordChanger
+ fill user data and change the password.
+
+EMAIL_USER
+ 
+EXCHANGE_SERVER
+ 
+FUNC_ACC_PASS
+ 
+FUNC_ACC_USER
+ 
+GOOGLE_URL
+ 
+SIEMENS_AUTO_PROXY_CONFIG
+ 
+SIEMENS_FULL_PROXY_ADDRESS
+ 
+SIEMENS_PROXY
+ 
+SIEMENS_PROXY_PORT
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+List<String>
+getTestServers()
+ 
+String
+getValue()
+
+Returns Enums value.
+
+static AccessData
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static AccessData[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+FUNC_ACC_USER
+public static final AccessData FUNC_ACC_USER
+
+
+
+
+FUNC_ACC_PASS
+public static final AccessData FUNC_ACC_PASS
+
+
+
+
+EMAIL_ADDRESS
+public static final AccessData EMAIL_ADDRESS
+
+
+
+
+EMAIL_USER
+public static final AccessData EMAIL_USER
+
+
+
+
+SIEMENS_PROXY
+public static final AccessData SIEMENS_PROXY
+
+
+
+
+SIEMENS_PROXY_PORT
+public static final AccessData SIEMENS_PROXY_PORT
+
+
+
+
+SIEMENS_FULL_PROXY_ADDRESS
+public static final AccessData SIEMENS_FULL_PROXY_ADDRESS
+
+
+
+
+SIEMENS_AUTO_PROXY_CONFIG
+public static final AccessData SIEMENS_AUTO_PROXY_CONFIG
+
+
+
+
+EXCHANGE_SERVER
+public static final AccessData EXCHANGE_SERVER
+
+
+
+
+GOOGLE_URL
+public static final AccessData GOOGLE_URL
+
+
+
+
+EMAIL_PASS
+public static final AccessData EMAIL_PASS
+User password can expire, steps for reactivation:
+ Go to PasswordChanger
+ fill user data and change the password.
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static AccessData[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static AccessData valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getTestServers
+public List<String> getTestServers()
+
+
+
+
+getValue
+public String getValue()
+Returns Enums value.
+
+Returns:
+Value as String.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

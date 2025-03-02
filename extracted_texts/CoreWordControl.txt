@@ -1,0 +1,172 @@
+CoreWordControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreWordControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreWordControl
+
+
+
+public class CoreWordControl
+extends Object
+Handles '.docx' and '.doc' files
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static List<String>
+getFileContent(Path path)
+
+Returns content of a '.docx' or '.doc' file as List of Strings.
+
+static boolean
+isEmpty(Path path)
+
+Verifies if wanted '.docx' or '.doc' file is empty.
+
+static boolean
+isTextPresentInFile(Path path,
+ String text)
+
+Verifies if wanted '.docx' or .'doc' file contains wanted text.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getFileContent
+public static List<String> getFileContent(Path path)
+Returns content of a '.docx' or '.doc' file as List of Strings.
+
+Parameters:
+path - path to file
+Returns:
+List of Strings or an empty list
+
+
+
+
+
+isTextPresentInFile
+public static boolean isTextPresentInFile(Path path,
+ String text)
+Verifies if wanted '.docx' or .'doc' file contains wanted text.
+
+Parameters:
+path - path to file
+text - wanted text to look for
+Returns:
+boolean value
+
+
+
+
+
+isEmpty
+public static boolean isEmpty(Path path)
+Verifies if wanted '.docx' or '.doc' file is empty. Even an empty line in a file means that the file is NOT empty.
+
+Parameters:
+path - path to file
+Returns:
+boolean value
+
+
+
+
+
+
+
+
+
+
+
+
+
+

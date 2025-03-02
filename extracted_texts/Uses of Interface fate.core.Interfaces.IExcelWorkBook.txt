@@ -1,0 +1,80 @@
+Uses of Interface fate.core.Interfaces.IExcelWorkBook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IExcelWorkBook
+
+Packages that use IExcelWorkBook
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+
+
+
+
+
+Uses of IExcelWorkBook in fate.core.ControlImplementations
+Classes in fate.core.ControlImplementations that implement IExcelWorkBook
+
+Modifier and Type
+Class
+Description
+class 
+CoreExcelControl
+
+Handles xls/xlsx file reading.
+
+
+
+
+
+
+
+
+
+
+

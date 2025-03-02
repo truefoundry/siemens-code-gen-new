@@ -1,0 +1,80 @@
+fate.core.Annotations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Annotations
+
+
+package fate.core.Annotations
+
+
+
+
+Annotation Interfaces
+
+Class
+Description
+TestTimeout
+ 
+Unsupported
+ 
+
+
+
+
+
+
+
+
+
+

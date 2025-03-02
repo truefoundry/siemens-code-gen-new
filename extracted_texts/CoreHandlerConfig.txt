@@ -1,0 +1,280 @@
+CoreHandlerConfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class CoreHandlerConfig
+
+java.lang.Object
+fate.core.CompositionRoot.CoreHandlerConfig
+
+
+
+public class CoreHandlerConfig
+extends Object
+Retrieves and places the data in the ongoing test case's log.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreHandlerConfig(IResultData iocTestPath,
+ String iocTcName)
+
+Constructor
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getComment()
+
+Retrieves the Azure comment .
+
+String
+getConfigID()
+
+Returns configuration ID for specific platform configuration.
+
+ProjectData
+getPushConfig()
+
+Retrieves the ProjectData such as URL , ID etc.
+
+String
+getTcName()
+
+Retrieves the Test case name.
+
+IResultData
+getTcPath()
+
+Retrieves the Test case path.
+
+void
+setComment(String comment)
+
+Set the comment for the azure.
+
+void
+setConfigID(String configID)
+
+Sets configuration ID for specific platform configuration.
+
+void
+setPushConfig(ProjectData pushConfig)
+
+Sets the ProjectData such as URL , ID etc.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreHandlerConfig
+public CoreHandlerConfig(IResultData iocTestPath,
+ String iocTcName)
+Constructor
+
+Parameters:
+iocTestPath - Path to the test set
+iocTcName - Name of Key of the test
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getConfigID
+public String getConfigID()
+Returns configuration ID for specific platform configuration. Configuration defines which configurations have been used in test run and will be displayed in test result.
+
+Returns:
+ID or MsgCode.NOT_AVAILABLE
+
+
+
+
+
+setConfigID
+public void setConfigID(String configID)
+Sets configuration ID for specific platform configuration. Configuration defines which configurations have been used in test run and will be displayed in test result.
+
+Parameters:
+configID - ID of platform configuration.
+
+
+
+
+
+getPushConfig
+public ProjectData getPushConfig()
+Retrieves the ProjectData such as URL , ID etc.
+
+Returns:
+ProjectData
+
+
+
+
+
+setPushConfig
+public void setPushConfig(ProjectData pushConfig)
+Sets the ProjectData such as URL , ID etc.
+
+Parameters:
+pushConfig - Contains all the necessary data loaded such as URL , USER , PASSWORD , ORGANIZATION etc.
+
+
+
+
+
+getTcName
+public String getTcName()
+Retrieves the Test case name.
+
+Returns:
+String
+
+
+
+
+
+getTcPath
+public IResultData getTcPath()
+Retrieves the Test case path.
+
+Returns:
+IResultData
+
+
+
+
+
+setComment
+public void setComment(String comment)
+Set the comment for the azure.
+
+Parameters:
+comment - comment data
+
+
+
+
+
+getComment
+public String getComment()
+Retrieves the Azure comment .
+
+Returns:
+String
+
+
+
+
+
+
+
+
+
+
+
+
+
+

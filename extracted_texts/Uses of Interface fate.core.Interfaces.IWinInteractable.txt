@@ -1,0 +1,267 @@
+Uses of Interface fate.core.Interfaces.IWinInteractable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IWinInteractable
+
+Packages that use IWinInteractable
+
+Package
+Description
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.Interfaces
+ 
+
+
+
+
+
+Uses of IWinInteractable in fate.core.CompositionRoot.WinApp
+Classes in fate.core.CompositionRoot.WinApp that implement IWinInteractable
+
+Modifier and Type
+Class
+Description
+class 
+Button
+ 
+class 
+CheckBox
+ 
+class 
+ComboBox
+ 
+class 
+CoreWinInteractables
+ 
+class 
+DataItem
+ 
+class 
+Dialog
+ 
+class 
+Document
+ 
+class 
+Edit
+ 
+class 
+Header
+ 
+class 
+Image
+ 
+class 
+Link
+ 
+class 
+List
+ 
+class 
+ListItem
+ 
+class 
+Menu
+ 
+class 
+MenuBar
+ 
+class 
+MenuItem
+ 
+class 
+Pane
+ 
+class 
+ProgressBar
+ 
+class 
+RadioButton
+ 
+class 
+ScrollBar
+ 
+class 
+SplitButton
+ 
+class 
+StatusBar
+ 
+class 
+Tab
+ 
+class 
+TabItem
+ 
+class 
+Table
+ 
+class 
+Text
+ 
+class 
+TitleBar
+ 
+class 
+ToolBar
+ 
+class 
+Tree
+ 
+class 
+TreeItem
+ 
+class 
+Window
+ 
+
+Methods in fate.core.CompositionRoot.WinApp that return IWinInteractable
+
+Modifier and Type
+Method
+Description
+IWinInteractable
+CoreWinInteractables.clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+
+
+
+
+
+Uses of IWinInteractable in fate.core.Interfaces
+Methods in fate.core.Interfaces that return IWinInteractable
+
+Modifier and Type
+Method
+Description
+IWinInteractable
+IWinInteractable.clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Clears the wanted element
+
+IWinInteractable
+IWinInteractable.click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Click this element.
+
+IWinInteractable
+IWinInteractable.sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted Keys to wanted control.
+
+IWinInteractable
+IWinInteractable.sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted String to wanted control.
+
+IWinInteractable
+IWinInteractable.waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for disposal of wanted element.
+
+IWinInteractable
+IWinInteractable.waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become clickable.
+
+IWinInteractable
+IWinInteractable.waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become visible.
+
+
+
+
+
+
+
+
+
+
+

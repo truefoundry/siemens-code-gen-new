@@ -1,0 +1,127 @@
+IBrowserExtensions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IBrowserExtensions
+
+
+
+All Known Implementing Classes:
+BrowserExtensions
+
+
+public interface IBrowserExtensions
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getPath()
+
+Returns path to extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getPath
+String getPath()
+Returns path to extension.
+
+Returns:
+Path as String.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

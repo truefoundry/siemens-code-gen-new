@@ -1,0 +1,303 @@
+PerfMon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PerfMon
+Class PerfMon
+
+java.lang.Object
+fate.core.PerfMon.PerfMon
+
+
+
+public class PerfMon
+extends Object
+A utility class for monitoring and measuring the performance of code blocks or functions.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+PerfMon()
+
+Initializes a performance monitor instance with a unique ID and caller details.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+abort()
+
+Aborts measurement in case of failed function.
+
+static String
+getAvgResult(String callerName,
+ Duration expected,
+ List<PerfMon> mons)
+
+Calculates the average elapsed time for a list of performance monitors and formats the result.
+
+String
+getCallerName()
+ 
+Duration
+getElapsedTime()
+ 
+Duration
+getExpectedDuration()
+ 
+UUID
+getId()
+ 
+String
+getResult()
+
+Generates a formatted result string containing execution details.
+
+static PerfMon
+measure(Runnable function,
+ Duration... expectedDuration)
+
+Measures execution of the function and automatically handles start, stop and abort of measurement.
+
+void
+printResult(LogType log)
+
+Prints the performance result to the appropriate logging system.
+
+Duration
+stop()
+
+Stops measuring time and returns elapsed time.
+
+void
+watch(Duration... expectedDuration)
+
+Starts measuring the time.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+PerfMon
+public PerfMon()
+Initializes a performance monitor instance with a unique ID and caller details.
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+watch
+public void watch(Duration... expectedDuration)
+Starts measuring the time.
+
+Parameters:
+expectedDuration - Optional expected duration. Will be compared with elapsed time at the end.
+
+
+
+
+
+measure
+public static PerfMon measure(Runnable function,
+ Duration... expectedDuration)
+Measures execution of the function and automatically handles start, stop and abort of measurement.
+
+Parameters:
+function - executable task to be measured
+expectedDuration - optional expected duration of the executed function
+Returns:
+self - performance monitor instance
+
+
+
+
+
+abort
+public void abort()
+Aborts measurement in case of failed function.
+
+
+
+
+stop
+@CanIgnoreReturnValue
+public Duration stop()
+Stops measuring time and returns elapsed time.
+
+Returns:
+Elapsed time as Duration.
+
+
+
+
+
+getResult
+public String getResult()
+Generates a formatted result string containing execution details.
+
+Returns:
+The formatted result string.
+
+
+
+
+
+getAvgResult
+public static String getAvgResult(String callerName,
+ Duration expected,
+ List<PerfMon> mons)
+Calculates the average elapsed time for a list of performance monitors and formats the result.
+
+Parameters:
+callerName - The name of the function being measured.
+expected - The expected duration for the function execution.
+mons - A list of PerfMon instances containing elapsed time data.
+Returns:
+A formatted string representing the average performance result.
+
+
+
+
+
+printResult
+public void printResult(LogType log)
+Prints the performance result to the appropriate logging system.
+
+Parameters:
+log - The logging type (e.g., INFO or PERF).
+
+
+
+
+
+getCallerName
+public String getCallerName()
+
+
+
+
+getElapsedTime
+public Duration getElapsedTime()
+
+
+
+
+getExpectedDuration
+public Duration getExpectedDuration()
+
+
+
+
+getId
+public UUID getId()
+
+
+
+
+
+
+
+
+
+
+
+
+

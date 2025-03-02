@@ -1,0 +1,132 @@
+Uses of Class fate.core.CompositionRoot.AbstractCoreHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.CompositionRoot.AbstractCoreHandler
+
+Packages that use AbstractCoreHandler
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.ControlImplementations
+ 
+fate.core.Results
+ 
+
+
+
+
+
+Uses of AbstractCoreHandler in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot that return AbstractCoreHandler
+
+Modifier and Type
+Method
+Description
+static AbstractCoreHandler
+CoreIocBuilder.getHandler(TestType type)
+
+Retrieves a test handler of the specified type.
+
+
+
+
+
+
+Uses of AbstractCoreHandler in fate.core.ControlImplementations
+Classes in fate.core.ControlImplementations with type parameters of type AbstractCoreHandler
+
+Modifier and Type
+Interface
+Description
+static interface 
+TestExecuter.ThrowingConsumer<T extends AbstractCoreHandler,E extends Exception>
+
+A functional interface that defines a consumer accepting a test handler and throwing an exception.
+
+
+Methods in fate.core.ControlImplementations with type parameters of type AbstractCoreHandler
+
+Modifier and Type
+Method
+Description
+static <T extends AbstractCoreHandler>void
+TestExecuter.execute(Duration duration,
+ TestExecuter.ThrowingConsumer<T,Exception> testFunction,
+ T newTest,
+ TestExecuter.ThrowingConsumer<T,Exception>[] clean,
+ String... testCaseId)
+
+Executes a test with a specified duration, handles exceptions, and performs clean-up actions.
+
+
+
+
+
+
+Uses of AbstractCoreHandler in fate.core.Results
+Methods in fate.core.Results with parameters of type AbstractCoreHandler
+
+Modifier and Type
+Method
+Description
+static void
+ResultCollector.catcher(AbstractCoreHandler tc,
+ Exception e)
+
+Exception handling.
+
+
+
+
+
+
+
+
+
+
+

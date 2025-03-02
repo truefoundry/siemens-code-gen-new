@@ -1,0 +1,402 @@
+CorePdfControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Pdf
+Class CorePdfControl
+
+java.lang.Object
+fate.core.Pdf.CorePdfControl
+
+
+
+public class CorePdfControl
+extends Object
+Handles pdf file reading
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CorePdfControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+compare(Path file1,
+ Path file2,
+ int... pages)
+
+Compares PDF files.
+
+PageSize
+getCommonPageSizeOfPDFDocument(Path path)
+
+Get common size of all pages of pdf document.
+
+String
+getFooter(File file,
+ int pageNum,
+ int... footerHeight)
+
+Gets content of a footer from wanted page in provided PDF file.
+
+String
+getHeader(File file,
+ int pageNum,
+ int... headerHeight)
+
+Gets content of a header from wanted page in provided PDF file.
+
+@NotNull List<PageOrientation>
+getOrientationsForPages(File file)
+
+Get orientation for each page of document determined by path.
+
+String
+getPageContent(File file,
+ int pageNum,
+ boolean... normalize)
+
+Gets content of wanted page (including both header and footer) in provided pdf file as plain text.
+
+int
+getPageCount(Path file)
+
+Returns pages count of wanted document.
+
+String
+getPdfFileContent(File file,
+ boolean... normalize)
+
+Gets content of pdf file as plain text.
+
+PageOrientation
+getPdfOrientation(Path path)
+
+Get common page orientation in entire document, otherwise you get mixed state.
+
+@NotNull List<PageSize>
+getSizesForPages(File file)
+
+Get sizes for each page of document determined by path.
+
+boolean
+isTextPresentInFile(String text,
+ File file)
+
+Checks if pdf file contains text.
+
+List<String>
+saveAsImages(Path file,
+ int... pages)
+
+Extracts PDF pages as images.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CorePdfControl
+public CorePdfControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getPageCount
+public int getPageCount(Path file)
+Returns pages count of wanted document.
+
+Parameters:
+file - PDF file where pages count should be extracted.
+Returns:
+Pages count as int.
+
+
+
+
+
+saveAsImages
+public List<String> saveAsImages(Path file,
+ int... pages)
+Extracts PDF pages as images.
+
+Parameters:
+file - PDF file which should be extracted.
+pages - Start and end pages can be provided.
+              extractToImages(file, 1); for extraction with start page only.
+extractToImages(file, 1, 10); for extraction with start and end page.
+extractToImages(file, 1, 1); for extraction of single page only.
+Returns:
+Paths list of extracted images as Strings.
+
+
+
+
+
+compare
+public boolean compare(Path file1,
+ Path file2,
+ int... pages)
+Compares PDF files.
+
+Parameters:
+file1 - Provided PDF 1
+file2 - Provided PDF 2
+pages - Start and End page can be provided.
+              compare(file1, file2, 1); for comparison with start page only.
+compare(file1, file2, 1, 10); for comparison with start and end page.
+compare(file1, file2, 1, 1); for comparison of single page only.
+Returns:
+true if files are identical, false otherwise.
+
+
+
+
+
+getPdfFileContent
+public String getPdfFileContent(File file,
+ boolean... normalize)
+Gets content of pdf file as plain text.
+
+Parameters:
+file - pdf file to parse.
+normalize - will replace all consecutive spaces with single space
+Returns:
+pdf file content as plain text of MsgCode.NOT_FOUND.
+
+
+
+
+
+isTextPresentInFile
+public boolean isTextPresentInFile(String text,
+ File file)
+Checks if pdf file contains text.
+
+Parameters:
+text - text to check for in file.
+file - file to check for text.
+Returns:
+true, if text is present in file.
+
+
+
+
+
+getPageContent
+public String getPageContent(File file,
+ int pageNum,
+ boolean... normalize)
+Gets content of wanted page (including both header and footer) in provided pdf file as plain text.
+
+Parameters:
+file - pdf file to parse
+pageNum - wanted page number
+normalize - will replace all consecutive spaces with single space
+Returns:
+wanted page content as plain text or MsgCode.NOT_FOUND
+
+
+
+
+
+getHeader
+public String getHeader(File file,
+ int pageNum,
+ int... headerHeight)
+Gets content of a header from wanted page in provided PDF file.
+
+Parameters:
+file - PDF file to work with
+pageNum - wanted page
+headerHeight - by default 80px, can be set to a different number
+Returns:
+header text or MsgCode.NOT_FOUND
+
+
+
+
+
+getFooter
+public String getFooter(File file,
+ int pageNum,
+ int... footerHeight)
+Gets content of a footer from wanted page in provided PDF file.
+
+Parameters:
+file - PDF file to work with
+pageNum - wanted page
+footerHeight - by default 60px, can be set to a different number
+Returns:
+footer text or MsgCode.NOT_FOUND
+
+
+
+
+
+getPdfOrientation
+public PageOrientation getPdfOrientation(Path path)
+Get common page orientation in entire document, otherwise you get mixed state.
+
+Parameters:
+path - path to PDF file
+Returns:
+common page orientation in entire document, otherwise you get mixed state.
+
+
+
+
+
+getCommonPageSizeOfPDFDocument
+public PageSize getCommonPageSizeOfPDFDocument(Path path)
+Get common size of all pages of pdf document.
+ A0,..,A3,A4,...
+
+Parameters:
+path - path to PDF file
+Returns:
+Return common size of all pages, if exists.
+
+
+
+
+
+getOrientationsForPages
+@NotNull
+public @NotNull List<PageOrientation> getOrientationsForPages(File file)
+Get orientation for each page of document determined by path.
+
+Parameters:
+file - PDF file to work with
+Returns:
+list of orientation for pages,
+ zero-based index inside list is index of page inside document
+
+
+
+
+
+getSizesForPages
+@NotNull
+public @NotNull List<PageSize> getSizesForPages(File file)
+Get sizes for each page of document determined by path. A4,A3, etc...
+
+Parameters:
+file - PDF file to work with
+Returns:
+list of sizes for pages,
+ zero-based index inside list is index of page inside document
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+TestExecuter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class TestExecuter
+
+java.lang.Object
+fate.core.ControlImplementations.TestExecuter
+
+
+
+public class TestExecuter
+extends Object
+Handles the TestCase Execution.
+
+
+
+
+
+
+Nested Class Summary
+Nested Classes
+
+Modifier and Type
+Class
+Description
+static interface 
+TestExecuter.ThrowingConsumer<T extends AbstractCoreHandler,E extends Exception>
+
+A functional interface that defines a consumer accepting a test handler and throwing an exception.
+
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+static String
+reason
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static <T extends AbstractCoreHandler>void
+execute(Duration duration,
+ TestExecuter.ThrowingConsumer<T,Exception> testFunction,
+ T newTest,
+ TestExecuter.ThrowingConsumer<T,Exception>[] clean,
+ String... testCaseId)
+
+Executes a test with a specified duration, handles exceptions, and performs clean-up actions.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+reason
+public static String reason
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+execute
+public static <T extends AbstractCoreHandler> void execute(Duration duration,
+ TestExecuter.ThrowingConsumer<T,Exception> testFunction,
+ T newTest,
+ TestExecuter.ThrowingConsumer<T,Exception>[] clean,
+ String... testCaseId)
+Executes a test with a specified duration, handles exceptions, and performs clean-up actions.
+ The method also handles timeouts, captures errors, takes screenshots on failure, and logs necessary details.
+
+Parameters:
+duration - Duration for the test to run.
+testFunction - The test function to be executed.
+newTest - A new test handler instance to manage test state.
+clean - Array of cleaning functions that should run after the test.
+testCaseId - Optional test case identifiers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

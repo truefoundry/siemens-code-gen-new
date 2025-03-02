@@ -1,0 +1,179 @@
+DataRowDeserializer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure.SharedParameters.POJO
+Class DataRowDeserializer
+
+java.lang.Object
+com.fasterxml.jackson.databind.JsonDeserializer<List<DataRow>>
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.DataRowDeserializer
+
+
+
+
+All Implemented Interfaces:
+com.fasterxml.jackson.databind.deser.NullValueProvider
+
+
+public class DataRowDeserializer
+extends com.fasterxml.jackson.databind.JsonDeserializer<List<DataRow>>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class com.fasterxml.jackson.databind.JsonDeserializer
+com.fasterxml.jackson.databind.JsonDeserializer.None
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+DataRowDeserializer()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+List<DataRow>
+deserialize(com.fasterxml.jackson.core.JsonParser p,
+ com.fasterxml.jackson.databind.DeserializationContext ctxt)
+ 
+
+
+
+
+Methods inherited from class com.fasterxml.jackson.databind.JsonDeserializer
+deserialize, deserializeWithType, deserializeWithType, findBackReference, getDelegatee, getEmptyAccessPattern, getEmptyValue, getEmptyValue, getKnownPropertyNames, getNullAccessPattern, getNullValue, getNullValue, getObjectIdReader, handledType, isCachable, replaceDelegatee, supportsUpdate, unwrappingDeserializer
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+DataRowDeserializer
+public DataRowDeserializer()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+deserialize
+public List<DataRow> deserialize(com.fasterxml.jackson.core.JsonParser p,
+ com.fasterxml.jackson.databind.DeserializationContext ctxt)
+                          throws IOException,
+com.fasterxml.jackson.core.JsonProcessingException
+
+Specified by:
+deserialize in class com.fasterxml.jackson.databind.JsonDeserializer<List<DataRow>>
+Throws:
+IOException
+com.fasterxml.jackson.core.JsonProcessingException
+
+
+
+
+
+
+
+
+
+
+
+
+
+

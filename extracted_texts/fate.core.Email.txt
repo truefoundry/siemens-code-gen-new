@@ -1,0 +1,93 @@
+fate.core.Email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Email
+
+
+package fate.core.Email
+
+
+
+
+All Classes and InterfacesInterfacesClasses
+
+
+Class
+Description
+Email
+
+Common class for general eMail functionality.
+
+EmailConfig
+
+Represents the configuration settings for an email, including email address, password,
+ proxy address, proxy port, and exchange server address.
+
+EMailData
+
+Represents the data of an email, including its ID, subject, content, sender, reply-to, IETC.
+
+IEmailConfig
+ 
+
+
+
+
+
+
+
+
+
+
+

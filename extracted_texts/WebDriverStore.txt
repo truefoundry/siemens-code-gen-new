@@ -1,0 +1,332 @@
+WebDriverStore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class WebDriverStore
+
+java.lang.Object
+fate.core.CompositionRoot.WebDriverStore
+
+
+
+public class WebDriverStore
+extends Object
+This class provides functionality to store and manage multiple WebDriver instances,
+ including the ability to switch between active instances.
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addDriver(WinAppDriverContainer driver)
+
+Adds an WinDriver instance to the store and sets it to active use in all classes.
+
+void
+addDriver(org.openqa.selenium.WebDriver driver)
+
+Adds an WebDriver instance to the store and sets it to active use in all classes.
+
+UUID
+getActive(DriverType type)
+
+Returns the UUID of active Driver instance.
+
+Map<UUID,org.openqa.selenium.WebDriver>
+getAvailableWebDriverInstances()
+
+returns all available WebDriver instances from the store.
+
+Map<UUID,WinAppDriverContainer>
+getAvailableWinDriverInstances()
+
+returns all available WinDriver instances from the store.
+
+String
+getWinAppServerAddress()
+
+Retrieves the WinAppServerAddress for the running application
+
+int
+getWinAppServerPort()
+
+Retrieves the WinAppServerPort for the running application
+
+RunningProcess
+getWinAppServerProcess()
+ 
+boolean
+isWinAppServerRunning()
+
+Checks if the server for WinAppDriver is running.
+
+void
+removeActive(DriverType type)
+
+Removes currently active Web or Win Driver from store.
+
+void
+removeAllActive()
+
+Removes all active drivers.
+
+void
+removeWebDriver(DriverType type,
+ UUID driverToRemove)
+
+Removes a driver with wanted ID and Type from DriverStore
+
+void
+resetStore()
+
+Deletes all store WebDrivers from store.
+
+void
+setActive(UUID driversID)
+
+Sets wanted Driver with driversID as ID as an active instance in the container, all other instances of same type will be removed from the
+ container.
+
+void
+stopWinAppServer()
+
+Kills WinAppServer Process
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+resetStore
+public void resetStore()
+Deletes all store WebDrivers from store.
+
+
+
+
+getWinAppServerProcess
+@CheckForNull
+public RunningProcess getWinAppServerProcess()
+
+
+
+
+stopWinAppServer
+public void stopWinAppServer()
+Kills WinAppServer Process
+
+
+
+
+getWinAppServerAddress
+public String getWinAppServerAddress()
+Retrieves the WinAppServerAddress for the running application
+
+
+
+
+getWinAppServerPort
+public int getWinAppServerPort()
+Retrieves the WinAppServerPort for the running application
+
+
+
+
+isWinAppServerRunning
+public boolean isWinAppServerRunning()
+Checks if the server for WinAppDriver is running.
+
+
+
+
+addDriver
+public void addDriver(@Nonnull
+ org.openqa.selenium.WebDriver driver)
+Adds an WebDriver instance to the store and sets it to active use in all classes. All other instances of WebDriver will be removed from
+ container, newly added instance will be uploaded to the container as active instance.
+
+Parameters:
+driver - WebDriver instance which should be added to the store and container.
+
+
+
+
+
+addDriver
+public void addDriver(@Nonnull
+ WinAppDriverContainer driver)
+Adds an WinDriver instance to the store and sets it to active use in all classes. All other instances of WinDriver will be removed from
+ container, newly added instance will be uploaded to the container as active instance.
+
+Parameters:
+driver - WinDriver instance which should be added to the store and container.
+
+
+
+
+
+setActive
+public void setActive(UUID driversID)
+Sets wanted Driver with driversID as ID as an active instance in the container, all other instances of same type will be removed from the
+ container. Wanted WebDriver with wanted ID has to be added to the store before. If wanted ID is not stored in the WebDriverStore no action will
+ be performed.
+
+Parameters:
+driversID - UUID which was provided by the creation of WebDriver in CoreBrowserControl.start(WebDrv, String, CoreStartOptions...)
+
+
+
+
+
+getActive
+public UUID getActive(DriverType type)
+Returns the UUID of active Driver instance.
+
+Returns:
+UUID or NullUUID if no instance is available.
+
+
+
+
+
+getAvailableWebDriverInstances
+public Map<UUID,org.openqa.selenium.WebDriver> getAvailableWebDriverInstances()
+returns all available WebDriver instances from the store.
+
+Returns:
+HashMap with ID's and WebDrivers.
+
+
+
+
+
+getAvailableWinDriverInstances
+public Map<UUID,WinAppDriverContainer> getAvailableWinDriverInstances()
+returns all available WinDriver instances from the store.
+
+Returns:
+HashMap with ID's and WinDrivers.
+
+
+
+
+
+removeWebDriver
+public void removeWebDriver(DriverType type,
+ UUID driverToRemove)
+Removes a driver with wanted ID and Type from DriverStore
+
+Parameters:
+type - Type of wanted driver.
+driverToRemove - ID of wanted driver.
+
+
+
+
+
+removeActive
+public void removeActive(DriverType type)
+Removes currently active Web or Win Driver from store.
+
+
+
+
+removeAllActive
+public void removeAllActive()
+Removes all active drivers.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,427 @@
+AbstractCoreHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class AbstractCoreHandler
+
+java.lang.Object
+fate.core.CompositionRoot.AbstractCoreHandler
+
+
+
+public abstract class AbstractCoreHandler
+extends Object
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+final LogLevels
+logLevels
+ 
+final StepEvaluator
+stepEvaluator
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+abortTest(String message,
+ TcStates state)
+
+Stops the test immediately, result is failed.
+
+void
+addStepInfo(String stepName,
+ Comparable expected,
+ Comparable current,
+ ComparerOptions... options)
+
+Adds step information for the report.
+
+void
+addToGarbageCollector(Runnable fx)
+
+Collects call which will be executed after the test run.
+
+void
+cleanUpAndPush(CleanUpOptions... options)
+
+Cleanup at the end of test case, performs: Driver quit, result push to JIRA or ALM
+ according to the type defined.
+
+List<String>
+getFullLog()
+
+Returns fullLog which was collected while test execution.
+
+String
+getTestcaseName()
+
+Returns name of current test case.
+
+TestType
+getType()
+
+Returns Type of current Handler.
+
+boolean
+isTestable()
+
+Checks if test case is testable.
+
+boolean
+isTestDeveloper()
+
+Checks whether the test case is set to dev or not
+
+void
+runAndAddToGarbageCollector(Runnable fx)
+
+Executes wanted call and stores it in GC for execution again after the test run.
+
+void
+setAbortionReason(String reason)
+
+To set the test abortion reason
+
+void
+setCleanUpOptions(CleanUpOptions options)
+
+Sets options for clean up process.
+
+void
+setComment(String comment)
+
+Setting comment to test case result
+
+void
+setErrorScreenshot(File img)
+
+To set the screenshot for failed test reason
+
+void
+setTestDeveloper(boolean testDeveloper)
+ 
+void
+setTestResultState(TcStates state)
+
+Setting up test result state mainly if test found error during execution
+
+void
+setType(TestType type)
+
+Determination of test type, UI or API test.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+logLevels
+public final LogLevels logLevels
+
+
+
+
+stepEvaluator
+public final StepEvaluator stepEvaluator
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+isTestable
+public boolean isTestable()
+Checks if test case is testable.
+
+Returns:
+true if the provided test case is ready for execution, false otherwise
+
+
+
+
+
+getFullLog
+public List<String> getFullLog()
+Returns fullLog which was collected while test execution.
+
+Returns:
+Logs as String list.
+
+
+
+
+
+addToGarbageCollector
+public void addToGarbageCollector(Runnable fx)
+Collects call which will be executed after the test run.
+
+Parameters:
+fx - Wanted function call.
+
+
+
+
+
+runAndAddToGarbageCollector
+public void runAndAddToGarbageCollector(Runnable fx)
+Executes wanted call and stores it in GC for execution again after the test run.
+
+Parameters:
+fx - Wanted function call.
+
+
+
+
+
+abortTest
+public void abortTest(String message,
+ TcStates state)
+Stops the test immediately, result is failed.
+
+Parameters:
+message - Message for result.
+state - Abortion state TcStates
+
+
+
+
+
+setTestResultState
+public void setTestResultState(TcStates state)
+Setting up test result state mainly if test found error during execution
+
+Parameters:
+state - Abortion state TcStates
+
+
+
+
+
+setAbortionReason
+public void setAbortionReason(String reason)
+To set the test abortion reason
+
+Parameters:
+reason - Reason for the abort issue
+
+
+
+
+
+setErrorScreenshot
+public void setErrorScreenshot(File img)
+To set the screenshot for failed test reason
+
+Parameters:
+img - Error screenshot
+
+
+
+
+
+getType
+public TestType getType()
+Returns Type of current Handler.
+
+Returns:
+Type as TestType.
+
+
+
+
+
+setType
+public void setType(TestType type)
+Determination of test type, UI or API test.
+
+Parameters:
+type - - Type as enum.
+
+
+
+
+
+getTestcaseName
+public String getTestcaseName()
+Returns name of current test case.
+
+Returns:
+Name as String
+
+
+
+
+
+setCleanUpOptions
+public void setCleanUpOptions(CleanUpOptions options)
+Sets options for clean up process.
+
+Parameters:
+options - Options object.
+
+
+
+
+
+cleanUpAndPush
+public void cleanUpAndPush(CleanUpOptions... options)
+Cleanup at the end of test case, performs: Driver quit, result push to JIRA or ALM
+ according to the type defined.
+
+Parameters:
+options - - optional parameter, see CleanUpOptions
+
+
+
+
+
+addStepInfo
+public void addStepInfo(String stepName,
+ Comparable expected,
+ Comparable current,
+ ComparerOptions... options)
+Adds step information for the report.
+
+Parameters:
+stepName - Short step description.
+expected - Comparable Expected result
+current - Comparable current result which was found by test case.
+options - Options for comparer e.g. known bug or screenshot.
+
+
+
+
+
+isTestDeveloper
+public boolean isTestDeveloper()
+Checks whether the test case is set to dev or not
+
+
+
+
+setTestDeveloper
+public void setTestDeveloper(boolean testDeveloper)
+
+
+
+
+setComment
+public void setComment(String comment)
+Setting comment to test case result
+
+Parameters:
+comment - - wanted text for comment
+
+
+
+
+
+
+
+
+
+
+
+
+
+

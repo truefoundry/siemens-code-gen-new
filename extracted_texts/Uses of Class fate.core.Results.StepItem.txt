@@ -1,0 +1,159 @@
+Uses of Class fate.core.Results.StepItem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.Results.StepItem
+
+Packages that use StepItem
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Interfaces
+ 
+fate.core.PlatformConnectors.azure
+ 
+fate.core.PlatformConnectors.jira
+ 
+
+
+
+
+
+Uses of StepItem in fate.core.ControlImplementations
+Method parameters in fate.core.ControlImplementations with type arguments of type StepItem
+
+Modifier and Type
+Method
+Description
+static void
+DirectoryControl.saveScreenShotsFromTestSteps(List<StepItem> steps)
+
+Saves collected screenshots from test steps to local output directory as PNG files.
+
+
+
+
+
+
+Uses of StepItem in fate.core.Interfaces
+Methods in fate.core.Interfaces that return types with arguments of type StepItem
+
+Modifier and Type
+Method
+Description
+List<StepItem>
+IResultPlatformHandler.getTestSteps()
+
+Returns all collected test steps while test run as object list.
+
+
+Methods in fate.core.Interfaces with parameters of type StepItem
+
+Modifier and Type
+Method
+Description
+void
+IResultPlatformHandler.addStep(StepItem step)
+
+Adds a step information during the test run.
+
+
+
+
+
+
+Uses of StepItem in fate.core.PlatformConnectors.azure
+Methods in fate.core.PlatformConnectors.azure that return types with arguments of type StepItem
+
+Modifier and Type
+Method
+Description
+List<StepItem>
+AzureHandler.getTestSteps()
+ 
+
+Methods in fate.core.PlatformConnectors.azure with parameters of type StepItem
+
+Modifier and Type
+Method
+Description
+void
+AzureHandler.addStep(StepItem step)
+ 
+
+
+
+
+
+Uses of StepItem in fate.core.PlatformConnectors.jira
+Methods in fate.core.PlatformConnectors.jira that return types with arguments of type StepItem
+
+Modifier and Type
+Method
+Description
+List<StepItem>
+JiraHandler.getTestSteps()
+ 
+
+Methods in fate.core.PlatformConnectors.jira with parameters of type StepItem
+
+Modifier and Type
+Method
+Description
+void
+JiraHandler.addStep(StepItem step)
+ 
+
+
+
+
+
+
+
+
+
+

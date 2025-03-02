@@ -1,0 +1,210 @@
+PerfMonStorage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PerfMon
+Class PerfMonStorage
+
+java.lang.Object
+fate.core.PerfMon.PerfMonStorage
+
+
+
+public class PerfMonStorage
+extends Object
+A utility class for monitoring the storage of code blocks or functions.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+PerfMonStorage()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static List<PerfMon>
+getAll(String caller)
+
+Returns all measurement of specific caller.
+
+static PerfMon
+getLatest(String caller)
+
+Returns the latest measurement of specific caller.
+
+List<String>
+getSummary()
+
+Retrieves a list of summary strings from the stored performance monitors.
+
+static void
+printSummary(boolean groupedAvg)
+
+Prints a summary of the performance monitor data, optionally grouped by average.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+PerfMonStorage
+public PerfMonStorage()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+printSummary
+public static void printSummary(boolean groupedAvg)
+Prints a summary of the performance monitor data, optionally grouped by average.
+
+Parameters:
+groupedAvg - Flag indicating whether to group the results by average.
+
+
+
+
+
+getSummary
+public List<String> getSummary()
+Retrieves a list of summary strings from the stored performance monitors.
+
+Returns:
+A list of summary strings.
+
+
+
+
+
+getLatest
+public static PerfMon getLatest(String caller)
+Returns the latest measurement of specific caller. Result is found by contains() function, specify exact name for more precise result.
+
+Parameters:
+caller - Wanted name of caller function.
+Returns:
+PerfMon object.
+
+
+
+
+
+getAll
+public static List<PerfMon> getAll(String caller)
+Returns all measurement of specific caller. Result is found by contains() function, specify exact name for more precise result.
+
+Parameters:
+caller - Wanted name of caller function.
+Returns:
+List of PerfMon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

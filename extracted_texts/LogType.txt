@@ -1,0 +1,306 @@
+LogType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class LogType
+
+java.lang.Object
+java.lang.Enum<LogType>
+fate.core.Enums.LogType
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<LogType>, Constable
+
+
+public enum LogType
+extends Enum<LogType>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+LOG_ACTION
+ 
+LOG_BUG
+ 
+LOG_CONFIG
+ 
+LOG_DEBUG
+ 
+LOG_ERROR
+ 
+LOG_FATAL
+ 
+LOG_INFO
+ 
+LOG_PERF
+ 
+LOG_RESULT
+ 
+LOG_STEP
+ 
+LOG_TIMEOUT
+ 
+LOG_WAIT
+ 
+LOG_WARNING
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static LogType
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static LogType[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+LOG_INFO
+public static final LogType LOG_INFO
+
+
+
+
+LOG_ERROR
+public static final LogType LOG_ERROR
+
+
+
+
+LOG_WARNING
+public static final LogType LOG_WARNING
+
+
+
+
+LOG_FATAL
+public static final LogType LOG_FATAL
+
+
+
+
+LOG_RESULT
+public static final LogType LOG_RESULT
+
+
+
+
+LOG_STEP
+public static final LogType LOG_STEP
+
+
+
+
+LOG_BUG
+public static final LogType LOG_BUG
+
+
+
+
+LOG_WAIT
+public static final LogType LOG_WAIT
+
+
+
+
+LOG_DEBUG
+public static final LogType LOG_DEBUG
+
+
+
+
+LOG_CONFIG
+public static final LogType LOG_CONFIG
+
+
+
+
+LOG_ACTION
+public static final LogType LOG_ACTION
+
+
+
+
+LOG_TIMEOUT
+public static final LogType LOG_TIMEOUT
+
+
+
+
+LOG_PERF
+public static final LogType LOG_PERF
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static LogType[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static LogType valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+TestExecuter.ThrowingConsumer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Interface TestExecuter.ThrowingConsumer<T extends AbstractCoreHandler,E extends Exception>
+
+
+
+Type Parameters:
+T - The type of the test handler extending AbstractCoreHandler.
+E - The type of the exception thrown by the consumer.
+
+
+Enclosing class:
+TestExecuter
+
+
+public static interface TestExecuter.ThrowingConsumer<T extends AbstractCoreHandler,E extends Exception>
+A functional interface that defines a consumer accepting a test handler and throwing an exception.
+ Used for executing the test function with possible exceptions.
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+void
+accept(T t)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+accept
+void accept(T t)
+     throws E
+
+Throws:
+E extends Exception
+
+
+
+
+
+
+
+
+
+
+
+
+
+

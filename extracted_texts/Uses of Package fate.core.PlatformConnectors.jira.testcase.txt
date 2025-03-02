@@ -1,0 +1,100 @@
+Uses of Package fate.core.PlatformConnectors.jira.testcase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Packagefate.core.PlatformConnectors.jira.testcase
+
+Packages that use fate.core.PlatformConnectors.jira.testcase
+
+Package
+Description
+fate.core.PlatformConnectors.jira
+ 
+fate.core.PlatformConnectors.jira.testcase
+ 
+
+
+
+
+
+Classes in fate.core.PlatformConnectors.jira.testcase used by fate.core.PlatformConnectors.jira
+
+Class
+Description
+TestCase
+
+Represents a test case with metadata, status, and related information.
+
+
+
+
+
+
+Classes in fate.core.PlatformConnectors.jira.testcase used by fate.core.PlatformConnectors.jira.testcase
+
+Class
+Description
+Parameters
+
+Represents a container for variables and entries.
+
+TestScript
+
+Created by Michael on 28.02.2019.
+
+TestScriptSteps
+
+Created by Michael on 28.02.2019.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+Uses of Interface fate.core.Interfaces.IRegistryKey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IRegistryKey
+
+Packages that use IRegistryKey
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Enums
+ 
+
+
+
+
+
+Uses of IRegistryKey in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type IRegistryKey
+
+Modifier and Type
+Method
+Description
+static String
+WinRegistry.readRegistryKey(IRegistryKey regQuery)
+
+Executes registry query and returns keys value.
+
+
+
+
+
+
+Uses of IRegistryKey in fate.core.Enums
+Classes in fate.core.Enums that implement IRegistryKey
+
+Modifier and Type
+Class
+Description
+enum 
+WinRegistryKeys
+ 
+
+
+
+
+
+
+
+
+
+

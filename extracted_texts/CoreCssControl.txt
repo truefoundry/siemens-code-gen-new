@@ -1,0 +1,500 @@
+CoreCssControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreCssControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreInteractables
+fate.core.ControlImplementations.CoreCssControl
+
+
+
+
+All Implemented Interfaces:
+ICoreCssControl, IInteractable
+
+
+public class CoreCssControl
+extends CoreInteractables
+implements ICoreCssControl
+Handles the element extraction using locators.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreCssControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+exists(org.openqa.selenium.By selector)
+
+Checks if wanted element exists.
+
+org.openqa.selenium.WebElement
+findControl(@NotNull org.openqa.selenium.By selector,
+ Duration... wait)
+
+Returns wanted WebElement.
+
+List<org.openqa.selenium.WebElement>
+findControls(org.openqa.selenium.By cssSelector,
+ boolean... wait)
+
+Returns wanted WebElements List.
+
+List<org.openqa.selenium.WebElement>
+findControlsWithRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.By root)
+
+Returns list of wanted elements from specific root element.
+
+List<org.openqa.selenium.WebElement>
+findControlsWithRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+
+Returns list of wanted elements from specific root element.
+
+org.openqa.selenium.WebElement
+findControlWithRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.By rootElement)
+
+Returns wanted WebElement.
+
+org.openqa.selenium.WebElement
+findControlWithRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement rootElement,
+ Duration... wait)
+
+Returns wanted WebElement.
+
+List<org.openqa.selenium.WebElement>
+findMultipleControlsWithRoot(List<org.openqa.selenium.By> selectors,
+ org.openqa.selenium.By root)
+
+Returns a list filled with multiple control implementations.
+
+String
+getAttribute(org.openqa.selenium.By selector,
+ String attribute)
+
+Returns wanted attribute from wanted control.
+
+int
+getElementsCount(IInteractableNaming identifier)
+
+Returns the count of elements that match the provided identifier.
+
+org.openqa.selenium.WebElement
+getElementWithText(List<org.openqa.selenium.WebElement> list,
+ String name)
+
+Returns the wanted Web Element of a List with All Web Elements.
+
+String
+getPropertyOfPseudoElement(String id,
+ PseudoElement pElement,
+ String property)
+
+Retrieves the specified CSS property value of a pseudo-element of an HTML element.
+
+String
+getText(IInteractableNaming identifier)
+
+Returns text from wanted element.
+
+String
+getText(org.openqa.selenium.By selector)
+
+Returns text from wanted element.
+
+List<String>
+getTextFromElements(IInteractableNaming identifier)
+
+Returns the text from all elements that match the provided identifier.
+
+
+
+
+
+Methods inherited from class fate.core.ControlImplementations.CoreInteractables
+click, exists, getAttribute, getCssValue, getHeight, getLocation, getText, getWidth, hasFocus, isBlank, isClickable, isDisplayed, isEmpty, isEnabled, isMandatory, moveMouseOver, scrollIntoView, sendKeys, sendKeys, setAttribute, waitForDisposal, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface fate.core.Interfaces.IInteractable
+click, exists, getAttribute, getCssValue, getHeight, getLocation, getText, getWidth, hasFocus, isBlank, isClickable, isDisplayed, isEmpty, isEnabled, isMandatory, moveMouseOver, scrollIntoView, sendKeys, sendKeys, setAttribute, waitForDisposal, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreCssControl
+public CoreCssControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getAttribute
+@CheckForNull
+public String getAttribute(org.openqa.selenium.By selector,
+ String attribute)
+Returns wanted attribute from wanted control.
+
+Parameters:
+selector - Selector to identify wanted control.
+attribute - Wanted attribute.
+Returns:
+Returns attribute value as String or null if control or attribute wos not found.
+
+
+
+
+
+getElementWithText
+@CheckForNull
+public org.openqa.selenium.WebElement getElementWithText(List<org.openqa.selenium.WebElement> list,
+ String name)
+Returns the wanted Web Element of a List with All Web Elements. Web Element name gets trimmed.
+
+Parameters:
+list - List with all Web Elements.
+name - Wanted Web Element.
+Returns:
+Wanted Web Element or null if nothing was found.
+
+
+
+
+
+getText
+public String getText(IInteractableNaming identifier)
+Returns text from wanted element.
+
+Parameters:
+identifier - InteractableNaming enum of type EType.SELECTOR
+Returns:
+Text as String or MsgCode.NOT_FOUND
+
+
+
+
+
+getText
+public String getText(org.openqa.selenium.By selector)
+Returns text from wanted element.
+
+Parameters:
+selector - By selector to identify wanted element.
+Returns:
+Text as String or MsgCode.NOT_FOUND
+
+
+
+
+
+getElementsCount
+public int getElementsCount(IInteractableNaming identifier)
+Returns the count of elements that match the provided identifier.
+
+ This method checks if the identifier is of type SELECTOR, and if so, it returns the number of elements
+ found by the given selector. If the identifier type is not SELECTOR, it logs a warning and returns 0.
+
+Specified by:
+getElementsCount in interface ICoreCssControl
+Parameters:
+identifier - The identifier used to find the elements.
+Returns:
+The count of elements matching the identifier.
+
+
+
+
+
+getTextFromElements
+public List<String> getTextFromElements(IInteractableNaming identifier)
+Returns the text from all elements that match the provided identifier.
+
+ This method checks if the identifier is of type SELECTOR, and if so, it retrieves the text of all
+ elements found by the given selector. If the identifier type is not SELECTOR, it logs a warning and returns an empty list.
+
+Specified by:
+getTextFromElements in interface ICoreCssControl
+Parameters:
+identifier - The identifier used to find the elements.
+Returns:
+A list of text from all matching elements.
+
+
+
+
+
+exists
+public boolean exists(org.openqa.selenium.By selector)
+Checks if wanted element exists.
+
+Specified by:
+exists in interface ICoreCssControl
+Parameters:
+selector - By selector to identify wanted element.
+Returns:
+true if wanted element exists.
+
+
+
+
+
+getPropertyOfPseudoElement
+public String getPropertyOfPseudoElement(String id,
+ PseudoElement pElement,
+ String property)
+Retrieves the specified CSS property value of a pseudo-element of an HTML element.
+
+ This method uses JavaScript to access the computed style of a pseudo-element (e.g., ::before, ::after)
+ of the HTML element identified by the provided id. It executes a JavaScript script to retrieve the property
+ value for the given pseudo-element and property name.
+
+ If an error occurs (e.g., if the WebDriver is not available or if the element is not found), it logs the error.
+ If no value is retrieved, it returns an empty string.
+
+Specified by:
+getPropertyOfPseudoElement in interface ICoreCssControl
+Parameters:
+id - The ID of the HTML element.
+pElement - The pseudo-element (e.g., ::before, ::after).
+property - The CSS property whose value is to be retrieved.
+Returns:
+The value of the specified CSS property for the pseudo-element, or an empty string if an error occurs.
+
+
+
+
+
+findControl
+@CheckForNull
+public org.openqa.selenium.WebElement findControl(@NotNull
+ @NotNull org.openqa.selenium.By selector,
+ Duration... wait)
+Returns wanted WebElement.
+
+Parameters:
+selector - CSS Identifier of wanted Element.
+wait - Waits for wanted element.
+Returns:
+Object as WebElement or null.
+
+
+
+
+
+findControlWithRoot
+@CheckForNull
+public org.openqa.selenium.WebElement findControlWithRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.By rootElement)
+Returns wanted WebElement. Begins to search from rootElement.
+
+Parameters:
+rootElement - Selector for root element from where to start the search.
+selector - CSS Identifier of wanted Element.
+Returns:
+Object as WebElement or null.
+
+
+
+
+
+findControlWithRoot
+@CheckForNull
+public org.openqa.selenium.WebElement findControlWithRoot(@Nonnull
+ org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement rootElement,
+ Duration... wait)
+                                                   throws org.openqa.selenium.StaleElementReferenceException
+Returns wanted WebElement. Begins to search from rootElement.
+
+Parameters:
+rootElement - Element from where to search.
+selector - CSS Identifier of wanted Element.
+wait - Waits for wanted element.
+Returns:
+Object as WebElement or null.
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+findControlsWithRoot
+public List<org.openqa.selenium.WebElement> findControlsWithRoot(@Nonnull
+ org.openqa.selenium.By selector,
+ @Nonnull
+ org.openqa.selenium.By root)
+Returns list of wanted elements from specific root element.
+
+Parameters:
+selector - Selector for wanted elements.
+root - Selector for root element which contains wanted elements.
+Returns:
+List with WebElements or empty list if nothing was found.
+
+
+
+
+
+findMultipleControlsWithRoot
+@Experimental
+public List<org.openqa.selenium.WebElement> findMultipleControlsWithRoot(List<org.openqa.selenium.By> selectors,
+ @Nonnull
+ org.openqa.selenium.By root)
+Returns a list filled with multiple control implementations.
+
+Parameters:
+selectors - List with selector of wanted elements.
+root - Root element which is containing wanted elements.
+Returns:
+List with WebElements or empty list.
+
+
+
+
+
+findControlsWithRoot
+public List<org.openqa.selenium.WebElement> findControlsWithRoot(@Nonnull
+ org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+                                                          throws org.openqa.selenium.StaleElementReferenceException
+Returns list of wanted elements from specific root element.
+
+Parameters:
+selector - Selector for wanted elements.
+root - Selector for root element which contains wanted elements.
+Returns:
+List with WebElements or empty list if nothing was found.
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+findControls
+public List<org.openqa.selenium.WebElement> findControls(org.openqa.selenium.By cssSelector,
+ boolean... wait)
+Returns wanted WebElements List.
+
+Parameters:
+cssSelector - CSS selector of wanted Element.
+wait - Waits at least for one element before performing a search.
+Returns:
+List of WebElements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

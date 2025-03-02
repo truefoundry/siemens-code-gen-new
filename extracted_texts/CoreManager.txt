@@ -1,0 +1,133 @@
+CoreManager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreManager
+
+java.lang.Object
+fate.core.ControlImplementations.CoreManager
+
+
+
+public class CoreManager
+extends Object
+Handles the gradle file data.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static String
+getProperty(CoreProperties property)
+
+Returns a property from gradle.properties file.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getProperty
+public static String getProperty(CoreProperties property)
+Returns a property from gradle.properties file.
+
+Parameters:
+property - Name of wanted property.
+Returns:
+String value MsgCode.NOT_FOUND.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

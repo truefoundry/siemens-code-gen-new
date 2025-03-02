@@ -1,0 +1,280 @@
+EMailData
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Email
+Class EMailData
+
+java.lang.Object
+fate.core.Email.EMailData
+
+
+
+public class EMailData
+extends Object
+Represents the data of an email, including its ID, subject, content, sender, reply-to, IETC.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+EMailData(microsoft.exchange.webservices.data.core.service.item.EmailMessage email)
+
+Constructs an EMailData object from an EmailMessage, extracting various properties such as
+ ID, subject, content, sender, reply-to, CC, and attachments.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+microsoft.exchange.webservices.data.property.complex.AttachmentCollection
+getAttachments()
+
+Gets the attachments of the email.
+
+String
+getCc()
+
+Gets the email CC addresses.
+
+String
+getContent()
+
+Gets the email content (body).
+
+Instant
+getDateTimeReceived()
+
+Gets the date/time when the email was received.
+
+microsoft.exchange.webservices.data.property.complex.ItemId
+getId()
+
+Gets the email ID.
+
+String
+getReplyTo()
+
+Gets the email reply-to addresses.
+
+String
+getSender()
+
+Gets the email sender.
+
+String
+getSubject()
+
+Gets the email subject.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+EMailData
+public EMailData(microsoft.exchange.webservices.data.core.service.item.EmailMessage email)
+Constructs an EMailData object from an EmailMessage, extracting various properties such as
+ ID, subject, content, sender, reply-to, CC, and attachments.
+ Logs messages if any properties are missing.
+
+Parameters:
+email - the EmailMessage object from which to extract data
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getId
+public microsoft.exchange.webservices.data.property.complex.ItemId getId()
+Gets the email ID.
+
+Returns:
+the email ID
+
+
+
+
+
+getSubject
+public String getSubject()
+Gets the email subject.
+
+Returns:
+the email subject
+
+
+
+
+
+getContent
+public String getContent()
+Gets the email content (body).
+
+Returns:
+the email content
+
+
+
+
+
+getSender
+public String getSender()
+Gets the email sender.
+
+Returns:
+the sender's address
+
+
+
+
+
+getReplyTo
+public String getReplyTo()
+Gets the email reply-to addresses.
+
+Returns:
+the reply-to addresses
+
+
+
+
+
+getCc
+public String getCc()
+Gets the email CC addresses.
+
+Returns:
+the CC addresses
+
+
+
+
+
+getAttachments
+public microsoft.exchange.webservices.data.property.complex.AttachmentCollection getAttachments()
+Gets the attachments of the email.
+
+Returns:
+the attachments
+
+
+
+
+
+getDateTimeReceived
+public Instant getDateTimeReceived()
+Gets the date/time when the email was received.
+
+Returns:
+the date/time received
+
+
+
+
+
+
+
+
+
+
+
+
+
+

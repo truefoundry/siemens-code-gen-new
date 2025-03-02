@@ -1,0 +1,304 @@
+Generator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class Generator
+
+java.lang.Object
+fate.core.ControlImplementations.Generator
+
+
+
+public class Generator
+extends Object
+Handles the random data generation.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static Date
+createDateObject(int year,
+ int month,
+ int day)
+
+Creates new Date object with wanted date.
+
+static UUID
+generateNullUUID()
+
+returns "00000000-0000-0000-0000-000000000000" UUID
+
+static List<String>
+generateTwoCharacterList()
+
+Generates a list of all possible string with to letters in the range from a to z
+
+static UUID
+generateUUID()
+
+returns random GUID
+
+static String
+getCurrentDateTime(DateFormat expectedFormat,
+ boolean... isValidFrom)
+
+Get current date time in UTC
+
+static String
+getHashedName(String strToHash,
+ boolean... isFile)
+
+Hashes name for unique use cases.
+
+static String
+getRandomIPAddress()
+
+Generates random ip address.
+
+static int
+getRandomNumber(int maxNumber)
+
+Returns random int value with maxNumber as max value.
+
+static String
+getRandomString(int stringLength)
+
+Generates random alphabetic String with wanted length.
+
+static String
+getSpecificDate(DateManipulator date,
+ DateFormat formatter)
+
+Returns manipulated date e.g.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+generateTwoCharacterList
+public static List<String> generateTwoCharacterList()
+Generates a list of all possible string with to letters in the range from a to z
+
+Returns:
+List of string
+
+
+
+
+
+generateUUID
+public static UUID generateUUID()
+returns random GUID
+
+Returns:
+GUID as string.
+
+
+
+
+
+generateNullUUID
+public static UUID generateNullUUID()
+returns "00000000-0000-0000-0000-000000000000" UUID
+
+Returns:
+GUID
+
+
+
+
+
+getRandomString
+public static String getRandomString(int stringLength)
+Generates random alphabetic String with wanted length.
+
+Parameters:
+stringLength - wanted length
+Returns:
+random string with wanted length
+
+
+
+
+
+getRandomIPAddress
+public static String getRandomIPAddress()
+Generates random ip address.
+
+
+
+
+getRandomNumber
+public static int getRandomNumber(int maxNumber)
+Returns random int value with maxNumber as max value.
+
+ Examples:
+
+Generator.getRandomNumber(0) returns (deterministically) 0
+Generator.getRandomNumber(3) returns one of {0, 1, 2, 3}
+
+
+Parameters:
+maxNumber - max value, a non-negative integer
+Returns:
+random val between 0 and maxNumber (both inclusive)
+
+
+
+
+
+createDateObject
+public static Date createDateObject(int year,
+ int month,
+ int day)
+Creates new Date object with wanted date. Time is 00:00:00
+
+Parameters:
+year - wanted year.
+month - wanted month.
+day - wanted day.
+Returns:
+date object.
+
+
+
+
+
+getSpecificDate
+public static String getSpecificDate(DateManipulator date,
+ DateFormat formatter)
+Returns manipulated date e.g. today + 7 days or hours.
+
+Parameters:
+date - Wanted date difference.
+formatter - Formatter for return value. e.g. new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+Returns:
+Manipulated date as formatted string.
+
+
+
+
+
+getHashedName
+public static String getHashedName(String strToHash,
+ boolean... isFile)
+Hashes name for unique use cases.
+
+Parameters:
+strToHash - String to hash.
+isFile - creates hashed string without space char.
+Returns:
+Hashed value as String.
+
+
+
+
+
+getCurrentDateTime
+public static String getCurrentDateTime(DateFormat expectedFormat,
+ boolean... isValidFrom)
+Get current date time in UTC
+
+Parameters:
+expectedFormat - dateTime format e.g. new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH)
+isValidFrom - Adds current time + 5min if true, current time + 1min if false.
+Returns:
+current date time in expected format
+
+
+
+
+
+
+
+
+
+
+
+
+
+

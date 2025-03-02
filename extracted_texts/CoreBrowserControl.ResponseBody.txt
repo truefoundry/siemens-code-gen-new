@@ -1,0 +1,269 @@
+CoreBrowserControl.ResponseBody
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Record Class CoreBrowserControl.ResponseBody
+
+java.lang.Object
+java.lang.Record
+fate.core.ControlImplementations.CoreBrowserControl.ResponseBody
+
+
+
+
+Enclosing class:
+CoreBrowserControl
+
+
+public static record CoreBrowserControl.ResponseBody(org.openqa.selenium.devtools.v128.network.model.RequestId reqId, String responseBody, String postData)
+extends Record
+A record representing the response body associated with a specific request.
+ It contains:
+ - reqId: The request ID related to the response.
+ - responseBody: The content of the response.
+ - postData: The data sent in the POST request.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ResponseBody(org.openqa.selenium.devtools.v128.network.model.RequestId reqId,
+ String responseBody,
+ String postData)
+
+Creates an instance of a ResponseBody record class.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+final boolean
+equals(Object o)
+
+Indicates whether some other object is "equal to" this one.
+
+final int
+hashCode()
+
+Returns a hash code value for this object.
+
+String
+postData()
+
+Returns the value of the postData record component.
+
+org.openqa.selenium.devtools.v128.network.model.RequestId
+reqId()
+
+Returns the value of the reqId record component.
+
+String
+responseBody()
+
+Returns the value of the responseBody record component.
+
+final String
+toString()
+
+Returns a string representation of this record class.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ResponseBody
+public ResponseBody(org.openqa.selenium.devtools.v128.network.model.RequestId reqId,
+ String responseBody,
+ String postData)
+Creates an instance of a ResponseBody record class.
+
+Parameters:
+reqId - the value for the reqId record component
+responseBody - the value for the responseBody record component
+postData - the value for the postData record component
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+toString
+public final String toString()
+Returns a string representation of this record class. The representation contains the name of the class, followed by the name and value of each of the record components.
+
+Specified by:
+toString in class Record
+Returns:
+a string representation of this object
+
+
+
+
+
+hashCode
+public final int hashCode()
+Returns a hash code value for this object. The value is derived from the hash code of each of the record components.
+
+Specified by:
+hashCode in class Record
+Returns:
+a hash code value for this object
+
+
+
+
+
+equals
+public final boolean equals(Object o)
+Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with Objects::equals(Object,Object).
+
+Specified by:
+equals in class Record
+Parameters:
+o - the object with which to compare
+Returns:
+true if this object is the same as the o argument; false otherwise.
+
+
+
+
+
+reqId
+public org.openqa.selenium.devtools.v128.network.model.RequestId reqId()
+Returns the value of the reqId record component.
+
+Returns:
+the value of the reqId record component
+
+
+
+
+
+responseBody
+public String responseBody()
+Returns the value of the responseBody record component.
+
+Returns:
+the value of the responseBody record component
+
+
+
+
+
+postData
+public String postData()
+Returns the value of the postData record component.
+
+Returns:
+the value of the postData record component
+
+
+
+
+
+
+
+
+
+
+
+
+
+

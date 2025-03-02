@@ -1,0 +1,482 @@
+CertificateManager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CertificateManager
+
+java.lang.Object
+fate.core.ControlImplementations.CertificateManager
+
+
+
+public class CertificateManager
+extends Object
+Helps in managing the token certificate necessary for azure instances
+
+
+
+
+
+
+Nested Class Summary
+Nested Classes
+
+Modifier and Type
+Class
+Description
+static class 
+CertificateManager.KeystoreConfig
+ 
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+static final Path
+FATE_CERTS_PATH
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static void
+checkKeystoreAndCertificate(String url,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+
+
+     Checks if keystore does exist and if not, creates new one
+     Copies all certs from default keystore (java home) to newly created one
+     Cleans keystore including removal of expired and duplicated certs
+     Tries to download and store certificate to the keystore
+ 
+
+static Map<String,Certificate>
+cleanKeystore(CertificateManager.KeystoreConfig... keystoreConfig)
+
+Removes all duplicated as well as expired certificates from the provided keystore.
+
+static void
+copyAllCertificates(CertificateManager.KeystoreConfig sourceKeystore,
+ CertificateManager.KeystoreConfig... destinationKeystore)
+
+Copies all certificates from provided source keystore to custom destination keystore.
+
+static void
+createKeystoreIfNotExist(CertificateManager.KeystoreConfig... keystoreConfig)
+
+This method checks if a keystore file exists.
+
+static void
+createParentFolders(Path filePath)
+
+Creates parent folders including sub-folders for provided file path if they don't already exist.
+
+static boolean
+doesValidCertificateExist(String url,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+
+Checks for the presence and validity of certificate in the keystore.
+
+static void
+downloadAndStore(String url,
+ String alias,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+
+Downloads certificate from given website and stores it into keystore.
+
+static Map<String,Certificate>
+getAllCertificates(CertificateManager.KeystoreConfig... keystoreConfig)
+
+Gets all stored certificates from the keystore.
+
+static String
+parseHostNameWithoutProtocol(String websiteUrl)
+
+Parses host name from provided website URL without protocol.
+
+static String
+parseHostNameWithProtocol(String websiteUrl)
+
+Parses host name from provided website URL including protocol.
+
+static Map<String,Certificate>
+removeAllDuplicated(CertificateManager.KeystoreConfig... keystoreConfig)
+
+Removes all duplicated certificates from the provided keystore.
+
+static Map<String,Certificate>
+removeAllExpired(CertificateManager.KeystoreConfig... keystoreConfig)
+
+Removes all expired certificates from the provided keystore.
+
+void
+removeByAlias(String alias,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+
+Removes certificate from the provided keystore with provided alias (name).
+
+static void
+removeByAliases(List<String> certAliases,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+
+Removes certificates from the provided keystore with provided aliases (names).
+
+static void
+setCustomKeystore(CertificateManager.KeystoreConfig keystoreConfig)
+
+This method sets a custom keystore configuration for the application.
+
+static void
+setSystemProperties()
+
+Sets system properties for currently set keystore config.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+FATE_CERTS_PATH
+public static final Path FATE_CERTS_PATH
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setCustomKeystore
+public static void setCustomKeystore(@Nonnull
+ CertificateManager.KeystoreConfig keystoreConfig)
+This method sets a custom keystore configuration for the application.
+ It updates the keystore configuration and applies system properties based on it.
+
+Parameters:
+keystoreConfig - The custom configuration to be set for the keystore.
+
+
+
+
+
+setSystemProperties
+public static void setSystemProperties()
+Sets system properties for currently set keystore config.
+
+
+
+
+downloadAndStore
+public static void downloadAndStore(@Nonnull
+ String url,
+ @Nonnull
+ String alias,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+Downloads certificate from given website and stores it into keystore.
+
+Parameters:
+url - website/url to download certificate from
+alias - alias of the certificate to be stored into keystore.
+keystoreConfig - optional keystore config to download and store certificate into.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+
+
+
+
+
+createKeystoreIfNotExist
+public static void createKeystoreIfNotExist(CertificateManager.KeystoreConfig... keystoreConfig)
+This method checks if a keystore file exists. If it doesn't, it creates a new one and copies all certificates to it.
+
+Parameters:
+keystoreConfig - Configuration settings for the keystore (optional).
+
+
+
+
+
+getAllCertificates
+public static Map<String,Certificate> getAllCertificates(CertificateManager.KeystoreConfig... keystoreConfig)
+Gets all stored certificates from the keystore.
+
+Parameters:
+keystoreConfig - optional keystore config used to get certificates.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+Returns:
+map of certificates where key is alias and value is the certificate itself
+
+
+
+
+
+checkKeystoreAndCertificate
+public static void checkKeystoreAndCertificate(@Nonnull
+ String url,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+
+Checks if keystore does exist and if not, creates new one
+Copies all certs from default keystore (java home) to newly created one
+Cleans keystore including removal of expired and duplicated certs
+Tries to download and store certificate to the keystore
+
+
+Parameters:
+keystoreConfig - optional keystore config used to get certificates.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+url - host URL to check and download certificate from
+
+
+
+
+
+parseHostNameWithoutProtocol
+public static String parseHostNameWithoutProtocol(@Nonnull
+ String websiteUrl)
+Parses host name from provided website URL without protocol.
+
+Parameters:
+websiteUrl - to be parsed
+Returns:
+parsed host name without protocol or input in case of error
+
+
+
+
+
+parseHostNameWithProtocol
+public static String parseHostNameWithProtocol(@Nonnull
+ String websiteUrl)
+Parses host name from provided website URL including protocol.
+
+Parameters:
+websiteUrl - to be parsed
+Returns:
+parsed host name with protocol or input in case of error
+
+
+
+
+
+createParentFolders
+public static void createParentFolders(@Nonnull
+ Path filePath)
+Creates parent folders including sub-folders for provided file path if they don't already exist.
+
+Parameters:
+filePath - path of the target file
+See Also:
+
+
+Files.createDirectories(java.nio.file.Path, java.nio.file.attribute.FileAttribute<?>...)
+
+
+
+
+
+
+
+copyAllCertificates
+public static void copyAllCertificates(CertificateManager.KeystoreConfig sourceKeystore,
+ CertificateManager.KeystoreConfig... destinationKeystore)
+Copies all certificates from provided source keystore to custom destination keystore.
+
+Parameters:
+sourceKeystore - keystore config used as a source keystore to copy from
+destinationKeystore - optional keystore config used as a target keystore for copy.
+                            If not provided, following path will be used: FATE_CERTS_PATH
+
+
+
+
+
+cleanKeystore
+@CanIgnoreReturnValue
+public static Map<String,Certificate> cleanKeystore(CertificateManager.KeystoreConfig... keystoreConfig)
+Removes all duplicated as well as expired certificates from the provided keystore.
+
+Parameters:
+keystoreConfig - optional keystore config for cleaning.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+Returns:
+map of removed certificates where key is certificate's alias (name) and value is certificate itself.
+
+
+
+
+
+removeAllDuplicated
+public static Map<String,Certificate> removeAllDuplicated(CertificateManager.KeystoreConfig... keystoreConfig)
+Removes all duplicated certificates from the provided keystore.
+
+Parameters:
+keystoreConfig - optional keystore config for removing all duplicated certs.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+Returns:
+map of removed certificates where key is certificate's alias (name) and value is certificate itself.
+
+
+
+
+
+removeAllExpired
+public static Map<String,Certificate> removeAllExpired(CertificateManager.KeystoreConfig... keystoreConfig)
+Removes all expired certificates from the provided keystore.
+
+Parameters:
+keystoreConfig - optional keystore config for removing all expired certificates.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+Returns:
+map of removed certificates where key is certificate's alias (name) and value is certificate itself.
+
+
+
+
+
+removeByAlias
+public void removeByAlias(@Nonnull
+ String alias,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+Removes certificate from the provided keystore with provided alias (name).
+
+Parameters:
+alias - name of the certificate
+keystoreConfig - optional keystore config for removing certificate by alias.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+
+
+
+
+
+removeByAliases
+public static void removeByAliases(List<String> certAliases,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+Removes certificates from the provided keystore with provided aliases (names).
+
+Parameters:
+certAliases - certificate names to be removed
+keystoreConfig - optional keystore config for removing certificate by alias.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+
+
+
+
+
+doesValidCertificateExist
+public static boolean doesValidCertificateExist(String url,
+ CertificateManager.KeystoreConfig... keystoreConfig)
+Checks for the presence and validity of certificate in the keystore.
+
+Parameters:
+url - host URL to be checked
+keystoreConfig - optional keystore config for checking if certificate exist and is valid.
+                       If not provided, following path will be used: FATE_CERTS_PATH
+Returns:
+true if certificate exists and is also valid
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+Uses of Class fate.core.PerfMon.PerfMon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PerfMon.PerfMon
+
+Packages that use PerfMon
+
+Package
+Description
+fate.core.PerfMon
+ 
+
+
+
+
+
+Uses of PerfMon in fate.core.PerfMon
+Methods in fate.core.PerfMon that return PerfMon
+
+Modifier and Type
+Method
+Description
+static PerfMon
+PerfMonStorage.getLatest(String caller)
+
+Returns the latest measurement of specific caller.
+
+static PerfMon
+PerfMon.measure(Runnable function,
+ Duration... expectedDuration)
+
+Measures execution of the function and automatically handles start, stop and abort of measurement.
+
+
+Methods in fate.core.PerfMon that return types with arguments of type PerfMon
+
+Modifier and Type
+Method
+Description
+static List<PerfMon>
+PerfMonStorage.getAll(String caller)
+
+Returns all measurement of specific caller.
+
+
+Method parameters in fate.core.PerfMon with type arguments of type PerfMon
+
+Modifier and Type
+Method
+Description
+static String
+PerfMon.getAvgResult(String callerName,
+ Duration expected,
+ List<PerfMon> mons)
+
+Calculates the average elapsed time for a list of performance monitors and formats the result.
+
+
+
+
+
+
+
+
+
+
+

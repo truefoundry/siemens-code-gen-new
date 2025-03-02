@@ -1,0 +1,178 @@
+WebDriverObtainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class WebDriverObtainer
+
+java.lang.Object
+fate.core.ControlImplementations.WebDriverObtainer
+
+
+
+public class WebDriverObtainer
+extends Object
+Utility class for obtaining WebDriver instances.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static String
+getBrowserVersion(WebDrv drv,
+ boolean shortVersion)
+
+Returns version of wanted local browser installation.
+
+static Path
+getDriversPath(WebDrv drv,
+ String version)
+
+Retrieves the path to the specified WebDriver for a given browser and version.
+
+static Path
+obtainDriver(WebDrv drv,
+ String... version)
+
+Downloads wanted WebDriver for wanted Browser and adds it to correct resource folder.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getBrowserVersion
+public static String getBrowserVersion(WebDrv drv,
+ boolean shortVersion)
+Returns version of wanted local browser installation.
+
+Parameters:
+drv - Wanted browser type
+shortVersion - if set to true, returns just the main version, e.g. will return "100" for v. 100.1.2.123
+Returns:
+version of wanted browser, full/short or MsgCode.NOT_AVAILABLE
+
+
+
+
+
+obtainDriver
+public static Path obtainDriver(WebDrv drv,
+ String... version)
+Downloads wanted WebDriver for wanted Browser and adds it to correct resource folder.
+
+Parameters:
+drv - Browser type of wanted WebDriver.
+version - Specific browser version or empty for matching version of current browser installation. Note FF, downloads always the latest driver.
+Returns:
+Returns the path to obtained WebDriver or empty string.
+
+
+
+
+
+getDriversPath
+public static Path getDriversPath(WebDrv drv,
+ String version)
+Retrieves the path to the specified WebDriver for a given browser and version.
+
+Parameters:
+drv - The WebDriver type (e.g., CHROME, EDGE, FIREFOX).
+version - The version of the WebDriver.
+Returns:
+The path to the WebDriver file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+Uses of Interface fate.core.Interfaces.IResultPlatformHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IResultPlatformHandler
+
+Packages that use IResultPlatformHandler
+
+Package
+Description
+fate.core.PlatformConnectors.azure
+ 
+fate.core.PlatformConnectors.jira
+ 
+
+
+
+
+
+Uses of IResultPlatformHandler in fate.core.PlatformConnectors.azure
+Classes in fate.core.PlatformConnectors.azure that implement IResultPlatformHandler
+
+Modifier and Type
+Class
+Description
+class 
+AzureHandler
+ 
+
+
+
+
+
+Uses of IResultPlatformHandler in fate.core.PlatformConnectors.jira
+Classes in fate.core.PlatformConnectors.jira that implement IResultPlatformHandler
+
+Modifier and Type
+Class
+Description
+class 
+JiraHandler
+ 
+
+
+
+
+
+
+
+
+
+

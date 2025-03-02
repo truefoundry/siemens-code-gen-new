@@ -1,0 +1,181 @@
+WinDriverServer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+Class WinDriverServer
+
+java.lang.Object
+fate.core.CompositionRoot.WinDriverServer
+
+
+
+public class WinDriverServer
+extends Object
+This class is used to manage the WinDriver server process.
+ It helps check if the server is running and provides information like its address and port.
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getServerAddress()
+
+Provides the address where the server is hosted.
+
+int
+getServerPort()
+
+Provides the port number where the server is running.
+
+RunningProcess
+getServerProcess()
+
+Provides the process information for the running server.
+
+boolean
+isRunning()
+
+Checks if the WinDriver server is currently running.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+isRunning
+public boolean isRunning()
+Checks if the WinDriver server is currently running.
+ If no process with the name "WinAppDriver.exe" is found, it clears the server process.
+
+Returns:
+true if the server is running, false otherwise.
+
+
+
+
+
+getServerAddress
+public String getServerAddress()
+Provides the address where the server is hosted.
+
+Returns:
+The server's address as a string (default is "127.0.0.1").
+
+
+
+
+
+getServerProcess
+public RunningProcess getServerProcess()
+Provides the process information for the running server.
+
+Returns:
+The current running process, or null if no server is running.
+
+
+
+
+
+getServerPort
+public int getServerPort()
+Provides the port number where the server is running.
+
+Returns:
+The server's port number (default is 4723).
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+fate.core.Pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Pdf
+
+
+package fate.core.Pdf
+
+
+
+
+All Classes and InterfacesClassesEnum Classes
+
+
+Class
+Description
+CorePdfControl
+
+Handles pdf file reading
+
+PageOrientation
+
+This enum is used also for document
+
+PageSize
+
+This enum is used also for document
+
+
+
+
+
+
+
+
+
+
+
+

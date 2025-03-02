@@ -1,0 +1,504 @@
+ImageUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class ImageUtils
+
+java.lang.Object
+fate.core.ControlImplementations.ImageUtils
+
+
+
+public class ImageUtils
+extends Object
+This class uses sikulix to recognize images 
+Documentation
+sikulix doesn't support parallel testing
+
+See Also:
+
+
+The method captureElement(String cssSelector, String imageName) can be used to capture images from webDriver otherwise sikulix
+ IDE can be also used to capture elements and simulate the library methods such as find, click ...etc.
+
+
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static boolean
+areImagesEqual(Path pathA,
+ Path pathB)
+
+Compares two .PNG files.
+
+static boolean
+click(String imageName)
+
+Clicks on the desired image
+
+static boolean
+clickOnText(String text)
+
+Clicks on the wanted word
+
+static boolean
+containsImage(String imageName,
+ String mainImageName)
+
+Checks if the main image contains another specific image or not
+
+static boolean
+containsImage(String imageName,
+ String mainImagePath,
+ double... similarity)
+
+Checks if the main image contains another specific image or not
+
+static boolean
+containsText(String text)
+
+Checks if the displayed image contains the wanted text
+
+static List<org.sikuli.script.Match>
+findAllText(String text,
+ org.sikuli.script.Region... region)
+
+Find Text relevant to certain image in screen
+
+static org.sikuli.script.Match
+findImage(String imageName)
+
+Finds image by using the image name e.g.
+
+static List<org.sikuli.script.Match>
+findImages(String imageName)
+
+Finds images by using the image name e.g.
+
+static org.sikuli.script.Match
+findText(String text)
+
+Finds a text in the displayed image
+
+static org.apache.commons.math3.util.Pair<Integer,Integer>
+getDpi(Path path)
+
+Returns DPI of an PNG image.
+
+static String
+getImagedPath()
+
+Gets the path of the default image folder
+
+static boolean
+isOnCurrentScreen(String imageName)
+
+Checks if the image is existing on the screen
+
+static void
+saveScreenshot(Path path)
+
+Saves screenshot to wanted path, a valid WebDriver instance has to be available in the container.
+
+static void
+sendText(String imageName,
+ String text)
+
+Fills text into the wanted image
+
+static void
+setImagePath(String path)
+
+Set the screenshot folder path
+
+static void
+setResizeOff(boolean off)
+
+Turn resize to false or true in the setting t
+
+static void
+setResizeValue(float value)
+
+Sets the resize value for the system settings.
+
+static void
+setSimilarity(double minSimilarity)
+
+Set the minimum similarity tp override the default settings
+
+static File
+takeScreenshot()
+
+Takes screenshot.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+takeScreenshot
+@CheckForNull
+public static File takeScreenshot()
+Takes screenshot. Valid WebDriver or WindowsDriver instance has to be available in the container.
+
+
+
+
+saveScreenshot
+public static void saveScreenshot(Path path)
+Saves screenshot to wanted path, a valid WebDriver instance has to be available in the container. The directory holding the destination file
+ is created if it does not exist. If the destination file exists, then this method will overwrite it.
+
+Parameters:
+path - Where to save the screenshot e.g. "c:\\tmp\\screenshot000.png"
+
+
+
+
+
+findImages
+public static List<org.sikuli.script.Match> findImages(String imageName)
+Finds images by using the image name e.g. image.png
+
+Parameters:
+imageName - the name of image which is saved in the bundle path
+Returns:
+List of Match object otherwise empty list
+
+
+
+
+
+findImage
+@CheckForNull
+public static org.sikuli.script.Match findImage(String imageName)
+Finds image by using the image name e.g. image.png
+
+Parameters:
+imageName - the name of image which is saved in the bundle path
+Returns:
+Match if the image is found otherwise null
+
+
+
+
+
+click
+public static boolean click(@Nonnull
+ String imageName)
+Clicks on the desired image
+
+Parameters:
+imageName - the name of image which is saved in the bundle path
+Returns:
+boolean with true value  if the image is clicked
+
+
+
+
+
+findText
+@CheckForNull
+public static org.sikuli.script.Match findText(@Nonnull
+ String text)
+Finds a text in the displayed image
+
+Parameters:
+text - the wanted text
+Returns:
+Match (Line) if the text is found
+
+
+
+
+
+clickOnText
+public static boolean clickOnText(@Nonnull
+ String text)
+Clicks on the wanted word
+
+Parameters:
+text - String of the word that will be clicked
+Returns:
+boolean with true if the text is found in the screen
+
+
+
+
+
+containsImage
+public static boolean containsImage(@Nonnull
+ String imageName,
+ @Nonnull
+ String mainImageName)
+Checks if the main image contains another specific image or not
+  the main image will be opened on screen if it is not displayed
+
+Parameters:
+imageName - The name of image which is checked against the main image
+mainImageName - The name of the main image
+Returns:
+boolean with true value if the main image contains the wanted image
+
+
+
+
+
+containsImage
+public static boolean containsImage(@Nonnull
+ String imageName,
+ @Nonnull
+ String mainImagePath,
+ double... similarity)
+Checks if the main image contains another specific image or not
+  neither the main image nor the searching for image need to be displayed in screen so in this case Finder will be used instead Screen to
+ compare the saved files
+
+Parameters:
+imageName - The name of image which is checked against the main image
+mainImagePath - The image path of the main image
+similarity - optional similarity value to set the similarity in the image pattern otherwise the default similarity will be uses
+Returns:
+boolean with true value if the main image contains the wanted image
+
+
+
+
+
+isOnCurrentScreen
+public static boolean isOnCurrentScreen(@Nonnull
+ String imageName)
+Checks if the image is existing on the screen
+
+Parameters:
+imageName - The image name
+Returns:
+boolean with true value if the image is displayed in the screen
+
+
+
+
+
+containsText
+public static boolean containsText(@Nonnull
+ String text)
+Checks if the displayed image contains the wanted text
+
+Parameters:
+text - String of the wanted text
+Returns:
+boolean with true value if the text is displayed in the screen
+
+
+
+
+
+sendText
+public static void sendText(@Nonnull
+ String imageName,
+ @Nonnull
+ String text)
+Fills text into the wanted image
+
+Parameters:
+imageName - The name of image which will be filled with the text
+text - String of the wanted text
+
+
+
+
+
+getImagedPath
+public static String getImagedPath()
+Gets the path of the default image folder
+
+Returns:
+String of the folder path
+
+
+
+
+
+areImagesEqual
+public static boolean areImagesEqual(Path pathA,
+ Path pathB)
+Compares two .PNG files.
+
+Parameters:
+pathA - first file path
+pathB - second file path
+Returns:
+true if the files are the same
+
+
+
+
+
+getDpi
+public static org.apache.commons.math3.util.Pair<Integer,Integer> getDpi(Path path)
+Returns DPI of an PNG image.
+
+Parameters:
+path - source file
+Returns:
+pair of (xDPI, yDPI) or (-1, -1)
+
+
+
+
+
+setResizeOff
+public static void setResizeOff(boolean off)
+Turn resize to false or true in the setting t
+
+Parameters:
+off - boolean value
+
+
+
+
+
+setResizeValue
+public static void setResizeValue(float value)
+Sets the resize value for the system settings.
+
+ This method updates the `AlwaysResize` setting in the `Settings` class to the specified value. The value determines whether the system should always resize based on the provided input.
+
+Parameters:
+value - The new resize value to set, represented as a float. The meaning of the value depends on the specific system configuration.
+
+
+
+
+
+setSimilarity
+public static void setSimilarity(double minSimilarity)
+Set the minimum similarity tp override the default settings
+
+Parameters:
+minSimilarity - double value e.g 0.70
+
+
+
+
+
+setImagePath
+public static void setImagePath(String path)
+Set the screenshot folder path
+
+Parameters:
+path - full path string
+
+
+
+
+
+findAllText
+public static List<org.sikuli.script.Match> findAllText(@Nonnull
+ String text,
+ org.sikuli.script.Region... region)
+Find Text relevant to certain image in screen
+
+Parameters:
+text - The required text
+Returns:
+List of Match (Lines) for the searching text
+
+
+
+
+
+
+
+
+
+
+
+
+
+

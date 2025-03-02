@@ -1,0 +1,551 @@
+HttpRequest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Http
+Class HttpRequest
+
+java.lang.Object
+fate.core.Http.HttpRequest
+
+
+
+public class HttpRequest
+extends Object
+REST Request object for post, put, get, etc. calls.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+HttpRequest(HttpMethod type,
+ String url)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ InputStream entity)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ String entity,
+ boolean... isElastic)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ HttpRequest.BodyPublisher bodyPublisher)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ Path filePath)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ Map<Object,Object> fileParts)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ XMLObject entity,
+ boolean... isElastic)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ org.json.JSONArray entity,
+ boolean... isElastic)
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ org.json.JSONObject entity,
+ boolean... isElastic)
+ 
+HttpRequest(String contentType,
+ HttpMethod type,
+ String url,
+ String entity)
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addHeader(String key,
+ String value)
+ 
+void
+createRequest(HttpMethod type,
+ String url)
+
+creates a rest request without body
+
+void
+createRequest(HttpMethod type,
+ String url,
+ InputStream entity)
+
+creates a rest request for input stream entity
+
+void
+createRequest(HttpMethod type,
+ String url,
+ HttpRequest.BodyPublisher bodyPublisher)
+
+creates rest request by setting the bodyPublisher
+
+void
+createRequest(HttpMethod type,
+ String url,
+ Path filePath)
+
+creates a rest request for file
+
+Map<String,String>
+getHeaders()
+ 
+ProxySelector
+getProxySelector()
+ 
+int
+getReadTimout()
+ 
+HttpMethod
+getType()
+ 
+String
+getUrl()
+ 
+boolean
+isValidateCertificate()
+ 
+void
+setCustomProxy(String proxyURL,
+ int port)
+
+Sets custom proxy.
+
+void
+setNoProxy()
+ 
+void
+setProxy(String proxyURL,
+ int port,
+ boolean... validateCert)
+
+Sets custom proxy.
+
+void
+setProxySelector(ProxySelector proxySelector)
+ 
+void
+setReadTimout(int readTimout)
+ 
+void
+setType(HttpMethod type)
+ 
+void
+setValidateCertificate(boolean validateCertificate)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ org.json.JSONObject entity,
+ boolean... isElastic)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+entity - JSON entity object. Empty json object for GET requests.
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+
+
+
+
+
+HttpRequest
+public HttpRequest(String contentType,
+ HttpMethod type,
+ String url,
+ String entity)
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ String entity,
+ boolean... isElastic)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+entity - String entity object. Empty String object for GET requests.
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ org.json.JSONArray entity,
+ boolean... isElastic)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+entity - JSON Array entity object. Empty json array for GET requests.
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ XMLObject entity,
+ boolean... isElastic)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+entity - JSON entity object. Empty json object for GET requests.
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ InputStream entity)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+entity - InputStream  entity
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ HttpRequest.BodyPublisher bodyPublisher)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+bodyPublisher - BodyPublisher object
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ Path filePath)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+filePath - String of filePath
+
+
+
+
+
+HttpRequest
+public HttpRequest(HttpMethod type,
+ String url,
+ Map<Object,Object> fileParts)
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+fileParts - Map contains the file parts in order
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+createRequest
+public void createRequest(HttpMethod type,
+ String url,
+ InputStream entity)
+creates a rest request for input stream entity
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+entity - Input stream entity
+
+
+
+
+
+createRequest
+public void createRequest(HttpMethod type,
+ String url,
+ HttpRequest.BodyPublisher bodyPublisher)
+creates rest request by setting the bodyPublisher
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+bodyPublisher - BodyPublisher object
+
+
+
+
+
+createRequest
+public void createRequest(HttpMethod type,
+ String url,
+ Path filePath)
+creates a rest request for file
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+filePath - Path of the file
+
+
+
+
+
+createRequest
+public void createRequest(HttpMethod type,
+ String url)
+creates a rest request without body
+
+Parameters:
+type - REST request type.
+url - Wanted request URL.
+
+
+
+
+
+getReadTimout
+public int getReadTimout()
+
+
+
+
+setReadTimout
+public void setReadTimout(int readTimout)
+
+
+
+
+getHeaders
+public Map<String,String> getHeaders()
+
+
+
+
+addHeader
+public void addHeader(String key,
+ String value)
+
+
+
+
+getUrl
+public String getUrl()
+
+
+
+
+setProxy
+public void setProxy(String proxyURL,
+ int port,
+ boolean... validateCert)
+Sets custom proxy.
+
+Parameters:
+proxyURL - URL of wanted proxy.
+port - Port of wanted proxy.
+validateCert - Skips certificate validation if true.
+
+
+
+
+
+setCustomProxy
+public void setCustomProxy(String proxyURL,
+ int port)
+Sets custom proxy.
+
+Parameters:
+proxyURL - URL of wanted proxy.
+port - Port of wanted proxy.
+
+
+
+
+
+setNoProxy
+public void setNoProxy()
+
+
+
+
+getType
+public HttpMethod getType()
+
+
+
+
+isValidateCertificate
+public boolean isValidateCertificate()
+
+
+
+
+setValidateCertificate
+public void setValidateCertificate(boolean validateCertificate)
+
+
+
+
+setType
+public void setType(HttpMethod type)
+
+
+
+
+getProxySelector
+public ProxySelector getProxySelector()
+
+
+
+
+setProxySelector
+public void setProxySelector(ProxySelector proxySelector)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,313 @@
+CoreUI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreUI
+
+java.lang.Object
+fate.core.ControlImplementations.CoreUI
+
+
+
+public class CoreUI
+extends Object
+A utility class that serves as a container for UI-related helper methods and operations.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static void
+captureElement(String selector,
+ String fileName)
+
+Captures element according to it css selector from web driver
+ The files will be saved in the same folder of Sikulix library
+
+static void
+captureScreen(String fileName)
+
+Captures the entire screen of browser
+
+static org.openqa.selenium.Point
+getElementsBodyPosition(org.openqa.selenium.WebElement element)
+
+Returns elements position within body.
+
+static org.openqa.selenium.Point
+getElementsScreenPosition(org.openqa.selenium.WebElement element)
+
+Return the screen position 'top left corner' of wanted element relative to screen.
+
+static org.openqa.selenium.Dimension
+getScreenResolution()
+
+Returns current screen resolution.
+
+static int
+getScreenScalingfactor(int currentScreenDpi)
+
+Returns current scaling factor of screen.
+
+static int
+getTaskBarHeight()
+
+Returns the height of windows task bar in px.
+
+static void
+highlightElement(org.openqa.selenium.WebElement element,
+ String... color)
+
+Highlights wanted element with red border or custom color.
+
+static void
+removeHighlighter(org.openqa.selenium.WebElement element)
+
+Removes the visual highlighter (border) from the specified web element.
+
+static void
+scrollIntoView(org.openqa.selenium.WebElement element)
+
+Scrolls wanted element into view.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+removeHighlighter
+public static void removeHighlighter(org.openqa.selenium.WebElement element)
+                              throws org.openqa.selenium.StaleElementReferenceException
+Removes the visual highlighter (border) from the specified web element.
+ This method executes a JavaScript script to remove the border styling applied to an element.
+ It includes a stale element check to avoid errors if the element is no longer attached to the DOM.
+
+Parameters:
+element - The WebElement from which to remove the highlighter (border).
+Throws:
+org.openqa.selenium.StaleElementReferenceException - If the element is no longer attached to the DOM when the action is performed.
+
+
+
+
+
+highlightElement
+public static void highlightElement(org.openqa.selenium.WebElement element,
+ String... color)
+                             throws org.openqa.selenium.StaleElementReferenceException
+Highlights wanted element with red border or custom color.
+
+Parameters:
+element - Element to highlight.
+color - Default color "red" or specified.
+Throws:
+org.openqa.selenium.StaleElementReferenceException - Throws StaleElementEx if provided element is staled.
+
+
+
+
+
+getScreenScalingfactor
+public static int getScreenScalingfactor(int currentScreenDpi)
+Returns current scaling factor of screen.
+
+Parameters:
+currentScreenDpi - Current DPI from windows settings.
+Returns:
+Scaling resolution factor in %. 0 if provided screen dpi is outside 96-480 dpi.
+
+
+
+
+
+getScreenResolution
+public static org.openqa.selenium.Dimension getScreenResolution()
+Returns current screen resolution.
+
+Returns:
+Dimension object.
+
+
+
+
+
+getTaskBarHeight
+public static int getTaskBarHeight()
+Returns the height of windows task bar in px.
+
+Returns:
+Height as int or MsgCode.NOT_FOUND_INT.
+
+
+
+
+
+getElementsBodyPosition
+public static org.openqa.selenium.Point getElementsBodyPosition(org.openqa.selenium.WebElement element)
+Returns elements position within body. Browser window must be opened, means container should also
+ contain a WebDriver object, otherwise the function will fail and return '-1, -1' Point.
+
+Parameters:
+element - Wanted WebElement to find the position.
+Returns:
+Position as Point object.
+
+
+
+
+
+getElementsScreenPosition
+public static org.openqa.selenium.Point getElementsScreenPosition(@Nonnull
+ org.openqa.selenium.WebElement element)
+Return the screen position 'top left corner' of wanted element relative to screen. Browser window must be opened and maximized, means container
+ should also contain a WebDriver object, otherwise the function will fail and return '-1, -1' Point.
+
+Parameters:
+element - Wanted element as WebElement.
+Returns:
+Screen position as Point.
+
+
+
+
+
+scrollIntoView
+public static void scrollIntoView(@Nonnull
+ org.openqa.selenium.WebElement element)
+                           throws org.openqa.selenium.StaleElementReferenceException
+Scrolls wanted element into view.
+
+Parameters:
+element - wanted element.
+Throws:
+org.openqa.selenium.StaleElementReferenceException
+
+
+
+
+
+captureElement
+public static void captureElement(@Nonnull
+ String selector,
+ @Nonnull
+ String fileName)
+Captures element according to it css selector from web driver
+ The files will be saved in the same folder of Sikulix library
+
+Parameters:
+selector - String of the selector
+fileName - The name of file to save the captured image with it
+See Also:
+
+
+ImageUtils
+
+
+
+
+
+
+
+captureScreen
+public static void captureScreen(@Nonnull
+ String fileName)
+Captures the entire screen of browser
+
+Parameters:
+fileName - the name of image to be saved , for example image.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+

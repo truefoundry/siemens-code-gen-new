@@ -1,0 +1,91 @@
+Uses of Class fate.core.CompositionRoot.WinApp.WinAppDriverContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.CompositionRoot.WinApp.WinAppDriverContainer
+
+Packages that use WinAppDriverContainer
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+
+
+
+
+
+Uses of WinAppDriverContainer in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot that return types with arguments of type WinAppDriverContainer
+
+Modifier and Type
+Method
+Description
+Map<UUID,WinAppDriverContainer>
+WebDriverStore.getAvailableWinDriverInstances()
+
+returns all available WinDriver instances from the store.
+
+
+Methods in fate.core.CompositionRoot with parameters of type WinAppDriverContainer
+
+Modifier and Type
+Method
+Description
+void
+WebDriverStore.addDriver(WinAppDriverContainer driver)
+
+Adds an WinDriver instance to the store and sets it to active use in all classes.
+
+
+
+
+
+
+
+
+
+
+

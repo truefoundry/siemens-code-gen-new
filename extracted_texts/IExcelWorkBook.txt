@@ -1,0 +1,174 @@
+IExcelWorkBook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface IExcelWorkBook
+
+
+
+All Known Implementing Classes:
+CoreExcelControl
+
+
+public interface IExcelWorkBook
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getCellValue(int sheetIndex,
+ int rowIndex,
+ int colIndex)
+
+Returns cell value from sheet(as String).
+
+List<String>
+getColumnItems(int sheetIndex,
+ int colIndex)
+
+Returns all cell values from wanted column.
+
+Map<Integer,List<String>>
+getSheetData(int sheetIndex)
+
+Returns data from Excel sheet in Map<rowNumber, data(as List<String>)>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getSheetData
+Map<Integer,List<String>> getSheetData(int sheetIndex)
+Returns data from Excel sheet in Map<rowNumber, data(as List<String>)>
+
+Parameters:
+sheetIndex - Index of sheet in workbook.
+Returns:
+sheet data as Map<rowNumber, data(as List<String>)>.
+
+
+
+
+
+getCellValue
+String getCellValue(int sheetIndex,
+ int rowIndex,
+ int colIndex)
+Returns cell value from sheet(as String).
+
+Parameters:
+sheetIndex - Index of sheet in workbook.
+rowIndex - Row index.
+colIndex - Column index.
+Returns:
+Cell value as String.
+
+
+
+
+
+getColumnItems
+List<String> getColumnItems(int sheetIndex,
+ int colIndex)
+Returns all cell values from wanted column.
+
+Parameters:
+sheetIndex - Index of sheet in workbook.
+colIndex - Column index.
+Returns:
+Items from specified column as List<String>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

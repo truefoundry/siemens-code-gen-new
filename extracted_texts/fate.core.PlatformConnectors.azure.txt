@@ -1,0 +1,103 @@
+fate.core.PlatformConnectors.azure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure
+
+
+package fate.core.PlatformConnectors.azure
+
+
+
+
+Related Packages
+
+Package
+Description
+fate.core.PlatformConnectors.azure.SharedParameters
+ 
+
+
+
+
+
+All Classes and InterfacesClassesEnum Classes
+
+
+Class
+Description
+ADTestCase
+
+Represents a test case in Azure DevOps, retrieving details such as revisions and step IDs.
+
+AzureHandler
+ 
+resultOutcome
+ 
+runStates
+ 
+TestCaseParameters
+
+Retrieves the parameters from the azure test case.
+
+
+
+
+
+
+
+
+
+
+
+

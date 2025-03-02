@@ -1,0 +1,67 @@
+fate.core.Statics Class Hierarchy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Hierarchy For Package fate.core.Statics
+Package Hierarchies:
+
+All Packages
+
+
+
+Class Hierarchy
+
+java.lang.Object
+
+fate.core.Statics.MsgCode
+
+
+
+
+
+
+
+
+

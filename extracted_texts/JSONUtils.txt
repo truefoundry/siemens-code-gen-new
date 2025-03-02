@@ -1,0 +1,306 @@
+JSONUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class JSONUtils
+
+java.lang.Object
+fate.core.ControlImplementations.JSONUtils
+
+
+
+public class JSONUtils
+extends Object
+This class is mainly created to avoid exceptions in tests. JSONObject class is case-sensitive, however there is no common naming convention for
+ JSON keys and values. Methods below are taking into account camelCase and PascalCase.
+ PUT methods are not implemented as I expect you know the keys in JSONObject which you are trying to overwrite or a new key will be created.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static Object
+get(org.json.JSONObject object,
+ String key)
+
+Get the value Object associated with wanted key.
+
+static boolean
+getBoolean(org.json.JSONObject object,
+ String key)
+
+Get boolean value associated with wanted key.
+
+static Double
+getDouble(org.json.JSONObject object,
+ String key)
+
+Will return Double value associated with wanted key if the value is a Number.
+
+static int
+getInt(org.json.JSONObject object,
+ String key)
+
+Will return int value associated with wanted key if the value is a Number.
+
+static long
+getLong(org.json.JSONObject object,
+ String key)
+
+Will return long value associated with wanted key if the value is a Number.
+
+static String
+getString(org.json.JSONObject object,
+ String key)
+
+Will return String value associated with wanted key if the value is a String.
+
+static String
+getValueAsString(org.json.JSONObject object,
+ String key)
+
+Will return value of wanted key as String, no matter what type of value the key has.
+
+static boolean
+has(org.json.JSONObject object,
+ String key)
+
+Determine if the JSONObject contains a specific key.
+
+static boolean
+isNull(org.json.JSONObject object,
+ String key)
+
+Determine if the value associated with the key is null or if there is no value.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getValueAsString
+public static String getValueAsString(org.json.JSONObject object,
+ String key)
+Will return value of wanted key as String, no matter what type of value the key has.
+
+Parameters:
+object - JSONObject where to look for key
+key - wanted key
+Returns:
+String value of wanted key or message that the key was not found
+
+
+
+
+
+get
+public static Object get(org.json.JSONObject object,
+ String key)
+Get the value Object associated with wanted key.
+
+Parameters:
+object - JSONObject where to look for key
+key - wanted key
+Returns:
+Object associated with wanted key or new JSONObject '{EMPTY: "empty"}'
+
+
+
+
+
+has
+public static boolean has(org.json.JSONObject object,
+ String key)
+Determine if the JSONObject contains a specific key.
+
+Parameters:
+object - JSONObject where to look for key
+key - wanted key
+Returns:
+true if the key exists
+
+
+
+
+
+getBoolean
+public static boolean getBoolean(org.json.JSONObject object,
+ String key)
+Get boolean value associated with wanted key.
+
+Parameters:
+object - JSONObject where to look for key
+key - wanted key
+Returns:
+boolean value of wanted key or false and message if value is something else than "true/false"
+
+
+
+
+
+getDouble
+public static Double getDouble(org.json.JSONObject object,
+ String key)
+Will return Double value associated with wanted key if the value is a Number.
+
+Parameters:
+object - JSONObject where to look for the key
+key - wanted key
+Returns:
+Double value associated with the key or -99.0 and a warning message
+
+
+
+
+
+getInt
+public static int getInt(org.json.JSONObject object,
+ String key)
+Will return int value associated with wanted key if the value is a Number.
+
+Parameters:
+object - JSONObject where to look for the key
+key - wanted key
+Returns:
+int value associated with the key or -99 and a warning message
+
+
+
+
+
+getLong
+public static long getLong(org.json.JSONObject object,
+ String key)
+Will return long value associated with wanted key if the value is a Number.
+
+Parameters:
+object - JSONObject where to look for the key
+key - wanted key
+Returns:
+long value associated with the key or -99 and a warning message
+
+
+
+
+
+getString
+public static String getString(org.json.JSONObject object,
+ String key)
+Will return String value associated with wanted key if the value is a String.
+
+Parameters:
+object - JSONObject where to look for the key
+key - wanted key
+Returns:
+String value associated with the key or a message
+
+
+
+
+
+isNull
+public static boolean isNull(org.json.JSONObject object,
+ String key)
+Determine if the value associated with the key is null or if there is no value.
+
+Parameters:
+object - JSONObject where to look for the key
+key - wanted key
+Returns:
+true if there is no value associated with the key, if the value is the JSONObject.NULL or String 'null'
+
+
+
+
+
+
+
+
+
+
+
+
+
+

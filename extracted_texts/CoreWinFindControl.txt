@@ -1,0 +1,290 @@
+CoreWinFindControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class CoreWinFindControl
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.CoreWinFindControl
+
+
+
+All Implemented Interfaces:
+ICoreWinFindControl
+
+
+public class CoreWinFindControl
+extends Object
+implements ICoreWinFindControl
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreWinFindControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+org.openqa.selenium.WebElement
+findElement(org.openqa.selenium.By selector)
+
+Find element by selector
+
+@Nullable org.openqa.selenium.WebElement
+findElementByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+
+Find element by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+org.openqa.selenium.WebElement
+findElementByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+
+Find element by selector for specific parent
+
+List<org.openqa.selenium.WebElement>
+findElements(org.openqa.selenium.By selector)
+
+Find elements by selector
+
+List<org.openqa.selenium.WebElement>
+findElementsByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+
+Find elements by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+List<org.openqa.selenium.WebElement>
+findElementsByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+
+Find elements by selector for specific parent
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreWinFindControl
+public CoreWinFindControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findElement
+public org.openqa.selenium.WebElement findElement(org.openqa.selenium.By selector)
+Description copied from interface: ICoreWinFindControl
+Find element by selector
+
+Specified by:
+findElement in interface ICoreWinFindControl
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+Returns:
+WebElement object
+
+
+
+
+
+findElements
+public List<org.openqa.selenium.WebElement> findElements(org.openqa.selenium.By selector)
+Description copied from interface: ICoreWinFindControl
+Find elements by selector
+
+Specified by:
+findElements in interface ICoreWinFindControl
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+Returns:
+List of WebElement object
+
+
+
+
+
+findElementByRoot
+public org.openqa.selenium.WebElement findElementByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+Description copied from interface: ICoreWinFindControl
+Find element by selector for specific parent
+
+Specified by:
+findElementByRoot in interface ICoreWinFindControl
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+root - parent WebElement
+Returns:
+WebElement object
+
+
+
+
+
+findElementsByRoot
+public List<org.openqa.selenium.WebElement> findElementsByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+Description copied from interface: ICoreWinFindControl
+Find elements by selector for specific parent
+
+Specified by:
+findElementsByRoot in interface ICoreWinFindControl
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+root - parent WebElement
+Returns:
+List of WebElement object
+
+
+
+
+
+findElementByRoot
+@Nullable
+public @Nullable org.openqa.selenium.WebElement findElementByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+Description copied from interface: ICoreWinFindControl
+Find element by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+Specified by:
+findElementByRoot in interface ICoreWinFindControl
+Parameters:
+xPath - String of xpath
+root - parent WebElement
+Returns:
+WebElement object
+
+
+
+
+
+findElementsByRoot
+@Nullable
+public List<org.openqa.selenium.WebElement> findElementsByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+Description copied from interface: ICoreWinFindControl
+Find elements by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+Specified by:
+findElementsByRoot in interface ICoreWinFindControl
+Parameters:
+xPath - String of xpath
+root - parent WebElement
+Returns:
+List of WebElement object
+
+
+
+
+
+
+
+
+
+
+
+
+
+

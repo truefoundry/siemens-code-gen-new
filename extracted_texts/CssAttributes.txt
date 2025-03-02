@@ -1,0 +1,410 @@
+CssAttributes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class CssAttributes
+
+java.lang.Object
+java.lang.Enum<CssAttributes>
+fate.core.Enums.CssAttributes
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<CssAttributes>, Constable
+
+
+public enum CssAttributes
+extends Enum<CssAttributes>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+ALIGN_ITEMS
+ 
+ATT
+ 
+BG_COLOR
+ 
+BORDER
+ 
+BOTTOM_BORDER
+ 
+BOTTOM_BORDER_COLOR
+ 
+BOTTOM_BORDER_WIDTH
+ 
+BOTTOM_PADDING
+ 
+CURSOR
+ 
+FILL_COLOR
+ 
+FONT_FAMILY
+ 
+FONT_SIZE
+ 
+FONT_WEIGHT
+ 
+HEIGHT
+ 
+LEFT_BORDER_COLOR
+ 
+LEFT_MARGIN
+ 
+LEFT_PADDING
+ 
+LINE_HEIGHT
+ 
+RIGHT_BORDER_COLOR
+ 
+RIGHT_BORDER_WIDTH
+ 
+RIGHT_MARGIN
+ 
+RIGHT_PADDING
+ 
+TEXT_COLOR
+ 
+TOP_BORDER
+ 
+TOP_PADDING
+ 
+WIDTH
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static CssAttributes
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static CssAttributes[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+HEIGHT
+public static final CssAttributes HEIGHT
+
+
+
+
+WIDTH
+public static final CssAttributes WIDTH
+
+
+
+
+LEFT_MARGIN
+public static final CssAttributes LEFT_MARGIN
+
+
+
+
+RIGHT_MARGIN
+public static final CssAttributes RIGHT_MARGIN
+
+
+
+
+LEFT_PADDING
+public static final CssAttributes LEFT_PADDING
+
+
+
+
+RIGHT_PADDING
+public static final CssAttributes RIGHT_PADDING
+
+
+
+
+TOP_PADDING
+public static final CssAttributes TOP_PADDING
+
+
+
+
+BOTTOM_PADDING
+public static final CssAttributes BOTTOM_PADDING
+
+
+
+
+BORDER
+public static final CssAttributes BORDER
+
+
+
+
+TOP_BORDER
+public static final CssAttributes TOP_BORDER
+
+
+
+
+BOTTOM_BORDER
+public static final CssAttributes BOTTOM_BORDER
+
+
+
+
+BOTTOM_BORDER_WIDTH
+public static final CssAttributes BOTTOM_BORDER_WIDTH
+
+
+
+
+RIGHT_BORDER_WIDTH
+public static final CssAttributes RIGHT_BORDER_WIDTH
+
+
+
+
+BOTTOM_BORDER_COLOR
+public static final CssAttributes BOTTOM_BORDER_COLOR
+
+
+
+
+LEFT_BORDER_COLOR
+public static final CssAttributes LEFT_BORDER_COLOR
+
+
+
+
+RIGHT_BORDER_COLOR
+public static final CssAttributes RIGHT_BORDER_COLOR
+
+
+
+
+FILL_COLOR
+public static final CssAttributes FILL_COLOR
+
+
+
+
+TEXT_COLOR
+public static final CssAttributes TEXT_COLOR
+
+
+
+
+CURSOR
+public static final CssAttributes CURSOR
+
+
+
+
+FONT_SIZE
+public static final CssAttributes FONT_SIZE
+
+
+
+
+FONT_FAMILY
+public static final CssAttributes FONT_FAMILY
+
+
+
+
+FONT_WEIGHT
+public static final CssAttributes FONT_WEIGHT
+
+
+
+
+BG_COLOR
+public static final CssAttributes BG_COLOR
+
+
+
+
+LINE_HEIGHT
+public static final CssAttributes LINE_HEIGHT
+
+
+
+
+ALIGN_ITEMS
+public static final CssAttributes ALIGN_ITEMS
+
+
+
+
+ATT
+public static final CssAttributes ATT
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static CssAttributes[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static CssAttributes valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

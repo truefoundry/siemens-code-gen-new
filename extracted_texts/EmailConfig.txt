@@ -1,0 +1,309 @@
+EmailConfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Email
+Class EmailConfig
+
+java.lang.Object
+fate.core.Email.EmailConfig
+
+
+
+All Implemented Interfaces:
+IEmailConfig
+
+
+public class EmailConfig
+extends Object
+implements IEmailConfig
+Represents the configuration settings for an email, including email address, password,
+ proxy address, proxy port, and exchange server address. Implements the IEmailConfig interface.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+EmailConfig(String email,
+ String pass)
+
+Constructs an EmailConfig with the specified email and password.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getEmail()
+
+Gets the email address.
+
+String
+getEmailPassword()
+
+Gets the email password.
+
+String
+getExchangeServerAddress()
+
+Gets the exchange server address.
+
+String
+getProxyAddress()
+
+Gets the proxy address.
+
+int
+getProxyPort()
+
+Gets the proxy port.
+
+IEmailConfig
+setExchangeServerAddress(String address)
+
+Sets the exchange server address.
+
+IEmailConfig
+setProxyAddress(String address)
+
+Sets the proxy address.
+
+IEmailConfig
+setProxyPort(int port)
+
+Sets the proxy port.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+EmailConfig
+public EmailConfig(String email,
+ String pass)
+Constructs an EmailConfig with the specified email and password.
+ Proxy and exchange server settings are initialized from the AccessData.
+
+Parameters:
+email - the email address
+pass - the email password
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getEmail
+public String getEmail()
+Gets the email address.
+
+Specified by:
+getEmail in interface IEmailConfig
+Returns:
+the email address
+
+
+
+
+
+getEmailPassword
+public String getEmailPassword()
+Gets the email password.
+
+Specified by:
+getEmailPassword in interface IEmailConfig
+Returns:
+the email password
+
+
+
+
+
+getProxyAddress
+public String getProxyAddress()
+Gets the proxy address.
+
+Specified by:
+getProxyAddress in interface IEmailConfig
+Returns:
+the proxy address
+
+
+
+
+
+getProxyPort
+public int getProxyPort()
+Gets the proxy port.
+
+Specified by:
+getProxyPort in interface IEmailConfig
+Returns:
+the proxy port
+
+
+
+
+
+getExchangeServerAddress
+public String getExchangeServerAddress()
+Gets the exchange server address.
+
+Specified by:
+getExchangeServerAddress in interface IEmailConfig
+Returns:
+the exchange server address
+
+
+
+
+
+setProxyAddress
+public IEmailConfig setProxyAddress(String address)
+Sets the proxy address.
+
+Specified by:
+setProxyAddress in interface IEmailConfig
+Parameters:
+address - the proxy address to set
+Returns:
+the updated EmailConfig instance
+
+
+
+
+
+setProxyPort
+public IEmailConfig setProxyPort(int port)
+Sets the proxy port.
+
+Specified by:
+setProxyPort in interface IEmailConfig
+Parameters:
+port - the proxy port to set
+Returns:
+the updated EmailConfig instance
+
+
+
+
+
+setExchangeServerAddress
+public IEmailConfig setExchangeServerAddress(String address)
+Sets the exchange server address.
+
+Specified by:
+setExchangeServerAddress in interface IEmailConfig
+Parameters:
+address - the exchange server address to set
+Returns:
+the updated EmailConfig instance
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,568 @@
+DirectoryControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class DirectoryControl
+
+java.lang.Object
+fate.core.ControlImplementations.DirectoryControl
+
+
+
+public class DirectoryControl
+extends Object
+Handles the files in the directory
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static void
+appendFile(Path filePath,
+ String newValue,
+ boolean beforeLastLine)
+
+Appends the file with a new value
+
+static boolean
+copyFile(File file,
+ Path savePath)
+
+This method copies the contents of the specified source file to the specified destination file.
+
+static int
+countFiles(Path folderPath)
+
+Gets the count of files in a specific folder when it's directory.
+
+static boolean
+createDirectory(Path path)
+
+Creates wanted directory.
+
+static String
+executeFile(Path filePath,
+ Path outputFilePath,
+ List<String> params)
+
+Executes exe file and return the result of the running process.
+
+static boolean
+fileExists(Path filePath)
+
+Verifies if the file exists.
+
+static Path
+getCoreDirectory()
+
+Returns file directory of core folder.
+
+static Map<Path,Path>
+getDirectoryContents(Path directoryPath)
+
+Returns the contents of a directory.
+
+static Path
+getDownloadDirectory()
+
+Returns download directory of current browser with '/' at the end of path.
+
+static Path
+getFilePathFromDirectory(Path directory,
+ String fileName)
+
+Searches for a file with the specified name in the given directory and its subdirectories.
+
+static Path
+getLastDownloadedFile()
+ 
+static Path
+getPathOfResourceFile(Path resource)
+
+Returns the path for wanted file from resources folder.
+
+static Path
+getPathOfTestFile(String fileName)
+
+Returns the path for wanted file from resources "testFiles" folder.
+
+static Path
+getPathOfWebDriverFile(WebDrv driver)
+
+Returns the path for wanted WebDriver from resources "Drivers" folder.
+
+static Path
+getProjectDirectory()
+
+Returns file directory of current project.
+
+static List<Path>
+getRecentFiles(Path path,
+ String fileName,
+ String fileExtension)
+
+Gets the RecentFiles of desired directory by filtering it with the file name and extension to get a sorted files list by the lastModified date
+
+static List<String>
+listFilesAndFolders(Path directoryName)
+
+List all the files and folders from a directory
+
+static String
+readAllFiles(Path folderPath)
+
+Reads all files in a specific folder.
+
+static String
+readFromFile(Path filePath)
+
+Reads the content of a specific file.
+
+static boolean
+recursiveDelete(Path filePath)
+
+Deletes the files or folder, either the folder has files or not.
+
+static void
+saveScreenShotsFromTestSteps(List<StepItem> steps)
+
+Saves collected screenshots from test steps to local output directory as PNG files.
+
+static void
+unzipFile(Path zipFilePath,
+ Path pathWhereToUnzip,
+ String... password)
+
+Unzips an archive using net.lingala.zip4j library (7-Zip installation is no longer needed).
+
+static void
+updateValue(Path filePath,
+ String regExp,
+ String newValue)
+
+Update a specific value in file by another
+
+static void
+writeToFile(String data,
+ Path filePath)
+
+Writes string to a specific file.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+unzipFile
+public static void unzipFile(Path zipFilePath,
+ Path pathWhereToUnzip,
+ String... password)
+Unzips an archive using net.lingala.zip4j library (7-Zip installation is no longer needed).
+
+Parameters:
+zipFilePath - path to zipped file
+pathWhereToUnzip - path where to unzip
+password - if the file is protected, provide password
+
+
+
+
+
+getPathOfTestFile
+public static Path getPathOfTestFile(String fileName)
+Returns the path for wanted file from resources "testFiles" folder.
+
+Returns:
+file patch as string of empty string if file was not found.
+
+
+
+
+
+getPathOfWebDriverFile
+public static Path getPathOfWebDriverFile(WebDrv driver)
+Returns the path for wanted WebDriver from resources "Drivers" folder.
+
+Returns:
+file patch as string of empty string if file was not found.
+
+
+
+
+
+getPathOfResourceFile
+public static Path getPathOfResourceFile(Path resource)
+Returns the path for wanted file from resources folder.
+
+Returns:
+file path as string or empty string if file was not found.
+
+
+
+
+
+getDirectoryContents
+public static Map<Path,Path> getDirectoryContents(Path directoryPath)
+Returns the contents of a directory. This method does not recursively descend into the directory.
+
+ In error cases, an empty Map is returned.
+
+Parameters:
+directoryPath - path of a directory
+Returns:
+A map which maps filenames to Path objects
+
+
+
+
+
+getProjectDirectory
+public static Path getProjectDirectory()
+Returns file directory of current project.
+
+Returns:
+Path as string or empty Path.
+
+
+
+
+
+getCoreDirectory
+public static Path getCoreDirectory()
+Returns file directory of core folder.
+
+Returns:
+Path as string.
+
+
+
+
+
+getDownloadDirectory
+public static Path getDownloadDirectory()
+Returns download directory of current browser with '/' at the end of path.
+
+Returns:
+Path as string.
+
+
+
+
+
+createDirectory
+@CanIgnoreReturnValue
+public static boolean createDirectory(Path path)
+Creates wanted directory.
+
+Parameters:
+path - directory path.
+Returns:
+true if wanted directory was successfully created.
+
+
+
+
+
+executeFile
+public static String executeFile(Path filePath,
+ Path outputFilePath,
+ List<String> params)
+Executes exe file and return the result of the running process.
+
+Parameters:
+filePath - The complete path of the file to be executed.
+outputFilePath - The complete path of file to save the command result in.
+params - The args or properties that could be added while running the exe file, it can be null.
+Returns:
+The result of the executed file.
+
+
+
+
+
+writeToFile
+public static void writeToFile(String data,
+ Path filePath)
+Writes string to a specific file.
+
+Parameters:
+data - String to be written in the file.
+filePath - The complete path of the file.
+
+
+
+
+
+readFromFile
+public static String readFromFile(Path filePath)
+Reads the content of a specific file.
+
+Parameters:
+filePath - The complete path of the file
+Returns:
+String with the contents of file
+
+
+
+
+
+readAllFiles
+public static String readAllFiles(Path folderPath)
+Reads all files in a specific folder.
+
+Parameters:
+folderPath - The complete path of the folder which have the text files.
+Returns:
+String which contains the contents of all files inside the folder.
+
+
+
+
+
+recursiveDelete
+@CanIgnoreReturnValue
+public static boolean recursiveDelete(Path filePath)
+Deletes the files or folder, either the folder has files or not.
+
+Parameters:
+filePath - The complete file/folder path to be deleted. Wildcards can be used, e.g. "C:\Downloads\export*"
+Returns:
+returns true if the file/folder was deleted
+
+
+
+
+
+countFiles
+public static int countFiles(Path folderPath)
+Gets the count of files in a specific folder when it's directory.
+
+Parameters:
+folderPath - The complete folder path.
+Returns:
+The count of files in folder or 0 if it's not folder.
+
+
+
+
+
+getFilePathFromDirectory
+public static Path getFilePathFromDirectory(Path directory,
+ String fileName)
+Searches for a file with the specified name in the given directory and its subdirectories.
+
+Parameters:
+directory - The directory where the search begins.
+fileName - The name of the file to search for.
+Returns:
+The path of the first matching file, or an empty path if the file is not found or an error occurs.
+
+ This method performs a recursive search within the given directory. If a file with the given name
+ is found, its path is returned. If no file is found or an error occurs during the search,
+ an empty path is returned.
+
+
+
+
+
+listFilesAndFolders
+public static List<String> listFilesAndFolders(Path directoryName)
+List all the files and folders from a directory
+
+Parameters:
+directoryName - to be listed
+
+
+
+
+
+saveScreenShotsFromTestSteps
+public static void saveScreenShotsFromTestSteps(List<StepItem> steps)
+Saves collected screenshots from test steps to local output directory as PNG files.
+
+Parameters:
+steps - Collected test steps.
+
+
+
+
+
+copyFile
+public static boolean copyFile(@NonNull
+ File file,
+ @NonNull
+ Path savePath)
+This method copies the contents of the specified source file to the specified destination file. The directory holding the destination file
+ is created if it does not exist. If the destination file exists, then this method will overwrite it.
+
+Parameters:
+file - File to copy.
+savePath - Path where to save the copy e.g. c:\temp\test.png
+Returns:
+True if wanted file has been successfully copied and copy has the same content after verification.
+
+
+
+
+
+updateValue
+public static void updateValue(Path filePath,
+ String regExp,
+ String newValue)
+Update a specific value in file by another
+
+Parameters:
+filePath - String with a file path
+regExp - String with old value using regular expression
+newValue - String with the new value
+
+
+
+
+
+appendFile
+public static void appendFile(Path filePath,
+ String newValue,
+ boolean beforeLastLine)
+Appends the file with a new value
+
+Parameters:
+filePath - String by the file path
+newValue - String with the new value
+beforeLastLine - boolean value, it true then the new value will be added before the last line
+
+
+
+
+
+fileExists
+public static boolean fileExists(Path filePath)
+Verifies if the file exists.
+
+Parameters:
+filePath - absolute path
+Returns:
+true if file with given path exists
+
+
+
+
+
+getLastDownloadedFile
+public static Path getLastDownloadedFile()
+
+Returns:
+last modified file from Download folder or null
+
+
+
+
+
+getRecentFiles
+public static List<Path> getRecentFiles(Path path,
+ String fileName,
+ String fileExtension)
+Gets the RecentFiles of desired directory by filtering it with the file name and extension to get a sorted files list by the lastModified date
+
+Parameters:
+path - The wanted directory path
+fileName - part of file name
+fileExtension - file extension
+Returns:
+List of files ordered descending by last modifiedDate
+
+
+
+
+
+
+
+
+
+
+
+
+
+

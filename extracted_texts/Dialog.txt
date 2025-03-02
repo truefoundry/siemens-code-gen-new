@@ -1,0 +1,212 @@
+Dialog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class Dialog
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.CoreWinInteractables
+fate.core.CompositionRoot.WinApp.Dialog
+
+
+
+
+All Implemented Interfaces:
+IWinInteractable
+
+
+public class Dialog
+extends CoreWinInteractables
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Dialog()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+close(IWinInteractableNaming dialog)
+
+Closes the dialog
+
+org.openqa.selenium.WebElement
+findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+void
+maximize(IWinInteractableNaming dialog)
+
+Maximizes the dialog
+
+void
+minimize(IWinInteractableNaming dialog)
+
+Minimizes the dialog
+
+
+
+
+
+Methods inherited from class fate.core.CompositionRoot.WinApp.CoreWinInteractables
+clear, click, exists, getAttribute, getHeight, getLocation, getRoot, getText, getWidth, hasFocus, isBlank, isEmpty, isEnabled, isOnScreen, isSelected, sendKeys, sendKeys, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface fate.core.Interfaces.IWinInteractable
+expand, isExpanded
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+Dialog
+public Dialog()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findControl
+public org.openqa.selenium.WebElement findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+
+
+
+close
+public void close(IWinInteractableNaming dialog)
+Closes the dialog
+
+Parameters:
+dialog - the dialog name
+
+
+
+
+
+maximize
+public void maximize(IWinInteractableNaming dialog)
+Maximizes the dialog
+
+Parameters:
+dialog - the dialog name
+
+
+
+
+
+minimize
+public void minimize(IWinInteractableNaming dialog)
+Minimizes the dialog
+
+Parameters:
+dialog - the dialog name
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,314 @@
+Converter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class Converter
+
+java.lang.Object
+fate.core.ControlImplementations.Converter
+
+
+
+public class Converter
+extends Object
+Util class for all possible conversions for testing purposes.
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static String
+changeDatePattern(String date,
+ String currentPattern,
+ String newPattern)
+
+changes the date pattern
+
+static String
+fixURLEncodings(String url)
+
+Fixes URL Encodings e.g.
+
+static int
+hexToDec(String hexValue)
+
+Converts hex values from string to integer value.
+
+static Double
+intToDouble(int value)
+
+Converts wanted int value to String and then to Double.
+
+static String
+splitAndGetByIndex(String toSplit,
+ String separator,
+ int index)
+
+Splits given string by wanted separator and returns a string by wanted index.
+
+static org.apache.commons.lang3.tuple.Pair<Integer,Integer>
+textToPairOfInt(String text,
+ String delimiter)
+
+Converts text with specific delimiter to two integer values
+
+static LocalTime
+to24HourFormat(String inputTime)
+
+Returns LocalTime object from passed string.
+
+static String
+toHexColor(String rgbColor)
+
+Converts RGB Color into HEX Color.
+
+static org.json.JSONObject
+toJson(Object source,
+ boolean... hasInvalidFormat)
+
+Removes unneeded characters from the json source and converts it to Json Object
+
+static UUID
+uuidFromString(String id)
+
+Converts String into UUID.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+hexToDec
+public static int hexToDec(String hexValue)
+Converts hex values from string to integer value. Function extracts also decimal number from hex e.g. 0x90 -> 90.
+
+Returns:
+int value.
+
+
+
+
+
+fixURLEncodings
+public static String fixURLEncodings(String url)
+Fixes URL Encodings e.g. '%5' -> '/'
+
+Parameters:
+url - URL to fix
+Returns:
+fixed url as string.
+
+
+
+
+
+toHexColor
+public static String toHexColor(String rgbColor)
+Converts RGB Color into HEX Color.
+
+Parameters:
+rgbColor - RGB Color as String. Format: X, X, X
+Returns:
+HEX Color as String. Format: #XXXXXX
+
+
+
+
+
+uuidFromString
+public static UUID uuidFromString(String id)
+Converts String into UUID.
+
+Parameters:
+id - string to convert.
+Returns:
+UUID object or Generator.generateNullUUID().
+
+
+
+
+
+splitAndGetByIndex
+public static String splitAndGetByIndex(String toSplit,
+ String separator,
+ int index)
+Splits given string by wanted separator and returns a string by wanted index.
+
+Parameters:
+toSplit - String to split.
+separator - Wanted separator.
+index - Index of wanted string or negative index. Negative index begins from end of split array. -1 Stands for last item.
+Returns:
+Wanted string by index or MsgCode.EMPTY.
+
+
+
+
+
+changeDatePattern
+@CheckForNull
+public static String changeDatePattern(String date,
+ String currentPattern,
+ String newPattern)
+changes the date pattern
+
+Parameters:
+date - String to be reformatted
+currentPattern - String with the current date format
+newPattern - String with the new date format
+Returns:
+String of the date after applying the new pattern
+
+
+
+
+
+to24HourFormat
+@CheckForNull
+public static LocalTime to24HourFormat(String inputTime)
+Returns LocalTime object from passed string. Input string has to be in 'h:mm a' format. (11:05 AM, 2:00 PM ..).
+
+Parameters:
+inputTime - input string in 'h:mm a' format
+Returns:
+LocalTime object in 24-hour format or null.
+
+
+
+
+
+toJson
+public static org.json.JSONObject toJson(Object source,
+ boolean... hasInvalidFormat)
+Removes unneeded characters from the json source and converts it to Json Object
+
+Parameters:
+source - Object contains the source of json
+hasInvalidFormat - boolean value to remove the "[" and "]" from the json source in order to generate valid json object
+Returns:
+Json Object
+
+
+
+
+
+textToPairOfInt
+@CheckForNull
+public static org.apache.commons.lang3.tuple.Pair<Integer,Integer> textToPairOfInt(String text,
+ String delimiter)
+Converts text with specific delimiter to two integer values
+
+Parameters:
+text - Input string , it would be 225+555, 888*989 ...etc.
+delimiter - String with the delimiter that will split the string into two values
+Returns:
+pair of two integers or null
+
+
+
+
+
+intToDouble
+public static Double intToDouble(int value)
+Converts wanted int value to String and then to Double.
+
+Parameters:
+value - int value to parse
+Returns:
+Double value or -0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+

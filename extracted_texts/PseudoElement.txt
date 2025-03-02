@@ -1,0 +1,314 @@
+PseudoElement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class PseudoElement
+
+java.lang.Object
+java.lang.Enum<PseudoElement>
+fate.core.Enums.PseudoElement
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<PseudoElement>, Constable
+
+
+public enum PseudoElement
+extends Enum<PseudoElement>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+AFTER
+ 
+BACKDROP
+ 
+BEFORE
+ 
+CUE
+ 
+CUE_REGION
+ 
+FIRST_LETTER
+ 
+FIRST_LINE
+ 
+GRAMMAR_ERROR
+ 
+MARKER
+ 
+PART
+ 
+PLACEHOLDER
+ 
+SELECTION
+ 
+SLOTTED
+ 
+SPELLING_ERROR
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getValue()
+ 
+static PseudoElement
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PseudoElement[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+AFTER
+public static final PseudoElement AFTER
+
+
+
+
+BACKDROP
+public static final PseudoElement BACKDROP
+
+
+
+
+BEFORE
+public static final PseudoElement BEFORE
+
+
+
+
+CUE
+public static final PseudoElement CUE
+
+
+
+
+CUE_REGION
+public static final PseudoElement CUE_REGION
+
+
+
+
+FIRST_LETTER
+public static final PseudoElement FIRST_LETTER
+
+
+
+
+FIRST_LINE
+public static final PseudoElement FIRST_LINE
+
+
+
+
+GRAMMAR_ERROR
+public static final PseudoElement GRAMMAR_ERROR
+
+
+
+
+MARKER
+public static final PseudoElement MARKER
+
+
+
+
+PART
+public static final PseudoElement PART
+
+
+
+
+PLACEHOLDER
+public static final PseudoElement PLACEHOLDER
+
+
+
+
+SELECTION
+public static final PseudoElement SELECTION
+
+
+
+
+SLOTTED
+public static final PseudoElement SLOTTED
+
+
+
+
+SPELLING_ERROR
+public static final PseudoElement SPELLING_ERROR
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static PseudoElement[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static PseudoElement valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+
+
+
+
+
+
+
+
+

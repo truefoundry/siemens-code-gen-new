@@ -1,0 +1,139 @@
+HttpCall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Http
+Class HttpCall
+
+java.lang.Object
+fate.core.Http.HttpCall
+
+
+
+public class HttpCall
+extends Object
+Utility class to handle REST calls
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static HttpResponse
+executeRequest(HttpRequest req,
+ boolean... ignoreWait)
+
+Executes the given HTTP request.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+executeRequest
+public static HttpResponse executeRequest(HttpRequest req,
+ boolean... ignoreWait)
+                                   throws InterruptedException
+Executes the given HTTP request. Retries if an SSL handshake exception occurs.
+
+Parameters:
+req - the HttpRequest to execute
+ignoreWait - flag to determine if the wait before request should be ignored
+Returns:
+the HttpResponse from the request, or null if an error occurred
+Throws:
+InterruptedException - if the thread is interrupted
+
+
+
+
+
+
+
+
+
+
+
+
+
+

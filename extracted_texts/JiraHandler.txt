@@ -1,0 +1,434 @@
+JiraHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira
+Class JiraHandler
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.JiraHandler
+
+
+
+All Implemented Interfaces:
+IResultPlatformHandler
+
+
+public class JiraHandler
+extends Object
+implements IResultPlatformHandler
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+JiraHandler()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addStep(StepItem step)
+
+Adds a step information during the test run.
+
+boolean
+areStepsEqual()
+
+Compares the amount of steps retrieved from the testcase in jira with the amount of steps in the test script.
+
+int
+getPlatformStepCount()
+
+Returns steps count from selected system, Jira, Azure etc.
+
+String
+getTcState()
+
+Returns test case state from given platform.
+
+static TestCase
+getTestCase(ProjectData config,
+ String testCaseKey)
+
+Retrieves the testcase via jira testmanagement api
+
+static List<String>
+getTestCaseListFromCycle(ProjectData config,
+ String cycle)
+
+Retrieves the test cycle from jira
+
+static TestCycle
+getTestCycle(ProjectData config,
+ String cycle)
+ 
+String
+getTestRunKey()
+ 
+List<StepItem>
+getTestSteps()
+
+Returns all collected test steps while test run as object list.
+
+boolean
+isTestable()
+
+Checks if current test can be tested, function is matching the states of test case object on selected platform.
+
+static int
+isTestRunAvailable(ProjectData config,
+ String testRunKey)
+
+Checks if the run is available.
+
+int
+postTestRun(String testRunKey,
+ String testCaseKey,
+ org.json.JSONObject testRunResult)
+
+Posts test run result to specific test run.
+
+String
+pushToPlatform(TcStates state,
+ long executionTime)
+
+Pushes test results to selected platform after test execution.
+
+void
+setAbortionReason(String reason)
+
+Sets a reason for abortion of test case.
+
+void
+setErrorScreenshot(File img)
+ 
+void
+setTestRunKey(String testRunKey)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface fate.core.Interfaces.IResultPlatformHandler
+getFullLog, saveScreenShotsAsFiles
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+JiraHandler
+public JiraHandler()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setErrorScreenshot
+public void setErrorScreenshot(File img)
+
+Specified by:
+setErrorScreenshot in interface IResultPlatformHandler
+
+
+
+
+
+isTestRunAvailable
+public static int isTestRunAvailable(ProjectData config,
+ String testRunKey)
+Checks if the run is available.
+
+Parameters:
+config - PushConfig object
+testRunKey - Key of the testrun
+Returns:
+HttpResponse object
+
+
+
+
+
+getTestCase
+public static TestCase getTestCase(ProjectData config,
+ String testCaseKey)
+Retrieves the testcase via jira testmanagement api
+
+Parameters:
+config - PushConfig object
+testCaseKey - Key of the Testcase (e.g. SRSNG-T123)
+Returns:
+TestCase object
+
+
+
+
+
+getTestCycle
+public static TestCycle getTestCycle(ProjectData config,
+ String cycle)
+
+
+
+
+getTestCaseListFromCycle
+public static List<String> getTestCaseListFromCycle(ProjectData config,
+ String cycle)
+Retrieves the test cycle from jira
+
+Parameters:
+config - PushConfig object
+cycle - Jira TestCycle
+Returns:
+List of strings
+
+
+
+
+
+getPlatformStepCount
+public int getPlatformStepCount()
+Description copied from interface: IResultPlatformHandler
+Returns steps count from selected system, Jira, Azure etc.
+
+Specified by:
+getPlatformStepCount in interface IResultPlatformHandler
+Returns:
+Amount of test steps from remote platform.
+
+
+
+
+
+getTestSteps
+public List<StepItem> getTestSteps()
+Description copied from interface: IResultPlatformHandler
+Returns all collected test steps while test run as object list. 'Local Step Objects'.
+
+Specified by:
+getTestSteps in interface IResultPlatformHandler
+Returns:
+All test steps as list.
+
+
+
+
+
+setAbortionReason
+public void setAbortionReason(String reason)
+Description copied from interface: IResultPlatformHandler
+Sets a reason for abortion of test case.
+
+Specified by:
+setAbortionReason in interface IResultPlatformHandler
+Parameters:
+reason - Reason for abortion.
+
+
+
+
+
+addStep
+public void addStep(StepItem step)
+Description copied from interface: IResultPlatformHandler
+Adds a step information during the test run.
+
+Specified by:
+addStep in interface IResultPlatformHandler
+Parameters:
+step - Add a test step to result.
+
+
+
+
+
+pushToPlatform
+public String pushToPlatform(TcStates state,
+ long executionTime)
+Description copied from interface: IResultPlatformHandler
+Pushes test results to selected platform after test execution.
+
+Specified by:
+pushToPlatform in interface IResultPlatformHandler
+Parameters:
+state - State of test execution.
+executionTime - Duration of test execution.
+Returns:
+Empty string if everything was ok, or failure cause.
+
+
+
+
+
+getTcState
+public String getTcState()
+Description copied from interface: IResultPlatformHandler
+Returns test case state from given platform.
+
+Specified by:
+getTcState in interface IResultPlatformHandler
+Returns:
+Platform test case state.
+
+
+
+
+
+isTestable
+public boolean isTestable()
+Description copied from interface: IResultPlatformHandler
+Checks if current test can be tested, function is matching the states of test case object on selected platform.
+
+Specified by:
+isTestable in interface IResultPlatformHandler
+Returns:
+true if testable or false.
+
+
+
+
+
+areStepsEqual
+public boolean areStepsEqual()
+Compares the amount of steps retrieved from the testcase in jira with the amount of steps in the test script.
+
+Specified by:
+areStepsEqual in interface IResultPlatformHandler
+Returns:
+true if the amount of steps is identical
+
+
+
+
+
+postTestRun
+public int postTestRun(String testRunKey,
+ String testCaseKey,
+ org.json.JSONObject testRunResult)
+Posts test run result to specific test run.
+
+Parameters:
+testRunKey - Key of the testrun
+testCaseKey - Key of the testcase
+testRunResult - result of the testrun as a json
+Returns:
+HttpResponse object
+
+
+
+
+
+getTestRunKey
+public String getTestRunKey()
+
+
+
+
+setTestRunKey
+public void setTestRunKey(String testRunKey)
+
+
+
+
+
+
+
+
+
+
+
+
+

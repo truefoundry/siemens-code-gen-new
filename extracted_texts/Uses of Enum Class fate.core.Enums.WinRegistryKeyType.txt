@@ -1,0 +1,108 @@
+Uses of Enum Class fate.core.Enums.WinRegistryKeyType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.WinRegistryKeyType
+
+Packages that use WinRegistryKeyType
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Enums
+ 
+
+
+
+
+
+Uses of WinRegistryKeyType in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type WinRegistryKeyType
+
+Modifier and Type
+Method
+Description
+static void
+WinRegistry.setRegistryKey(String command,
+ String path,
+ String keyName,
+ WinRegistryKeyType keyType,
+ String keyValue)
+
+Manipulates wanted registry key on current machine.
+
+
+
+
+
+
+Uses of WinRegistryKeyType in fate.core.Enums
+Methods in fate.core.Enums that return WinRegistryKeyType
+
+Modifier and Type
+Method
+Description
+static WinRegistryKeyType
+WinRegistryKeyType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static WinRegistryKeyType[]
+WinRegistryKeyType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+
+
+
+
+

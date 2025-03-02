@@ -1,0 +1,235 @@
+ICoreWinFindControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Interfaces
+Interface ICoreWinFindControl
+
+
+
+All Known Implementing Classes:
+CoreWinFindControl
+
+
+public interface ICoreWinFindControl
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+
+Modifier and Type
+Method
+Description
+org.openqa.selenium.WebElement
+findElement(org.openqa.selenium.By selector)
+
+Find element by selector
+
+org.openqa.selenium.WebElement
+findElementByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+
+Find element by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+org.openqa.selenium.WebElement
+findElementByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+
+Find element by selector for specific parent
+
+List<org.openqa.selenium.WebElement>
+findElements(org.openqa.selenium.By selector)
+
+Find elements by selector
+
+List<org.openqa.selenium.WebElement>
+findElementsByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+
+Find elements by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+List<org.openqa.selenium.WebElement>
+findElementsByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+
+Find elements by selector for specific parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findElement
+org.openqa.selenium.WebElement findElement(org.openqa.selenium.By selector)
+Find element by selector
+
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+Returns:
+WebElement object
+
+
+
+
+
+findElements
+List<org.openqa.selenium.WebElement> findElements(org.openqa.selenium.By selector)
+Find elements by selector
+
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+Returns:
+List of WebElement object
+
+
+
+
+
+findElementByRoot
+org.openqa.selenium.WebElement findElementByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+Find element by selector for specific parent
+
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+root - parent WebElement
+Returns:
+WebElement object
+
+
+
+
+
+findElementsByRoot
+List<org.openqa.selenium.WebElement> findElementsByRoot(org.openqa.selenium.By selector,
+ org.openqa.selenium.WebElement root)
+Find elements by selector for specific parent
+
+Parameters:
+selector - By (xpath, tagName, name, className, accessibilityId)
+root - parent WebElement
+Returns:
+List of WebElement object
+
+
+
+
+
+findElementByRoot
+org.openqa.selenium.WebElement findElementByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+Find element by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+Parameters:
+xPath - String of xpath
+root - parent WebElement
+Returns:
+WebElement object
+
+
+
+
+
+findElementsByRoot
+List<org.openqa.selenium.WebElement> findElementsByRoot(String xPath,
+ org.openqa.selenium.WebElement root)
+Find elements by xpath for specific parent, this is a workaround to overcome this issue
+ 
+
+Parameters:
+xPath - String of xpath
+root - parent WebElement
+Returns:
+List of WebElement object
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,369 @@
+ParameterControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure.SharedParameters
+Class ParameterControl
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.SharedParameters.ParameterControl
+
+
+
+public class ParameterControl
+extends Object
+Helper class for managing operations on a ParameterSet data structure.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ParameterControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addRow(int tcId,
+ String... rowData)
+
+Adds a new row to ParameterSet using variable arguments for column values.
+
+void
+addRow(int tcId,
+ List<String> rowData)
+
+Adds a new row to ParameterSet using a list of column values.
+
+void
+addRow(int tcId,
+ Map<String,String> rowData)
+
+Adds a new row to ParameterSet using a map of column names to values.
+
+void
+addRows(int tcId,
+ List<List<String>> rowsData)
+
+Adds multiple rows to ParameterSet using a list of lists of column values.
+
+void
+deleteMultipleRows(int tcId,
+ int start,
+ int end)
+
+Deletes multiple rows from ParameterSet based on start and end indices (inclusive).
+
+void
+deleteRow(int tcId,
+ int rowIndex)
+
+Deletes a row at the specified index from ParameterSet.
+
+void
+deleteRow(int tcId,
+ String columnName,
+ String value)
+
+Deletes the first row in the ParameterSet that contains the specified value in the specified column.
+
+Map<String,Map<String,String>>
+getRowData(int tcId)
+
+Retrieves the data rows from ParameterSet as a map of row IDs to column data.
+
+void
+setRoot(Root root)
+
+Set the Root object for this helper.
+
+void
+updateCell(int tcId,
+ String rowIndex,
+ String columnName,
+ String value)
+
+Updates a cell in a specified row and column of ParameterSet.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+ParameterControl
+public ParameterControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setRoot
+public void setRoot(Root root)
+Set the Root object for this helper.
+
+Parameters:
+root - The Root object containing ParameterSet data.
+
+
+
+
+
+getRowData
+public Map<String,Map<String,String>> getRowData(int tcId)
+                                          throws IOException
+Retrieves the data rows from ParameterSet as a map of row IDs to column data.
+
+Returns:
+A map where each key is a row ID and value is a map of column names to column values.
+Throws:
+IOException
+
+
+
+
+
+addRow
+public void addRow(int tcId,
+ Map<String,String> rowData)
+            throws IOException
+Adds a new row to ParameterSet using a map of column names to values.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+rowData - A map where keys are column names and values are column values for the new row.
+Throws:
+IOException
+
+
+
+
+
+addRow
+public void addRow(int tcId,
+ List<String> rowData)
+            throws IOException
+Adds a new row to ParameterSet using a list of column values.
+ The list should match the order of column names in ParameterSet.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+rowData - A list of column values for the new row.
+Throws:
+IOException
+
+
+
+
+
+addRow
+public void addRow(int tcId,
+ String... rowData)
+            throws IOException
+Adds a new row to ParameterSet using variable arguments for column values.
+ The arguments should match the order of column names in ParameterSet.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+rowData - Column values for the new row.
+Throws:
+IOException
+
+
+
+
+
+addRows
+public void addRows(int tcId,
+ List<List<String>> rowsData)
+             throws IOException
+Adds multiple rows to ParameterSet using a list of lists of column values.
+ Each inner list represents a row with column values matching the order of column names in ParameterSet.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+rowsData - A list where each element is a list of column values for a new row.
+Throws:
+IOException
+
+
+
+
+
+updateCell
+public void updateCell(int tcId,
+ String rowIndex,
+ String columnName,
+ String value)
+                throws IOException
+Updates a cell in a specified row and column of ParameterSet.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+rowIndex - The index of the row to update.
+columnName - The name of the column to update.
+value - The new value to set in the specified cell.
+Throws:
+IOException
+
+
+
+
+
+deleteRow
+public void deleteRow(int tcId,
+ int rowIndex)
+               throws IOException
+Deletes a row at the specified index from ParameterSet.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+rowIndex - The index of the row to delete.
+Throws:
+IOException
+
+
+
+
+
+deleteMultipleRows
+public void deleteMultipleRows(int tcId,
+ int start,
+ int end)
+                        throws IOException
+Deletes multiple rows from ParameterSet based on start and end indices (inclusive).
+ Rearranges row IDs after deletion and updates lastId.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+start - The starting index of rows to delete.
+end - The ending index of rows to delete.
+Throws:
+IOException
+
+
+
+
+
+deleteRow
+public void deleteRow(int tcId,
+ String columnName,
+ String value)
+               throws IOException
+Deletes the first row in the ParameterSet that contains the specified value in the specified column.
+
+Parameters:
+tcId - The Api from where it should retrieve the data.
+columnName - The name of the column to search for the value.
+value - The value to search for in the specified column.
+Throws:
+IOException
+
+
+
+
+
+
+
+
+
+
+
+
+
+

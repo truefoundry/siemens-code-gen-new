@@ -1,0 +1,165 @@
+Uses of Enum Class fate.core.Enums.SelectorModificator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Enum Classfate.core.Enums.SelectorModificator
+
+Packages that use SelectorModificator
+
+Package
+Description
+fate.core.ControlImplementations
+ 
+fate.core.Enums
+ 
+
+
+
+
+
+Uses of SelectorModificator in fate.core.ControlImplementations
+Methods in fate.core.ControlImplementations with parameters of type SelectorModificator
+
+Modifier and Type
+Method
+Description
+SelectorBuilder
+SelectorBuilder.setAriaLabel(String ariaLabel,
+ SelectorModificator... mod)
+
+Adds an aria-label condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setClass(String eClass,
+ SelectorModificator... mod)
+
+Adds a class condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setHref(String href,
+ SelectorModificator... mod)
+
+Adds a href condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setId(String id,
+ SelectorModificator... mod)
+
+Adds an id condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setLabel(String label,
+ SelectorModificator... mod)
+
+Adds a label condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setName(String name,
+ SelectorModificator... mod)
+
+Adds a name condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setRole(String role,
+ SelectorModificator... mod)
+
+Adds a role condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setSrc(String src,
+ SelectorModificator... mod)
+
+Adds a src condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setStyle(String style,
+ SelectorModificator... mod)
+
+Adds a style condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setTarget(String target,
+ SelectorModificator... mod)
+
+Adds a target condition to the selector.
+
+SelectorBuilder
+SelectorBuilder.setTitle(String title,
+ SelectorModificator... mod)
+
+Adds a title condition to the selector.
+
+
+
+
+
+
+Uses of SelectorModificator in fate.core.Enums
+Methods in fate.core.Enums that return SelectorModificator
+
+Modifier and Type
+Method
+Description
+static SelectorModificator
+SelectorModificator.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static SelectorModificator[]
+SelectorModificator.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+
+
+
+
+
+

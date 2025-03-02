@@ -1,0 +1,189 @@
+PrintWindowControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class PrintWindowControl
+
+java.lang.Object
+fate.core.ControlImplementations.PrintWindowControl
+
+
+
+public class PrintWindowControl
+extends Object
+A utility class for interacting with the print window control in a web application.
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+close(int windowIndex)
+
+Clicks on 'Cancel' button to close browsers print window (Chrome, Edge) or print dialog (IE, FireFox).
+
+boolean
+exists()
+
+Checks if the print dialog window exists in the application.
+
+void
+save(int windowIndex,
+ String... path)
+
+Clicks on 'Save'/'Print' button in print window.
+
+void
+selectDestination(int windowIndex,
+ String value)
+
+Selects wanted value in Destination/Printer field.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+close
+public void close(int windowIndex)
+Clicks on 'Cancel' button to close browsers print window (Chrome, Edge) or print dialog (IE, FireFox).
+
+Parameters:
+windowIndex - index of print window, applies only for Chrome and Edge, for IE and FireFox use 0
+
+
+
+
+
+save
+public void save(int windowIndex,
+ String... path)
+Clicks on 'Save'/'Print' button in print window.
+ For Chrome and Edge it will first handle the browser window, then Windows save dialog.
+ In IE and FireFox after selecting 'Microsoft Print to PDF' clicking on 'Print' will invoke Windows save dialog.
+
+Parameters:
+windowIndex - index of print window, applies only for Chrome and Edge, for IE and FireFox use 0
+path - wanted path or file name to save the file
+
+
+
+
+
+selectDestination
+public void selectDestination(int windowIndex,
+ String value)
+Selects wanted value in Destination/Printer field.
+
+Parameters:
+windowIndex - index of print window, applies only for Chrome and Edge, for IE and FireFox use 0
+value - value to be selected
+
+
+
+
+
+exists
+public boolean exists()
+Checks if the print dialog window exists in the application.
+
+ This method initiates the print dialog check by starting a Windows application control and checking if the print dialog is present.
+
+Returns:
+`true` if the print dialog exists, `false` otherwise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

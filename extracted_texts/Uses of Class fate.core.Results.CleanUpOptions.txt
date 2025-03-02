@@ -1,0 +1,118 @@
+Uses of Class fate.core.Results.CleanUpOptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.Results.CleanUpOptions
+
+Packages that use CleanUpOptions
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.Results
+ 
+
+
+
+
+
+Uses of CleanUpOptions in fate.core.CompositionRoot
+Methods in fate.core.CompositionRoot with parameters of type CleanUpOptions
+
+Modifier and Type
+Method
+Description
+void
+AbstractCoreHandler.cleanUpAndPush(CleanUpOptions... options)
+
+Cleanup at the end of test case, performs: Driver quit, result push to JIRA or ALM
+ according to the type defined.
+
+void
+AbstractCoreHandler.setCleanUpOptions(CleanUpOptions options)
+
+Sets options for clean up process.
+
+
+
+
+
+
+Uses of CleanUpOptions in fate.core.Results
+Methods in fate.core.Results that return CleanUpOptions
+
+Modifier and Type
+Method
+Description
+CleanUpOptions
+CleanUpOptions.setPushResults(boolean pushResults)
+
+Sets the push state for test results.
+
+CleanUpOptions
+CleanUpOptions.setTestIsBroken(boolean testIsBroken)
+
+Sets the state of test case, broken test are those which are failing because of implementation issues.
+
+
+Methods in fate.core.Results with parameters of type CleanUpOptions
+
+Modifier and Type
+Method
+Description
+void
+ResultCollector.push(CleanUpOptions options)
+ 
+
+
+
+
+
+
+
+
+
+

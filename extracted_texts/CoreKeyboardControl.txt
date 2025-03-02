@@ -1,0 +1,238 @@
+CoreKeyboardControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreKeyboardControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreKeyboardControl
+
+
+
+public class CoreKeyboardControl
+extends Object
+Handles the keyboard for UI tests
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreKeyboardControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+copy()
+
+copies the selected text
+
+String
+getClipboardData()
+
+gets the string value from clipboard
+
+void
+paste()
+
+pastes the saved value in clipboard to the clicked element
+
+void
+pressKey(CharSequence... keys)
+
+Simulates pressing a Keyboard Key
+
+void
+removeAll()
+
+select all text in the clicked element and then remove it with backspace
+
+void
+selectAll()
+
+select all text in the clicked element
+
+void
+setClipboardData(String string)
+
+This method will set any parameter string to the system's clipboard.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreKeyboardControl
+public CoreKeyboardControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+setClipboardData
+public void setClipboardData(String string)
+This method will set any parameter string to the system's clipboard.
+
+Parameters:
+string - Data which should be moved to system clipboard.
+
+
+
+
+
+getClipboardData
+public String getClipboardData()
+gets the string value from clipboard
+
+Returns:
+String of the latest copied text
+
+
+
+
+
+pressKey
+public void pressKey(CharSequence... keys)
+Simulates pressing a Keyboard Key
+
+Parameters:
+keys - wanted keys from "Keys enum, org.openqa.selenium"
+
+
+
+
+
+copy
+public void copy()
+copies the selected text
+
+
+
+
+selectAll
+public void selectAll()
+select all text in the clicked element
+
+
+
+
+paste
+public void paste()
+pastes the saved value in clipboard to the clicked element
+
+
+
+
+removeAll
+public void removeAll()
+select all text in the clicked element and then remove it with backspace
+
+
+
+
+
+
+
+
+
+
+
+
+

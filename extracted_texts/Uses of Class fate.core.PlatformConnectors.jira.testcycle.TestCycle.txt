@@ -1,0 +1,79 @@
+Uses of Class fate.core.PlatformConnectors.jira.testcycle.TestCycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PlatformConnectors.jira.testcycle.TestCycle
+
+Packages that use TestCycle
+
+Package
+Description
+fate.core.PlatformConnectors.jira
+ 
+
+
+
+
+
+Uses of TestCycle in fate.core.PlatformConnectors.jira
+Methods in fate.core.PlatformConnectors.jira that return TestCycle
+
+Modifier and Type
+Method
+Description
+static TestCycle
+JiraHandler.getTestCycle(ProjectData config,
+ String cycle)
+ 
+
+
+
+
+
+
+
+
+
+

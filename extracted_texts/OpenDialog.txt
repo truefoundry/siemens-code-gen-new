@@ -1,0 +1,167 @@
+OpenDialog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class OpenDialog
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.OpenDialog
+
+
+
+public class OpenDialog
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+OpenDialog()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+exists()
+ 
+void
+open(String path)
+
+Will send keys to 'File name' editBox, then sendKeys.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+OpenDialog
+public OpenDialog()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+open
+public void open(String path)
+Will send keys to 'File name' editBox, then sendKeys. ENTER to open the file in windows open dialog.
+ NOTE: Works only with system language English.
+
+Parameters:
+path - path to wanted file
+
+
+
+
+
+exists
+public boolean exists()
+
+
+
+
+
+
+
+
+
+
+
+
+

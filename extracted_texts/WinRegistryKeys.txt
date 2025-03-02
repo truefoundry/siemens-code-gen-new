@@ -1,0 +1,416 @@
+WinRegistryKeys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class WinRegistryKeys
+
+java.lang.Object
+java.lang.Enum<WinRegistryKeys>
+fate.core.Enums.WinRegistryKeys
+
+
+
+
+All Implemented Interfaces:
+IRegistryKey, Serializable, Comparable<WinRegistryKeys>, Constable
+
+
+public enum WinRegistryKeys
+extends Enum<WinRegistryKeys>
+implements IRegistryKey
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+BUILD_ID
+ 
+HKCU_LOGIN_PROMPT_INTERNET
+ 
+HKCU_LOGIN_PROMPT_INTRANET
+ 
+HKCU_LOGIN_PROMPT_RESTRICTED
+ 
+HKCU_LOGIN_PROMPT_TRUSTED
+ 
+HKLM_LOGIN_PROMPT_INTERNET
+ 
+HKLM_LOGIN_PROMPT_INTRANET
+ 
+HKLM_LOGIN_PROMPT_RESTRICTED
+ 
+HKLM_LOGIN_PROMPT_TRUSTED
+ 
+IE_ENABLE_PROCESS_API
+ 
+INSTANCE
+ 
+IS_TEST_DEV
+ 
+OBTAINER_TIME_CHROME
+ 
+OBTAINER_TIME_EDGE
+ 
+OBTAINER_TIME_FF
+ 
+ROLE
+ 
+RUN_ID
+ 
+SMART_SCREEN_ENABLED
+ 
+USER_PATH
+ 
+WINDOWS_SSO
+ 
+WINDOWS_UI_SCALING
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getCommand()
+
+Returns wanted query command.
+
+String
+getKey()
+
+Returns wanted registry key name.
+
+String
+getPath()
+
+Returns wanted query path.
+
+static WinRegistryKeys
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static WinRegistryKeys[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+HKCU_LOGIN_PROMPT_INTRANET
+public static final WinRegistryKeys HKCU_LOGIN_PROMPT_INTRANET
+
+
+
+
+HKCU_LOGIN_PROMPT_TRUSTED
+public static final WinRegistryKeys HKCU_LOGIN_PROMPT_TRUSTED
+
+
+
+
+HKCU_LOGIN_PROMPT_INTERNET
+public static final WinRegistryKeys HKCU_LOGIN_PROMPT_INTERNET
+
+
+
+
+HKCU_LOGIN_PROMPT_RESTRICTED
+public static final WinRegistryKeys HKCU_LOGIN_PROMPT_RESTRICTED
+
+
+
+
+HKLM_LOGIN_PROMPT_INTRANET
+public static final WinRegistryKeys HKLM_LOGIN_PROMPT_INTRANET
+
+
+
+
+HKLM_LOGIN_PROMPT_TRUSTED
+public static final WinRegistryKeys HKLM_LOGIN_PROMPT_TRUSTED
+
+
+
+
+HKLM_LOGIN_PROMPT_INTERNET
+public static final WinRegistryKeys HKLM_LOGIN_PROMPT_INTERNET
+
+
+
+
+HKLM_LOGIN_PROMPT_RESTRICTED
+public static final WinRegistryKeys HKLM_LOGIN_PROMPT_RESTRICTED
+
+
+
+
+WINDOWS_UI_SCALING
+public static final WinRegistryKeys WINDOWS_UI_SCALING
+
+
+
+
+INSTANCE
+public static final WinRegistryKeys INSTANCE
+
+
+
+
+ROLE
+public static final WinRegistryKeys ROLE
+
+
+
+
+IS_TEST_DEV
+public static final WinRegistryKeys IS_TEST_DEV
+
+
+
+
+BUILD_ID
+public static final WinRegistryKeys BUILD_ID
+
+
+
+
+RUN_ID
+public static final WinRegistryKeys RUN_ID
+
+
+
+
+OBTAINER_TIME_CHROME
+public static final WinRegistryKeys OBTAINER_TIME_CHROME
+
+
+
+
+OBTAINER_TIME_FF
+public static final WinRegistryKeys OBTAINER_TIME_FF
+
+
+
+
+OBTAINER_TIME_EDGE
+public static final WinRegistryKeys OBTAINER_TIME_EDGE
+
+
+
+
+IE_ENABLE_PROCESS_API
+public static final WinRegistryKeys IE_ENABLE_PROCESS_API
+
+
+
+
+SMART_SCREEN_ENABLED
+public static final WinRegistryKeys SMART_SCREEN_ENABLED
+
+
+
+
+WINDOWS_SSO
+public static final WinRegistryKeys WINDOWS_SSO
+
+
+
+
+USER_PATH
+public static final WinRegistryKeys USER_PATH
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static WinRegistryKeys[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static WinRegistryKeys valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+getPath
+public String getPath()
+Returns wanted query path.
+
+Specified by:
+getPath in interface IRegistryKey
+Returns:
+Query path as String.
+
+
+
+
+
+getCommand
+public String getCommand()
+Returns wanted query command.
+
+Specified by:
+getCommand in interface IRegistryKey
+Returns:
+Query command as String.
+
+
+
+
+
+getKey
+public String getKey()
+Returns wanted registry key name.
+
+Specified by:
+getKey in interface IRegistryKey
+Returns:
+Key name as String.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+LogLevel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Enum Constants | 
+Field | 
+Method
+
+
+Detail: 
+Enum Constants | 
+Field | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Enums
+Enum Class LogLevel
+
+java.lang.Object
+java.lang.Enum<LogLevel>
+fate.core.Enums.LogLevel
+
+
+
+
+All Implemented Interfaces:
+Serializable, Comparable<LogLevel>, Constable
+
+
+public enum LogLevel
+extends Enum<LogLevel>
+
+
+
+
+
+
+Nested Class Summary
+
+Nested classes/interfaces inherited from class java.lang.Enum
+Enum.EnumDesc<E extends Enum<E>>
+
+
+
+
+
+Enum Constant Summary
+Enum Constants
+
+Enum Constant
+Description
+ALL
+
+Performance measurement mode and debug mode are activated.
+
+DEBUG
+
+Executes test in debug mode, debug messages will be visible, no results will be pushed.
+
+PERFORMANCE
+
+Executes test in performance measuring mode, performance messages will be visible, results WILL be pushed if nothing else is preventing it.
+
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+static LogLevel
+valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static LogLevel[]
+values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+
+
+
+
+Methods inherited from class java.lang.Enum
+compareTo, describeConstable, equals, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Enum Constant Details
+
+
+
+DEBUG
+public static final LogLevel DEBUG
+Executes test in debug mode, debug messages will be visible, no results will be pushed.
+
+
+
+
+PERFORMANCE
+public static final LogLevel PERFORMANCE
+Executes test in performance measuring mode, performance messages will be visible, results WILL be pushed if nothing else is preventing it.
+
+
+
+
+ALL
+public static final LogLevel ALL
+Performance measurement mode and debug mode are activated.
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+values
+public static LogLevel[] values()
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Returns:
+an array containing the constants of this enum class, in the order they are declared
+
+
+
+
+
+valueOf
+public static LogLevel valueOf(String name)
+Returns the enum constant of this class with the specified name.
+The string must match exactly an identifier used to declare an
+enum constant in this class.  (Extraneous whitespace characters are 
+not permitted.)
+
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+IllegalArgumentException - if this enum class has no constant with the specified name
+NullPointerException - if the argument is null
+
+
+
+
+
+
+
+
+
+
+
+
+
+

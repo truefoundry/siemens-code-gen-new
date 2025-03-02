@@ -1,0 +1,115 @@
+fate.core.CompositionRoot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot
+
+
+package fate.core.CompositionRoot
+
+
+
+
+Related Packages
+
+Package
+Description
+fate.core.CompositionRoot.ElementStore
+ 
+fate.core.CompositionRoot.WinApp
+ 
+
+
+
+
+
+Classes
+
+Class
+Description
+AbstractCoreHandler
+ 
+CoreHandlerConfig
+
+Retrieves and places the data in the ongoing test case's log.
+
+CoreIocBuilder
+ 
+LogLevels
+
+The LogLevels class manages logging levels for an application,
+ specifically debug and performance logging.
+
+TcLog
+
+Logger class for various logging functionalities within test cases.
+
+WebDriverStore
+
+This class provides functionality to store and manage multiple WebDriver instances,
+ including the ability to switch between active instances.
+
+WinDriverServer
+
+This class is used to manage the WinDriver server process.
+
+
+
+
+
+
+
+
+
+
+

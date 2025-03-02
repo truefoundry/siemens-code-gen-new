@@ -1,0 +1,217 @@
+fate.core.ControlImplementations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Package: 
+Description | 
+Related Packages | 
+Classes and Interfaces
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+
+
+package fate.core.ControlImplementations
+
+
+
+
+All Classes and InterfacesInterfacesClassesRecord Classes
+
+
+Class
+Description
+ArrayUtils
+
+Performs various operations on arrays.
+
+CertificateManager
+
+Helps in managing the token certificate necessary for azure instances
+
+CertificateManager.KeystoreConfig
+ 
+CmdScriptExec
+
+Executes all the powershell scripts and commands
+
+Converter
+
+Util class for all possible conversions for testing purposes.
+
+CoreBrowserControl
+
+Core functionality for browser controls.
+
+CoreBrowserControl.ResponseBody
+
+A record representing the response body associated with a specific request.
+
+CoreCleaner
+
+This class provides utility methods to manage post-test execution tasks such as cleaning up resources.
+
+CoreCssControl
+
+Handles the element extraction using locators.
+
+CoreExcelControl
+
+Handles xls/xlsx file reading.
+
+CoreFrameControl
+
+Handles the frame selection.
+
+CoreInteractables
+
+Handles the basic element interactions.
+
+CoreKeyboardControl
+
+Handles the keyboard for UI tests
+
+CoreManager
+
+Handles the gradle file data.
+
+CoreMouseControl
+
+Handles the mouse for UI tests
+
+CoreStartOptions
+
+This class allows to create a CoreStartOptions object using a fluent interface, making
+ the need for temporary variable redundant.
+
+CoreUI
+
+A utility class that serves as a container for UI-related helper methods and operations.
+
+CoreWordControl
+
+Handles '.docx' and '.doc' files
+
+DirectoryControl
+
+Handles the files in the directory
+
+DomUtils
+
+Handles elements based on dom structure.
+
+Generator
+
+Handles the random data generation.
+
+ImageUtils
+
+This class uses sikulix to recognize images
+
+JSONUtils
+
+This class is mainly created to avoid exceptions in tests.
+
+PrintWindowControl
+
+A utility class for interacting with the print window control in a web application.
+
+RunningProcess
+
+Running process object class to access available info of runningProcesses in tasklist.
+
+SelectorBuilder
+
+Allows constructing selectors dynamically with multiple conditions and modifications.
+
+StepEvaluator
+
+Handles the Steps in each test cases.
+
+StringUtils
+
+A utility class that provides helper methods for string manipulation.
+
+TestExecuter
+
+Handles the TestCase Execution.
+
+TestExecuter.ThrowingConsumer<T extends AbstractCoreHandler,E extends Exception>
+
+A functional interface that defines a consumer accepting a test handler and throwing an exception.
+
+WaitFor
+
+Handles the Wait functions.
+
+WebDriverEventHandler
+
+Handles the Event performed by WebDriver.
+
+WebDriverObtainer
+
+Utility class for obtaining WebDriver instances.
+
+WindowsUtils
+
+Utility class for obtaining Window handles.
+
+WinRegistry
+
+Handles registry based operations.
+
+
+
+
+
+
+
+
+
+
+
+

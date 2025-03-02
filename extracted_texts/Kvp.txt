@@ -1,0 +1,177 @@
+Kvp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.azure.SharedParameters.POJO
+Class Kvp
+
+java.lang.Object
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.Kvp
+
+
+
+public class Kvp
+extends Object
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Kvp()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getKey()
+ 
+String
+getValue()
+ 
+void
+setKey(String key)
+ 
+void
+setValue(String value)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+Kvp
+public Kvp()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getKey
+public String getKey()
+
+
+
+
+setKey
+public void setKey(String key)
+
+
+
+
+getValue
+public String getValue()
+
+
+
+
+setValue
+public void setValue(String value)
+
+
+
+
+
+
+
+
+
+
+
+
+

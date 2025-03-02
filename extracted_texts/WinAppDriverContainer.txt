@@ -1,0 +1,150 @@
+WinAppDriverContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class WinAppDriverContainer
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.WinAppDriverContainer
+
+
+
+public class WinAppDriverContainer
+extends Object
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+io.appium.java_client.windows.WindowsDriver
+getDriver()
+ 
+int
+getPort()
+ 
+RunningProcess
+getProcess()
+ 
+String
+getUrl()
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getDriver
+public io.appium.java_client.windows.WindowsDriver getDriver()
+
+
+
+
+getProcess
+public RunningProcess getProcess()
+
+
+
+
+getUrl
+public String getUrl()
+
+
+
+
+getPort
+public int getPort()
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+Uses of Package fate.core.CompositionRoot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Packagefate.core.CompositionRoot
+
+Packages that use fate.core.CompositionRoot
+
+Package
+Description
+fate.core.CompositionRoot
+ 
+fate.core.ControlImplementations
+ 
+fate.core.Results
+ 
+
+
+
+
+
+Classes in fate.core.CompositionRoot used by fate.core.CompositionRoot
+
+Class
+Description
+AbstractCoreHandler
+ 
+LogLevels
+
+The LogLevels class manages logging levels for an application,
+ specifically debug and performance logging.
+
+WebDriverStore
+
+This class provides functionality to store and manage multiple WebDriver instances,
+ including the ability to switch between active instances.
+
+
+
+
+
+
+Classes in fate.core.CompositionRoot used by fate.core.ControlImplementations
+
+Class
+Description
+AbstractCoreHandler
+ 
+
+
+
+
+
+Classes in fate.core.CompositionRoot used by fate.core.Results
+
+Class
+Description
+AbstractCoreHandler
+ 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,345 @@
+CoreCleaner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreCleaner
+
+java.lang.Object
+fate.core.ControlImplementations.CoreCleaner
+
+
+
+Direct Known Subclasses:
+RunningProcess
+
+
+public class CoreCleaner
+extends Object
+This class provides utility methods to manage post-test execution tasks such as cleaning up resources.
+ It helps with actions like closing the WebDriver and other cleanup tasks after tests are completed.
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreCleaner()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+addToGC(Runnable func)
+
+Collects call which will be executed after the test run.
+
+void
+clean()
+
+Cleans up test data and webDrivers after test run.
+
+static int
+countRunningProcesses(String processName)
+
+Counting running processes with given name.
+
+static List<RunningProcess>
+getAllProcesses()
+
+Returns list of RunningProcess objects with all attributes available from task list.
+
+static String
+getHighestPid(String name)
+
+Returns the highest available PID for running processes with wanted name.
+
+static int
+getMemoryUsage(String pidOrName)
+
+Returns memory usage for wanted process from task list.
+
+static long
+getProcessID(Process p)
+
+Returns process ID.
+
+static RunningProcess
+getRunningProcess(String pid)
+
+Returns a running process name by its PID.
+
+static void
+killAllByName(String name)
+
+Kills all the running processes with wanted name
+
+static void
+killByName(String name)
+
+Kills process with wanted name.
+
+static boolean
+killByPid(String pid)
+
+Kills wanted process based on sent Process ID.
+
+static void
+quitDriver(String reason,
+ boolean... closeAll)
+
+Quits current webdriver.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreCleaner
+public CoreCleaner()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+quitDriver
+public static void quitDriver(String reason,
+ boolean... closeAll)
+Quits current webdriver.
+
+Parameters:
+reason - Reason for quit.
+closeAll - Optional, if all Drivers should be closed.
+
+
+
+
+
+killAllByName
+public static void killAllByName(String name)
+Kills all the running processes with wanted name
+
+Parameters:
+name - Name of processes to kill, e.g. "chromedriver.exe"
+
+
+
+
+
+killByName
+public static void killByName(String name)
+Kills process with wanted name. In case there's multiple processes with same name, will kill one with the highest PID.
+
+Parameters:
+name - Name of processes to kill, e.g. "chromedriver.exe"
+
+
+
+
+
+killByPid
+@CanIgnoreReturnValue
+public static boolean killByPid(String pid)
+Kills wanted process based on sent Process ID.
+
+Parameters:
+pid - Process ID of process to kill
+Returns:
+true if wanted process is no longer in task list
+
+
+
+
+
+getMemoryUsage
+public static int getMemoryUsage(String pidOrName)
+Returns memory usage for wanted process from task list. Will throw an exception if such a process doesn't exist in the task list.
+
+Parameters:
+pidOrName - Process ID or name (e.g. chromedriver.exe) of wanted process
+Returns:
+Memory usage in KB
+
+
+
+
+
+getHighestPid
+public static String getHighestPid(String name)
+Returns the highest available PID for running processes with wanted name. Will throw an exception if such a process doesn't exist in the task list.
+
+Returns:
+PID as String or MsgCode.NOT_FOUND
+
+
+
+
+
+countRunningProcesses
+public static int countRunningProcesses(String processName)
+Counting running processes with given name.
+
+Parameters:
+processName - Process name to be counted.
+
+
+
+
+
+getRunningProcess
+public static RunningProcess getRunningProcess(String pid)
+Returns a running process name by its PID.
+
+Parameters:
+pid - ID of wanted process.
+Returns:
+Process or empty RunningProcess object.
+
+
+
+
+
+getProcessID
+public static long getProcessID(Process p)
+Returns process ID.
+
+Parameters:
+p - Wanted Process object or MsgCode.NOT_FOUND_INT.
+
+
+
+
+
+getAllProcesses
+public static List<RunningProcess> getAllProcesses()
+Returns list of RunningProcess objects with all attributes available from task list.
+
+Returns:
+List of RunningProcess or empty list.
+
+
+
+
+
+clean
+public void clean()
+Cleans up test data and webDrivers after test run.
+
+
+
+
+addToGC
+public void addToGC(Runnable func)
+Collects call which will be executed after the test run.
+
+Parameters:
+func - Wanted function call.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

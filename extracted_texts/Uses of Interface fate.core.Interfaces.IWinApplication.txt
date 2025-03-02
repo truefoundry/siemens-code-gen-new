@@ -1,0 +1,113 @@
+Uses of Interface fate.core.Interfaces.IWinApplication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Interfacefate.core.Interfaces.IWinApplication
+
+Packages that use IWinApplication
+
+Package
+Description
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.Enums
+ 
+
+
+
+
+
+Uses of IWinApplication in fate.core.CompositionRoot.WinApp
+Methods in fate.core.CompositionRoot.WinApp with parameters of type IWinApplication
+
+Modifier and Type
+Method
+Description
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options)
+
+Starts an application with whether by using its path or its windowsID
+ some variables and packages are installed while starting the WinApp Driver for the first time as following:
+
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options,
+ String xpath,
+ int... index)
+ 
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options,
+ String property,
+ String value,
+ int... index)
+
+Starts a root WinAppDriver and switches to wanted application
+
+
+
+
+
+
+Uses of IWinApplication in fate.core.Enums
+Classes in fate.core.Enums that implement IWinApplication
+
+Modifier and Type
+Class
+Description
+enum 
+WinApplicationsIDs
+ 
+
+
+
+
+
+
+
+
+
+

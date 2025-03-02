@@ -1,0 +1,814 @@
+CoreBrowserControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.ControlImplementations
+Class CoreBrowserControl
+
+java.lang.Object
+fate.core.ControlImplementations.CoreBrowserControl
+
+
+
+public abstract class CoreBrowserControl
+extends Object
+Core functionality for browser controls.
+
+
+
+
+
+
+Nested Class Summary
+Nested Classes
+
+Modifier and Type
+Class
+Description
+static final record 
+CoreBrowserControl.ResponseBody
+
+A record representing the response body associated with a specific request.
+
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+final PrintWindowControl
+printWindow
+ 
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreBrowserControl()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsAbstract MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+boolean
+alertExists()
+
+checks if an alert is shown.
+
+void
+blurActiveElementIfAny()
+
+Blurs active element if any.
+
+void
+close(String... specific)
+
+Closes wanted browser window or multiple windows.
+
+void
+closeAlert(boolean accept)
+
+Closes Browser alert if any is displayed.
+
+void
+closeByIndex(int index)
+
+Closes Window or Tab with wanted index.
+
+void
+duplicateCurrentTab()
+
+Duplicates current tab and switches to it.
+
+String
+getAlertMessage()
+
+Returns an alert message.
+
+String
+getBrowserName()
+
+Returns current Browser name.
+
+String
+getBrowserVersion()
+
+Returns current browser version.
+
+String
+getCurrentURL()
+
+Returns current browser URL.
+
+String
+getHandleOfActiveWindow()
+
+Returns handle of active window.
+
+int
+getIndexOfActiveWindow()
+
+Returns index of current active window.
+
+List<CoreBrowserControl.ResponseBody>
+getResponses()
+
+This method retrieves the list of response bodies.
+
+int
+getTabsCount()
+
+Returns current count of tabs.
+
+String
+getTitleOfActiveWindow()
+
+Returns title of active window.
+
+List<String>
+getTitlesOfExistingWindows()
+
+Returns titles of all current existing windows.
+
+int
+getWindowsCount()
+
+Returns the count of current opened windows.
+
+String
+getWindowsTitle(int index)
+
+Returns the title of wanted window, 0 based index.
+
+void
+handleEntitlement()
+
+Tries to log in to the entitlement page with the given credentials.
+
+abstract void
+localLogin()
+
+Method for local login with default user and password.
+
+void
+maximize()
+
+Maximizes current window.
+
+void
+navigateBack()
+
+Navigates back by one page on the browser's history.
+
+boolean
+navigateToURL(String url)
+
+Navigates to wanted URL.
+
+String
+openNewTab()
+
+Opens new empty tab.
+
+String
+openNewWindow()
+
+Opens new empty tab.
+
+void
+refresh()
+
+Refreshing current browser window.
+
+void
+resize(int width,
+ int height,
+ org.openqa.selenium.By... selector)
+
+Resizes browser window.
+
+void
+scroll(int x,
+ int y)
+
+Scrolls by the given amount of pixels.
+
+void
+scrollByKey(org.openqa.selenium.Keys key,
+ int amountOfClicks,
+ org.openqa.selenium.By... alternativeItem)
+
+Scroll by keyboard, function tries to perform a key action on body element, alternative element can be used.
+
+void
+scrollToBottom()
+
+Scroll to the bottom of the page
+
+void
+scrollToTheTop()
+
+Scrolls to the top of the page.
+
+void
+setWindowPosition(int x,
+ int y)
+
+Moves current window to wanted coordinates.
+
+UUID
+start(WebDrv wDriver,
+ String strURL,
+ CoreStartOptions... options)
+
+Starts with wanted browser and wanted URL.
+
+void
+switchToLastTab()
+
+Switches to last available.
+
+void
+switchToParentFrame()
+
+Switch to parent frame
+
+void
+switchToTab(int idx)
+
+Switches to wanted tab in the BrowserControl.
+
+void
+switchToWebDriver(UUID driversID)
+
+Switches to wanted WebDriver instance.
+
+void
+switchToWindow(int wndIndex,
+ boolean... waitUntilNotEmpty)
+
+Switch to wanted window.
+
+void
+switchToWindow(String wndHandle)
+
+Switch to wanted window.
+
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+printWindow
+public final PrintWindowControl printWindow
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CoreBrowserControl
+public CoreBrowserControl()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+localLogin
+public abstract void localLogin()
+Method for local login with default user and password.
+
+
+
+
+setWindowPosition
+public void setWindowPosition(int x,
+ int y)
+Moves current window to wanted coordinates.
+
+Parameters:
+x - X value
+y - Y value
+
+
+
+
+
+getCurrentURL
+public String getCurrentURL()
+Returns current browser URL.
+
+Returns:
+URL as String or MsgCode.EMPTY.
+
+
+
+
+
+maximize
+public void maximize()
+Maximizes current window.
+
+
+
+
+refresh
+public void refresh()
+Refreshing current browser window.
+
+
+
+
+close
+public void close(String... specific)
+Closes wanted browser window or multiple windows.
+
+Parameters:
+specific - Handle of wanted window.
+
+
+
+
+
+getBrowserName
+public String getBrowserName()
+Returns current Browser name.
+
+Returns:
+Name as String or MsgCode.NOT_AVAILABLE.
+
+
+
+
+
+getBrowserVersion
+public String getBrowserVersion()
+Returns current browser version.
+
+Returns:
+Version as String or MsgCode.NOT_AVAILABLE.
+
+
+
+
+
+closeByIndex
+public void closeByIndex(int index)
+Closes Window or Tab with wanted index.
+
+Parameters:
+index - Wanted window index to close.
+
+
+
+
+
+switchToWebDriver
+public void switchToWebDriver(UUID driversID)
+Switches to wanted WebDriver instance.
+
+Parameters:
+driversID - WebDrivers ID which was provided by start(WebDrv, String, CoreStartOptions...)
+
+
+
+
+
+start
+public UUID start(WebDrv wDriver,
+ String strURL,
+ CoreStartOptions... options)
+           throws InterruptedException
+Starts with wanted browser and wanted URL.
+
+Parameters:
+wDriver - Driver type WebDrv.
+strURL - wanted URL.
+options - start options for current browser.
+Throws:
+InterruptedException - if interrupted.
+
+
+
+
+
+handleEntitlement
+public void handleEntitlement()
+                       throws InterruptedException
+Tries to log in to the entitlement page with the given credentials.
+
+Throws:
+InterruptedException - if interrupted.
+
+
+
+
+
+openNewTab
+@CanIgnoreReturnValue
+public String openNewTab()
+Opens new empty tab.
+
+Returns:
+Returns a window handle of new Tab or Window or MsgCode.NOT_AVAILABLE.
+
+
+
+
+
+openNewWindow
+@CanIgnoreReturnValue
+public String openNewWindow()
+Opens new empty tab.
+
+Returns:
+Returns a window handle of new Tab or Window or MsgCode.NOT_AVAILABLE.
+
+
+
+
+
+switchToTab
+public void switchToTab(int idx)
+Switches to wanted tab in the BrowserControl.
+
+Parameters:
+idx - index of the tab.0 based
+
+
+
+
+
+getTabsCount
+public int getTabsCount()
+Returns current count of tabs.
+
+Returns:
+int value.
+
+
+
+
+
+switchToLastTab
+public void switchToLastTab()
+Switches to last available.
+
+
+
+
+switchToParentFrame
+public void switchToParentFrame()
+Switch to parent frame
+
+
+
+
+getWindowsCount
+public int getWindowsCount()
+Returns the count of current opened windows.
+
+Returns:
+count as int, 0 if no driver is available.
+
+
+
+
+
+getHandleOfActiveWindow
+public String getHandleOfActiveWindow()
+Returns handle of active window.
+
+Returns:
+handle of wanted window as string or MsgCode.EMPTY.
+
+
+
+
+
+switchToWindow
+public void switchToWindow(String wndHandle)
+Switch to wanted window.
+
+Parameters:
+wndHandle - Name or Handle of wanted window.
+
+
+
+
+
+switchToWindow
+public void switchToWindow(int wndIndex,
+ boolean... waitUntilNotEmpty)
+Switch to wanted window.
+
+Parameters:
+wndIndex - Index of wanted window. 0 Based.
+waitUntilNotEmpty - Waits up to 3 minutes until the window has any other URL than 'about:blank'
+
+
+
+
+
+getWindowsTitle
+public String getWindowsTitle(int index)
+Returns the title of wanted window, 0 based index.
+
+Parameters:
+index - Index of wanted window.
+Returns:
+Title as string or MsgCode.EMPTY.
+
+
+
+
+
+getTitleOfActiveWindow
+public String getTitleOfActiveWindow()
+Returns title of active window.
+
+Returns:
+Title as String.
+
+
+
+
+
+getTitlesOfExistingWindows
+public List<String> getTitlesOfExistingWindows()
+Returns titles of all current existing windows.
+
+Returns:
+Titles as string list.
+
+
+
+
+
+getIndexOfActiveWindow
+public int getIndexOfActiveWindow()
+Returns index of current active window. Means the window where webDrive performs its actions.
+
+Returns:
+Index as int or MsgCode.NOT_FOUND_INT
+
+
+
+
+
+navigateToURL
+@CanIgnoreReturnValue
+public boolean navigateToURL(String url)
+Navigates to wanted URL.
+
+Parameters:
+url - Url string.
+Returns:
+true if the url is updated to the new url
+
+
+
+
+
+resize
+public void resize(int width,
+ int height,
+ org.openqa.selenium.By... selector)
+Resizes browser window.
+
+Parameters:
+width - wanted browser width
+height - wanted browser height
+selector - optional control to wait. This parameter is used to locate an element usingBy selector.
+
+
+
+
+
+blurActiveElementIfAny
+public void blurActiveElementIfAny()
+Blurs active element if any.
+
+ This can be used to close the date picker for date input fields.
+
+
+
+
+closeAlert
+public void closeAlert(boolean accept)
+Closes Browser alert if any is displayed.
+
+Parameters:
+accept - To accept the message or to decline displayed message.
+
+
+
+
+
+alertExists
+public boolean alertExists()
+checks if an alert is shown.
+
+Returns:
+true if alert is shown otherwise false.
+
+
+
+
+
+getAlertMessage
+public String getAlertMessage()
+Returns an alert message.
+
+Returns:
+message as string or MsgCode.NOT_FOUND if no alert window was found.
+
+
+
+
+
+navigateBack
+public void navigateBack()
+Navigates back by one page on the browser's history.
+
+
+
+
+scrollByKey
+public void scrollByKey(org.openqa.selenium.Keys key,
+ int amountOfClicks,
+ org.openqa.selenium.By... alternativeItem)
+Scroll by keyboard, function tries to perform a key action on body element, alternative element can be used.
+
+Parameters:
+key - Key to scroll e.g. Keys.ARROW_DOWN.
+amountOfClicks - Defines how many times the key should be pressed.
+alternativeItem - Alternative item which will receive the keys sequence.
+
+
+
+
+
+scrollToTheTop
+public void scrollToTheTop()
+Scrolls to the top of the page.
+
+
+
+
+scrollToBottom
+public void scrollToBottom()
+Scroll to the bottom of the page
+
+
+
+
+scroll
+public void scroll(int x,
+ int y)
+Scrolls by the given amount of pixels.
+
+Parameters:
+x - horizontal pixel value
+y - vertical pixel value
+
+
+
+
+
+duplicateCurrentTab
+public void duplicateCurrentTab()
+Duplicates current tab and switches to it.
+
+
+
+
+getResponses
+public List<CoreBrowserControl.ResponseBody> getResponses()
+This method retrieves the list of response bodies. It avoids duplicates by converting the list of response bodies into a set
+ and then back into a list.
+ If a concurrent modification exception occurs, it retries up to 20 times with a 5-second delay between retries.
+
+Returns:
+A list of unique response bodies. If there is an issue retrieving them, an empty list is returned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

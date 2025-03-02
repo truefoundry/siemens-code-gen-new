@@ -1,0 +1,202 @@
+CheckBox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.CompositionRoot.WinApp
+Class CheckBox
+
+java.lang.Object
+fate.core.CompositionRoot.WinApp.CoreWinInteractables
+fate.core.CompositionRoot.WinApp.CheckBox
+
+
+
+
+All Implemented Interfaces:
+IWinInteractable
+
+
+public class CheckBox
+extends CoreWinInteractables
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CheckBox()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+void
+check(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Checks the checkBox
+
+org.openqa.selenium.WebElement
+findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+void
+uncheck(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Unchecks the checkBox
+
+
+
+
+
+Methods inherited from class fate.core.CompositionRoot.WinApp.CoreWinInteractables
+clear, click, exists, getAttribute, getHeight, getLocation, getRoot, getText, getWidth, hasFocus, isBlank, isEmpty, isEnabled, isOnScreen, isSelected, sendKeys, sendKeys, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+Methods inherited from interface fate.core.Interfaces.IWinInteractable
+expand, isExpanded
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+CheckBox
+public CheckBox()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+findControl
+public org.openqa.selenium.WebElement findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+
+
+
+check
+public void check(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Checks the checkBox
+
+Parameters:
+name - the checkBox name
+root - the parent element
+
+
+
+
+
+uncheck
+public void uncheck(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+Unchecks the checkBox
+
+Parameters:
+name - the checkBox name
+root - the parent element
+
+
+
+
+
+
+
+
+
+
+
+
+
+

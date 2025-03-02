@@ -1,0 +1,218 @@
+MsgCode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.Statics
+Class MsgCode
+
+java.lang.Object
+fate.core.Statics.MsgCode
+
+
+
+public class MsgCode
+extends Object
+
+
+
+
+
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+static final String
+EMPTY
+ 
+static final String
+NOT_AVAILABLE
+ 
+static final String
+NOT_FOUND
+ 
+static final int
+NOT_FOUND_INT
+ 
+static final String
+TEST_IS_NOT_READY
+ 
+static final String
+UNAUTHORIZED
+ 
+
+
+
+
+
+
+Method Summary
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Field Details
+
+
+
+NOT_FOUND
+public static final String NOT_FOUND
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+NOT_AVAILABLE
+public static final String NOT_AVAILABLE
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+NOT_FOUND_INT
+public static final int NOT_FOUND_INT
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+EMPTY
+public static final String EMPTY
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+UNAUTHORIZED
+public static final String UNAUTHORIZED
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+TEST_IS_NOT_READY
+public static final String TEST_IS_NOT_READY
+
+See Also:
+
+
+Constant Field Values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

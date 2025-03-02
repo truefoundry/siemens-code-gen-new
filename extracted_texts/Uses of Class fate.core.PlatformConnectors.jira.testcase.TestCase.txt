@@ -1,0 +1,81 @@
+Uses of Class fate.core.PlatformConnectors.jira.testcase.TestCase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+Uses of Classfate.core.PlatformConnectors.jira.testcase.TestCase
+
+Packages that use TestCase
+
+Package
+Description
+fate.core.PlatformConnectors.jira
+ 
+
+
+
+
+
+Uses of TestCase in fate.core.PlatformConnectors.jira
+Methods in fate.core.PlatformConnectors.jira that return TestCase
+
+Modifier and Type
+Method
+Description
+static TestCase
+JiraHandler.getTestCase(ProjectData config,
+ String testCaseKey)
+
+Retrieves the testcase via jira testmanagement api
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+Summary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript is disabled on your browser.
+
+
+
+
+
+
+Skip navigation links
+
+Overview
+Package
+Class
+Use
+Tree
+Index
+Help
+
+
+
+
+
+Summary: 
+Nested | 
+Field | 
+Constr | 
+Method
+
+
+Detail: 
+Field | 
+Constr | 
+Method
+
+
+SEARCH:
+
+
+
+
+
+
+
+
+
+
+
+Package fate.core.PlatformConnectors.jira.testcycle
+Class Summary
+
+java.lang.Object
+fate.core.PlatformConnectors.jira.testcycle.Summary
+
+
+
+public class Summary
+extends Object
+Created by Michael on 08.04.2019. SRSNG-
+
+
+
+
+
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Summary()
+ 
+
+
+
+
+
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+
+Modifier and Type
+Method
+Description
+String
+getFail()
+ 
+String
+getPass()
+ 
+void
+setFail(String fail)
+ 
+void
+setPass(String pass)
+ 
+
+
+
+
+Methods inherited from class java.lang.Object
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+
+
+
+
+
+
+
+
+
+Constructor Details
+
+
+
+Summary
+public Summary()
+
+
+
+
+
+
+
+
+Method Details
+
+
+
+getPass
+public String getPass()
+
+
+
+
+setPass
+public void setPass(String pass)
+
+
+
+
+getFail
+public String getFail()
+
+
+
+
+setFail
+public void setFail(String fail)
+
+
+
+
+
+
+
+
+
+
+
+
+
