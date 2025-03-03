@@ -1,6 +1,8 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core.settings import Settings
-from llama_index.llms.openai import OpenAI
+#from llama_index.llms.openai import OpenAI
+from llama_index.llms.openai_like import OpenAILike
+from llama_index.core.llms import ChatMessage, MessageRole
 from llama_index.embeddings.openai import OpenAIEmbedding
 from evals import evaluate_code
 import os
@@ -8,7 +10,6 @@ import logging
 from utils import load_config, load_prompt, format_java_prompt
 from dotenv import load_dotenv
 from pathlib import Path
-
 
 load_dotenv()
 
@@ -59,16 +60,19 @@ def generate_response(config: dict, index: VectorStoreIndex):
     logger = logging.getLogger(__name__)
     
     # Setup LLM with system prompt
-    Settings.llm = OpenAI(
+    Settings.llm = OpenAILike(
         model=config["llm"]["models"]["main"]["name"],
+        #api_key=os.getenv("OPENAI_API_KEY"),
         api_key=os.getenv("TFY_API_KEY_INTERNAL"),
         api_base=os.getenv("TFY_BASE_URL"),
+        is_chat_model=True,
         system_prompt=load_prompt(config["system"]["prompt_paths"]["system_default"]),
         temperature=config["system"]["model_config"]["temperature"],
         top_p=config["system"]["model_config"]["top_p"],
         presence_penalty=config["system"]["model_config"]["presence_penalty"],
         frequency_penalty=config["system"]["model_config"]["frequency_penalty"],
         max_tokens=config["system"]["model_config"]["max_tokens"],
+        context_window=8192,
     )
     
     # Load and format prompt
@@ -130,7 +134,7 @@ if __name__ == "__main__":
     response, source_texts, source_names = generate_response(config, index)
     
     # Evaluate results
-    ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
+    ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.txt"
     output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"
     
     evaluate_code(ground_truth_path, output_path)

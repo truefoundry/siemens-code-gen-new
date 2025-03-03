@@ -1,0 +1,108 @@
+```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+
+public class DigitalCustomerPortalTest {
+
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    public DigitalCustomerPortalTest() {
+        // Initialize WebDriver and WebDriverWait
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public void loginToPortal() {
+        // Step 1: Log in to Digital Customer Portal
+        driver.get("https://digitalcustomerportal.com/login");
+        WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
+        WebElement passwordField = driver.findElement(By.id("password"));
+        WebElement loginButton = driver.findElement(By.id("loginButton"));
+
+        usernameField.sendKeys("testUser");
+        passwordField.sendKeys("testPassword");
+        loginButton.click();
+
+        // Verify landing page is displayed
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("landingPage")));
+    }
+
+    public void verifyTopRibbonContent() {
+        // Step 2: Check top ribbon content
+        WebElement topRibbon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("topRibbon")));
+        assert topRibbon.getText().contains("Siemens healthineers Logo");
+        assert topRibbon.getText().contains("My Digital Lab Assistant (vX.X.X)");
+        assert topRibbon.getText().contains("Contact icon");
+        assert topRibbon.getText().contains("Settings icon");
+        assert topRibbon.getText().contains("Notification bell icon");
+        assert topRibbon.getText().contains("Icon with name shortcut");
+        assert topRibbon.getText().contains("Name of logged in user");
+        assert topRibbon.getText().contains("Admin icon");
+    }
+
+    public void verifyTileContent() {
+        // Step 3: Check tile content
+        WebElement tiles = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tiles")));
+        assert tiles.getText().contains("Report an issue with an order or delivery");
+        assert tiles.getText().contains("Show me my Requests");
+        assert tiles.getText().contains("Question about an order or eSuport assistance");
+        assert tiles.getText().contains("Question about my Account");
+        assert tiles.getText().contains("Request Allocation or Saturday Delivery (SET Request)");
+    }
+
+    public void clickTiles() {
+        // Step 4: Click on tile "Report an issue with an order or delivery"
+        WebElement reportIssueTile = driver.findElement(By.id("reportIssueTile"));
+        reportIssueTile.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("reportIssuePage")));
+
+        // Step 5: Click on tile "Show me my Requests"
+        WebElement myRequestsTile = driver.findElement(By.id("myRequestsTile"));
+        myRequestsTile.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("myRequestsPage")));
+
+        // Step 6: Click on tile "Question about an order or eSuport assistance"
+        WebElement questionOrderTile = driver.findElement(By.id("questionOrderTile"));
+        questionOrderTile.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("questionOrderPage")));
+
+        // Step 7: Click on tile "Question about my Account"
+        WebElement questionAccountTile = driver.findElement(By.id("questionAccountTile"));
+        questionAccountTile.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("questionAccountPage")));
+
+        // Step 8: Click on tile "Request Allocation or Saturday Delivery (SET Request)"
+        WebElement setRequestTile = driver.findElement(By.id("setRequestTile"));
+        setRequestTile.click();
+        wait.until(ExpectedConditions.urlContains("salesEfficiencyToolPage"));
+    }
+
+    public void tearDown() {
+        // Close the browser
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    public static void main(String[] args) {
+        DigitalCustomerPortalTest test = new DigitalCustomerPortalTest();
+        try {
+            test.loginToPortal();
+            test.verifyTopRibbonContent();
+            test.verifyTileContent();
+            test.clickTiles();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            test.tearDown();
+        }
+    }
+}
+```

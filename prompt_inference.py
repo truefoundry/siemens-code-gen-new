@@ -27,10 +27,9 @@ def create_llm_client(config: dict) -> ChatOpenAI:
             "top_p": config["system"]["model_config"]["top_p"],
             "presence_penalty": config["system"]["model_config"]["presence_penalty"],
             "frequency_penalty": config["system"]["model_config"]["frequency_penalty"],
-            "timeout": config["system"]["model_config"]["timeout"]
         },
         streaming=True,
-        api_key=os.getenv("TFY_API_KEY"),
+        api_key=os.getenv("TFY_API_KEY_INTERNAL"),
         base_url=os.getenv("TFY_BASE_URL"),
         max_retries=config["system"]["model_config"]["max_retries"]
     )

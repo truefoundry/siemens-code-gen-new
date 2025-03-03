@@ -16,3 +16,51 @@
 2025-03-03 09:42:01,867 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
 2025-03-03 09:42:04,407 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
 2025-03-03 09:42:07,118 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:41:00,393 - __main__ - INFO - Starting test generation process
+2025-03-03 10:41:05,454 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:41:07,814 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:41:10,453 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:41:13,502 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:41:15,804 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:42:03,761 - __main__ - INFO - Starting test generation process
+2025-03-03 10:42:08,486 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:42:11,325 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:42:13,937 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:42:16,583 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:42:18,953 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:42:56,110 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 10:43:19,719 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 10:43:19,735 - __main__ - INFO - Response generated with 8 source documents
+2025-03-03 10:43:19,735 - __main__ - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'TestScriptSteps.txt', 'StepItem.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'Uses of Package fate.core.PlatformConnectors.jira.testcase.txt', 'IResultPlatformHandler.txt', 'DirectoryControl.txt']
+2025-03-03 11:43:57,512 - __main__ - INFO - Starting prompt-based code generation
+2025-03-03 11:43:57,514 - __main__ - ERROR - Error in prompt inference pipeline: 1 validation error for ChatOpenAI
+  Value error, Parameters {'timeout'} should be specified explicitly. Instead they were passed in as part of `model_kwargs` parameter. [type=value_error, input_value={'model': 'gpt-4o', 'temp...enai', 'max_retries': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2025-03-03 11:43:57,514 - root - ERROR - Error running prompt inference: 1 validation error for ChatOpenAI
+  Value error, Parameters {'timeout'} should be specified explicitly. Instead they were passed in as part of `model_kwargs` parameter. [type=value_error, input_value={'model': 'gpt-4o', 'temp...enai', 'max_retries': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2025-03-03 11:44:56,345 - __main__ - INFO - Starting prompt-based code generation
+2025-03-03 11:44:56,345 - __main__ - ERROR - Error in prompt inference pipeline: 1 validation error for ChatOpenAI
+  Value error, Parameters {'timeout'} should be specified explicitly. Instead they were passed in as part of `model_kwargs` parameter. [type=value_error, input_value={'model': 'openai-main/gp...enai', 'max_retries': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2025-03-03 11:44:56,345 - root - ERROR - Error running prompt inference: 1 validation error for ChatOpenAI
+  Value error, Parameters {'timeout'} should be specified explicitly. Instead they were passed in as part of `model_kwargs` parameter. [type=value_error, input_value={'model': 'openai-main/gp...enai', 'max_retries': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2025-03-03 11:45:03,722 - __main__ - INFO - Starting prompt-based code generation
+2025-03-03 11:45:03,723 - __main__ - ERROR - Error in prompt inference pipeline: 1 validation error for ChatOpenAI
+  Value error, Parameters {'timeout'} should be specified explicitly. Instead they were passed in as part of `model_kwargs` parameter. [type=value_error, input_value={'model': 'openai-main/gp...enai', 'max_retries': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2025-03-03 11:45:38,536 - __main__ - INFO - Starting prompt-based code generation
+2025-03-03 11:45:38,868 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-03-03 11:45:38,870 - __main__ - ERROR - Error generating code: Error code: 401 - {'status': 'failure', 'message': 'Forbidden: Invalid token'}
+2025-03-03 11:45:38,870 - __main__ - ERROR - Error in prompt inference pipeline: Error code: 401 - {'status': 'failure', 'message': 'Forbidden: Invalid token'}
+2025-03-03 11:46:02,012 - __main__ - INFO - Starting prompt-based code generation
+2025-03-03 11:46:02,658 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 11:46:35,449 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-03 11:46:35,450 - __main__ - ERROR - Error in prompt inference pipeline: [Errno 21] Is a directory: 'Formatted_data/Ground_Truths'
+2025-03-03 11:48:25,752 - __main__ - INFO - Starting test generation process
+2025-03-03 11:48:31,513 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 11:48:33,662 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 11:48:36,221 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 11:48:38,884 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 11:48:41,599 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
