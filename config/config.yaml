@@ -1,37 +1,109 @@
 system:
-  prompt: "You are an expert in writing java-selenium tests. You will be provided with examples of test case requirements and generated java-selenium tests. 
-You will be then asked to write a test case for a new requirement that is provided to you. Use documentation if provided as addtional context. Do not invent class names and base on the documentation context provided
-
-You need to write a java class with the steps of the test case.
-
-"
+  # Model configuration
+  model_config:
+    temperature: 0.3
+    max_tokens: 8192
+    top_p: 0.8
+    presence_penalty: 0
+    frequency_penalty: 0
+    max_retries: 3
+    timeout: 30  # seconds
+    
+  # Prompt file paths
+  prompt_paths:
+    system_default: "prompts/system_default.txt"
+    base_case: "prompts/base_case.txt"
+    few_shot_case: "prompts/few_shot_case.txt"
+    base_step: "prompts/base_step.txt"
+    few_shot_step: "prompts/few_shot_step.txt"
+  
+  # Task-specific prompts with improved descriptions
   prompts:
-    imports: "You are an expert in analyzing Java imports. Given a Java test file, identify and list all necessary imports required for the test to run properly. Consider Selenium WebDriver, TestNG, and any custom framework imports that might be needed based on the code context."
-    
-    steps: "You are an expert in breaking down Java-Selenium test cases into logical steps. Analyze the given test case and identify the key testing steps, including setup, main test actions, verifications, and cleanup. List these steps in a clear, sequential order."
-    
-    combine: "You are an expert in combining and organizing Java-Selenium test steps. Take the provided test steps and create a well-structured test case that follows best practices. Ensure proper test flow, error handling, and clear documentation."
-    
-    edit: "You are an expert in reviewing and improving Java-Selenium test cases. Analyze the given test case and suggest improvements for better readability, maintainability, and reliability. Consider test structure, naming conventions, assertions, and error handling."
-
-  temperature: 0.3
-  max_tokens: 8192
-  top_p: 0.8
-  presence_penalty: 0
-  frequency_penalty: 0
+    imports:
+      description: "Expert system for Java import analysis"
+      instruction: "Analyze Java test files to identify and list all necessary imports, including:
+                   - Selenium WebDriver dependencies
+                   - TestNG framework imports
+                   - Custom framework requirements
+                   - Utility and helper class imports"
+      
+    steps:
+      description: "Test case step decomposition expert"
+      instruction: "Break down Java-Selenium test cases into logical steps:
+                   - Test setup and prerequisites
+                   - Main test actions and workflows
+                   - Validation and verification points
+                   - Cleanup and resource management
+                   - Error handling procedures"
+      
+    combine:
+      description: "Test step integration specialist"
+      instruction: "Create well-structured test cases by combining steps with:
+                   - Proper test flow and organization
+                   - Robust error handling
+                   - Clear documentation and comments
+                   - Best practices implementation
+                   - Maintainable code structure"
+      
+    edit:
+      description: "Test case optimization expert"
+      instruction: "Review and enhance test cases focusing on:
+                   - Code readability and clarity
+                   - Maintainability improvements
+                   - Reliability enhancements
+                   - Naming convention consistency
+                   - Assertion quality and coverage"
 
 llm:
-  model: "openai-main/gpt-4o"
-  embedding_model: "text-embedding-3-large"
-  similarity_top_k: 8
+  # LLM model configurations
+  models:
+    main:
+      name: "openai-main/gpt-4o"
+      version: "latest"
+      api_version: "2024-02"
+    embedding:
+      name: "openai-main/text-embedding-3-large"
+      version: "latest"
+  
+  # RAG configurations
+  rag:
+    similarity_top_k: 8
+    min_similarity_score: 0.7
+    max_context_length: 4096
+    chunk_size: 1000
+    chunk_overlap: 200
 
 paths:
-  data_dir: "extracted_texts"
-  base_prompt_path: "data/base_prompt.txt"
-  test_case_files: "MDLA"
-  input_prompt_path: "Formatted_data/Text_files/838.txt"
-  output_file_rag: "data/rag/838.java"
-  output_file_prompt: "data/prompt_inference/838.java"
-  ground_truth_file: "Formatted_data/Ground_Truths/838.java" 
+  # Data and file paths
+  base_dir: "."
+  data:
+    root: "data"
+    extracted_texts: "extracted_texts"
+    test_cases: "MDLA"
+    rag_output: "data/rag"
+    prompt_output: "data/prompt_inference"
+    ground_truth: "Formatted_data/Ground_Truths"
+  
+  prompts:
+    input: "Formatted_data/Text_files/838.txt"
+    formatted: "Formatted_data"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/test_generation.log"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+validation:
+  enable_schema_validation: true
+  max_test_case_size: 1000000  # 1MB
+  supported_file_types: 
+    - ".java"
+    - ".txt"
+  required_sections:
+    - "imports"
+    - "test_class"
+    - "test_methods"
 
 

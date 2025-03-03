@@ -2,10 +2,12 @@ from langchain.schema import HumanMessage, SystemMessage
 from langchain_community.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 import os
+import logging
+from pathlib import Path
 from evals import evaluate_code
-from utils import load_prompt, format_java_prompt, load_config
-import yaml
-load_dotenv(".env")
+from utils import load_config, load_prompt, format_java_prompt, validate_file_size, setup_logging
+
+load_dotenv()
 
 def create_llm_client(config: dict) -> ChatOpenAI:
     """
@@ -18,51 +20,74 @@ def create_llm_client(config: dict) -> ChatOpenAI:
         ChatOpenAI: Configured LLM client
     """
     return ChatOpenAI(
-        model=f"openai-main/{config['llm']['model']}",
-        temperature=config['system']['temperature'],
-        max_tokens=config['system']['max_tokens'],
+        model=config["llm"]["models"]["main"]["name"],
+        temperature=config["system"]["model_config"]["temperature"],
+        max_tokens=config["system"]["model_config"]["max_tokens"],
         model_kwargs={
-            "top_p": config['system']['top_p'],
-            "presence_penalty": config['system']['presence_penalty'],
-            "frequency_penalty": config['system']['frequency_penalty']
+            "top_p": config["system"]["model_config"]["top_p"],
+            "presence_penalty": config["system"]["model_config"]["presence_penalty"],
+            "frequency_penalty": config["system"]["model_config"]["frequency_penalty"],
+            "timeout": config["system"]["model_config"]["timeout"]
         },
         streaming=True,
         api_key=os.getenv("TFY_API_KEY"),
         base_url=os.getenv("TFY_BASE_URL"),
-        extra_headers={
-            "X-TFY-METADATA": '{"tfy_log_request":"true"}',
-        }
+        max_retries=config["system"]["model_config"]["max_retries"]
     )
 
-def get_messages(prompt: str, system_prompt: str) -> list:
+def get_messages(prompt: str, config: dict) -> list:
     """
     Create the message list for the LLM.
     
     Args:
         prompt: The prepared prompt text
+        config: Configuration dictionary
     
     Returns:
         list: List of messages for the LLM
     """
+    system_prompt = load_prompt(config["system"]["prompt_paths"]["system_default"])
     return [
         SystemMessage(content=system_prompt),
         HumanMessage(content=prompt),
     ]
-def generate_code(llm: ChatOpenAI, messages: list, output_path: str) -> str:
+
+def generate_code(llm: ChatOpenAI, messages: list, output_path: str, config: dict) -> str:
     """
     Generate code using LLM.
     
     Args:
         llm: LLM client
         messages: List of messages for the LLM
+        output_path: Path to save generated code
+        config: Configuration dictionary
         
     Returns:
         str: Generated code content
     """
-    generated_code = llm.invoke(messages).content
-    with open(output_path, "w") as file:
-        file.write(generated_code)
-    return generated_code
+    logger = logging.getLogger(__name__)
+    
+    try:
+        generated_code = llm.invoke(messages).content
+        
+        # Ensure output directory exists
+        output_dir = Path(output_path).parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Validate output size before saving
+        if len(generated_code.encode('utf-8')) <= config["validation"]["max_test_case_size"]:
+            with open(output_path, "w") as file:
+                file.write(generated_code)
+            logger.info(f"Successfully generated and saved code to {output_path}")
+        else:
+            logger.error(f"Generated code exceeds maximum size limit")
+            raise ValueError("Generated code exceeds maximum size limit")
+            
+        return generated_code
+        
+    except Exception as e:
+        logger.error(f"Error generating code: {str(e)}")
+        raise
 
 def run_prompt_inference(config: dict) -> tuple:
     """
@@ -72,24 +97,52 @@ def run_prompt_inference(config: dict) -> tuple:
         config: Configuration dictionary
         
     Returns:
-        tuple: (generated_code, results, codebleu_score)
+        tuple: (generated_code, results)
     """
+    logger = logging.getLogger(__name__)
+    logger.info("Starting prompt-based code generation")
     
-    # Execute pipeline
-    prompt = load_prompt(config['paths']['base_prompt_path'], 
-                        config['paths']['input_prompt_path'])
-    llm = create_llm_client(config)
-    messages = get_messages(prompt, config['system']['prompt'])
-    generated_code = generate_code(llm, messages, config['paths']['output_file_prompt'])
-    results = evaluate_code(config['paths']['output_file_prompt'], 
-                          config['paths']['ground_truth_file'])
-
-    # Access CodeBLEU score from the correct location in results
-    #codebleu_score = results['codebleu_metrics']['codebleu']
-    #print(f"CodeBLEU Score: {results[1]['codebleu']:.3f}")
-    return generated_code, results
+    try:
+        # Load and validate prompts
+        base_prompt = load_prompt(
+            config["system"]["prompt_paths"]["base_case"],
+            config["paths"]["prompts"]["input"]
+        )
+        
+        # Setup LLM and generate code
+        llm = create_llm_client(config)
+        messages = get_messages(base_prompt, config)
+        
+        # Ensure output directory exists
+        output_path = Path(config["paths"]["data"]["prompt_output"]) / "generated_code.java"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        generated_code = generate_code(llm, messages, str(output_path), config)
+        
+        # Ensure ground truth directory exists
+        ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
+        if not ground_truth_path.exists():
+            logger.warning(f"Ground truth directory does not exist: {ground_truth_path}")
+            ground_truth_path.mkdir(parents=True, exist_ok=True)
+            
+        results = evaluate_code(output_path, ground_truth_path)
+        
+        logger.info("Code generation completed successfully")
+        return generated_code, results
+        
+    except Exception as e:
+        logger.error(f"Error in prompt inference pipeline: {str(e)}")
+        raise
 
 if __name__ == "__main__":
-    # Load configuration using utils function
-    config = load_config()
-    run_prompt_inference(config)
+    try:
+        # Load configuration and setup logging
+        config = load_config()
+        logger = logging.getLogger(__name__)
+        
+        generated_code, results = run_prompt_inference(config)
+        logger.info("Generation Results: %s", results)
+        print("Generation Results:", results)
+    except Exception as e:
+        logging.error(f"Error running prompt inference: {str(e)}")
+        print(f"Error running prompt inference: {str(e)}")

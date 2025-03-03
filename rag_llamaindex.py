@@ -4,11 +4,23 @@ from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 from evals import evaluate_code
 import os
+import logging
 from utils import load_config, load_prompt, format_java_prompt
 from dotenv import load_dotenv
+from pathlib import Path
 
 
 load_dotenv()
+
+def setup_logging(config: dict):
+    """Setup logging configuration"""
+    logging.basicConfig(
+        level=config["logging"]["level"],
+        format=config["logging"]["format"],
+        filename=config["logging"]["file"],
+        filemode='a'
+    )
+    return logging.getLogger(__name__)
 
 def create_index(config: dict):
     """
@@ -19,15 +31,17 @@ def create_index(config: dict):
     Returns:
         VectorStoreIndex: Created index
     """
+    logger = logging.getLogger(__name__)
+    
     # Setup embedding model
     Settings.embed_model = OpenAIEmbedding(
-        model_name=f"openai-main/{config['llm']['embedding_model']}", 
-        api_key=os.getenv("TFY_API_KEY"),
+        model_name=config["llm"]["models"]["embedding"]["name"],
+        api_key=os.getenv("TFY_API_KEY_EO"),
         api_base=os.getenv("TFY_BASE_URL")
     )
     
     # Load and index documents
-    documents = SimpleDirectoryReader(config["paths"]["data_dir"]).load_data()
+    documents = SimpleDirectoryReader(config["paths"]["data"]["extracted_texts"]).load_data()
     index = VectorStoreIndex.from_documents(documents)
     
     return index
@@ -42,27 +56,31 @@ def generate_response(config: dict, index: VectorStoreIndex):
     Returns:
         tuple: (response, source_texts, source_names)
     """
+    logger = logging.getLogger(__name__)
+    
     # Setup LLM with system prompt
     Settings.llm = OpenAI(
-        model=config["llm"]["model"],
-        #api_key="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpJTkY3bXJ2RjA3cWJNUzllelhYeU5GYTBWVSJ9.eyJhdWQiOiI2OTZlNzQ2NS03MjZlLTYxNmMtM2EzOS02MTM4Mzg2NTYxNjEiLCJleHAiOjM2ODc4NDcxODEsImlhdCI6MTcyODI5NTE4MSwiaXNzIjoidHJ1ZWZvdW5kcnkuY29tIiwic3ViIjoiY20xeXViczM4c2l3YzAxcXQ5d2hzNzA3eCIsImp0aSI6Ijg1MjFkZWQxLTExMTQtNGM3YS05ZWJkLTg1NGJjNDUxMDI1ZSIsInVzZXJuYW1lIjoiaW50ZXJuYWx0b2tlbiIsInVzZXJUeXBlIjoic2VydmljZWFjY291bnQiLCJ0ZW5hbnROYW1lIjoiaW50ZXJuYWwiLCJyb2xlcyI6WyJ0ZW5hbnQtbWVtYmVyIl0sImFwcGxpY2F0aW9uSWQiOiI2OTZlNzQ2NS03MjZlLTYxNmMtM2EzOS02MTM4Mzg2NTYxNjEifQ.auxiXDusKgjIBPfaC4VNNaTpFgYBjPFKYPnbcEdzZyF2HmpJ8paqJqWAgMETdj7JmoHTOuiuAQKTAu76JgkzTYU1Kwu6mDH4B6vUuZO6SiWr99Z3thmmnoyvD15Y1E-bCFo_JqSSCxbq-oNKOIEWJ7w3bR3U7jQ-orVAXuR7PkNfFP2-YFBuW-1gYkWizWfFYtAQTQQ8ZBIgC7X9KdNNeWyr0KMxNGXmvYZ-Q4Q9HFgzAIX91DFCO4_3QtB3F4AKWuCQs4V1_Wy9J8gUZAN587TP--CwFqstzo7nlj5pKX6UH4dgwVJ1M6LAaVGouQ_PvzmvRnB9UKUpmluaCS9zIg",
-        #api_base="https://llm-gateway.truefoundry.com/api/inference/openai",
-        system_prompt=config["system"]["prompt"],
-        temperature=config["system"]["temperature"],
-        # top_p=config["system"]["top_p"],
-        # presence_penalty=config["system"]["presence_penalty"],
-        # frequency_penalty=config["system"]["frequency_penalty"],
-        # max_tokens=config["system"]["max_tokens"],
+        model=config["llm"]["models"]["main"]["name"],
+        api_key=os.getenv("TFY_API_KEY_INTERNAL"),
+        api_base=os.getenv("TFY_BASE_URL"),
+        system_prompt=load_prompt(config["system"]["prompt_paths"]["system_default"]),
+        temperature=config["system"]["model_config"]["temperature"],
+        top_p=config["system"]["model_config"]["top_p"],
+        presence_penalty=config["system"]["model_config"]["presence_penalty"],
+        frequency_penalty=config["system"]["model_config"]["frequency_penalty"],
+        max_tokens=config["system"]["model_config"]["max_tokens"],
     )
     
     # Load and format prompt
-    base_prompt = load_prompt(config["paths"]["base_prompt_path"], 
-                            config["paths"]["input_prompt_path"])
+    base_prompt = load_prompt(
+        config["system"]["prompt_paths"]["base_case"],
+        Path(config["paths"]["prompts"]["input"])
+    )
     formatted_prompt = format_java_prompt(base_prompt)
     
     # Query and get response
     query_engine = index.as_query_engine(
-        similarity_top_k=config["llm"]["similarity_top_k"],
+        similarity_top_k=config["llm"]["rag"]["similarity_top_k"],
         verbose=True
     )
     response = query_engine.query(formatted_prompt)
@@ -72,11 +90,14 @@ def generate_response(config: dict, index: VectorStoreIndex):
     source_names = [os.path.basename(node.metadata["file_path"]) for node in source_nodes]
     source_texts = [node.node.text for node in source_nodes]
     
-    print(f"Response generated with {len(source_texts)} source documents")
-    print(f"Source documents: {source_names}")
+    logger.info(f"Response generated with {len(source_texts)} source documents")
+    logger.info(f"Source documents: {source_names}")
     
     # Save response
-    with open(config["paths"]["output_file_rag"], "w") as f:
+    output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(output_path, "w") as f:
         f.write(str(response))
 
     return response, source_texts, source_names
@@ -90,21 +111,37 @@ def run_rag(config: dict):
     Returns:
         tuple: (response, source_texts, source_names)
     """
+    logger = setup_logging(config)
+    logger.info("Starting RAG pipeline")
+    
     index = create_index(config)
-    return generate_response(index, config)
+    return generate_response(config, index)
 
 if __name__ == "__main__":
     # Load configuration from YAML
     config = load_config()
+    
+    # Setup logging
+    logger = setup_logging(config)
+    logger.info("Starting test generation process")
+    
+    # Run RAG pipeline
     index = create_index(config)
     response, source_texts, source_names = generate_response(config, index)
     
-    evaluate_code(config["paths"]["ground_truth_file"], 
-                 config["paths"]["output_file_rag"])
-
+    # Evaluate results
+    ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
+    output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"
+    
+    evaluate_code(ground_truth_path, output_path)
+    
+    logger.info("Test generation completed")
+    
+    # Display results
     print(response)
     print(source_texts)
     print(source_names)
-
-    os.system(f"code --diff {config['paths']['output_file_rag']} {config['paths']['ground_truth_file']}")
+    
+    # Compare with ground truth
+    os.system(f"code --diff {output_path} {ground_truth_path}")
 
