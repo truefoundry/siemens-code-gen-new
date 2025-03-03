@@ -89,6 +89,7 @@ def generate_response(config: dict, index: VectorStoreIndex):
     )
     response = query_engine.query(formatted_prompt)
     
+    
     # Extract source information
     source_nodes = response.source_nodes
     source_names = [os.path.basename(node.metadata["file_path"]) for node in source_nodes]
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     response, source_texts, source_names = generate_response(config, index)
     
     # Evaluate results
-    ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.txt"
+    ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"
     output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"
     
     evaluate_code(ground_truth_path, output_path)
@@ -142,9 +143,9 @@ if __name__ == "__main__":
     logger.info("Test generation completed")
     
     # Display results
-    print(response)
-    print(source_texts)
-    print(source_names)
+    print("response : " , response)
+    print("source_texts : ",source_texts)
+    print("source_names : ",source_names)
     
     # Compare with ground truth
     os.system(f"code --diff {output_path} {ground_truth_path}")

@@ -3,99 +3,80 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DigitalCustomerPortalTest {
-    WebDriver driver;
 
-    @BeforeClass
-    public void setUp() {
-        // Set up ChromeDriver path
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://digital-customer-portal-url.com");
-    }
+    public static void main(String[] args) {
+        // Set up WebDriver (Assuming ChromeDriver is in the system path)
+        WebDriver driver = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
 
-    @Test(priority = 1)
-    public void testLogin() {
-        // Assuming login is done through some login method
-        login("username", "password");
-        Assert.assertTrue(driver.getTitle().contains("Landing page"), "Landing page is not displayed");
-    }
+        try {
+            // Step 1: Log in to Digital Customer Portal
+            driver.get("https://digitalcustomerportal.com/login");
+            driver.findElement(By.id("username")).sendKeys("your_username");
+            driver.findElement(By.id("password")).sendKeys("your_password");
+            driver.findElement(By.id("loginButton")).click();
+            wait.until(ExpectedConditions.titleIs("Landing Page"));
 
-    @Test(priority = 2)
-    public void testTopRibbonContent() {
-        WebElement topRibbon = driver.findElement(By.id("top-ribbon"));
-        Assert.assertTrue(topRibbon.isDisplayed(), "Top ribbon is not displayed");
+            // Step 2: Click on "Contact" icon on top ribbon
+            driver.findElement(By.id("contactIcon")).click();
+            WebElement contactPopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("contactPopup")));
+            assert contactPopup.getText().contains("Contact Support");
+            assert contactPopup.getText().contains("800-242-3233");
 
-        Assert.assertTrue(topRibbon.getText().contains("Siemens healthineers Logo"), "Logo is missing");
-        Assert.assertTrue(topRibbon.getText().contains("My Digital Lab Assistant"), "Digital Lab Assistant text is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Contact icon"), "Contact icon is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Language icon"), "Language icon is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Settings icon"), "Settings icon is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Notification bell icon"), "Notification bell icon is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Icon with name shortcut"), "Icon with name shortcut is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Name of logged in user"), "Name of logged in user is missing");
-        Assert.assertTrue(topRibbon.getText().contains("Admin icon"), "Admin icon is missing");
-    }
+            // Step 3: Click on "Close" button
+            driver.findElement(By.id("closeContactPopup")).click();
+            wait.until(ExpectedConditions.titleIs("Landing Page"));
 
-    @Test(priority = 3)
-    public void testLandingPageTiles() {
-        WebElement tilesContainer = driver.findElement(By.id("tiles-container"));
-        Assert.assertTrue(tilesContainer.isDisplayed(), "Tiles container is not displayed");
+            // Step 4: Click on "Language" icon on top ribbon
+            driver.findElement(By.id("languageIcon")).click();
+            WebElement languageOptions = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("languageOptions")));
+            assert languageOptions.getText().contains("English");
+            assert languageOptions.getText().contains("Deutsch");
 
-        Assert.assertTrue(tilesContainer.getText().contains("Report an issue with an order or delivery"), "Tile for reporting an issue is missing");
-        Assert.assertTrue(tilesContainer.getText().contains("Show me my Requests"), "Tile for showing requests is missing");
-        Assert.assertTrue(tilesContainer.getText().contains("Question about an order or eSuport assistance"), "Tile for order or eSupport assistance is missing");
-        Assert.assertTrue(tilesContainer.getText().contains("Question about my Account"), "Tile for account questions is missing");
-        Assert.assertTrue(tilesContainer.getText().contains("Request Allocation or Saturday Delivery (SET Request)"), "Tile for SET Request is missing");
-    }
+            // Step 5: Click on "Deutsch"
+            driver.findElement(By.id("languageDeutsch")).click();
+            wait.until(ExpectedConditions.titleIs("Landing Page"));
+            assert driver.findElement(By.tagName("body")).getText().contains("Willkommen"); // Example check for German text
 
-    @Test(priority = 4)
-    public void testReportIssueTile() {
-        driver.findElement(By.xpath("//div[text()='Report an issue with an order or delivery']")).click();
-        Assert.assertTrue(driver.getTitle().contains("Report Issue"), "Report Issue page is not opened");
-        driver.navigate().back();
-    }
+            // Step 6: Click on "Language" icon on top ribbon and select "English"
+            driver.findElement(By.id("languageIcon")).click();
+            driver.findElement(By.id("languageEnglish")).click();
+            wait.until(ExpectedConditions.titleIs("Landing Page"));
+            assert driver.findElement(By.tagName("body")).getText().contains("Welcome"); // Example check for English text
 
-    @Test(priority = 5)
-    public void testShowRequestsTile() {
-        driver.findElement(By.xpath("//div[text()='Show me my Requests']")).click();
-        Assert.assertTrue(driver.getTitle().contains("Requests Dashboard"), "Requests Dashboard page is not opened");
-        driver.navigate().back();
-    }
+            // Step 7: Click on "Settings" icon on top ribbon
+            driver.findElement(By.id("settingsIcon")).click();
+            WebElement settingsOptions = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("settingsOptions")));
+            assert settingsOptions.getText().contains("Theme");
+            assert settingsOptions.getText().contains("Email Notification Settings");
 
-    @Test(priority = 6)
-    public void testQuestionOrderTile() {
-        driver.findElement(By.xpath("//div[text()='Question about an order or eSuport assistance']")).click();
-        Assert.assertTrue(driver.getTitle().contains("Order Assistance"), "Order Assistance page is not opened");
-        driver.navigate().back();
-    }
+            // Step 8: Click on "Email Notification Settings"
+            driver.findElement(By.id("emailNotificationSettings")).click();
+            wait.until(ExpectedConditions.titleIs("Email Notifications"));
+            WebElement notificationsPage = driver.findElement(By.id("notificationsPage"));
+            assert notificationsPage.getText().contains("All notifications are turned on by default");
 
-    @Test(priority = 7)
-    public void testQuestionAccountTile() {
-        driver.findElement(By.xpath("//div[text()='Question about my Account']")).click();
-        Assert.assertTrue(driver.getTitle().contains("Account Assistance"), "Account Assistance page is not opened");
-        driver.navigate().back();
-    }
+            // Step 9: Change notifications from ON to OFF and back to ON
+            WebElement notificationToggle = driver.findElement(By.id("notificationToggle"));
+            notificationToggle.click(); // Turn OFF
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("successMessage")));
+            assert driver.findElement(By.id("successMessage")).getText().equals("Successfully updated settings");
+            notificationToggle.click(); // Turn ON
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("successMessage")));
+            assert driver.findElement(By.id("successMessage")).getText().equals("Successfully updated settings");
 
-    @Test(priority = 8)
-    public void testSetRequestTile() {
-        driver.findElement(By.xpath("//div[text()='Request Allocation or Saturday Delivery (SET Request)']")).click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("sales-efficiency-tool"), "Not redirected to Sales Efficiency tool page");
-    }
+            // Step 10: Click on "My Digital Lab Assistant (vX.X.X)" on top ribbon
+            driver.findElement(By.id("digitalLabAssistant")).click();
+            wait.until(ExpectedConditions.titleIs("Landing Page"));
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
-
-    private void login(String username, String password) {
-        // Implement login logic here
+        } finally {
+            // Close the browser
+            driver.quit();
+        }
     }
 }
 ```
