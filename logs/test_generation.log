@@ -306,3 +306,40 @@
 2025-03-03 15:43:06,754 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
 2025-03-03 15:43:27,873 - absl - INFO - Using default tokenizer.
 2025-03-03 15:43:31,815 - prompt_inference - INFO - Code generation completed successfully
+2025-03-03 15:48:12,406 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:48:15,345 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:48:18,104 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:48:20,714 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:48:49,115 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:50:02,770 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:50:36,395 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:51:05,906 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:51:37,632 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:51:59,222 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:52:29,140 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:53:03,170 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:53:30,790 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:53:49,176 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:54:12,188 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:54:12,192 - rag_llamaindex - INFO - Response generated with 8 source documents
+2025-03-03 15:54:12,193 - rag_llamaindex - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'TestScriptSteps.txt', 'StepItem.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'IResultPlatformHandler.txt', 'CoreUI.txt', 'DirectoryControl.txt']
+2025-03-03 15:54:13,907 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:54:49,517 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:55:24,567 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:55:58,915 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:56:17,898 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:56:38,069 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:56:56,383 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:57:13,981 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:57:35,575 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:57:56,864 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:57:56,868 - rag_llamaindex - INFO - Response generated with 8 source documents
+2025-03-03 15:57:56,868 - rag_llamaindex - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'TestScriptSteps.txt', 'StepItem.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'IResultPlatformHandler.txt', 'DirectoryControl.txt', 'CoreUI.txt']
+2025-03-03 15:57:57,907 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:58:36,563 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:59:02,338 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:59:26,532 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 16:00:00,379 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 16:00:23,295 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 16:00:46,302 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 16:01:07,805 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"

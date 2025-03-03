@@ -5,6 +5,5 @@ __pycache__/
 *.pyd
 *.pyw
 *.pyz
-Formatted_Data/
 predictions/
 .env

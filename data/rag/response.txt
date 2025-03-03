@@ -3,85 +3,84 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.assertTrue;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class DigitalCustomerPortalTest {
 
     private WebDriver driver;
-    private WebDriverWait wait;
 
-    @Before
+    @BeforeClass
     public void setUp() {
-        // Set up ChromeDriver
+        // Set up the ChromeDriver path
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        driver.manage().window().maximize();
     }
 
     @Test
     public void testDigitalCustomerPortal() {
         // Step 1: Log in to Digital Customer Portal
-        driver.get("https://digitalcustomerportal.url");
-        loginToPortal();
+        driver.get("https://digital-customer-portal-url.com");
+        // Assuming login is handled automatically or session is already active
+        Assert.assertTrue(driver.getTitle().contains("Landing Page"), "Landing page is not displayed");
 
-        // Step 2: Verify top ribbon content
-        WebElement topRibbon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("top-ribbon")));
-        assertTrue(topRibbon.getText().contains("Contact icon"));
-        assertTrue(topRibbon.getText().contains("Settings icon"));
-        assertTrue(topRibbon.getText().contains("Notification bell icon"));
-        assertTrue(topRibbon.getText().contains("Icon with name shortcut"));
-        assertTrue(topRibbon.getText().contains("Name of logged in user"));
-        assertTrue(topRibbon.getText().contains("Admin icon"));
+        // Step 2: Check top ribbon content
+        WebElement topRibbon = driver.findElement(By.id("topRibbon"));
+        Assert.assertTrue(topRibbon.isDisplayed(), "Top ribbon is not displayed");
+        Assert.assertTrue(topRibbon.getText().contains("Contact icon"), "Contact icon not found");
+        Assert.assertTrue(topRibbon.getText().contains("Settings icon"), "Settings icon not found");
+        Assert.assertTrue(topRibbon.getText().contains("Notification bell icon"), "Notification bell icon not found");
+        Assert.assertTrue(topRibbon.getText().contains("Icon with name shortcut"), "Name shortcut icon not found");
+        Assert.assertTrue(topRibbon.getText().contains("Name of logged in user"), "Name of logged in user not found");
+        Assert.assertTrue(topRibbon.getText().contains("Admin icon"), "Admin icon not found");
 
-        // Step 3: Verify tiles on landing page
-        WebElement tilesContainer = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tiles-container")));
-        assertTrue(tilesContainer.getText().contains("Report an issue with an order or delivery"));
-        assertTrue(tilesContainer.getText().contains("Show me my Requests"));
-        assertTrue(tilesContainer.getText().contains("Question about an order or eSuport assistance"));
-        assertTrue(tilesContainer.getText().contains("Question about my Account"));
-        assertTrue(tilesContainer.getText().contains("Request Allocation or Saturday Delivery (SET Request)"));
+        // Step 3: Check page tiles
+        WebElement tilesContainer = driver.findElement(By.id("tilesContainer"));
+        Assert.assertTrue(tilesContainer.isDisplayed(), "Tiles container is not displayed");
+        Assert.assertTrue(tilesContainer.getText().contains("Report an issue with an order or delivery"), "Tile 'Report an issue' not found");
+        Assert.assertTrue(tilesContainer.getText().contains("Show me my Requests"), "Tile 'Show me my Requests' not found");
+        Assert.assertTrue(tilesContainer.getText().contains("Question about an order or eSupport assistance"), "Tile 'Question about an order' not found");
+        Assert.assertTrue(tilesContainer.getText().contains("Question about my Account"), "Tile 'Question about my Account' not found");
+        Assert.assertTrue(tilesContainer.getText().contains("Request Allocation or Saturday Delivery (SET Request)"), "Tile 'Request Allocation' not found");
 
-        // Step 4: Click on tile "Report an issue with an order or delivery"
-        WebElement reportIssueTile = driver.findElement(By.id("report-issue-tile"));
+        // Step 4: Click on tile 'Report an issue with an order or delivery'
+        WebElement reportIssueTile = driver.findElement(By.id("reportIssueTile"));
         reportIssueTile.click();
-        assertTrue(driver.getCurrentUrl().contains("report-issue"));
+        Assert.assertTrue(driver.getTitle().contains("Report Issue Page"), "Report issue page is not opened");
 
-        // Step 5: Click on tile "Show me my Requests"
-        WebElement showRequestsTile = driver.findElement(By.id("show-requests-tile"));
+        // Step 5: Click on tile 'Show me my Requests'
+        driver.navigate().back();
+        WebElement showRequestsTile = driver.findElement(By.id("showRequestsTile"));
         showRequestsTile.click();
-        assertTrue(driver.getCurrentUrl().contains("my-requests"));
+        Assert.assertTrue(driver.getTitle().contains("Requests Dashboard"), "Requests dashboard page is not opened");
 
-        // Step 6: Click on tile "Question about an order or eSuport assistance"
-        WebElement questionOrderTile = driver.findElement(By.id("question-order-tile"));
+        // Step 6: Click on tile 'Question about an order or eSupport assistance'
+        driver.navigate().back();
+        WebElement questionOrderTile = driver.findElement(By.id("questionOrderTile"));
         questionOrderTile.click();
-        assertTrue(driver.getCurrentUrl().contains("question-order"));
+        Assert.assertTrue(driver.getTitle().contains("Order Assistance Page"), "Order assistance page is not opened");
 
-        // Step 7: Click on tile "Question about my Account"
-        WebElement questionAccountTile = driver.findElement(By.id("question-account-tile"));
+        // Step 7: Click on tile 'Question about my Account'
+        driver.navigate().back();
+        WebElement questionAccountTile = driver.findElement(By.id("questionAccountTile"));
         questionAccountTile.click();
-        assertTrue(driver.getCurrentUrl().contains("question-account"));
+        Assert.assertTrue(driver.getTitle().contains("Account Assistance Page"), "Account assistance page is not opened");
 
-        // Step 8: Click on tile "Request Allocation or Saturday Delivery (SET Request)"
-        WebElement requestAllocationTile = driver.findElement(By.id("request-allocation-tile"));
+        // Step 8: Click on tile 'Request Allocation or Saturday Delivery (SET Request)'
+        driver.navigate().back();
+        WebElement requestAllocationTile = driver.findElement(By.id("requestAllocationTile"));
         requestAllocationTile.click();
-        assertTrue(driver.getCurrentUrl().contains("external-sales-efficiency-tool"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("sales-efficiency-tool-url"), "User is not redirected to external Sales Efficiency tool page");
     }
 
-    @After
+    @AfterClass
     public void tearDown() {
-        // Close the browser
         if (driver != null) {
             driver.quit();
         }
-    }
-
-    private void loginToPortal() {
-        // Implement login logic here
     }
 }
 ```
