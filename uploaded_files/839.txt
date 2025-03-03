@@ -1,0 +1,14 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal | Landing page is displayed |
+| 2 | Click on "Contact" icon  on top ribbon | Popup with following text is displayed:Contact Support<br>For any questions regarding this portal feel free to reach out to our E-Support team: 800-242-3233<br>For reference check attached screenshot |
+| 3 | Click on "Close" button | Landing page is displayed |
+| 4 | Click on "Language" icon  on top ribbon | Options English and Deutsch are displayed. |
+| 5 | Click on "Deutsch" | Landing page is displayed. Language is changed to german language. |
+| 6 | Click on "Language" icon  on top ribbon and select "English" | Landing page is displayed. Language is changed to english language. |
+| 7 | Click on "Settings" icon  on top ribbon | Options "Theme" and "Email Notification Settings" are displayed. |
+| 8 | Click on "Email Notification Settings" | Email Notifications page is displayed.All notifications are turned on by default.<br>For reference check attached screenshot |
+| 9 | Change notifications from ON to OFF and back to ON | Messsage "Sucessfuly updated settings" is displayed after any notification option is changed |
+| 10 | Click on "My Digital Lab Assistant (vX.X.X)" on top ribbon | User is redirected to landing page |
+
+

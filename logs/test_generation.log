@@ -276,3 +276,33 @@
 2025-03-03 15:27:11,161 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
 2025-03-03 15:27:11,165 - rag_llamaindex - INFO - Response generated with 8 source documents
 2025-03-03 15:27:11,166 - rag_llamaindex - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'TestScriptSteps.txt', 'StepItem.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'IResultPlatformHandler.txt', 'CoreUI.txt', 'DirectoryControl.txt']
+2025-03-03 15:31:54,902 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-03 15:31:55,838 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:32:41,210 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-03 15:32:49,419 - absl - INFO - Using default tokenizer.
+2025-03-03 15:32:56,486 - prompt_inference - INFO - Code generation completed successfully
+2025-03-03 15:36:33,960 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:36:36,818 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:36:39,551 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:36:41,630 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:36:43,010 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-03 15:40:33,232 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-03 15:40:34,013 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:41:01,015 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-03 15:41:17,697 - absl - INFO - Using default tokenizer.
+2025-03-03 15:41:22,622 - prompt_inference - INFO - Code generation completed successfully
+2025-03-03 15:41:22,624 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-03 15:41:23,605 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:41:48,499 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-03 15:41:55,691 - absl - INFO - Using default tokenizer.
+2025-03-03 15:42:00,050 - prompt_inference - INFO - Code generation completed successfully
+2025-03-03 15:42:00,050 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-03 15:42:00,709 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:42:28,576 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-03 15:42:36,878 - absl - INFO - Using default tokenizer.
+2025-03-03 15:42:41,115 - prompt_inference - INFO - Code generation completed successfully
+2025-03-03 15:42:41,117 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-03 15:42:41,839 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 15:43:06,754 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-03 15:43:27,873 - absl - INFO - Using default tokenizer.
+2025-03-03 15:43:31,815 - prompt_inference - INFO - Code generation completed successfully

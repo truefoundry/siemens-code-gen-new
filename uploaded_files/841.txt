@@ -1,0 +1,7 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal as Admin | Landing page is displayed |
+| 2 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab Created RequestsFor reference check attached screenshot<br> |
+| 3 | Verify that page contains following tabs:Page contains tabs:<br>- My Dashboard<br>- Created Requests<br>- Submitted<br>- Under Review<br>- Pending Requestor Response<br>- Referred Out<br>- Referred Out to Me<br>- Resolved<br><br>For reference check attached screenshot | Page contains tabs:- My Dashboard<br>- Created Requests<br>- Submitted<br>- Under Review<br>- Pending Requestor Response<br>- Referred Out<br>- Referred Out to Me<br>- Resolved |
+
+
