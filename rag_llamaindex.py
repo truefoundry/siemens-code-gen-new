@@ -148,5 +148,16 @@ if __name__ == "__main__":
     print("source_names : ",source_names)
     
     # Compare with ground truth
-    os.system(f"code --diff {output_path} {ground_truth_path}")
-
+    import subprocess
+    try:
+        result = subprocess.run(
+            ['diff', '-u', str(output_path), str(ground_truth_path)],
+            capture_output=True,
+            text=True
+        )
+        print("\nDiff between output and ground truth:")
+        print(result.stdout if result.stdout else "Files are identical")
+        if result.stderr:
+            print("Errors:", result.stderr)
+    except Exception as e:
+        print(f"Error running diff: {e}")

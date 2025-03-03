@@ -82,7 +82,7 @@ paths:
     test_cases: "MDLA"
     rag_output: "data/rag"
     prompt_output: "data/prompt_inference"
-    ground_truth: "Formatted_data/Ground_Truths"
+    ground_truth: "Formatted_data/Ground_Truths/838.java"
   
   prompts:
     input: "Formatted_data/Text_files/838.txt"
