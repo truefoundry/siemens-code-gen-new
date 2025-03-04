@@ -57,6 +57,28 @@ def upload_files():
     st.write("Upload your files:")
     uploaded_files = st.file_uploader("Upload files", type=["txt"], accept_multiple_files=True)
     
+    # Preview section for uploaded files
+    if uploaded_files:
+        st.write("Uploaded files preview:")
+        for uploaded_file in uploaded_files:
+            # Container for file row
+            with st.container():
+                col1, col2 = st.columns([3, 1])
+                with col1:
+                    st.write(f"📄 {uploaded_file.name}")
+                with col2:
+                    preview_button = st.button("Preview", key=f"preview_upload_{uploaded_file.name}")
+            
+            # Preview expander outside the columns for full width
+            if preview_button:
+                with st.expander(f"Preview of {uploaded_file.name}", expanded=True):
+                    try:
+                        content = uploaded_file.getvalue().decode('utf-8')
+                        st.code(content, language='text', line_numbers=True)
+                    except Exception as e:
+                        st.error(f"Error reading file: {str(e)}")
+                st.markdown("---")  # Add separator between files
+    
     st.write("Or select from sample files:")
     sample_files_dir = "sample_files"
     sample_file_options = ["838.txt", "842.txt"]
@@ -64,19 +86,27 @@ def upload_files():
     selected_samples = []
     # Create a columns layout for sample files with space for preview
     for sample_file in sample_file_options:
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            if st.checkbox(sample_file, key=f"sample_{sample_file}"):
-                selected_samples.append(sample_file)
-        with col2:
-            if st.button("Preview", key=f"preview_{sample_file}"):
-                with st.expander(f"Preview of {sample_file}", expanded=True):
-                    try:
-                        with open(os.path.join(sample_files_dir, sample_file), 'r') as f:
-                            content = f.read()
-                            st.code(content, language='text')
-                    except Exception as e:
-                        st.error(f"Error reading file: {str(e)}")
+        # Container for file row
+        with st.container():
+            col1, col2, col3 = st.columns([0.5, 2.5, 1])
+            with col1:
+                if st.checkbox("", key=f"sample_{sample_file}"):
+                    selected_samples.append(sample_file)
+            with col2:
+                st.write(f"📄 {sample_file}")
+            with col3:
+                preview_button = st.button("Preview", key=f"preview_{sample_file}")
+        
+        # Preview expander outside the columns for full width
+        if preview_button:
+            with st.expander(f"Preview of {sample_file}", expanded=True):
+                try:
+                    with open(os.path.join(sample_files_dir, sample_file), 'r') as f:
+                        content = f.read()
+                        st.code(content, language='text', line_numbers=True)
+                except Exception as e:
+                    st.error(f"Error reading file: {str(e)}")
+            st.markdown("---")  # Add separator between files
     
     # Create uploaded_files directory if it doesn't exist
     os.makedirs("uploaded_files", exist_ok=True)
