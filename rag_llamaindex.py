@@ -72,7 +72,7 @@ def generate_response(config: dict, index: VectorStoreIndex):
         presence_penalty=config["system"]["model_config"]["presence_penalty"],
         frequency_penalty=config["system"]["model_config"]["frequency_penalty"],
         max_tokens=config["system"]["model_config"]["max_tokens"],
-        context_window=8192,
+        context_window=16384,
     )
     
     # Load and format prompt
@@ -139,8 +139,8 @@ if __name__ == "__main__":
 
 
     # Evaluate results
-    ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"
-    output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"
+    ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) 
+    output_path = Path(config["paths"]["data"]["rag_output"])
     
     evaluate_code(ground_truth_path, output_path)
     

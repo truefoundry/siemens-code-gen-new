@@ -78,7 +78,7 @@ paths:
   base_dir: "."
   data:
     root: "data"
-    extracted_texts: "extracted_texts"
+    extracted_texts: "updated_clean_text"
     test_cases: "MDLA"
     rag_output: "data/rag/838.java"
     prompt_output: "data/prompt_inference/838.java"

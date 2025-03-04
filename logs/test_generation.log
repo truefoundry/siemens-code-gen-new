@@ -422,3 +422,32 @@
 2025-03-04 20:14:26,732 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/838.java
 2025-03-04 20:14:26,735 - __main__ - INFO - Code generation completed successfully
 2025-03-04 20:15:47,591 - absl - INFO - Using default tokenizer.
+2025-03-04 20:16:54,300 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 20:16:55,210 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:17:58,421 - __main__ - INFO - Starting test generation process
+2025-03-04 20:18:04,062 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:18:06,893 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:18:09,684 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:18:11,536 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:18:14,060 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:18:15,522 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:19:00,068 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:19:31,683 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:20:11,655 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:20:49,364 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:21:20,534 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:21:20,538 - __main__ - INFO - Response generated with 8 source documents
+2025-03-04 20:21:20,538 - __main__ - INFO - Source documents: ['cleaned_LatestTestResult.txt', 'cleaned_TestCycle.txt', 'cleaned_TestCycleItems.txt', 'cleaned_Uses of Package fate.core.ControlImplementations.txt', 'cleaned_CoreBrowserControl.txt', 'cleaned_IResultPlatformHandler.txt', 'cleaned_fate.core.ControlImplementations.txt', 'cleaned_Uses of Package fate.core.Enums.txt']
+2025-03-04 20:21:46,010 - absl - INFO - Using default tokenizer.
+2025-03-04 20:25:46,184 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:25:48,505 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:25:51,172 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:25:54,060 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:25:56,935 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:25:58,583 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:26:21,600 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:27:02,310 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:27:02,313 - __main__ - INFO - Response generated with 8 source documents
+2025-03-04 20:27:02,313 - __main__ - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'Uses of Package fate.core.PlatformConnectors.jira.testcase.txt', 'TestScriptSteps.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'fate.core.ControlImplementations.txt', 'IResultPlatformHandler.txt', 'StepItem.txt']
+2025-03-04 20:27:10,333 - absl - INFO - Using default tokenizer.
+2025-03-04 20:27:14,179 - __main__ - INFO - Test generation completed

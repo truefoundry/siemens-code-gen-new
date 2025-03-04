@@ -144,8 +144,8 @@ if __name__ == "__main__":
         output_path = Path(config["paths"]["data"]["prompt_output"]) 
         ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
         evaluate_code(output_path, ground_truth_path)
-        logger.info("Generation Results: %s", results)
-        print("Generation Results:", results)
+        logger.info("Generation Results: %s", generated_code)
+        print("Generation Results:", generated_code)
     except Exception as e:
         logging.error(f"Error running prompt inference: {str(e)}")
         print(f"Error running prompt inference: {str(e)}")
