@@ -95,15 +95,10 @@ def generate_code_and_display(config: dict, index: VectorStoreIndex):
     try:
         if config["generation_type"] == "RAG":
             response, source_texts, source_names = generate_response(config, index)
-            #st.write(response)
-            #st.write(source_texts)
-            #st.write(source_names)
             return response, source_texts, source_names
         elif config["generation_type"] == "Prompt":
-            response, results = run_prompt_inference(config)
-            #st.write(response)
-            #st.write(results)
-            return response, results
+            response = run_prompt_inference(config)
+            return response
         st.success("Code generation complete!")
     except Exception as e:
         st.error(f"Error generating code: {str(e)}")

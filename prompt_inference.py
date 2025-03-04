@@ -88,7 +88,7 @@ def generate_code(llm: ChatOpenAI, messages: list, output_path: str, config: dic
         logger.error(f"Error generating code: {str(e)}")
         raise
 
-def run_prompt_inference(config: dict) -> tuple:
+def run_prompt_inference(config: dict) -> str:
     """
     Run the prompt-based code generation pipeline.
     
@@ -105,7 +105,8 @@ def run_prompt_inference(config: dict) -> tuple:
         # Load and validate prompts
         base_prompt = load_prompt(
             config["system"]["prompt_paths"]["base_case"],
-            config["paths"]["prompts"]["input"]
+            config["system"]["prompt_paths"]["few_shot_case"],
+            config["paths"]["prompts"]["input"], 
         )
         
         # Setup LLM and generate code
@@ -139,7 +140,7 @@ if __name__ == "__main__":
         config = load_config()
         logger = logging.getLogger(__name__)
         
-        generated_code, results = run_prompt_inference(config)
+        generated_code = run_prompt_inference(config)
         output_path = Path(config["paths"]["data"]["prompt_output"]) / "generated_code.java"
         ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"
         evaluate_code(output_path, ground_truth_path)

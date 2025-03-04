@@ -78,7 +78,8 @@ def generate_response(config: dict, index: VectorStoreIndex):
     # Load and format prompt
     base_prompt = load_prompt(
         config["system"]["prompt_paths"]["base_case"],
-        Path(config["paths"]["prompts"]["input"])
+        config["system"]["prompt_paths"]["few_shot_case"],
+        config["paths"]["prompts"]["input"], 
     )
     formatted_prompt = format_java_prompt(base_prompt)
     
@@ -135,7 +136,7 @@ if __name__ == "__main__":
     response, source_texts, source_names = generate_response(config, index)
     
     print("response : " , response)
-    
+
 
     # Evaluate results
     ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"

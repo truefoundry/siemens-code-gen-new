@@ -38,7 +38,7 @@ def load_config(config_path: str = "config/config.yaml") -> Dict:
         print(f"Error loading config from {config_path}: {str(e)}")
         raise
 
-def load_prompt(prompt_path: str, input_path: Optional[str] = None) -> str:
+def load_prompt(prompt_path: str, few_shot_path: Optional[str] = None, input_path: Optional[str] = None) -> str:
     """
     Load prompt from file(s).
     
@@ -57,6 +57,11 @@ def load_prompt(prompt_path: str, input_path: Optional[str] = None) -> str:
             with open(input_path, "r") as f:
                 input_text = f.read()
                 prompt += "\n" + input_text
+        
+        if few_shot_path:
+            with open(few_shot_path, "r") as f:
+                few_shot_text = f.read()
+                prompt += "\n" + few_shot_text
         
         # Add standard output format
         prompt += "\n\n```Output: java\n\n```"
@@ -105,7 +110,7 @@ def format_java_prompt(base_prompt: str) -> str:
     Returns:
         str: Formatted prompt for Java code generation
     """
-    return f"""Based on the following context, generate a complete Java test case:
+    return f"""Based on the following context, generate a complete Java test case. Focus on using the custom framework:
 
     {base_prompt}
 
