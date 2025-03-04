@@ -462,3 +462,8 @@
 2025-03-04 20:29:43,846 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
 2025-03-04 20:30:23,285 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
 2025-03-04 20:31:01,636 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:31:30,785 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:32:02,336 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:32:32,562 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:32:32,565 - rag_llamaindex - INFO - Response generated with 8 source documents
+2025-03-04 20:32:32,565 - rag_llamaindex - INFO - Source documents: ['cleaned_LatestTestResult.txt', 'cleaned_TestCycle.txt', 'cleaned_TestCycleItems.txt', 'cleaned_Uses of Package fate.core.ControlImplementations.txt', 'cleaned_CoreBrowserControl.txt', 'cleaned_IResultPlatformHandler.txt', 'cleaned_fate.core.ControlImplementations.txt', 'cleaned_Uses of Package fate.core.Enums.txt']
