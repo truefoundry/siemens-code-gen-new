@@ -467,3 +467,7 @@
 2025-03-04 20:32:32,562 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
 2025-03-04 20:32:32,565 - rag_llamaindex - INFO - Response generated with 8 source documents
 2025-03-04 20:32:32,565 - rag_llamaindex - INFO - Source documents: ['cleaned_LatestTestResult.txt', 'cleaned_TestCycle.txt', 'cleaned_TestCycleItems.txt', 'cleaned_Uses of Package fate.core.ControlImplementations.txt', 'cleaned_CoreBrowserControl.txt', 'cleaned_IResultPlatformHandler.txt', 'cleaned_fate.core.ControlImplementations.txt', 'cleaned_Uses of Package fate.core.Enums.txt']
+2025-03-04 21:13:42,757 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-04 21:13:44,080 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 21:14:52,018 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/869.java
+2025-03-04 21:14:52,018 - prompt_inference - INFO - Code generation completed successfully
