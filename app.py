@@ -54,18 +54,35 @@ def sidebar(config):
     return config
 
 def upload_files():
+    st.write("Upload your files:")
     uploaded_files = st.file_uploader("Upload files", type=["txt"], accept_multiple_files=True)
     
-    # Create a directory if not there for uploaded files
+    st.write("Or select from sample files:")
+    sample_files_dir = "sample_files"
+    sample_file_options = ["838.txt", "842.txt"]
+    
+    selected_samples = []
+    # Create a columns layout for sample files with space for preview
+    for sample_file in sample_file_options:
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            if st.checkbox(sample_file, key=f"sample_{sample_file}"):
+                selected_samples.append(sample_file)
+        with col2:
+            if st.button("Preview", key=f"preview_{sample_file}"):
+                with st.expander(f"Preview of {sample_file}", expanded=True):
+                    try:
+                        with open(os.path.join(sample_files_dir, sample_file), 'r') as f:
+                            content = f.read()
+                            st.code(content, language='text')
+                    except Exception as e:
+                        st.error(f"Error reading file: {str(e)}")
+    
+    # Create uploaded_files directory if it doesn't exist
     os.makedirs("uploaded_files", exist_ok=True)
     
-    # Get list of existing files in the uploaded_files directory
-    existing_files = set(os.listdir("uploaded_files"))
-    
-    # Get list of current uploaded file names
+    # Handle uploaded files first
     current_files = set()
-    
-    # Save new uploaded files
     if uploaded_files:
         for uploaded_file in uploaded_files:
             if uploaded_file is not None:
@@ -74,14 +91,26 @@ def upload_files():
                 with open(f"uploaded_files/{file_name}", "wb") as f:
                     f.write(uploaded_file.getbuffer())
     
-    # Remove files that are no longer in the uploader
+    # Handle sample files
+    for sample_file in selected_samples:
+        source_path = os.path.join(sample_files_dir, sample_file)
+        dest_path = os.path.join("uploaded_files", sample_file)
+        if os.path.exists(source_path):
+            with open(source_path, 'rb') as src, open(dest_path, 'wb') as dst:
+                dst.write(src.read())
+            current_files.add(sample_file)
+    
+    # Remove files that are no longer selected or uploaded
+    existing_files = set(os.listdir("uploaded_files"))
     files_to_remove = existing_files - current_files
     for file_name in files_to_remove:
         file_path = os.path.join("uploaded_files", file_name)
         if os.path.exists(file_path):
             os.remove(file_path)
     
-    return uploaded_files
+    # Return both uploaded files and selected samples
+    all_files = (uploaded_files if uploaded_files else []) + selected_samples
+    return all_files
 
 def generate_code_and_display(config: dict, index: VectorStoreIndex):
     """

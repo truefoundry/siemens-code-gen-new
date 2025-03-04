@@ -471,3 +471,7 @@
 2025-03-04 21:13:44,080 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
 2025-03-04 21:14:52,018 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/869.java
 2025-03-04 21:14:52,018 - prompt_inference - INFO - Code generation completed successfully
+2025-03-04 22:40:13,214 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-04 22:40:14,503 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 22:40:44,643 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
+2025-03-04 22:40:44,643 - prompt_inference - INFO - Code generation completed successfully
