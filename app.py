@@ -164,7 +164,7 @@ def main():
                             st.write(f"Generating code for {uploaded_file}")
                             input_prompt_path = f"uploaded_files/{uploaded_file}"
                             config = update_config_paths(config, uploaded_file, input_prompt_path)
-                            response, results = run_prompt_inference(config)
+                            response= run_prompt_inference(config)
                             st.write(f"Code generated for {uploaded_file}")
                             st.write(response)
                         st.success("Code generation complete!")
