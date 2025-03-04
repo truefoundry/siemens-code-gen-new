@@ -1,0 +1,37 @@
+fate.core.Results
+ 
+
+Modifier and Type
+Method
+Description
+void
+AbstractCoreHandler.cleanUpAndPush(CleanUpOptions... options)
+
+Cleanup at the end of test case, performs: Driver quit, result push to JIRA or ALM
+ according to the type defined.
+
+void
+AbstractCoreHandler.setCleanUpOptions(CleanUpOptions options)
+
+Sets options for clean up process.
+
+Modifier and Type
+Method
+Description
+CleanUpOptions
+CleanUpOptions.setPushResults(boolean pushResults)
+
+Sets the push state for test results.
+
+CleanUpOptions
+CleanUpOptions.setTestIsBroken(boolean testIsBroken)
+
+Sets the state of test case, broken test are those which are failing because of implementation issues.
+
+Methods in fate.core.Results with parameters of type CleanUpOptions
+
+Modifier and Type
+Method
+Description
+void
+ResultCollector.push(CleanUpOptions options)

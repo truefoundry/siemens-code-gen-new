@@ -1,0 +1,9 @@
+fate.core.DTO
+
+package fate.core.DTO
+
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+ProjectData
+
+A utility class to store all the required project data.

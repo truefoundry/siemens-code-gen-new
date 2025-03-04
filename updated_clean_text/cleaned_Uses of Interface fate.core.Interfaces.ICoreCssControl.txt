@@ -1,0 +1,2 @@
+Modifier and Type
+Handles the element extraction using locators.

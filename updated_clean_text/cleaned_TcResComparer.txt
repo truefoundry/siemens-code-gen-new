@@ -1,0 +1,69 @@
+public class TcResComparer
+extends Object
+Utility class for comparing values
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TcResComparer(Comparable<?> expected,
+ Comparable<?> actual,
+ ComparerOptions... options)
+
+Constructor to compare two Comparable objects with specified options.
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+String
+getCurrent()
+
+Returns current value as String
+
+String
+getExpected()
+
+Returns expected value as String
+
+ComparerOptions
+getOptions()
+ 
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+TcResComparer
+public TcResComparer(Comparable<?> expected,
+ Comparable<?> actual,
+ ComparerOptions... options)
+Constructor to compare two Comparable objects with specified options.
+
+Parameters:
+expected - The expected value.
+actual - The actual value.
+options - Optional comparison options. Defaults to a new instance if not provided.
+
+Method Details
+
+getOptions
+public ComparerOptions getOptions()
+
+getExpected
+public String getExpected()
+Returns expected value as String
+
+Returns:
+value converted in String.
+
+getCurrent
+public String getCurrent()
+Returns current value as String
+
+Returns:
+value converted in String.

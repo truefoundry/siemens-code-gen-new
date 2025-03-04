@@ -1,0 +1,2 @@
+Modifier and Type
+Running process object class to access available info of runningProcesses in tasklist.

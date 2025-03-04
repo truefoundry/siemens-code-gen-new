@@ -1,0 +1,14 @@
+fate.core.PlatformConnectors.jira.testcase
+ 
+
+Represents a test case with metadata, status, and related information.
+
+Represents a container for variables and entries.
+
+TestScript
+
+Created by Michael on 28.02.2019.
+
+TestScriptSteps
+
+Created by Michael on 28.02.2019.

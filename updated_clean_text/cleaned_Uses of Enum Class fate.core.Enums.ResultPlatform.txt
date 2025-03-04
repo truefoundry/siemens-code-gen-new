@@ -1,0 +1,22 @@
+fate.core.Interfaces
+ 
+
+Modifier and Type
+Method
+Description
+static ResultPlatform
+ResultPlatform.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static ResultPlatform[]
+ResultPlatform.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Modifier and Type
+Method
+Description
+ResultPlatform
+IResultData.getPlatform()

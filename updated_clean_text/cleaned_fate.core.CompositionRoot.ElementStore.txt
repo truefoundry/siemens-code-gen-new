@@ -1,0 +1,10 @@
+fate.core.CompositionRoot.ElementStore
+
+package fate.core.CompositionRoot.ElementStore
+
+fate.core.CompositionRoot.WinApp
+ 
+
+ElementStore
+
+This class provides the possibility to store several WebElements to check their staleness status

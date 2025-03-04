@@ -1,0 +1,5 @@
+fate.core.PlatformConnectors.azure.SharedParameters
+
+package fate.core.PlatformConnectors.azure.SharedParameters
+
+fate.core.PlatformConnectors.azure.SharedParameters.POJO

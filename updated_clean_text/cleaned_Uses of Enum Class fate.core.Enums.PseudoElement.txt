@@ -1,0 +1,38 @@
+fate.core.Enums
+ 
+fate.core.Interfaces
+ 
+
+Modifier and Type
+Method
+Description
+String
+CoreCssControl.getPropertyOfPseudoElement(String id,
+ PseudoElement pElement,
+ String property)
+
+Retrieves the specified CSS property value of a pseudo-element of an HTML element.
+
+Modifier and Type
+Method
+Description
+static PseudoElement
+PseudoElement.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PseudoElement[]
+PseudoElement.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Modifier and Type
+Method
+Description
+String
+ICoreCssControl.getPropertyOfPseudoElement(String id,
+ PseudoElement pElement,
+ String property)
+
+Returns wanted property from wanted pseudo-element "::before, ::after"

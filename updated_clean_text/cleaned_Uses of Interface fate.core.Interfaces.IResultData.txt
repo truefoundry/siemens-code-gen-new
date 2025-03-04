@@ -1,0 +1,33 @@
+fate.core.PlatformConnectors.alm
+ 
+
+Modifier and Type
+Method
+Description
+IResultData
+CoreHandlerConfig.getTcPath()
+
+Retrieves the Test case path.
+
+Constructors in fate.core.CompositionRoot with parameters of type IResultData
+
+Modifier
+Constructor
+Description
+ 
+CoreHandlerConfig(IResultData iocTestPath,
+ String iocTcName)
+
+Constructor
+
+Modifier and Type
+Method
+Description
+String
+ALMHandler.postRun(ProjectData config,
+ String tcName,
+ IResultData testSet,
+ TcStates state,
+ String steps)
+
+Posts the test run result to the ALM platform.

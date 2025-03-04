@@ -1,0 +1,19 @@
+fate.core.ControlImplementations
+ 
+fate.core.Interfaces
+ 
+fate.core.PlatformConnectors.azure
+ 
+fate.core.PlatformConnectors.jira
+ 
+fate.core.Results
+ 
+
+ComparerOptions
+ 
+
+ComparerOptions
+ 
+TcResComparer
+
+Utility class for comparing values

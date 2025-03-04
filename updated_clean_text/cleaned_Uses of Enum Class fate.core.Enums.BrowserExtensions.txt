@@ -1,0 +1,13 @@
+Modifier and Type
+Method
+Description
+static BrowserExtensions
+BrowserExtensions.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static BrowserExtensions[]
+BrowserExtensions.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.

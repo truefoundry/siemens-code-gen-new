@@ -1,0 +1,24 @@
+fate.core.Enums
+ 
+
+Modifier and Type
+Method
+Description
+void
+LogLevels.set(LogLevel... levels)
+
+Sets the logging levels based on the provided LogLevel values.
+
+Modifier and Type
+Method
+Description
+static LogLevel
+LogLevel.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static LogLevel[]
+LogLevel.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.

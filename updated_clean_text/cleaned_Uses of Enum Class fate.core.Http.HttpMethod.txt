@@ -1,0 +1,111 @@
+Modifier and Type
+Method
+Description
+HttpMethod
+HttpRequest.getType()
+ 
+static HttpMethod
+HttpMethod.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static HttpMethod[]
+HttpMethod.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Methods in fate.core.Http with parameters of type HttpMethod
+
+Modifier and Type
+Method
+Description
+void
+HttpRequest.createRequest(HttpMethod type,
+ String url)
+
+creates a rest request without body
+
+void
+HttpRequest.createRequest(HttpMethod type,
+ String url,
+ InputStream entity)
+
+creates a rest request for input stream entity
+
+void
+HttpRequest.createRequest(HttpMethod type,
+ String url,
+ HttpRequest.BodyPublisher bodyPublisher)
+
+creates rest request by setting the bodyPublisher
+
+void
+HttpRequest.createRequest(HttpMethod type,
+ String url,
+ Path filePath)
+
+creates a rest request for file
+
+void
+HttpRequest.setType(HttpMethod type)
+ 
+
+Constructors in fate.core.Http with parameters of type HttpMethod
+
+Modifier
+Constructor
+Description
+ 
+HttpRequest(HttpMethod type,
+ String url)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ InputStream entity)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ String entity,
+ boolean... isElastic)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ HttpRequest.BodyPublisher bodyPublisher)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ Path filePath)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ Map<Object,Object> fileParts)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ XMLObject entity,
+ boolean... isElastic)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ org.json.JSONArray entity,
+ boolean... isElastic)
+ 
+ 
+HttpRequest(HttpMethod type,
+ String url,
+ org.json.JSONObject entity,
+ boolean... isElastic)
+ 
+ 
+HttpRequest(String contentType,
+ HttpMethod type,
+ String url,
+ String entity)

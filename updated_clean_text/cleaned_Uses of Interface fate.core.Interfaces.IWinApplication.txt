@@ -1,0 +1,29 @@
+fate.core.Enums
+ 
+
+Modifier and Type
+Method
+Description
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options)
+
+Starts an application with whether by using its path or its windowsID
+ some variables and packages are installed while starting the WinApp Driver for the first time as following:
+
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options,
+ String xpath,
+ int... index)
+ 
+UUID
+CoreWinAppControl.start(IWinApplication appID,
+ CoreStartOptions options,
+ String property,
+ String value,
+ int... index)
+
+Starts a root WinAppDriver and switches to wanted application
+
+Modifier and Type

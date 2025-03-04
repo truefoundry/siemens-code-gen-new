@@ -1,0 +1,5 @@
+This enum is used also for document
+
+PageSize
+
+This enum is used also for document

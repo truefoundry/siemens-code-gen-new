@@ -1,0 +1,13 @@
+fate.core.Pdf
+
+package fate.core.Pdf
+
+Handles pdf file reading
+
+PageOrientation
+
+This enum is used also for document
+
+PageSize
+
+This enum is used also for document

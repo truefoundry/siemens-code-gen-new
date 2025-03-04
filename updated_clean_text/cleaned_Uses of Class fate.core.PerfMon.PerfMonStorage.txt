@@ -1,0 +1,7 @@
+Modifier and Type
+Method
+Description
+static PerfMonStorage
+CoreIocBuilder.getPerfMonStorage()
+
+Retrieves the PerfMonStorage instance.

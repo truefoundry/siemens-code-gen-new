@@ -1,0 +1,18 @@
+Modifier and Type
+Method
+Description
+List<Kvp>
+KvpDeserializer.deserialize(com.fasterxml.jackson.core.JsonParser p,
+ com.fasterxml.jackson.databind.DeserializationContext ctxt)
+ 
+List<Kvp>
+DataRow.getKvp()
+ 
+
+Method parameters in fate.core.PlatformConnectors.azure.SharedParameters.POJO with type arguments of type Kvp
+
+Modifier and Type
+Method
+Description
+void
+DataRow.setKvp(List<Kvp> kvp)

@@ -1,0 +1,11 @@
+fate.core.PlatformConnectors.alm
+
+package fate.core.PlatformConnectors.alm
+
+ALMRestConnector
+
+This class keeps the state of the connection for the examples.
+
+Response
+
+This is a naive implementation of an HTTP response.

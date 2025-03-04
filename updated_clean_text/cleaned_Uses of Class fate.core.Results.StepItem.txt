@@ -1,0 +1,63 @@
+fate.core.Interfaces
+ 
+fate.core.PlatformConnectors.azure
+ 
+fate.core.PlatformConnectors.jira
+ 
+
+Modifier and Type
+Method
+Description
+static void
+DirectoryControl.saveScreenShotsFromTestSteps(List<StepItem> steps)
+
+Saves collected screenshots from test steps to local output directory as PNG files.
+
+Modifier and Type
+Method
+Description
+List<StepItem>
+IResultPlatformHandler.getTestSteps()
+
+Returns all collected test steps while test run as object list.
+
+Methods in fate.core.Interfaces with parameters of type StepItem
+
+Modifier and Type
+Method
+Description
+void
+IResultPlatformHandler.addStep(StepItem step)
+
+Adds a step information during the test run.
+
+Modifier and Type
+Method
+Description
+List<StepItem>
+AzureHandler.getTestSteps()
+ 
+
+Methods in fate.core.PlatformConnectors.azure with parameters of type StepItem
+
+Modifier and Type
+Method
+Description
+void
+AzureHandler.addStep(StepItem step)
+ 
+
+Modifier and Type
+Method
+Description
+List<StepItem>
+JiraHandler.getTestSteps()
+ 
+
+Methods in fate.core.PlatformConnectors.jira with parameters of type StepItem
+
+Modifier and Type
+Method
+Description
+void
+JiraHandler.addStep(StepItem step)

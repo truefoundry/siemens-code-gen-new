@@ -1,0 +1,68 @@
+public class SignInDialog
+extends Object
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+SignInDialog()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+void
+cancel()
+
+Clicks Cancel button.
+
+boolean
+exists()
+ 
+void
+sendKeys(IInteractableNaming name,
+ String value,
+ boolean... check)
+
+Sends wanted value to wanted input field.
+
+void
+signIn()
+
+Clicks Sign In button.
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+SignInDialog
+public SignInDialog()
+
+Method Details
+
+exists
+public boolean exists()
+
+sendKeys
+public void sendKeys(IInteractableNaming name,
+ String value,
+ boolean... check)
+Sends wanted value to wanted input field. NOTE! If you are using web application, use CoreStartOptions().addLogin("user", "pass")); to login!
+
+Parameters:
+name - name of wanted input field
+value - wanted value
+check - set to true to check input field after sendKeys and retry if set value is not correct
+
+signIn
+public void signIn()
+Clicks Sign In button.
+
+cancel
+public void cancel()
+Clicks Cancel button.

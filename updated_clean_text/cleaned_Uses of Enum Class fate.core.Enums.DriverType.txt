@@ -1,0 +1,35 @@
+fate.core.Enums
+ 
+
+Modifier and Type
+Method
+Description
+UUID
+WebDriverStore.getActive(DriverType type)
+
+Returns the UUID of active Driver instance.
+
+void
+WebDriverStore.removeActive(DriverType type)
+
+Removes currently active Web or Win Driver from store.
+
+void
+WebDriverStore.removeWebDriver(DriverType type,
+ UUID driverToRemove)
+
+Removes a driver with wanted ID and Type from DriverStore
+
+Modifier and Type
+Method
+Description
+static DriverType
+DriverType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static DriverType[]
+DriverType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.

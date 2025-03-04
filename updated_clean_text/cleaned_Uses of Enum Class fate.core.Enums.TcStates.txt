@@ -1,0 +1,103 @@
+fate.core.Enums
+ 
+fate.core.Interfaces
+ 
+fate.core.PlatformConnectors.alm
+ 
+fate.core.PlatformConnectors.azure
+ 
+fate.core.PlatformConnectors.jira
+ 
+fate.core.Results
+ 
+
+Modifier and Type
+Method
+Description
+void
+AbstractCoreHandler.abortTest(String message,
+ TcStates state)
+
+Stops the test immediately, result is failed.
+
+void
+AbstractCoreHandler.setTestResultState(TcStates state)
+
+Setting up test result state mainly if test found error during execution
+
+Modifier and Type
+Method
+Description
+static TcStates
+TcStates.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static TcStates[]
+TcStates.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Modifier and Type
+Method
+Description
+String
+IResultPlatformHandler.pushToPlatform(TcStates state,
+ long executionTime)
+
+Pushes test results to selected platform after test execution.
+
+Modifier and Type
+Method
+Description
+String
+ALMHandler.postRun(ProjectData config,
+ String tcName,
+ IResultData testSet,
+ TcStates state,
+ String steps)
+
+Posts the test run result to the ALM platform.
+
+void
+ALMHandler.updateRun(ProjectData config,
+ String runID,
+ TcStates state,
+ String comments)
+
+Updated existing run.
+
+Modifier and Type
+Method
+Description
+String
+AzureHandler.pushToPlatform(TcStates state,
+ long executionTime)
+ 
+
+Modifier and Type
+Method
+Description
+String
+JiraHandler.pushToPlatform(TcStates state,
+ long executionTime)
+ 
+
+Modifier and Type
+Method
+Description
+TcStates
+StepItem.getStepStatus()
+ 
+
+Methods in fate.core.Results with parameters of type TcStates
+
+Modifier and Type
+Method
+Description
+void
+ResultCollector.setState(TcStates state)
+ 
+void
+StepItem.setStepStatus(TcStates state)

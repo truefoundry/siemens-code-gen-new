@@ -1,0 +1,10 @@
+java.lang.Object
+
+fate.core.Pdf.CorePdfControl
+
+java.lang.Object
+
+java.lang.Enum<E> (implements java.lang.Comparable<T>, java.lang.constant.Constable, java.io.Serializable)
+
+fate.core.Pdf.PageOrientation
+fate.core.Pdf.PageSize

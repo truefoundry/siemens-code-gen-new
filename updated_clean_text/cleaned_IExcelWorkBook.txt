@@ -1,0 +1,28 @@
+public interface IExcelWorkBook
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+Modifier and Type
+Method
+Description
+String
+Returns cell value from sheet(as String).
+
+List<String>
+Returns all cell values from wanted column.
+
+Map<Integer,List<String>>
+Returns data from Excel sheet in Map<rowNumber, data(as List<String>)>
+
+Method Details
+
+getSheetData
+Parameters:
+
+getCellValue
+Parameters:
+
+getColumnItems
+Parameters:

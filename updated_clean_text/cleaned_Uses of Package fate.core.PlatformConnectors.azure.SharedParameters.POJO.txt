@@ -1,0 +1,10 @@
+fate.core.PlatformConnectors.azure.SharedParameters.POJO
+ 
+
+Kvp
+ 
+ParamData
+ 
+ParameterSet
+ 
+ParamNames

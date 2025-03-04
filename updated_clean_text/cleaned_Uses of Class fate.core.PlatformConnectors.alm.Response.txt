@@ -1,0 +1,8 @@
+Modifier and Type
+Method
+Description
+Response
+ALMRestConnector.httpDelete(String url,
+ Map<String,String> headers)
+
+Executes an HTTP DELETE request.

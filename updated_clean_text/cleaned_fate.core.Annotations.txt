@@ -1,0 +1,7 @@
+fate.core.Annotations
+
+package fate.core.Annotations
+
+Annotation Interfaces
+
+Unsupported

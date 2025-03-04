@@ -1,0 +1,51 @@
+public class ParameterSet
+extends Object
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+ParameterSet()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+ParamData
+getParamData()
+ 
+ParamNames
+getParamNames()
+ 
+void
+setParamData(ParamData paramData)
+ 
+void
+setParamNames(ParamNames paramNames)
+ 
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+ParameterSet
+public ParameterSet()
+
+Method Details
+
+getParamNames
+public ParamNames getParamNames()
+
+setParamNames
+public void setParamNames(ParamNames paramNames)
+
+getParamData
+public ParamData getParamData()
+
+setParamData
+public void setParamData(ParamData paramData)

@@ -1,0 +1,28 @@
+public class CoreManager
+extends Object
+Handles the gradle file data.
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+static String
+getProperty(CoreProperties property)
+
+Returns a property from gradle.properties file.
+
+Methods inherited from class java.lang.Object
+
+Method Details
+
+getProperty
+public static String getProperty(CoreProperties property)
+Returns a property from gradle.properties file.
+
+Parameters:
+property - Name of wanted property.
+Returns:
+String value MsgCode.NOT_FOUND.

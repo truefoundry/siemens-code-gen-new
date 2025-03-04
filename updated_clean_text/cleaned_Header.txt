@@ -1,0 +1,56 @@
+public class Header
+extends CoreWinInteractables
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Header()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+org.openqa.selenium.WebElement
+findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+List<String>
+getAllHeaders(IWinInteractableNaming header,
+ IWinInteractableNaming... root)
+
+Gets the headers items for the desired header
+
+Methods inherited from class fate.core.CompositionRoot.WinApp.CoreWinInteractables
+clear, click, exists, getAttribute, getHeight, getLocation, getRoot, getText, getWidth, hasFocus, isBlank, isEmpty, isEnabled, isOnScreen, isSelected, sendKeys, sendKeys, waitForDisposal, waitToBeClickable, waitToBeVisible
+
+Methods inherited from class java.lang.Object
+Methods inherited from interface fate.core.Interfaces.IWinInteractable
+expand, isExpanded
+
+Constructor Details
+
+Header
+public Header()
+
+Method Details
+
+findControl
+public org.openqa.selenium.WebElement findControl(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+getAllHeaders
+public List<String> getAllHeaders(IWinInteractableNaming header,
+ IWinInteractableNaming... root)
+Gets the headers items for the desired header
+
+Parameters:
+header - IWinInteractableNaming
+root - IWinInteractableNaming
+Returns:
+list of string of the headers' titles

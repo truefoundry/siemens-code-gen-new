@@ -1,0 +1,3 @@
+fate.core.Statics
+
+package fate.core.Statics

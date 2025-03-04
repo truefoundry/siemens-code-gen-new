@@ -1,0 +1,6 @@
+fate.core.PlatformConnectors.jira
+ 
+
+Modifier and Type
+
+Modifier and Type

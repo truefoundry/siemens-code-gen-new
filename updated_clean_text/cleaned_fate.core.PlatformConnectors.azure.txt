@@ -1,0 +1,15 @@
+fate.core.PlatformConnectors.azure
+
+package fate.core.PlatformConnectors.azure
+
+Represents a test case in Azure DevOps, retrieving details such as revisions and step IDs.
+
+AzureHandler
+ 
+resultOutcome
+ 
+runStates
+ 
+TestCaseParameters
+
+Retrieves the parameters from the azure test case.

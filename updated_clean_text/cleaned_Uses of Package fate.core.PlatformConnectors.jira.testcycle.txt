@@ -1,0 +1,10 @@
+fate.core.PlatformConnectors.jira.testcycle
+ 
+
+Created by Michael on 08.04.2019.
+
+Created by Michael on 08.04.2019.
+
+TestCycleItems
+
+Created by Michael on 08.04.2019.

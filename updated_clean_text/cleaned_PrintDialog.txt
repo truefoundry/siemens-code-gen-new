@@ -1,0 +1,56 @@
+public class PrintDialog
+extends Object
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+PrintDialog()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+void
+cancel()
+ 
+boolean
+exists()
+ 
+void
+print()
+ 
+void
+selectPrinter(String value)
+
+Selects wanted value in 'Select Printer' section.
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+PrintDialog
+public PrintDialog()
+
+Method Details
+
+exists
+public boolean exists()
+
+selectPrinter
+public void selectPrinter(String value)
+Selects wanted value in 'Select Printer' section.
+
+Parameters:
+value - wanted value
+
+print
+public void print()
+
+cancel
+public void cancel()

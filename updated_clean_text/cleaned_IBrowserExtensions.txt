@@ -1,0 +1,22 @@
+public interface IBrowserExtensions
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+Modifier and Type
+Method
+Description
+String
+getPath()
+
+Returns path to extension.
+
+Method Details
+
+getPath
+String getPath()
+Returns path to extension.
+
+Returns:
+Path as String.

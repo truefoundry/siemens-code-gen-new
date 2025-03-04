@@ -1,0 +1,28 @@
+Modifier and Type
+Method
+Description
+PageSize
+CorePdfControl.getCommonPageSizeOfPDFDocument(Path path)
+
+Get common size of all pages of pdf document.
+
+static PageSize
+PageSize.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PageSize[]
+PageSize.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Methods in fate.core.Pdf that return types with arguments of type PageSize
+
+Modifier and Type
+Method
+Description
+@NotNull List<PageSize>
+CorePdfControl.getSizesForPages(File file)
+
+Get sizes for each page of document determined by path.

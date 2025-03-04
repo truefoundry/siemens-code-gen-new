@@ -1,0 +1,8 @@
+Modifier and Type
+Method
+Description
+static List<EMailData>
+Email.getMailInfos(ITestData user,
+ String queryString)
+
+Returns information about the emails matched by a query string.

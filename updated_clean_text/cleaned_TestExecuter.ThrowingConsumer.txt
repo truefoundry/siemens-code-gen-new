@@ -1,0 +1,22 @@
+public static interface TestExecuter.ThrowingConsumer<T extends AbstractCoreHandler,E extends Exception>
+A functional interface that defines a consumer accepting a test handler and throwing an exception.
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+Modifier and Type
+Method
+Description
+void
+accept(T t)
+ 
+
+Method Details
+
+accept
+void accept(T t)
+     throws E
+
+Throws:
+E extends Exception

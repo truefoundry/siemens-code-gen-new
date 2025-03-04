@@ -1,0 +1,14 @@
+Modifier and Type
+Method
+Description
+ParameterSet
+Root.getParameterSet()
+ 
+
+Methods in fate.core.PlatformConnectors.azure.SharedParameters.POJO with parameters of type ParameterSet
+
+Modifier and Type
+Method
+Description
+void
+Root.setParameterSet(ParameterSet parameterSet)

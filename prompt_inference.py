@@ -114,7 +114,7 @@ def run_prompt_inference(config: dict) -> str:
         messages = get_messages(base_prompt, config)
         
         # Ensure output directory exists
-        output_path = Path(config["paths"]["data"]["prompt_output"]) / "generated_code.java"
+        output_path = Path(config["paths"]["data"]["prompt_output"])
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
         generated_code = generate_code(llm, messages, str(output_path), config)
@@ -141,8 +141,8 @@ if __name__ == "__main__":
         logger = logging.getLogger(__name__)
         
         generated_code = run_prompt_inference(config)
-        output_path = Path(config["paths"]["data"]["prompt_output"]) / "generated_code.java"
-        ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"
+        output_path = Path(config["paths"]["data"]["prompt_output"]) 
+        ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
         evaluate_code(output_path, ground_truth_path)
         logger.info("Generation Results: %s", results)
         print("Generation Results:", results)

@@ -1,0 +1,12 @@
+fate.core.PlatformConnectors.jira
+
+package fate.core.PlatformConnectors.jira
+
+fate.core.PlatformConnectors.jira.testcaseresult
+ 
+fate.core.PlatformConnectors.jira.testcycle
+ 
+
+JiraKey
+ 
+JiraTestStep

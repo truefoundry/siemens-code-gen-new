@@ -1,0 +1,14 @@
+Modifier and Type
+Method
+Description
+Summary
+TestCycle.getExecutionResultsSummary()
+ 
+
+Methods in fate.core.PlatformConnectors.jira.testcycle with parameters of type Summary
+
+Modifier and Type
+Method
+Description
+void
+TestCycle.setExecutionResultsSummary(Summary executionResultsSummary)

@@ -1,0 +1,8 @@
+Modifier and Type
+Method
+Description
+static TestCase
+JiraHandler.getTestCase(ProjectData config,
+ String testCaseKey)
+
+Retrieves the testcase via jira testmanagement api

@@ -1,0 +1,5 @@
+java.lang.Object
+
+fate.core.PlatformConnectors.alm.ALMHandler
+fate.core.PlatformConnectors.alm.ALMRestConnector
+fate.core.PlatformConnectors.alm.Response

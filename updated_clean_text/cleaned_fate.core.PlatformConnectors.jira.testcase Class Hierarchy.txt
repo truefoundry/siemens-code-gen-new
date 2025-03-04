@@ -1,0 +1,6 @@
+java.lang.Object
+
+fate.core.PlatformConnectors.jira.testcase.Parameters
+fate.core.PlatformConnectors.jira.testcase.TestCase
+fate.core.PlatformConnectors.jira.testcase.TestScript
+fate.core.PlatformConnectors.jira.testcase.TestScriptSteps

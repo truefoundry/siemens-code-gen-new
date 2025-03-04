@@ -1,0 +1,14 @@
+Modifier and Type
+Method
+Description
+Parameters
+TestCase.getParameters()
+ 
+
+Methods in fate.core.PlatformConnectors.jira.testcase with parameters of type Parameters
+
+Modifier and Type
+Method
+Description
+void
+TestCase.setParameters(Parameters parameters)

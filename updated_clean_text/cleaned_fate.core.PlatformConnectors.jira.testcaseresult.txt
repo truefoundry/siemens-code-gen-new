@@ -1,0 +1,12 @@
+fate.core.PlatformConnectors.jira.testcaseresult
+
+package fate.core.PlatformConnectors.jira.testcaseresult
+
+fate.core.PlatformConnectors.jira.testcase
+ 
+fate.core.PlatformConnectors.jira.testcycle
+ 
+
+TestResultToPush
+
+Created by Michael on 24.07.2018.

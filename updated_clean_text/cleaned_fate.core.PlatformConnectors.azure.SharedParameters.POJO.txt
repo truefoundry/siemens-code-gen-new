@@ -1,0 +1,17 @@
+fate.core.PlatformConnectors.azure.SharedParameters.POJO
+
+package fate.core.PlatformConnectors.azure.SharedParameters.POJO
+
+DataRowDeserializer
+ 
+Kvp
+ 
+KvpDeserializer
+ 
+ParamData
+ 
+ParameterSet
+ 
+ParamNames
+ 
+Root

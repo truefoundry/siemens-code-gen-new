@@ -1,0 +1,64 @@
+public class TestScript
+extends Object
+Created by Michael on 28.02.2019. SRSNG-
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+TestScript()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+String
+getId()
+ 
+List<TestScriptSteps>
+getSteps()
+ 
+String
+getType()
+ 
+void
+setId(String id)
+ 
+void
+setSteps(List<TestScriptSteps> steps)
+ 
+void
+setType(String type)
+ 
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+TestScript
+public TestScript()
+
+Method Details
+
+getId
+public String getId()
+
+setId
+public void setId(String id)
+
+getType
+public String getType()
+
+setType
+public void setType(String type)
+
+getSteps
+public List<TestScriptSteps> getSteps()
+
+setSteps
+public void setSteps(List<TestScriptSteps> steps)

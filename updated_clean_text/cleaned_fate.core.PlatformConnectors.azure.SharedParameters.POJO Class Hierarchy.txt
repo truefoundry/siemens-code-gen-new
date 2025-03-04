@@ -1,0 +1,13 @@
+java.lang.Object
+
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.DataRow
+com.fasterxml.jackson.databind.JsonDeserializer<T> (implements com.fasterxml.jackson.databind.deser.NullValueProvider)
+
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.DataRowDeserializer
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.KvpDeserializer
+
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.Kvp
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.ParamData
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.ParameterSet
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.ParamNames
+fate.core.PlatformConnectors.azure.SharedParameters.POJO.Root

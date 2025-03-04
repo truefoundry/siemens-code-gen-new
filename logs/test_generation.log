@@ -395,3 +395,30 @@
 2025-03-04 15:44:22,111 - rag_llamaindex - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'TestScriptSteps.txt', 'StepItem.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'Uses of Package fate.core.PlatformConnectors.jira.testcase.txt', 'IResultPlatformHandler.txt', 'DirectoryControl.txt']
 2025-03-04 19:45:17,822 - __main__ - INFO - Starting prompt-based code generation
 2025-03-04 19:45:19,943 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 19:56:50,957 - __main__ - INFO - Found 0 test cases
+2025-03-04 19:57:22,184 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 19:57:25,309 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 19:57:52,812 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-04 19:57:52,812 - __main__ - INFO - Code generation completed successfully
+2025-03-04 19:57:52,812 - root - ERROR - Error running prompt inference: [Errno 20] Not a directory: 'Formatted_data/Ground_Truths/838.java/838.java'
+2025-03-04 20:01:26,409 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 20:01:27,306 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:02:02,870 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/838.java/generated_code.java
+2025-03-04 20:02:02,870 - __main__ - INFO - Code generation completed successfully
+2025-03-04 20:05:20,055 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 20:05:21,223 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:05:43,581 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/838.java/generated_code.java
+2025-03-04 20:05:43,581 - __main__ - INFO - Code generation completed successfully
+2025-03-04 20:09:13,051 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 20:09:14,350 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:09:41,984 - __main__ - ERROR - Error generating code: [Errno 21] Is a directory: 'data/prompt_inference/838.java'
+2025-03-04 20:09:41,984 - __main__ - ERROR - Error in prompt inference pipeline: [Errno 21] Is a directory: 'data/prompt_inference/838.java'
+2025-03-04 20:13:01,235 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 20:13:02,560 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:13:25,895 - __main__ - ERROR - Error generating code: [Errno 21] Is a directory: 'data/prompt_inference/838.java'
+2025-03-04 20:13:25,895 - __main__ - ERROR - Error in prompt inference pipeline: [Errno 21] Is a directory: 'data/prompt_inference/838.java'
+2025-03-04 20:13:56,745 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 20:13:57,644 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:14:26,732 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/838.java
+2025-03-04 20:14:26,735 - __main__ - INFO - Code generation completed successfully
+2025-03-04 20:15:47,591 - absl - INFO - Using default tokenizer.

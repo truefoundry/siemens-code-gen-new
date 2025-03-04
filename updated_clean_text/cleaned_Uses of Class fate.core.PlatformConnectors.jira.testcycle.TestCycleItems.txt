@@ -1,0 +1,14 @@
+Modifier and Type
+Method
+Description
+List<TestCycleItems>
+TestCycle.getItems()
+ 
+
+Method parameters in fate.core.PlatformConnectors.jira.testcycle with type arguments of type TestCycleItems
+
+Modifier and Type
+Method
+Description
+void
+TestCycle.setItems(List<TestCycleItems> items)

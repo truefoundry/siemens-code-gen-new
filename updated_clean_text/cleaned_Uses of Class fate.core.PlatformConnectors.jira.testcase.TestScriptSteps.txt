@@ -1,0 +1,14 @@
+Modifier and Type
+Method
+Description
+List<TestScriptSteps>
+TestScript.getSteps()
+ 
+
+Method parameters in fate.core.PlatformConnectors.jira.testcase with type arguments of type TestScriptSteps
+
+Modifier and Type
+Method
+Description
+void
+TestScript.setSteps(List<TestScriptSteps> steps)

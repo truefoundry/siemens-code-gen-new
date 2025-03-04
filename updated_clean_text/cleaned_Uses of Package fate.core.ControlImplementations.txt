@@ -1,0 +1,54 @@
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.ControlImplementations
+ 
+
+Running process object class to access available info of runningProcesses in tasklist.
+
+StepEvaluator
+
+Handles the Steps in each test cases.
+
+This class allows to create a CoreStartOptions object using a fluent interface, making
+ the need for temporary variable redundant.
+
+RunningProcess
+
+Running process object class to access available info of runningProcesses in tasklist.
+
+CoreBrowserControl.ResponseBody
+
+A record representing the response body associated with a specific request.
+
+CoreCleaner
+
+This class provides utility methods to manage post-test execution tasks such as cleaning up resources.
+
+CoreInteractables
+
+Handles the basic element interactions.
+
+CoreStartOptions
+
+This class allows to create a CoreStartOptions object using a fluent interface, making
+ the need for temporary variable redundant.
+
+PrintWindowControl
+
+A utility class for interacting with the print window control in a web application.
+
+RunningProcess
+
+Running process object class to access available info of runningProcesses in tasklist.
+
+SelectorBuilder
+
+Allows constructing selectors dynamically with multiple conditions and modifications.
+
+StepEvaluator
+
+Handles the Steps in each test cases.
+
+TestExecuter.ThrowingConsumer
+
+A functional interface that defines a consumer accepting a test handler and throwing an exception.

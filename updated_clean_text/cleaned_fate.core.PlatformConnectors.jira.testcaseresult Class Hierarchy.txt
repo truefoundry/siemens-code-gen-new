@@ -1,0 +1,4 @@
+java.lang.Object
+
+fate.core.PlatformConnectors.jira.testcaseresult.LatestTestResult
+fate.core.PlatformConnectors.jira.testcaseresult.TestResultToPush

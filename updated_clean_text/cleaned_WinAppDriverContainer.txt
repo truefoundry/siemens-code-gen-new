@@ -1,0 +1,38 @@
+public class WinAppDriverContainer
+extends Object
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+io.appium.java_client.windows.WindowsDriver
+getDriver()
+ 
+int
+getPort()
+ 
+RunningProcess
+getProcess()
+ 
+String
+getUrl()
+ 
+
+Methods inherited from class java.lang.Object
+
+Method Details
+
+getDriver
+public io.appium.java_client.windows.WindowsDriver getDriver()
+
+getProcess
+public RunningProcess getProcess()
+
+getUrl
+public String getUrl()
+
+getPort
+public int getPort()

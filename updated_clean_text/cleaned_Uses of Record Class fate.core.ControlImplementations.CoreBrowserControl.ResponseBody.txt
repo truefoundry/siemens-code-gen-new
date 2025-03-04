@@ -1,0 +1,7 @@
+Modifier and Type
+Method
+Description
+List<CoreBrowserControl.ResponseBody>
+CoreBrowserControl.getResponses()
+
+This method retrieves the list of response bodies.

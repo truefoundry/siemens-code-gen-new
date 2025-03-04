@@ -1,0 +1,46 @@
+public interface IRegistryKey
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+Modifier and Type
+Method
+Description
+String
+getCommand()
+
+Returns wanted query command.
+
+String
+getKey()
+
+Returns wanted registry key name.
+
+String
+getPath()
+
+Returns wanted query path.
+
+Method Details
+
+getPath
+String getPath()
+Returns wanted query path.
+
+Returns:
+Query path as String.
+
+getCommand
+String getCommand()
+Returns wanted query command.
+
+Returns:
+Query command as String.
+
+getKey
+String getKey()
+Returns wanted registry key name.
+
+Returns:
+Key name as String.

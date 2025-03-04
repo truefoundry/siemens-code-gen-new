@@ -1,0 +1,6 @@
+Modifier and Type
+Method
+Description
+static TestCycle
+JiraHandler.getTestCycle(ProjectData config,
+ String cycle)

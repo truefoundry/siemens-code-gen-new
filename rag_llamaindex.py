@@ -100,7 +100,7 @@ def generate_response(config: dict, index: VectorStoreIndex):
     logger.info(f"Source documents: {source_names}")
     
     # Save response
-    output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"
+    output_path = Path(config["paths"]["data"]["rag_output"]) 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     with open(output_path, "w") as f:

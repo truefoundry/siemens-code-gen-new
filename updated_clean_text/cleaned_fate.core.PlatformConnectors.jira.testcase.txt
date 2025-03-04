@@ -1,0 +1,22 @@
+fate.core.PlatformConnectors.jira.testcase
+
+package fate.core.PlatformConnectors.jira.testcase
+
+fate.core.PlatformConnectors.jira.testcaseresult
+ 
+fate.core.PlatformConnectors.jira.testcycle
+ 
+
+Represents a container for variables and entries.
+
+TestCase
+
+Represents a test case with metadata, status, and related information.
+
+TestScript
+
+Created by Michael on 28.02.2019.
+
+TestScriptSteps
+
+Created by Michael on 28.02.2019.

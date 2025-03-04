@@ -1,0 +1,51 @@
+public class Kvp
+extends Object
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+Kvp()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+String
+getKey()
+ 
+String
+getValue()
+ 
+void
+setKey(String key)
+ 
+void
+setValue(String value)
+ 
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+Kvp
+public Kvp()
+
+Method Details
+
+getKey
+public String getKey()
+
+setKey
+public void setKey(String key)
+
+getValue
+public String getValue()
+
+setValue
+public void setValue(String value)

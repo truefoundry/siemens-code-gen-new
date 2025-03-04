@@ -1,0 +1,12 @@
+fate.core.Enums
+ 
+
+Modifier and Type
+Method
+Description
+CoreStartOptions
+CoreStartOptions.addExtension(IBrowserExtensions extension)
+
+Adds wanted extension to current run.
+
+Modifier and Type

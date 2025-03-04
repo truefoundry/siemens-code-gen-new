@@ -1,0 +1,28 @@
+Modifier and Type
+Method
+Description
+PageOrientation
+CorePdfControl.getPdfOrientation(Path path)
+
+Get common page orientation in entire document, otherwise you get mixed state.
+
+static PageOrientation
+PageOrientation.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static PageOrientation[]
+PageOrientation.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Methods in fate.core.Pdf that return types with arguments of type PageOrientation
+
+Modifier and Type
+Method
+Description
+@NotNull List<PageOrientation>
+CorePdfControl.getOrientationsForPages(File file)
+
+Get orientation for each page of document determined by path.

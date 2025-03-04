@@ -1,0 +1,121 @@
+public class Email
+extends Object
+Common class for general eMail functionality. This class uses MS Exchange server.
+
+Field Summary
+Fields
+
+Modifier and Type
+Field
+Description
+static final String
+EMAIL_ADDRESS
+ 
+
+Method Summary
+
+All MethodsStatic MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+static void
+deleteEmail(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String subject)
+
+Deletes an email with wanted subject.
+
+static void
+downloadAllAttachments(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String emailsSubject,
+ String pathWhereToSaveAttachments)
+
+Downloads all email attachments to wanted directory.
+
+static String
+getContentOfEmail(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String emailsSubject)
+
+Returns text of email with wanted subject.
+
+static List<EMailData>
+getMailInfos(ITestData user,
+ String queryString)
+
+Returns information about the emails matched by a query string.
+
+static boolean
+isEmailExists(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String subject)
+
+Checks if wanted folder contains an email with wanted subject.
+
+static void
+sendEmail(ITestData user,
+ String email,
+ String subject,
+ String text)
+
+Sends wanted mail to wanted address.
+
+Methods inherited from class java.lang.Object
+
+Field Details
+
+EMAIL_ADDRESS
+public static final String EMAIL_ADDRESS
+
+Method Details
+
+getMailInfos
+public static List<EMailData> getMailInfos(ITestData user,
+ String queryString)
+Returns information about the emails matched by a query string.
+
+Parameters:
+
+downloadAllAttachments
+public static void downloadAllAttachments(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String emailsSubject,
+ String pathWhereToSaveAttachments)
+Downloads all email attachments to wanted directory. Any attachment with the same name will be overwritten!
+
+Parameters:
+
+getContentOfEmail
+public static String getContentOfEmail(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String emailsSubject)
+Returns text of email with wanted subject.
+
+Parameters:
+
+isEmailExists
+public static boolean isEmailExists(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String subject)
+Checks if wanted folder contains an email with wanted subject.
+
+Parameters:
+
+deleteEmail
+public static void deleteEmail(ITestData user,
+ microsoft.exchange.webservices.data.core.enumeration.property.WellKnownFolderName folder,
+ String subject)
+Deletes an email with wanted subject.
+
+Parameters:
+
+sendEmail
+public static void sendEmail(ITestData user,
+ String email,
+ String subject,
+ String text)
+Sends wanted mail to wanted address.
+
+Parameters:

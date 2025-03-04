@@ -1,0 +1,55 @@
+public class SaveDialog
+extends Object
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+SaveDialog()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+void
+cancel()
+
+Clicks on 'Cancel' button in windows save dialog.
+
+boolean
+exists()
+ 
+void
+save(String... path)
+
+If a path is provided, will send keys to 'File name' editBox, then clicks on 'Save' button in windows save dialog.
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+SaveDialog
+public SaveDialog()
+
+Method Details
+
+save
+public void save(String... path)
+If a path is provided, will send keys to 'File name' editBox, then clicks on 'Save' button in windows save dialog.
+ NOTE: Works only with system language English.
+
+Parameters:
+path - wanted path or fileName
+
+cancel
+public void cancel()
+Clicks on 'Cancel' button in windows save dialog.
+ NOTE: Works only with system language English.
+
+exists
+public boolean exists()

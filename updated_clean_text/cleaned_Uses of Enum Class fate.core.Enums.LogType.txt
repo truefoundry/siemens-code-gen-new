@@ -1,0 +1,24 @@
+fate.core.PerfMon
+ 
+
+Modifier and Type
+Method
+Description
+static LogType
+LogType.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static LogType[]
+LogType.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Modifier and Type
+Method
+Description
+void
+PerfMon.printResult(LogType log)
+
+Prints the performance result to the appropriate logging system.

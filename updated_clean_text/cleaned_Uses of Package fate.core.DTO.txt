@@ -1,0 +1,18 @@
+fate.core.ControlImplementations
+ 
+fate.core.DTO
+ 
+fate.core.PlatformConnectors.alm
+ 
+fate.core.PlatformConnectors.jira
+ 
+
+A utility class to store all the required project data.
+
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+A utility class to manipulate and set individual components of a date and time (year, month, day, hour, minute, second).
+
+A utility class to store all the required project data.
+
+A utility class to store all the required project data.

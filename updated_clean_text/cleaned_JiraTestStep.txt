@@ -1,0 +1,61 @@
+public class JiraTestStep
+extends Object
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+JiraTestStep(int index,
+ String status,
+ String comment)
+
+Standard constructor for a test step
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+String
+getComment()
+ 
+int
+String
+getStatus()
+ 
+void
+setComment(String comment)
+ 
+void
+void
+setStatus(String status)
+ 
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+JiraTestStep
+public JiraTestStep(int index,
+ String status,
+ String comment)
+Standard constructor for a test step
+
+Parameters:
+
+Method Details
+
+getStatus
+public String getStatus()
+
+setStatus
+public void setStatus(String status)
+
+getComment
+public String getComment()
+
+setComment
+public void setComment(String comment)

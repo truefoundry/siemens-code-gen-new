@@ -1,0 +1,7 @@
+Modifier and Type
+Method
+Description
+static WebDriverStore
+CoreIocBuilder.getStore()
+
+Retrieves the WebDriverStore instance.

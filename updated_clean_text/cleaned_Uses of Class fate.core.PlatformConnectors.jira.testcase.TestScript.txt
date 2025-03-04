@@ -1,0 +1,14 @@
+Modifier and Type
+Method
+Description
+TestScript
+TestCase.getTestScript()
+ 
+
+Methods in fate.core.PlatformConnectors.jira.testcase with parameters of type TestScript
+
+Modifier and Type
+Method
+Description
+void
+TestCase.setTestScript(TestScript testScript)

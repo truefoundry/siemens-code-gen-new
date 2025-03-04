@@ -1,0 +1,46 @@
+public class PrintWindowControl
+extends Object
+A utility class for interacting with the print window control in a web application.
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+void
+Clicks on 'Cancel' button to close browsers print window (Chrome, Edge) or print dialog (IE, FireFox).
+
+boolean
+exists()
+
+Checks if the print dialog window exists in the application.
+
+void
+Clicks on 'Save'/'Print' button in print window.
+
+void
+Selects wanted value in Destination/Printer field.
+
+Methods inherited from class java.lang.Object
+
+Method Details
+
+close
+Parameters:
+
+save
+Parameters:
+
+selectDestination
+Parameters:
+
+exists
+public boolean exists()
+Checks if the print dialog window exists in the application.
+
+ This method initiates the print dialog check by starting a Windows application control and checking if the print dialog is present.
+
+Returns:
+`true` if the print dialog exists, `false` otherwise.

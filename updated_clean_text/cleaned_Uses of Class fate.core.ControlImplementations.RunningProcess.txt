@@ -1,0 +1,51 @@
+fate.core.CompositionRoot.WinApp
+ 
+fate.core.ControlImplementations
+ 
+
+Modifier and Type
+Method
+Description
+RunningProcess
+WinDriverServer.getServerProcess()
+
+Provides the process information for the running server.
+
+RunningProcess
+WebDriverStore.getWinAppServerProcess()
+ 
+
+Modifier and Type
+Method
+Description
+RunningProcess
+WinAppDriverContainer.getProcess()
+ 
+
+Modifier and Type
+Method
+Description
+static RunningProcess
+CmdScriptExec.executeCommand(String command)
+
+Executes wanted cmd command.
+
+static RunningProcess
+CmdScriptExec.executeCommand(String[] cmdarray)
+
+Executes wanted cmd command.
+
+static RunningProcess
+CoreCleaner.getRunningProcess(String pid)
+
+Returns a running process name by its PID.
+
+Methods in fate.core.ControlImplementations that return types with arguments of type RunningProcess
+
+Modifier and Type
+Method
+Description
+static List<RunningProcess>
+CoreCleaner.getAllProcesses()
+
+Returns list of RunningProcess objects with all attributes available from task list.

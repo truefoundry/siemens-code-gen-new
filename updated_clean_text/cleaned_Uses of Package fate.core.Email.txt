@@ -1,0 +1,6 @@
+fate.core.Interfaces
+ 
+
+Represents the data of an email, including its ID, subject, content, sender, reply-to, IETC.
+
+IEmailConfig

@@ -1,0 +1,179 @@
+fate.core.Interfaces
+ 
+
+Modifier and Type
+class 
+CheckBox
+ 
+class 
+ComboBox
+ 
+class 
+CoreWinInteractables
+ 
+class 
+DataItem
+ 
+class 
+Dialog
+ 
+class 
+Document
+ 
+class 
+Edit
+ 
+class 
+Header
+ 
+class 
+Image
+ 
+class 
+Link
+ 
+class 
+List
+ 
+class 
+ListItem
+ 
+class 
+Menu
+ 
+class 
+MenuBar
+ 
+class 
+MenuItem
+ 
+class 
+Pane
+ 
+class 
+ProgressBar
+ 
+class 
+RadioButton
+ 
+class 
+ScrollBar
+ 
+class 
+SplitButton
+ 
+class 
+StatusBar
+ 
+class 
+Tab
+ 
+class 
+TabItem
+ 
+class 
+Table
+ 
+class 
+Text
+ 
+class 
+TitleBar
+ 
+class 
+ToolBar
+ 
+class 
+class 
+class 
+Window
+ 
+
+Methods in fate.core.CompositionRoot.WinApp that return IWinInteractable
+
+Modifier and Type
+Method
+Description
+IWinInteractable
+CoreWinInteractables.clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+IWinInteractable
+CoreWinInteractables.waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+ 
+
+Modifier and Type
+Method
+Description
+IWinInteractable
+IWinInteractable.clear(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Clears the wanted element
+
+IWinInteractable
+IWinInteractable.click(IWinInteractableNaming name,
+ IWinInteractableNaming... root)
+
+Click this element.
+
+IWinInteractable
+IWinInteractable.sendKeys(IWinInteractableNaming name,
+ CharSequence[] keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted Keys to wanted control.
+
+IWinInteractable
+IWinInteractable.sendKeys(IWinInteractableNaming name,
+ String keysToSend,
+ IWinInteractableNaming... root)
+
+Sends wanted String to wanted control.
+
+IWinInteractable
+IWinInteractable.waitForDisposal(IWinInteractableNaming control,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for disposal of wanted element.
+
+IWinInteractable
+IWinInteractable.waitToBeClickable(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become clickable.
+
+IWinInteractable
+IWinInteractable.waitToBeVisible(IWinInteractableNaming name,
+ Duration duration,
+ IWinInteractableNaming... root)
+
+Waits for wanted control to become visible.

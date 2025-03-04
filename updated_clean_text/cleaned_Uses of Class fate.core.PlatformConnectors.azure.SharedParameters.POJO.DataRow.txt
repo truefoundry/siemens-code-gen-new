@@ -1,0 +1,18 @@
+Modifier and Type
+Method
+Description
+List<DataRow>
+DataRowDeserializer.deserialize(com.fasterxml.jackson.core.JsonParser p,
+ com.fasterxml.jackson.databind.DeserializationContext ctxt)
+ 
+List<DataRow>
+ParamData.getDataRow()
+ 
+
+Method parameters in fate.core.PlatformConnectors.azure.SharedParameters.POJO with type arguments of type DataRow
+
+Modifier and Type
+Method
+Description
+void
+ParamData.setDataRow(List<DataRow> dataRow)

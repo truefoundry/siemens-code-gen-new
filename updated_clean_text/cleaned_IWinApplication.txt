@@ -1,0 +1,17 @@
+public interface IWinApplication
+
+Method Summary
+
+All MethodsInstance MethodsAbstract Methods
+
+Modifier and Type
+Method
+Description
+String
+getApplicationID()
+ 
+
+Method Details
+
+getApplicationID
+String getApplicationID()

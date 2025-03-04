@@ -1,0 +1,51 @@
+public class CoreWinPinControl
+extends Object
+Handles the Pin for UI tests
+
+Constructor Summary
+Constructors
+
+Constructor
+Description
+CoreWinPinControl()
+ 
+
+Method Summary
+
+All MethodsInstance MethodsConcrete Methods
+
+Modifier and Type
+Method
+Description
+void
+clickByOffset(org.openqa.selenium.WebElement ele,
+ int x,
+ int y)
+ 
+void
+rightClick(org.openqa.selenium.WebElement sourceElement)
+
+A method that performs right click at the location of the source element, moves to the location of the target element, then right click
+ using the selenium pin actions
+
+Methods inherited from class java.lang.Object
+
+Constructor Details
+
+CoreWinPinControl
+public CoreWinPinControl()
+
+Method Details
+
+rightClick
+public void rightClick(org.openqa.selenium.WebElement sourceElement)
+A method that performs right click at the location of the source element, moves to the location of the target element, then right click
+ using the selenium pin actions
+
+Parameters:
+sourceElement - Element to right-click
+
+clickByOffset
+public void clickByOffset(org.openqa.selenium.WebElement ele,
+ int x,
+ int y)

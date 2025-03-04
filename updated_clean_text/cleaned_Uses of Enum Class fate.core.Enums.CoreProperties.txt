@@ -1,0 +1,24 @@
+fate.core.Enums
+ 
+
+Modifier and Type
+Method
+Description
+static String
+CoreManager.getProperty(CoreProperties property)
+
+Returns a property from gradle.properties file.
+
+Modifier and Type
+Method
+Description
+static CoreProperties
+CoreProperties.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static CoreProperties[]
+CoreProperties.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.

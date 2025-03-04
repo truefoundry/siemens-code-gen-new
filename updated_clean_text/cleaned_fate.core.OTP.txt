@@ -1,0 +1,5 @@
+fate.core.OTP
+
+package fate.core.OTP
+
+Utility class for generating OTP (One-Time Password) using TOTP (Time-based One-Time Password).

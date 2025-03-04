@@ -1,0 +1,44 @@
+fate.core.Interfaces
+ 
+
+Modifier and Type
+Represents the configuration settings for an email, including email address, password,
+ proxy address, proxy port, and exchange server address.
+
+Methods in fate.core.Email that return IEmailConfig
+
+Modifier and Type
+Method
+Description
+IEmailConfig
+EmailConfig.setExchangeServerAddress(String address)
+
+Sets the exchange server address.
+
+IEmailConfig
+IEmailConfig.setExchangeServerAddress(String address)
+ 
+IEmailConfig
+EmailConfig.setProxyAddress(String address)
+
+Sets the proxy address.
+
+IEmailConfig
+IEmailConfig.setProxyAddress(String address)
+ 
+IEmailConfig
+EmailConfig.setProxyPort(int port)
+
+Sets the proxy port.
+
+IEmailConfig
+IEmailConfig.setProxyPort(int port)
+ 
+
+Modifier and Type
+Method
+Description
+IEmailConfig
+ITestData.getEmailConfig()
+
+Returns Email configuration.

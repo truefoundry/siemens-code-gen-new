@@ -1,0 +1,24 @@
+Modifier and Type
+Method
+Description
+static runStates
+runStates.valueOf(String name)
+
+Returns the enum constant of this class with the specified name.
+
+static runStates[]
+runStates.values()
+
+Returns an array containing the constants of this enum class, in
+the order they are declared.
+
+Methods in fate.core.PlatformConnectors.azure with parameters of type runStates
+
+Modifier and Type
+Method
+Description
+void
+AzureHandler.updateRunState(int runID,
+ runStates state)
+
+Updates the state of current run.

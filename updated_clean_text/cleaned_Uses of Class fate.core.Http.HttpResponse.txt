@@ -1,0 +1,8 @@
+Modifier and Type
+Method
+Description
+static HttpResponse
+HttpCall.executeRequest(HttpRequest req,
+ boolean... ignoreWait)
+
+Executes the given HTTP request.

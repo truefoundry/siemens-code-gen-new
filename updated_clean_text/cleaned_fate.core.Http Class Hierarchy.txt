@@ -1,0 +1,23 @@
+java.lang.Object
+
+org.apache.http.message.AbstractHttpMessage (implements org.apache.http.HttpMessage)
+
+org.apache.http.client.methods.AbstractExecutionAwareRequest (implements org.apache.http.client.methods.AbortableHttpRequest, java.lang.Cloneable, org.apache.http.client.methods.HttpExecutionAware, org.apache.http.HttpRequest)
+
+org.apache.http.client.methods.HttpRequestBase (implements org.apache.http.client.methods.Configurable, org.apache.http.client.methods.HttpUriRequest)
+
+org.apache.http.client.methods.HttpEntityEnclosingRequestBase (implements org.apache.http.HttpEntityEnclosingRequest)
+
+fate.core.Http.HttpDeleteWithBody
+
+fate.core.Http.HttpCall
+fate.core.Http.HttpRequest
+fate.core.Http.HttpResponse
+fate.core.Http.JsonHandler
+
+java.lang.Object
+
+java.lang.Enum<E> (implements java.lang.Comparable<T>, java.lang.constant.Constable, java.io.Serializable)
+
+fate.core.Http.HttpHeader
+fate.core.Http.HttpMethod
