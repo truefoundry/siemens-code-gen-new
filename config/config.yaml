@@ -16,6 +16,10 @@ system:
     few_shot_case: "prompts/few_shot_case.txt"
     base_step: "prompts/base_step.txt"
     few_shot_step: "prompts/few_shot_step.txt"
+    planning_steps: "prompts/planning_steps.txt"
+    code_generation_steps: "prompts/code_generation_steps.txt"
+    execution_steps: "prompts/execution_steps.txt"
+    refinement_steps: "prompts/refinement_steps.txt"
   
   # Task-specific prompts with improved descriptions
   prompts:
@@ -54,6 +58,37 @@ system:
                    - Naming convention consistency
                    - Assertion quality and coverage"
 
+# Stepwise code generation configuration
+stepwise:
+  # Enable or disable stepwise code generation
+  enabled: true
+  
+  # Output directory for intermediate and final files
+  output_dir: "predictions/stepwise"
+  
+  # Default output path for the final generated code
+  output_path: "predictions/stepwise/final_code.py"
+  
+  # Test case parsing options
+  use_deterministic_parsing: false
+  
+  # Prompt file references - will be automatically loaded from the files
+  # These are only used if the file cannot be found to provide fallback content
+  prompt: "Base prompt for stepwise generation"
+  planning: "Planning prompt for step breakdown"
+  code_generation: "Code generation prompt for implementation"
+  execution: "Execution analysis prompt for validation"
+  refinement: "Refinement prompt for optimization"
+  few_shot_examples: "Few-shot examples for guidance"
+  
+  # Variables that can be referenced in prompts using ${variable} syntax
+  variables:
+    language: "Python"
+    ml_frameworks: "PyTorch, scikit-learn, pandas"
+    api_frameworks: "FastAPI, Flask"
+    visualization: "Streamlit, Matplotlib, Plotly"
+    test_frameworks: "pytest, unittest"
+
 llm:
   # LLM model configurations
   models:
@@ -85,6 +120,7 @@ paths:
     ground_truth: "Formatted_data/Ground_Truths/838.java"
   
   prompts:
+    dir: "prompts"  # Directory containing prompt files
     input: "Formatted_data/Text_files/838.txt"
     formatted: "Formatted_data"
 
@@ -101,6 +137,7 @@ validation:
   supported_file_types: 
     - ".java"
     - ".txt"
+    - ".py"  # Added Python files
   required_sections:
     - "imports"
     - "test_class"

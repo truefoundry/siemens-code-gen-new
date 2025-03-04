@@ -475,3 +475,21 @@
 2025-03-04 22:40:14,503 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
 2025-03-04 22:40:44,643 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
 2025-03-04 22:40:44,643 - prompt_inference - INFO - Code generation completed successfully
+2025-03-05 01:36:38,144 - utils - INFO - Loaded planning prompt from prompts/planning_steps.txt
+2025-03-05 01:36:38,145 - utils - INFO - Loaded code_generation prompt from prompts/code_generation_steps.txt
+2025-03-05 01:36:38,145 - utils - INFO - Loaded execution prompt from prompts/execution_steps.txt
+2025-03-05 01:36:38,145 - utils - INFO - Loaded refinement prompt from prompts/refinement_steps.txt
+2025-03-05 01:36:38,145 - utils - INFO - Loaded prompt prompt from prompts/base_step.txt
+2025-03-05 01:36:38,145 - utils - INFO - Loaded few_shot_examples prompt from prompts/few_shot_step.txt
+2025-03-05 01:37:32,420 - utils - INFO - Starting stepwise prediction process
+2025-03-05 01:42:20,843 - utils - INFO - Loaded planning prompt from prompts/planning_steps.txt
+2025-03-05 01:42:20,843 - utils - INFO - Loaded code_generation prompt from prompts/code_generation_steps.txt
+2025-03-05 01:42:20,843 - utils - INFO - Loaded execution prompt from prompts/execution_steps.txt
+2025-03-05 01:42:20,843 - utils - INFO - Loaded refinement prompt from prompts/refinement_steps.txt
+2025-03-05 01:42:20,843 - utils - INFO - Loaded prompt prompt from prompts/base_step.txt
+2025-03-05 01:42:20,843 - utils - INFO - Loaded few_shot_examples prompt from prompts/few_shot_step.txt
+2025-03-05 01:42:23,451 - utils - INFO - Starting stepwise prediction process
+2025-03-05 01:42:25,625 - utils - INFO - Parsing test case steps from prompt
+2025-03-05 01:42:25,625 - utils - INFO - Successfully parsed 0 test case steps
+2025-03-05 01:43:06,493 - utils - INFO - Parsing test case steps from prompt
+2025-03-05 01:43:06,493 - utils - INFO - Successfully parsed 0 test case steps
