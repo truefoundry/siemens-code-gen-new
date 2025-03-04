@@ -451,3 +451,14 @@
 2025-03-04 20:27:02,313 - __main__ - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'Uses of Package fate.core.PlatformConnectors.jira.testcase.txt', 'TestScriptSteps.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'fate.core.ControlImplementations.txt', 'IResultPlatformHandler.txt', 'StepItem.txt']
 2025-03-04 20:27:10,333 - absl - INFO - Using default tokenizer.
 2025-03-04 20:27:14,179 - __main__ - INFO - Test generation completed
+2025-03-04 20:28:20,109 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-04 20:28:21,267 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 20:28:51,818 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
+2025-03-04 20:28:51,819 - prompt_inference - INFO - Code generation completed successfully
+2025-03-04 20:29:29,866 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:29:32,696 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:29:34,962 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:29:37,458 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:29:43,846 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:30:23,285 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
+2025-03-04 20:31:01,636 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"

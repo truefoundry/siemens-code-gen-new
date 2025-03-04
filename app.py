@@ -19,7 +19,7 @@ def sidebar(config):
             "Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.3,
+            value=config["system"]["model_config"]["temperature"],
             step=0.1
         )
         config["llm"]["model"] = model

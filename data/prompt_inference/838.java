@@ -26,13 +26,17 @@ public class TC05_Landing_Page_Content_Check
                     new ComparerOptions().takeScreenShotPlatform());
 
             // Step 2
-            boolean isTopRibbonCorrect = tc.button.exists(EButton.CONTACT) &&
-                                         tc.button.exists(EButton.SETTINGS) &&
-                                         tc.button.exists(EButton.NOTIFICATION_BELL) &&
-                                         tc.button.exists(EButton.NAME_SHORTCUT) &&
-                                         tc.button.exists(EButton.ADMIN_ICON);
+            boolean isTopRibbonCorrect = tc.ribbon.exists(ERibbon.SIEMENS_LOGO) &&
+                                         tc.ribbon.exists(ERibbon.MY_DIGITAL_LAB_ASSISTANT) &&
+                                         tc.ribbon.exists(ERibbon.CONTACT_ICON) &&
+                                         tc.ribbon.exists(ERibbon.LANGUAGE_ICON) &&
+                                         tc.ribbon.exists(ERibbon.SETTINGS_ICON) &&
+                                         tc.ribbon.exists(ERibbon.NOTIFICATION_BELL_ICON) &&
+                                         tc.ribbon.exists(ERibbon.NAME_SHORTCUT_ICON) &&
+                                         tc.ribbon.exists(ERibbon.LOGGED_IN_USER_NAME) &&
+                                         tc.ribbon.exists(ERibbon.ADMIN_ICON);
             tc.addStepInfo("""
-                    Landing page top ribbon content is according screenshot and consists of:
+                    Landing page top ribbon content is according to screenshot and consists of:
                     - Contact icon
                     - Settings icon
                     - Notification bell icon
@@ -48,7 +52,7 @@ public class TC05_Landing_Page_Content_Check
                                       tc.tile.exists(ETile.QUESTION_ABOUT_ACCOUNT) &&
                                       tc.tile.exists(ETile.REQUEST_ALLOCATION);
             tc.addStepInfo("""
-                    Landing page tile content is according screenshot and consists of following tiles:
+                    Landing page tile content is according to screenshot and consists of following tiles:
                     - Report an issue with an order or delivery
                     - Show me my Requests
                     - Question about an order or eSupport assistance
@@ -58,41 +62,41 @@ public class TC05_Landing_Page_Content_Check
 
             // Step 4
             tc.tile.open(ETile.REPORT_AN_ISSUE);
-            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Report an Issue"));
+            WaitFor.condition(() -> tc.page.exists(EPage.REPORT_ISSUE_DETAILS));
             tc.addStepInfo("Page with details for reporting an issue is opened", true,
-                    tc.browser.getPageTitle().contains("Report an Issue"), new ComparerOptions().takeScreenShotPlatform());
+                    tc.page.exists(EPage.REPORT_ISSUE_DETAILS), new ComparerOptions().takeScreenShotPlatform());
 
             // Step 5
             tc.browser.navigateBack();
             WaitFor.condition(() -> tc.tile.exists(ETile.SHOW_ME_MY_REQUESTS));
             tc.tile.open(ETile.SHOW_ME_MY_REQUESTS);
-            WaitFor.condition(() -> tc.browser.getPageTitle().contains("My Requests"));
+            WaitFor.condition(() -> tc.page.exists(EPage.REQUESTS_DASHBOARD));
             tc.addStepInfo("Page with dashboard with all requests created by the user is opened", true,
-                    tc.browser.getPageTitle().contains("My Requests"), new ComparerOptions().takeScreenShotPlatform());
+                    tc.page.exists(EPage.REQUESTS_DASHBOARD), new ComparerOptions().takeScreenShotPlatform());
 
             // Step 6
             tc.browser.navigateBack();
             WaitFor.condition(() -> tc.tile.exists(ETile.QUESTION_ABOUT_ORDER));
             tc.tile.open(ETile.QUESTION_ABOUT_ORDER);
-            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Order Assistance"));
+            WaitFor.condition(() -> tc.page.exists(EPage.REPORT_ISSUE_DETAILS));
             tc.addStepInfo("Page with details for reporting an issue is opened", true,
-                    tc.browser.getPageTitle().contains("Order Assistance"), new ComparerOptions().takeScreenShotPlatform());
+                    tc.page.exists(EPage.REPORT_ISSUE_DETAILS), new ComparerOptions().takeScreenShotPlatform());
 
             // Step 7
             tc.browser.navigateBack();
             WaitFor.condition(() -> tc.tile.exists(ETile.QUESTION_ABOUT_ACCOUNT));
             tc.tile.open(ETile.QUESTION_ABOUT_ACCOUNT);
-            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Account Assistance"));
+            WaitFor.condition(() -> tc.page.exists(EPage.REPORT_ISSUE_DETAILS));
             tc.addStepInfo("Page with details for reporting an issue is opened", true,
-                    tc.browser.getPageTitle().contains("Account Assistance"), new ComparerOptions().takeScreenShotPlatform());
+                    tc.page.exists(EPage.REPORT_ISSUE_DETAILS), new ComparerOptions().takeScreenShotPlatform());
 
             // Step 8
             tc.browser.navigateBack();
             WaitFor.condition(() -> tc.tile.exists(ETile.REQUEST_ALLOCATION));
             tc.tile.open(ETile.REQUEST_ALLOCATION);
-            WaitFor.condition(() -> tc.browser.getPageTitle().contains("Sales Efficiency Tool"));
+            WaitFor.condition(() -> tc.browser.getCurrentUrl().contains("SalesEfficiencyTool"));
             tc.addStepInfo("User is redirected to external Sales Efficiency tool page", true,
-                    tc.browser.getPageTitle().contains("Sales Efficiency Tool"), new ComparerOptions().takeScreenShotPlatform());
+                    tc.browser.getCurrentUrl().contains("SalesEfficiencyTool"), new ComparerOptions().takeScreenShotPlatform());
         });
     }
 }
