@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/siet04_qa002/saml2 <br>Open Rapid Response by clicking on the URL given<br>above<br> | Rapid Response window will open.<br> |
+| 2 | In order to view the different forecast streams, go to the resource panel and open the workbook ‘SHS S&OP Consensus Demand Planning’ as shown in the screen print.<br><br> | The workbook "SHS S&OP Consensus Demand Planning" will open. <br> |
+| 3 | In the Data Settings dialog box select the “Consensus Demand Plan –<br>Units Summary” worksheet. Select a private scenario under the ‘S&OP Candidate’ scenario as here. (Create a private scenario in case it doesn't exist under the S&OP Candidate scenario).<br> | The "Consensus Demand Plan –Units Summary” worksheet will open and the data for each forecast category can be viewed from this workbook.<br> |
+| 4 | In order to input data in any of the forecast categories, click on the link for that particular forecast category. For example if we want to input the data for Spare Parts CS, upon clicking the category it will take us to Spare Part CS workbook.<br> | The workbook for the selected forecast category will open. For example, the "SHS Spare Parts CS" workbook in this case |
+| 5 | In order to input the forecast, open Proposed Plan Detail worksheet and we can input the values for the mentioned forecast category (Spare Parts CS in this case) in monthly buckets.<br> | The Proposed Plan Detail worksheet will open and the forecast can be input/edited in monthly buckets |
+
+

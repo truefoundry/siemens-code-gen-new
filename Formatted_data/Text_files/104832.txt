@@ -1,0 +1,13 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | CAD application launched and logged in successfully |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Views options should contains the following suboptions like:<br>Capacity Limitations<br>Capacity Used Daily<br>Education Waitlist<br>Resource Territory<br>Task<br>Engineer |
+| 4 | Navigate to Capacity Used Daily | Periodic Capacity page should be displayed |
+| 5 | Check whether Manage filter, sorting,  refresh, New , Export option are available | Manage filter, sorting,  refresh, New , Export option should be  available |
+| 6 | Check the following fields Periodic Capacity:<br>Name<br>District<br>Task Type Category<br>Entry Date<br>Capacity Threshold<br>Actual Capacity Used | The following fields should be in Periodic Capacity:<br>Name<br>District<br>Task Type Category<br>Entry Date<br>Capacity Threshold<br>Actual Capacity Used |
+| 7 | Click on New | New (CapacityLimitsDynamic) page should be displayed |
+| 8 | Enter the all the Details | Details should be entered |
+| 9 | Click on Apply and Click on OK | Details should be applied and saved |
+
+

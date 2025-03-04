@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br> | Rapid Response will be visible. |
+| 2 | Open the workbook ‘SHS S&OP Demand Supply Balancing’<br> | workbook ‘SHS S&OP Demand Supply Balancing’ is opened in RapidResponse<br> |
+| 3 | The data settings dialogue box pops up with default values.<br><br> | data setting dialogue is shown in pop up.<br> |
+| 4 | Worksheet ‘Demand Supply Balancing – Units Summary’ is opened.<br><br> | ‘Demand Supply Balancing – Units Summary’ is opened.<br> |
+| 5 | Create a private scenario using the 'S&OP Candidate' scenario. | A private scenario using the 'S&OP Candidate' is created<br> |
+| 6 | You will see consensus Override highlighted . Enter the override quantity for a month you choose to override<br><br> | quantity for a month can be overwritten.<br> |
+| 7 | Example – entered 1000 in Consensus Override for Dec-22 and then Press ‘Save’ <br><br> | After the record is saved, the ‘Demand Plan’ row is updated with the override quantity.<br> |
+
+

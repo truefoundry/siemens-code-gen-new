@@ -1,0 +1,12 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | CAD application launched and logged in successfully |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Clik on Calendar Management | Calenders and Resources fields along with that Manage Filters, Sorting, Refresh and New options should be display |
+| 4 | Navigate to Calendars | Name and Base fields should be displayed |
+| 5 | Click on Manage Filters Option | Filters Management - Calendar screen page should be displayed |
+| 6 | Click on Add | Calendar filter 01 * - Conditions should be displayed |
+| 7 | Enter the Condition by clicking on  Add conditions i.e, "Select a property field" like "Name contains 400" | Condition should be entered |
+| 8 | Click on Apply and Click on OK | Condition should be applied and saved , Based on Condition the Name and Base list should be dispalyed |
+
+

@@ -1,0 +1,13 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Clipboard option | Filter,Sorted by : Call Id, Search Task, Split Task list domain, List of notifications option should be reflected |
+| 3 | Click on Actions icon for any one of the @notifications | Below options should be reflected for each notification<br>Edit                                                                                            Change Status<br>Show on Gantt<br>Show on Map<br>Remove to Clipboard<br>Pin Task<br>Comment<br>Check Rules<br>Get Candidates<br>Schedule<br>Unschedule                                                                                  |
+| 4 | Click on Edit button | Task pop up window should open with below tabs<br>Assignment, General , Time, History |
+| 5 | Click on Assigment | Below details should be reflected with Ok, Apply, Cancel buttons<br>Status<br>Reschedule Call?<br>Assigment Start<br>Assigment Finish<br>Duration<br>Assigned Resource |
+| 6 | Click on General | General notification details are reflected and CSE skills can be added |
+| 7 | Click on Location | Location details should be reflected with customer name, Contact and Email |
+| 8 | Click on Time | DISP Task Creation Date, Planned Start, Planned Finish options should be reflected |
+| 9 | Click on History | Notification history details should be reflected |
+
+

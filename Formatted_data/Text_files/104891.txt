@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Task option | Filter,Sorted by : Call Id, Search Task, Split Task list domain, List of notifications option should be reflected |
+| 3 | Search the Notification<br> | Notification should be appear under the Clipboard tab<br> |
+| 4 | Click on Actions icon of the @notification | Below options should be reflected for each notification<br>Edit<br>Site Assigned Engineers<br>Show on Gantt<br>Show on Map<br>Add to Clipboard<br>Show related tasks<br>Pin Task<br>Comment<br>Check Rules<br>Get Candidates<br>Schedule<br>Unschedule                                                                                   Relaxed Get Candidates |
+| 5 | Click on Get Candidates | CSE list available for the notification should be reflected |
+
+

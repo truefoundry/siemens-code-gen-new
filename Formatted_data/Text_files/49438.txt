@@ -1,0 +1,12 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Tester clicks in the left side menu on "Bulk submission Tasks"<br> | 'Bulk submission' screen displayed |
+| 2 | Tester clicks on Group | Dropdown list will display on click of Group |
+| 3 | Tester clicks on Fields | Dropdown list will display on click of Fields |
+| 4 | Tester clicks on Density | Dropdown list will display on click of Density |
+| 5 | Select any case ID and click on Bulk submit | Bulk submit task popup window will be displayed with Cancel and Submit buttons |
+| 6 | Click on Cancel | Bulk submit task popup window will be closed |
+| 7 | Select any case ID -> click on Bulk submit -> click on 'X' icon | Bulk submit task popup window will be closed |
+| 8 | Select any case ID -> click on Bulk submit -> click on Submit | Task will be submitted |
+
+

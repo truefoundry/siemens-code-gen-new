@@ -1,0 +1,135 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal as Internal user | Landing page is displayed |
+| 2 | Click on tile "Report an issue with an order or delivery" | Page with details for reporting an issue is opened - Part 1. Personal information |
+| 3 | Enter data in to following fields: | User is able to enter information in specified fields |
+| 4 | Click "Next" button | Page with details for reporting an issue is opened - Part 2. Request information |
+| 5 | Enter data in to following fields: - Request type - preselected "Order Issue" not possible to modify - Subject - Reason - Siemens Healthineers Team - Sold To - Ship to - Puchase Order or Order Number - add multiple entries by clicking on "+ Add Order Number" - Additional E-Mail - add multiple entries by clicking on "+ Add E-Mail" For reference check attached screenshot | User is able to enter information in specified fields |
+| 6 | In section Attachments click on icon "Browse files", select files that will be attached to this issue and click "Open" | Icon with name of each individual file is created in section Attachments |
+| 7 | Drag and drop file from your computer in to section Attachments | Icon with name of file is created in section Attachments |
+| 8 | Click "Next" button | Page with details for reporting an issue is opened - 3. Check your information |
+| 9 | Verify that the content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 3 and 5 |
+| 10 | Check the checkbox "Mark as urgent" | Checkbox can be checked |
+| 11 | Click "Save" button | Popup with following text is diplayed: Request saved successfully. For reference check attached screenshot |
+| 12 | Click "Cancel" button | Popup with following text is diplayed: Are you sure you want to cancel this request? All progress will be lost. For reference check attached screenshot |
+| 13 | Click "Yes, cancel request" button | Landing page is displayed |
+| 14 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 15 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 16 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 17 | Check Status of request | Request is in status "Saved" |
+| 18 | Open the request created in previous steps | Page with details for reporting an issue is opened - Part 1. Personal information |
+| 19 | Verify that the content of fields on the page is the same as was entered in step 3 and that you are able to edit following: - Mobile - Country - State - Preferred language | Values of the fields are the same as were entered in step 3. User is able to modify values in fields listed in step |
+| 20 | Click "Next" button | Page with details for reporting an issue is opened - Part 2. Request information |
+| 21 | Verify that the content of fields on the page is the same as was entered in step 5 and that you are able to edit following: - Subject - Reason - Siemens Healthineers Team - Sold To - Ship to - Puchase Order or Order Number - add multiple entries by clicking on "+ Add Order Number" - Additional E-Mail - add multiple entries by clicking on "+ Add E-Mail" - Attachments For reference check attached screenshot | Values of the fields are the same as were entered in step 5. User is able to modify values in fields listed in step |
+| 22 | Click "Next" button | Page with details for reporting an issue is opened - 3. Check your information |
+| 23 | Verify that the content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 24 | Click "Save + Submit" button | Popup with following text is diplayed: Save & Submit Request Are you sure you want to submit this request? You will not be able to make any changes after submission For reference check attached screenshot |
+| 25 | Click "Yes, submit" button | Popup with following test is displayed: Congratulations! Your issue has been reported. For reference check attached screenshot |
+| 26 | Click "Go back to the dashboard" button | Landing page is displayed |
+| 27 | Verify that notification was sent to email address menitoned in fields E-Mail and Additional E-Mail For reference check attached screenshot | Notification email was received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 28 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 29 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 30 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 31 | Check Status of request | Request is in status "Submitted" |
+| 32 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history For reference check attached screenshot |
+| 33 | Verify content of fields on the screen For reference check attached screenshot | Reason from step 5 is used as 1st comment |
+| 34 | Enter text, add attachment and submit new comment by clicking ">" icon | New comment is added |
+| 35 | Select tab "Request Information" and verify content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 36 | Select tab "Requestor Information" and verify content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 37 | Select tab "Request Overview" and verify content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 38 | Click "< Back" button | Page with dashboard with all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 39 | Click on tab "My Response Needed" | Page with list of all requests with status Pending Requestor Response created by the user is opened For reference check attached screenshot |
+| 40 | Enter Subject of request created in previous steps in to search field | No Request is displayed. |
+| 41 | Log in to Digital Customer Portal as Admin | Landing page is displayed |
+| 42 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab Created Requests For reference check attached screenshot |
+| 43 | Click on tab "Submitted" | List of all requests created by the users in status Submitted is displayed For reference check attached screenshot |
+| 44 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 45 | Click on button "Assign to me" | Popup with following test is displayed: Task has been assigned to you. For reference check attached screenshot |
+| 46 | Enter Subject of request created in previous steps in to search field | Request is no longer visible in tab "Submitted" |
+| 47 | Verify that notification about change of status to "Under Review" was sent to email address menitoned in fields E-Mail and Additional E-Mail For reference check attached screenshot | Notification email with latest comment was received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 48 | Click on tab "Under Review" | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 49 | Check checkbox "Only Show My Assigned Tasks" | Only list of requests where Assignee is current user is displayed |
+| 50 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 51 | Click on button "Change Request Status" select option "Put Request on Hold" | Popup with mandatory comment is displayed For reference check attached screenshot |
+| 52 | Add comment in to "Comment field" | Button "Put on Hold" is activated |
+| 53 | Click on button "Put on Hold" | New comment is added. Status of request is changed to "Under Review" with Pause icon Popup is displayed. Request successfully put on hold For reference check attached screenshot |
+| 54 | Verify that no notification about change of status to "Under review" with flag paused was sent to email address menitoned in fields E-Mail and Additional E-Mail | Notification email with latest comment was not received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 55 | Click "< Back" button | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 56 | Open the request created in previous steps | Request detail page is displayed on Comment tab with full comment history For reference check attached screenshot |
+| 57 | Click on button "Change Request Status" select option "Set Request Active" | Popup is dipslayed Are you sure you want to take the request off of hold? For reference check attached screenshot |
+| 58 | Click "Set Active" button | Pause icon is removed and status is changed to "Under Review" Popup is displayed. Request successfully set to active. For reference check attached screenshot |
+| 59 | Verify that no notification about change of status to "Under review" with flag paused was sent to email address menitoned in fields E-Mail and Additional E-Mail | Notification email with latest comment was not received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 60 | Click "< Back" button | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 61 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history For reference check attached screenshot |
+| 62 | Verify content of fields on the screen For reference check attached screenshot | Reason from step 5 is used as 1st comment |
+| 63 | Enter text, add attachment and submit new comment by clicking ">" icon | New comment is added |
+| 64 | Select tab "Request Information" and verify content of fields on the screen User is able to edit following fields: - "Mark as urgent" checkbox - Request type - Classification - Add e-mail - Attachments For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 65 | Select tab "Requestor Information" and verify content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 66 | Select tab "Request Overview" and verify content of fields on the screen For reference check attached screenshot | Values of the fields are the same as were entered in step 19 and 21 |
+| 67 | Select tab "Activity Stream" and verify content of fields on the screen For reference check attached screenshot | History of request updates is displayed |
+| 68 | Click on button "Change Request Status" select option "Request Requeestor Feedback" | Popup with mandatory comment and possibility to add attachment is displayed For reference check attached screenshot |
+| 69 | Add comment in to "Comment" field | Button "Confirm" is activated |
+| 70 | Click on button "Confirm" | New comment is added. Status of request is changed to "Pending Requestor Response" Popup is displayed. Status changed to pending requesteor response. For reference check attached screenshot |
+| 71 | Verify that notification about change of status to "Pending Requestor Response" was sent to email address menitoned in fields E-Mail and Additional E-Mail For reference check attached screenshot | Notification email with latest comment was received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 72 | Click "< Back" button | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 73 | Enter Subject of request created in previous steps in to search field | Request is no longer visible in tab "Under Review" |
+| 74 | Click on tab "Pending Requestor Response" | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 75 | Check checkbox "Only Show My Assigned Tasks" | Only list of requests where Assignee is current user is displayed |
+| 76 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 77 | Log in to Digital Customer Portal as User | Landing page is displayed |
+| 78 | Click on the Notification bell icon on top ribbon | Notification about change of status for request updated in steps above is displayed. |
+| 79 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 80 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 81 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 82 | Check Status of request | Request is in status "Pending Requestor Response" |
+| 83 | Click on tab "My Response Needed" | Page with list of all requests created by the user in status "Pending Requestor Response" is opened on tab My Dashboard For reference check attached screenshot |
+| 84 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 85 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history For reference check attached screenshot |
+| 86 | Enter text in to comment field, add attachment and submit new comment by clicking ">" icon | Popup is displayed Send Back to Task Owner Do you want to send this request nack to the task owner? |
+| 87 | Click on button "Comment Only" | New comment is added Status remains unchanged |
+| 88 | Enter text in to comment field, add attachment and submit new comment by clicking ">" icon | Popup is displayed Send Badk to Task Owner Do you want to send this request nack to the task owner? |
+| 89 | Click on button "Comment and Send" | New comment is added. Status of request is changed to "Under Review" Popup is displayed. Request successfully sent back to task owner. For reference check attached screenshot |
+| 90 | Log in to Digital Customer Portal as Admin | Landing page is displayed |
+| 91 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab Created Requests For reference check attached screenshot |
+| 92 | Click on tab "Under Review" | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 93 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 94 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history For reference check attached screenshot |
+| 95 | Click on button "Change Request Status" select option "Mark Request Resolved" | Popup with mandatory comment and possibility to add attachment is displayed For reference check attached screenshot |
+| 96 | Add comment in to "Comment field" | Button "Resolve Request" is activated |
+| 97 | Click on button "Resolve Request" | New comment is added. Status of request is changed to "Resolved" Popup is displayed. Request successfully marked resolved. For reference check attached screenshot |
+| 98 | Verify that notification about change of status to "Pending Requestor Response" was sent to email address menitoned in fields E-Mail and Additional E-Mail For reference check attached screenshot | Notification email with latest comment was received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 99 | Click "< Back" button | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 100 | Enter Subject of request created in previous steps in to search field | Request is no longer visible in tab "Under Review" |
+| 101 | Click on tab "Resolved" | List of all requests created by the users in status Resolved is displayed For reference check attached screenshot |
+| 102 | Check checkbox "Only Show My Assigned Tasks" | Only list of requests where Assignee is current user is displayed |
+| 103 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 104 | Log in to Digital Customer Portal as User | Landing page is displayed |
+| 105 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 106 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 107 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 108 | Check Status of request | Request is in status "Resolved" |
+| 109 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history For reference check attached screenshot |
+| 110 | Click "Reopen Request" button | Popup with mandatory comment and possibility to add attachment is displayed For reference check attached screenshot |
+| 111 | Add comment in to "Comment" field | Button "Reopen request" is activated |
+| 112 | Click on button "Reopen Request" | New comment is added. Status of request is changed to "Submitted" For reference check attached screenshot |
+| 113 | Verify that notification about change of status to "Submitted" was sent to email address menitoned in fields E-Mail and Additional E-Mail For reference check attached screenshot | Notification email with latest comment was received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 114 | Log in to Digital Customer Portal as Admin | Landing page is displayed |
+| 115 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab Created Requests For reference check attached screenshot |
+| 116 | Click on tab "Submitted" | List of all requests created by the users in status Submitted is displayed For reference check attached screenshot |
+| 117 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 118 | Click on button "Assign to me" | Popup with following test is displayed: Task has been assigned to you. For reference check attached screenshot |
+| 119 | Click on tab "Under Review" | List of all requests created by the users in status Under Review is displayed For reference check attached screenshot |
+| 120 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 121 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history For reference check attached screenshot |
+| 122 | Click on button "Change Request Status" select option "Mark Request Resolved" | Popup with mandatory comment and possibility to add attachment is displayed For reference check attached screenshot |
+| 123 | Add comment in to "Comment field" | Button "Resolve Request" is activated |
+| 124 | Click on button "Resolve Request" | New comment is added. Status of request is changed to "Resolved" Popup is displayed. Request successfully marked resolved. For reference check attached screenshot |
+| 125 | Verify that notification about change of status to "Pending Requestor Response" was sent to email address menitoned in fields E-Mail and Additional E-Mail For reference check attached screenshot | Notification email with latest comment was received by email address menitoned in fields E-Mail and Additional E-Mail |
+| 126 | Log in to Digital Customer Portal as User | Landing page is displayed |
+| 127 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 128 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot |
+| 129 | Enter Subject of request created in previous steps in to search field | Request is displayed. |
+| 130 | Check Status of request | Request is in status "Resolved" |
+| 131 | Open the request created in previous steps | Request detail page is opened on Comment tab with full comment history It is not possible ro reopen the same request for 2nd time For reference check attached screenshot |
+
+

@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL: https://na1.kinaxis.net/siet04_qa002/saml2Open Rapid Response by clicking on the URL given<br>above.<br> | Rapid Response window will open. |
+| 2 | Create a new scenario called TC-4692, a child of S&OP Candidate  | The scenario is created |
+| 3 | Open workbook SHS  S&OP Forecast Item Management​ workbook at the "forecast Item Configuration" worksheet. From the item column select Item "Part:10501081" and click on the item link and select the "forecast review"   | The workbook "SHS S&OP Forecast item Management " will open and in the lower pane a chart of the forecast showing actual and forecast for the selected forecast item.<br> |
+| 4 | For the selected forecast item move to the right to the "Parameter set"  column Click in the column - you will see "BestFit". when you click in this column a list of forecast models will be shown.  | A list of forecast models will be displayed  |
+| 5 | From the list select the Select the "ExponentialSmoothing" forecast model which and save.<br> | A the forecast review will change based on the new model selection  |
+
+

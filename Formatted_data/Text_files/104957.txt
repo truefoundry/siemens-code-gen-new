@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Task option | Filter,Sorted by : Call Id, Search Task, Split Task list domain, List of notifications option should be reflected |
+| 3 | Click on Actions icon for Open @notification | Below options should be reflected for each notification |
+| 4 | Click on Book Appointment | Appointment Booking pop up should be reflected with Get Appointments / close buttons and Appointment Start date field |
+| 5 | Click on Get Appointments | Appointments available for the week should be reflected |
+| 6 | Select the CSE slot for respective date and time set before | CSE Slot should be selected and Book Slot window popup should be displayed with Book Appointment and Cancel button |
+| 7 | Click on Book Appointment button in the window popup | Appointment Details should be reflected. |
+
+

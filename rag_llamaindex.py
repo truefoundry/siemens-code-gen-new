@@ -134,6 +134,9 @@ if __name__ == "__main__":
     index = create_index(config)
     response, source_texts, source_names = generate_response(config, index)
     
+    print("response : " , response)
+    
+
     # Evaluate results
     ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"
     output_path = Path(config["paths"]["data"]["rag_output"]) / "response.txt"

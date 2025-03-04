@@ -1,0 +1,12 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Home, Schedule, Calendar Management, View , Analytics<br> |
+| 3 |  Click on View | Below sub options should be reflected<br>Capacity Limitations, Capacity Used Daily, Education Waitlist, Resource Territory, Task , Engineer<br> |
+| 4 | Click on task option | Task screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of notification |
+| 5 | Click on Manage Filters | Filters Management - Task screen should be displayed |
+| 6 | Click on Add | Task filter 01 * - Conditions folder is created |
+| 7 | Click on Advance Filter | Text Fields is generated like "Write down the expression to evaluate the condition:" |
+| 8 | Enter the expression, Click on Apply and Save | Expression should be Applied and saved |
+
+

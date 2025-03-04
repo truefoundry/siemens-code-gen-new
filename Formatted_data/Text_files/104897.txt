@@ -1,0 +1,14 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | CAD application launched and logged in successfully |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Views options should contains the following suboptions like:<br>Capacity Limitations<br>Capacity Used Daily<br>Education Waitlist<br>Resource Territory<br>Task<br>Engineer |
+| 4 | Navigate to Capacity Limitations suboption | Generic Capacity page should be displayed |
+| 5 | In Generic Capacity contains fields like Name, District, Task Type Category, Capacity Threshold and along with the options like manage filters, sorting, refresh, New, Export | In Generic Capacity , fields like Name, District, Task Type Category, Capacity Threshold should be displayed with the list and along with the options like manage filters, sorting, refresh, New, Export should be displayed |
+| 6 | Click on Sorting | Generic Capacity Sorting page should be displayed |
+| 7 | Select Columns list are like Name, District, Task Type Category, Capacity Threshold | Select Columns list are like Name, District, Task Type Category, Capacity Threshold should be displayed under the select columns list |
+| 8 | Drag the Selected Columns and drop in the Sort by table | Dragged select columns should be dropped in the sort by table |
+| 9 | Set the sorting for each fields like :<br> Name as A-Z or Z-A<br>District as A-Z or Z-A<br>Task Type Category as A-Z or Z-A<br>Capacity Threshold as Acending or Decesending | All fields in the sort by should be validate |
+| 10 | Click on sort | All the fields should be sorted and displayed. |
+
+

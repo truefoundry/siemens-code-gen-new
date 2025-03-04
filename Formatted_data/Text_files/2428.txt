@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Open Rapid Response by clicking on the URL given above.<br>URL : https://na1.kinaxis.net/web/SIET04_QA002/<br> | Rapid Response will be visible.<br> |
+| 2 | Open the 'SHS S&OP Consensus Demand Planning' workbook using the 'S&OP Candidate' scenario. | workbook 'SHS S&OP Consensus Demand Planning' is opened with using the 'S&OP Candidate' scenario<br> |
+| 3 | Check that forecast exists for all the forecast categories. | Forecast exists<br> |
+| 4 | In the consensus workbook the following forecast categories are displayed:<br>1. Business Line (AT)2. Dmd From SAP3. Spare Parts (CS)4. Business Line (CT)<br> | Forecast categories are shown for Business Line (AT), Dmd From SAP, Spare Parts (CS), Business Line (CT).  The 'Unconstrained Demand Plan' should also show up the correct number (if there no ratio override then it should use 25% as default when calculating this line). |
+
+

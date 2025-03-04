@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Home, Schedule, Calendar Management, View , Analytics |
+| 3 |  Click on View | Below sub options should be reflected<br>Capacity Limitations, Capacity Used Daily, Education Waitlist, Resource Territory, Task , Engineer<br> |
+| 4 | Click on Education Waitlist | Education Waitlist screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of education waitlist |
+| 5 | Click on New | Education Waitlist screen should be reflected with OK, Apply, Cancel button |
+
+

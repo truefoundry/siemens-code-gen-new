@@ -1,0 +1,7 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br><br> | Rapid Response will be visible. |
+| 2 | Open the workbook ‘SHS Data Integrity Check’. | workbook ‘SHS Data Integrity Check’ is opened<br> |
+| 3 | Select ‘Has Issues? = Y(filter the data in the worksheet), it will show parts – having demand and missing sourcing or Average selling price.<br><br> | The parts missing in the master data are visible. |
+
+

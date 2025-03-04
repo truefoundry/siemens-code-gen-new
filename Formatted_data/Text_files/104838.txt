@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Home, Schedule, Calendar Management, View , Analytics<br> |
+| 3 |  Click on View | Below sub options should be reflected<br>Capacity Limitations, Capacity Used Daily, Education Waitlist, Resource Territory, Task , Engineer |
+| 4 | Click on resource territory | Resource territory view screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of resource territory list item |
+| 5 | Click on Refresh | Refresh options should be have dropdown list like Refresh every time, 5 minutes, 10 minutes and 15 minutes |
+
+

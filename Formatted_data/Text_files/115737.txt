@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Below options should be reflected <br>Education Waitlist<br>Task<br>Engineer<br>Education Skills<br>Assignent |
+| 4 | Click on Engineer option | Engineer screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of enigneers |
+| 5 | Click on any engineer from the list | Resource screen should be reflected with below options with OK, Apply, Cancel<br>Personal<br>Location<br>Professional |
+
+

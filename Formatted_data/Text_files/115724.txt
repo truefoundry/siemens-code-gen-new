@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Clipboard option | Filter,Sorted by : Call Id, Search Task, Split Task list domain, List of notifications option should be reflected |
+| 3 | Click on Actions icon of confirmed status of the @notification | Below options should be reflected for each notification<br>Edit                                                                                           <br>Change Status<br>Show on Gantt<br>Show on Map<br>Remove to Clipboard<br>Pin Task<br>Comment<br>Check Rules<br>Get Candidates<br>Schedule<br>Unschedule |
+| 4 | Click on Comment | Comment window should be reflected and user should be able to add the comment |
+
+

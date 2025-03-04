@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Tester clicks on left side menu and selects "Bulk Transfer Task"<br> | "Bulk Reassign" screen opens<br> |
+| 2 | Tester searches any user in "Reassign from" field -> Select any task listed in the table | "Reassign" button is now enabled |
+| 3 | Tester clicks on "Reassign" | Bulk Transfer Assignment popup window displayed |
+| 4 | Update the details -> Click Cancel | Bulk Transfer Assignment popup window will be closed |
+| 5 | Tester selects any task listed in the table -> clicks on "Reassign" -> Update the details -> Click on 'X' icon | Bulk Transfer Assignment popup window will be closed<br>   |
+| 6 | Tester selects any task listed in the table -> clicks on "Reassign" -> Update the details -> Click on Transfer<br>   | Case ID should be transferred to the selected user |
+
+

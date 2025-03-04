@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Home, Schedule, Calendar Management, View , Analytics |
+| 3 |  Click on view and validate the sub options | Below sub options should be reflected<br>Capacity Limitations, Capacity Used Daily, Education Waitlist, Resource Territory, Task , Engineer<br> |
+| 4 | Click on task option | Task screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of notification |
+| 5 | Click on any of the notification from the list | Task screen should be reflected with below options with OK, Apply, Cancel buttons |
+
+

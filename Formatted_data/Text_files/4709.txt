@@ -1,0 +1,12 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL: https://na1.kinaxis.net/web/siet04_ga002/saml2<br>Open Rapid Response by clicking on the URL given<br>above. | Rapid Response window will open.<br> |
+| 2 | open the workbook ‘SHS S&OP Forecast Item Management" <br> | workbook ‘SHS S&OP Forecast Item Management"  is visible<br> |
+| 3 | In order to set up the statistical forecast run the command ‘Statistical Forecast Setup’ as shown screen print. Click on ‘Run’ and finally ‘Confirm’. | statistical forecast run the command ‘Statistical Forecast Setup’ is proceeded<br> |
+| 4 | Click on the ‘Forecast Item Configuration’ and check if the newly created forecast items shows up correctly<br> | newly created forecast item is visible and correct<br> |
+| 5 | Modify the forecast start and stop dates under the ‘Over Forecast’ column.<br> | modified forecast start and stop dates are visible |
+| 6 | Modify  historical and forecast interval count<br> | modified historical and forecast interval count are visible<br> |
+| 7 | create new model sets by inserting record using the ‘Model Sets and Method’ worksheet. New records can be nserted by clicking on the insert icon<br> | new records are visible |
+| 8 | replace the ‘DefaultBestFit’ with the newly created model set | newly created model ste is visible |
+
+

@@ -1,0 +1,13 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | CAD application launched and logged in successfully |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Views option should contains the following suboptions like:<br>Capacity Limitations<br>Capacity Used Daily<br>Education Waitlist<br>Resource Territory<br>Task<br>Engineer |
+| 4 | Navigate to Resource Territory | Resource Territory View page with the list of Resource details should be displayed |
+| 5 | Check the availablity of  Manage Filter, Sorting, Refresh , Duplicate ,Delete, New and Export options | Manage filter, sorting,  refresh, Delete,New , Export option should be  displayed |
+| 6 | Check the availability of fields like Date , Resource Name , Territories, Address, Max Distance,Max Travel Time | Date , Resource Name , Territories, Address, Max Distance,Max Travel Time fields with detail list should be displayed |
+| 7 | Click on Export | Data present in the Resource Territories view page should be exported and file is downloaded in local device in the Excel format |
+| 8 | Open the exported Excel file | Exported Excel file should be opened in the local device |
+| 9 | Validate the data present export file and and data present in the Resource Territory view | Data should be validated. |
+
+

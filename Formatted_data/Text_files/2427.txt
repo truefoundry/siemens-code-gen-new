@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Open Rapid Response by clicking on the URL given above.<br>URL : https://na1.kinaxis.net/web/SIET04_QA002/<br> | Rapid Response will be visible.<br> |
+| 2 | Create a private scenario using the 'S&OP Candidate' scenario. <br>Open the 'SHS S&OP Demand Planning Ratios' and the 'SHS S&OP Consensus Demand Planning' workbooks. | Able to create a private scenario, and able to open both the workbooks using the newly created scenario. |
+| 3 | In the consensus workbook the following forecast categories contribute 25% to the final forecast numbers.1. Business Line (AT)2. Dmd From SAP3. Spare Parts (CS)<br>4. Business Line (CT)<br>Pick any part and check if the 'Unconstrained Demand Plan' is being created 25% of <br>four forecast streams. | Able to see that for a selected part we can see that each of the forecast streams are contributing 25% each while calculating the 'Unconstrained Demand Plan'. |
+| 4 | The planners should open the 'Edit Default Ratios' worksheet using the workbook 'SHS S&OP Demand Planning Ratios.  For the selected part (same part that used in step 3) change override ratio using the SHS S&OP Demand Planning Ratios workbook as shown. Save the changes.<br> | Able to change the ratios |
+| 5 | After changing the the ratios and recheck if the 'Unconstrained Demand Plan' is being created using the newly defined ratios. | The  'Unconstrained Demand Plan' should use the newly created ratios.<br> |
+
+

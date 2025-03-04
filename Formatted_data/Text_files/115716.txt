@@ -1,0 +1,7 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Validate the options available | Menu, Search bar, Notification button should be reflected |
+| 3 | Validate the home screen message | You can start browsing the different views by clicking the menu button  at the top left. This button is always available for quick navigation between the views. You can also perform a global search for records, objects and views using the Search field in the blue header.<br><br>We hope you enjoy this new product! Feedback is always welcome :-)<br><br>- The ClickSoftware team |
+
+

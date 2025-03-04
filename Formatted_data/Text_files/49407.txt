@@ -1,0 +1,24 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | The tester clicks on "Create" -> "Validity Documents" | Button click works as expected and 'validity documents' screen opened |
+| 2 | Tester choose a QMS and clicks on 'Cancel' | "You are about to discard your unsaved changes." alert message popup should be displayed with OK and Cancel button |
+| 3 | Click on Cancel button | Popup message should be closed |
+| 4 | Click on Cancel again and Click "X" icon in the alert message | Popup message should be closed |
+| 5 | Click on Cancel again and Click OK in the alert message | New changes are reverted |
+| 6 | Tester selects at choose QMS 'AT' and clicks on 'Save' | QMS is saved |
+| 7 | Tester clicks on 'Submit' | QMS is submitted successfully |
+| 8 | The tester enters in the 'Name' field -> 'Alten' and clicks on 'Search for Suppliers' | A list of suppliers (Name beginning with 'Alten') is shown on the click of 'Search for Suppliers' |
+| 9 | Click on Clear search criteria | All fields will reset |
+| 10 | Click on Cancel | Validity documents screen will be closed without saving anything |
+| 11 | Tester enters in the 'Name' field -> 'Alten' and clicks on 'Search for Suppliers' -> selects the Supplier 'ALTEN GmbH' setting the check mark at the related line and clicks on -> 'Continue' | Supplier is selected and Validity document screen displayed with the list of documents |
+| 12 | Select any document -> Uncheck the Valid? -> Click on Cancel | Validity documents screen will be closed without saving anything |
+| 13 | Click Go -> Select any document -> Uncheck the Valid? -> Add comments -> Click on Save | Changes will be saved |
+| 14 | Tester clicks on 'Submit' | Validity documents is submitted successfully |
+| 15 | Click on supplier tab -> Click on Show 360° View | 360° View should be opened |
+| 16 | The tester clicks on "Create" -> "Validity Documents" | 'Validity documents' screen opened |
+| 17 | Tester clicks on Actions -> click on Cancel case | Cancel case screen is displayed |
+| 18 | Enter the cancellation comment and click cancel | Cancel case screen closed without saving |
+| 19 | Tester clicks on Actions -> click on Cancel case -> enter the cancellation comment and click Save | Cancellation comment is saved |
+| 20 | Click on submit | VD case is cancelled |
+
+

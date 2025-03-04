@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL: https://na1.kinaxis.net/siet04_qa002/saml2 <br>Open Rapid Response by clicking on the URL given<br>above.<br> | Rapid Response window will open.<br> |
+| 2 | The private scenario needs to be created using the S&OP Candidate scenario. Having created the private scenario make sure that the workbook is opened using the newly created private scenario.<br> | Private scenario is created. |
+| 3 | Open the "SHS S&OP Forecast Disaggregation" workbook.<br> | "SHS S&OP Forecast Disaggregation" workbook opens.<br> |
+| 4 | In the data settings from the left select:                                                                                                    <br>Worksheet: Define Forecast Item Level<br> Scenario: S&OP Candidate (your private scenario)<br>Part: All Parts<br>Sites: All Sites<br>Forecast Category: Spare Parts CS | Able to use the data settings<br> |
+| 5 | In the Hierarchy settings select relevant SHS Site, SHS Customer and SHS Product, similarly as in the screenshot. | Hierarchy is selected. |
+| 6 | Choose desired product and type new value into the chosen bucket and save the changes. In the bottom part of the screen will show up new worksheet 'Rates Override Detail - Units' where you can see distribution of overridden values. | Able to make changes. 'Rates Override Detail - Units' worksheet is available and values are overridden.<br> |
+| 7 | To make forecast adjustments, open the ‘SHS S&OP Consensus Demand Planning’ workbook and make the adjustments using the adjustments row. | The forecast is disaggregated using the effective disaggregation rates |
+
+

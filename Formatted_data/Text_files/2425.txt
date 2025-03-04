@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br> | Rapid Response will be visible. |
+| 2 | Then open the Workbook ‘SHS Part Properties’ as shown. | Workbook is opened |
+| 3 | In the data settings dialogue box select public scenario 'S&OP candidate'.<br> | Scenario 'S&OP candidate' is selected. |
+| 4 | Select the ‘General’ worksheet <br> | Able to view the Average selling price, but cannot see pencil mark and cannot edit value! (except global demand planner and some specified groups)<br> |
+| 5 | Create private scenario under S&OP candidate Scenario. In the data settings dialogue box select this created private scenario. | Private Scenario under S&OP candidate Scenario is selected. |
+| 6 | Select the ‘General’ worksheet ,(only global demand planners will be able to edit Average Selling Price).<br><br> | Able to view the Average selling price and also edit the selling price. (Pencil mark at the column indicates you have the permission to edit the data)<br> |
+
+

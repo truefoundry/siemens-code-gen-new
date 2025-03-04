@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br><br> | Rapid Response will be visible. |
+| 2 | Open the workbook ‘SHS Demand Waterfalls’.<br><br> |  workbook ‘SHS Demand Waterfalls’ is opened.<br> |
+| 3 | Select the customer number, Forecast stream, ASOF Date in the selection criteria to filter the data<br><br> | workbook shows data based on selection<br> |
+| 4 | This worksheet can be used to review historical actual demand and forecast quantities as they were at different points in time specified in the As of Date row. <br><br>This will allow you to view trends and see how closely the past forecasts have matched actual demands.<br>The background color of the values in the Quantity by Date column signified the following:<br>Yellow—forecast demand<br>Blue—actual historical demand<br><br> | The quantities are visible for various dates as on the data selected (AS OF Date).  |
+
+

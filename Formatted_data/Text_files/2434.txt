@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Open Rapid Response by clicking on the URL given above.<br>URL : https://na1.kinaxis.net/web/SIET04_QA002/<br> | Rapid Response will be visible.<br> |
+| 2 | Open the workbook ‘SHS S&OP Consensus Demand Planning’ and make sure that forecast exists for a specific part/site/month that has ‘Unconstrained Demand Plan’. <br><br>Note: In the following example we can see that that there are 1500 units (1000 units for Nov and 500 units for Dec).<br> | forecast exists for a specific part/site/month that has ‘Unconstrained Demand Plan’.<br> |
+| 3 | Open the ‘Horizontal MPS (Due Date) worksheet under the ‘SHS Planning Sheet’ workbook. Select the same part/site combination as shown in the previous slide and select the ‘Calendar_Week’ under the bucket settings. <br><br> | ‘Calendar_Week’ under the bucket settings is selected for the ‘Horizontal MPS (Due Date) worksheet under the ‘SHS Planning Sheet’ workbook with selected part/site combination <br> |
+| 4 | Open the ‘Horizontal MPS (Due Date) worksheet under the ‘SHS Planning Sheet’ workbook. On selecting the ‘Calendar_Week’ bucket setting, the forecast line shows the spread numbers.<br><br> | Note: Be sure to have checked Auto Statistics by your choice. |
+
+

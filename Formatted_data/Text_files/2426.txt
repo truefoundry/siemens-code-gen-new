@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Open Rapid Response by clicking on the URL given above.<br>URL : https://na1.kinaxis.net/web/SIET04_QA002/<br> | Rapid Response will be visible.<br> |
+| 2 | Open the 'SHS S&OP Forecast Disaggregation' workbook using a private scenario under 'S&OP Candidate'.<br> | workbook 'SHS S&OP Forecast Disaggregation' was opened with a private scenario in 'S&OP Candidate'.<br> |
+| 3 | The planners can modify the disaggregation rates for one of the following four categories.<br>1. Spare Parts CS<br>2. Forecast Adjustments<br>3. Dependent Dmd From SAP<br>4. Statistical<br> All the above listed forecast have the disaggregation rates based on the ‘Historical Sales’<br>After opening the workbook select any one of the option from the drop down (shown in snapshot).<br> | Able to select one of the option from the list. |
+| 4 | For testing the ratios the planners can create a custom filters as shown below.  The custom filter can be created using number of parts which the planner wants to test. Select the parts and right click on it. Then select the create a new filter.  Give name to the newly created private part filter | Able to create a private part filter |
+| 5 | Using the  ‘Rates Summary – Units’ worksheet the planners can change the ratios using the ‘Override’ row. When there are no override entries the ‘Effective’ shows the ‘Default’ rates. The default rates are calculated using the historical sales.  | Able to edit using the override line  |
+
+

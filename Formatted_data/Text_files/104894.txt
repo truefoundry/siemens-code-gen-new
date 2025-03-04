@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD Application and Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Gantt option | Gantt Filters, Sort, Change Gantt resolution, Change the start date of the Gantt, Settings, Search Resources, List of Resources should be reflected |
+| 3 | Click on 3 dot option next to each resource | Below option should be reflected<br>Edit<br>Show Home Base<br>Show Daily Route<br>Add Tasks to Clipboard<br>Relocate Resource<br>Cancel All Relocations<br> |
+| 4 | Click on Edit | Resource pop up should be reflected with Personal, Location, Professional and History sections with OK, Apply, Cancel button for each<br> |
+
+

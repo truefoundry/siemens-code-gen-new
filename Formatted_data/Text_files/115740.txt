@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Below options should be reflected <br>Education Waitlist<br>Task<br>Engineer<br>Education Skills<br>Assignent |
+| 4 | Click on Education Skills | Education skills screen should be reflected with Manage Filters, Sorting, Refresh, New Options and List of Education Skills |
+| 5 | Click on Manage Filters | Filters Management - EducationSkills popup screen should be displayed with Add, Rename, Delete, Add Condition, Advanced Filter, System Filters, My Filters Options along with Apply, Save As and Save button |
+| 6 | Click on Add, Enter the conditions, Click on save | EducationSkills filter 01 * folder should be created and condition should be entered and saved |
+
+

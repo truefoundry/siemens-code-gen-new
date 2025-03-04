@@ -1,0 +1,14 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | CAD application launched and logged in successfully |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Views options should contains the following suboptions like:<br>Capacity Limitations<br>Capacity Used Daily<br>Education Waitlist<br>Resource Territory<br>Task<br>Engineer |
+| 4 | Navigate to Education Waitlist suboption | Education WaitList screen should be displayed |
+| 5 | Check for Manage Filter, Sorting, Refresh , Duplicate , Delete, New and Export options | Manage filter, sorting,  refresh,Delete, New , Export option should be  displayed |
+| 6 | Check whether Education WaitList contains fields like Priority Ranking, Notification Number, Sales Order, FL#, Requested Training Start Date, Customer Contact Date, Perferred CES,Customer Name, City, State | Education Waitlist should contains fields like Priority Ranking, Notification Number, Sales Order, FL#, Requested Training Start Date, Customer Contact Date, Preferred CSE, Customer Name, City, State |
+| 7 | Click on any one of the Notification Number from the List | Notification details should be displayed |
+| 8 | Click on duplicate | Another copy of same notification should be created |
+| 9 | Click on Apply and Click on OK | Duplicate copy is created and saved |
+| 10 | To validate the Duplicate copy, go to view | Duplicate copy of the same notification should be displayed |
+
+

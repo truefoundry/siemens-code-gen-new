@@ -1,0 +1,32 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Tester clicks on left side menu on 'Create' -> 'Upload Documents' | Button click works as expected and upload documents screen opened |
+| 2 | Tester selects any QMS and clicks on 'Save' | QMS is saved |
+| 3 | Tester choose a different QMS and clicks on 'Cancel' | "You are about to discard your unsaved changes." alert message popup should be displayed with OK and Cancel button |
+| 4 | Click on Cancel button | Popup message should be closed |
+| 5 | Click on Cancel again and Click "X" icon in the alert message | Popup message should be closed |
+| 6 | Click on Cancel again and Click OK in the alert message | New changes are reverted |
+| 7 | Tester clicks on 'Submit'<br> | QMS is submitted successfully |
+| 8 | The tester enters any name in the 'Name' field' and clicks on 'Search for Suppliers' | A list of suppliers is shown on the click of 'Search for Suppliers'<br> |
+| 9 | Click on Clear search criteria | All fields will reset |
+| 10 | Click on Cancel | Upload documents screen will be closed without saving anything |
+| 11 | Tester enters any name in the 'Name' field' and clicks on 'Search for Suppliers' -> selects any Supplier setting the check mark at the related line and clicks on -> 'Continue' | Supplier is selected and "Upload document" screen opened on the click of Continue |
+| 12 | Tester clicks on "actions" and -> Take a screenshot of the options in the actions menu | On Click of actions, dropdown list will display |
+| 13 | Tester clicks on the dropdown menu and verifies available categories | On Click of document category, dropdown list will display |
+| 14 | Click on Cancel | Upload documents screen will be closed |
+| 15 | Click on Go -> Select the document Category 'Basic Supplier Information' -> Click Add | Fields to specify for 'Basic Supplier Information' will appear |
+| 16 | Tester Clicks on Remove files | Uploaded files should be removed |
+| 17 | Click Add on the selected document category | Fields to specify for 'Basic Supplier Information' will appear |
+| 18 | Tester Clicks on Upload file and Click Cancel | Attach files popup window displayed and closed on click of 'Cancel'<br> |
+| 19 | Tester Clicks on Upload file and Click 'X' icon | Attach files popup window displayed and closed on click of 'X' icon |
+| 20 | Tester Clicks on Upload file -> Click 'Select file(s)' -> Select any pdf file -> Attach | Select files window will display and files will be attached on click of 'Attach' |
+| 21 | Tester clicks on Save | Changes should be saved |
+| 22 | Click on Go -> Click on Submit | Upload documents submitted successfully |
+| 23 | Click on supplier tab -> Click on Show 360° View | 360° View should be opened |
+| 24 | Tester clicks on left side menu on 'Create' -> 'Upload Documents' | upload documents screen opened |
+| 25 | Tester clicks on Actions -> click on Cancel case | Cancel case screen is displayed |
+| 26 | Enter the cancellation comment and click cancel | Cancel case screen closed without saving |
+| 27 | Tester clicks on Actions -> click on Cancel case -> enter the cancellation comment and click Save | Cancellation comment is saved |
+| 28 | Click on submit | UD case is cancelled |
+
+

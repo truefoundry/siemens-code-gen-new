@@ -1,0 +1,21 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Select Manual supplier list on the left menu | 'Manual supplier list' screen will be displayed |
+| 2 | Click on Create supplier | Manual supplier screen displayed |
+| 3 | Tester choose a QMS and clicks on 'Cancel' | "You are about to discard your unsaved changes." alert message popup should be displayed with OK and Cancel button<br> |
+| 4 | Click on Cancel button | Popup message should be closed |
+| 5 | Click on Cancel again and Click "X" icon in the alert message | Popup message should be closed |
+| 6 | Click on Cancel again and Click OK in the alert message | New changes are reverted |
+| 7 | Tester selects any QMS and clicks on 'Save' | QMS is saved |
+| 8 | Tester clicks on 'Submit' | QMS is submitted successfully |
+| 9 | Enter the required details in the Define manual supplier and Click Cancel | 'Define manual supplier' screen closed without saving anything |
+| 10 | Click on Go -> Enter the required details -> click Save | Entered details are saved in 'Define manual supplier' |
+| 11 | Click on Submit | 'Define manual supplier' is submitted |
+| 12 | Tester clicks on Actions -> Cancel case | Cancel case screen will display |
+| 13 | Enter the cancellation comment and click cancel | Cancel case screen closed without saving |
+| 14 | Tester clicks on Actions -> click on Cancel case -> enter the cancellation comment and click Save | Cancellation comment is saved |
+| 15 | Click on submit | Manual supplier case is cancelled |
+| 16 | Select Manual supplier list on the left menu | 'Manual supplier list' screen will be displayed |
+| 17 | Click 'Edit' button on any supplier | Manual supplier screen displayed for the selected supplier |
+
+

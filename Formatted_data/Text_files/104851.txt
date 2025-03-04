@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Validate the options available | Menu, Search bar, Notification button should be reflected |
+| 3 | Click on Notification icon | Alert Center pop up should be reflected with list of pending notifications Setting and dismiss all alerts button |
+| 4 | Click on Settings | Alert Center Settings should be reflected with Schedule view domains only toggle button, Search Domain, Apply /Cancel button |
+| 5 | Select the required domain from the list and click on Apply | Notifications related to the selected domain should be reflected |
+| 6 | Click on dismiss all alerts | Are you sure? Message should be reflected with Dismiss All and Cancel button |
+| 7 | Click on dismiss all | All the notifications should be removed |
+
+

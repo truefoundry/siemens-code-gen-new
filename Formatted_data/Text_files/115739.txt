@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Below options should be reflected <br>Education Waitlist<br>Task<br>Engineer<br>Education Skills<br>Assignent |
+| 4 | Click on Education Skills | Education skills screen should be reflected with Manage Filters, Sorting, Refresh, New Options and List of Education Skills |
+| 5 | Click on New | New Education Skills screen should be displayed with Skill fields along with ok, Apply and Cancel button |
+| 6 | Enter Skill in Skill Field and Click on Ok | Education Skills is Added to the List with a Key Number |
+
+

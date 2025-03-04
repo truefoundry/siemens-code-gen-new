@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD Application and Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Gantt option | Gantt Filters, Sort, Change Gantt resolution, Change the start date of the Gantt, Settings, Search Resources, List of Resources should be reflected |
+| 3 | Click on 3 dot option next to each resource | Below option should be reflected |
+| 4 | Click on Create N/A | Non Availability pop up should be reflected with General, Location, Recurrence, Notes and each with OK,Apply, Cancel button |
+| 5 | Enter required Start date, Finish Date, Type field under general and click on Ok button | Non Availability should be created for selected date & time and Type |
+
+

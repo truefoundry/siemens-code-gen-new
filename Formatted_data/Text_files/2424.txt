@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br> | Rapid Response will be visible. |
+| 2 | Then open the dashboard ‘SHS Demand Planner’.<br> | dashboard ‘SHS Demand Planner’ is opened in RR<br> |
+| 3 | In the data settings dialogue box select the ‘Consensus Demand Plan’ widget. <br>(use a private scenario under S&OP Candidate scenario) | ‘Consensus Demand Plan’ is selected in a private scenario<br> |
+| 4 | In Consensus Demand Plan Widget edit the range in ‘Show Units or Revenue’ and ‘Currency 'column and select the needed. | In ‘Consensus Demand Plan ‘Widget all demand streams displayed + actual sales are seen.<br> |
+| 5 | In Consensus Demand Plan Widget edit the range in ‘Show Units or Revenue’ and ‘Currency 'column and select the needed. click on any data in the widget.<br> | In ‘Consensus Demand Plan ‘Widget all demand streams displayed + actual sales are seen. click on it and it will take you to the S&OP consensus demand planning workbook. |
+
+

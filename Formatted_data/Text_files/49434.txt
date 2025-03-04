@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Select Define supplier list on the left menu | Define supplier list screen displayed |
+| 2 | The tester selects any QMS and clicks on 'Search for Suppliers' | A list of suppliers (Name beginning with 'SHS') is shown on the click of 'Search for Suppliers' |
+| 3 | Click on Clear search criteria | All fields will reset |
+| 4 | Again, select any QMS and click on 'Search for Suppliers' | Suppliers list will display |
+| 5 | Click on Export to Excel | Supplier list will be downloaded in excel |
+| 6 | Select any suppliers and click on Save<br><br>Note: <br>1. Comments should be mandatory for non-relevant 'A' category suppliers.<br>2. Supplier contact, MinMax, StdPO & JIT should be mandatory for relevant suppliers and total value of MinMax, StdPO & JIT entered in the field should be 100 in total | Define supplier list will be saved |
+
+

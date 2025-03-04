@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD Application and Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Gantt option | Gantt Filters, Sort, Change Gantt resolution, Change the start date of the Gantt Settings, Search Resources, List of Resources should be reflected |
+| 3 | Click on Gantt Filter | Search bar with Manage and Clear button should be reflected |
+| 4 | Click on Manage button | Filters Management Resources should be reflected with Add button, System Filters and My filters option |
+| 5 | Click on Add button | Rename , Delete button should be enabled with Advance filter check box , Add condition option and Apply, Save As, Save buttons |
+| 6 | Click on Add condition | User should be able to add the required condition from the drop down |
+| 7 | Click on Advance Filter checkbox | "Write down the expression to evaluate the condition:" field should be reflected |
+
+

@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics<br> |
+| 3 | Click on Views | Views options should contains the following suboptions like:<br>Capacity Limitations<br>Capacity Used Daily<br>Education Waitlist<br>Resource Territory<br>Task<br>Engineer<br> |
+| 4 | Click on Capacity Used Daily | Periodic Capacity screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of capacity used daily |
+| 5 | Click on any of the Capacity Used Daily item from the list | Detail screen should be reflected for the selected list item with Name,District,Task Type category, Time Resolution,Capacity Threshold fields and OK, Apply, Cancel button |
+
+

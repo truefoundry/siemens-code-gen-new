@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL: https://na1.kinaxis.net/web/siet04_ga002/saml2<br>Open Rapid Response by clicking on the URL given<br>above. | Rapid Response window will open.<br> |
+| 2 | Create a scenario, child of S&OP Candidate called Test Case 4696  | <br> |
+| 3 | Go to the resource panel and open the workbook ‘SHS S&OP Forecast Item Management" at the "Define Forecast Item Level" worksheet and select the scenario you created in step 2 as shown in the screen print.  <br> | The workbook "SHS S&OP Forecast Item Management" will open<br> |
+| 4 | In the top tool bar Click the ‘button marked "show all" and from the drop down list select the option "unassigned" to display only forecast items records that are not configured.<br> |  Only those records which don’t have a forecastitems assigned against them are visible. The "Stat Forecast Level" column will be empty for unassigned items |
+| 5 | Select the column ‘Stat Forecast Level (Modify)’ which needs to be assigned with aforecast item and right click to pick ‘Edit Range’ option. In the ‘Edit Range’ dialoguebox select the ‘Copy from column’ under operation and pick the appropriatecolumn from the list. - "the part column-  Then click on ‘Apply’ and finally save thechanges. | Changes to statistical forecast item can be saved |
+| 6 | Make sure the newly created forecast items shows up in the ‘Stat Forecast Level (MODIFY)’ column (change the filter to ‘Show All’ incase it is still using ‘Unassigned’)​ | Forecast items are visible in the stat forecast Level (Modify) column |
+
+

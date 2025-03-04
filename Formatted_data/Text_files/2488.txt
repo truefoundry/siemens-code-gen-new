@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given<br>above.<br> | Rapid Response will be visible.<br> |
+| 2 | Then open the workbook ‘SHS S&OP Consensus Demand Planning’ as shown in the screen print. | The workbook "SHS S&OP Consensus Demand Planning' is opened |
+| 3 | In the data settings dialogue box select the ‘Consensus Demand Plan – Unit Summary’worksheet. Select a private scenario under the ‘S&OP Candidate’ scenario as here. (Create a private scenario incase if it doesn't exist under the S&OP Candidate scenario).<br> | A private scenario under 'S&OP Candidate' is created and selected.<br> |
+| 4 | In Consensus Demand Plan – Unit Summary Worksheet edit the range in ‘Adjustments’ column and select the needed hierarchy.<br> | The adjustments column is updated in the Units summary worksheet.<br> |
+| 5 | In Consensus Demand Plan – Unit Worksheet edit the range in ‘Adjustments’ column the values have been automatically disaggregate down and roll-up.<br><br> | The data updated in Summary view is disaggregated automatically and visible in the Consensus Demand Plan - Units worksheet.<br> |
+
+

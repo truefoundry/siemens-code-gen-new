@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/siet04_qa002/saml2 <br>Open Rapid Response by clicking on the URL given<br>above.<br> | Rapid Response window will open.<br> |
+| 2 | Open the workbook ‘SHS S&OP Consensus Demand Planning’ as shown in the screen print.<br> | The workbook "SHS S&OP Consensus Demand Planning" is opened<br> |
+| 3 | In the Data Settings dialog box select the “Consensus Demand Plan –<br>Units Summary” worksheet. Select a private scenario under the ‘S&OP Candidate’ scenario as here. (Create a private scenario in case it doesn't exist under the S&OP Candidate scenario).<br> | A private scenario under 'S&OP Candidate' is created and selected.<br> |
+| 4 | Click on the business line hyperlink for which you want to view the data for. <br> | The respective Business line workbook opens.<br> |
+| 5 | Click on the data settings for the new workbook opened and go to the hierarchy option and select the “SHS Product” as shown in the screenshot. Select the part from the hierarchy for which you want to view the data for.<br> | The data is filtered for the selected hierarchy settings. |
+| 6 | Go to the bucket settings and select 60 months past buckets in the new workbook opened<br> | 60 months of historical data will be visible  |
+
+

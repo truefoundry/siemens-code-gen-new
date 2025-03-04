@@ -1,0 +1,12 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen |
+| 3 | Validate the options reflected | Below sub options in Views should be reflected |
+| 4 | Click on Engineer option in Views | Engineer screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh, New, Export buttons and list of engineers |
+| 5 | Click on Manage filters | Filters Management - Resource screen should be displayed |
+| 6 | Click on Add | Resource filter 01 * - Conditions folder should be created |
+| 7 | Click on Rename | Filter folder name should be edited |
+| 8 | Enter the name in the Filter folder and Click on save | New name should be saved. |
+
+

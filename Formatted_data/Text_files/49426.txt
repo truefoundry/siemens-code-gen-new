@@ -1,0 +1,44 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Tester goes to left side menu -> click on Create -> click Supplier Qualification | Button click works as expected and Qualification case opened |
+| 2 | Tester choose a QMS and clicks on 'Cancel' | New changes are reverted |
+| 3 | Click on Go -> Select a QMS -> Click on Save | QMS is saved |
+| 4 | Tester clicks on 'Submit' | QMS is submitted successfully |
+| 5 | The tester enters in the 'Name' field 'SHS' and clicks on 'Search for Suppliers' | A list of suppliers (Name beginning with 'SHS') is shown on the click of 'Search for Suppliers' |
+| 6 | Click on Clear search criteria | All fields will reset |
+| 7 | Click on Cancel | 'Search for suppliers' screen will be closed without saving anything |
+| 8 | Click on Go -> enters in the 'Name' field 'SHS 2328' -> clicks on 'Search for Suppliers' -> selects the Supplier setting the check mark at the related line and clicks on -> 'Continue'<br><br>Note: Search for the already qualified SLM-Manual supplier | Supplier is selected and "Apply scope" screen opened on the click of Continue |
+| 9 | Click on Show 360° View | 360° View window will open |
+| 10 | Make any changes on Apply scope -> Click Cancel | 'Apply scope' screen will be closed without saving anything |
+| 11 | Click on Go -> Click Back | Confirmation popup window will display with 'Yes' and 'No' buttons<br> |
+| 12 | Click on No | popup window will be closed |
+| 13 | Click on Yes | Screen redirects to 'Search for suppliers' screen |
+| 14 | Repeat Step 8 -> click Continue | Apply scope is submitted |
+| 15 | Update the username on CFT members -> click Cancel | 'Assign CFT members' screen will be closed without saving anything |
+| 16 | Click on Go -> Click Back | Confirmation popup window will display with 'Yes' and 'No' buttons |
+| 17 | Click on No | popup window will be closed |
+| 18 | Click on Yes | Screen redirects to 'Apply scope' screen |
+| 19 | Click Continue on Apply scope | Apply scope is submitted |
+| 20 | Update the username on CFT members -> click Continue | CFT members is submitted |
+| 21 | Click on 'Add task' in 'Review and adjust tasks' | Add task window will display |
+| 22 | Click on 'X' icon | Add task window will be closed |
+| 23 | Click on 'Add task' -> Click on Cancel | Add task window will be closed |
+| 24 | Enter the values and Click Next | Next task will display |
+| 25 | Enter the values and Click Previous | Previous task will display |
+| 26 | Click on Submit | New task is submitted |
+| 27 | Click on Cancel | "You are about to discard your unsaved changes." alert message popup should be displayed with OK and Cancel button |
+| 28 | Click on Cancel button | Popup message should be closed |
+| 29 | Click on Cancel again and Click "X" icon in the alert message | Popup message should be closed |
+| 30 | Click on Cancel again and Click OK in the alert message | 'Review and adjust tasks' screen will be closed without saving anything |
+| 31 | Click on Go -> Update any task displayed in the list by double click on it -> Click on Save | Updated details will be saved |
+| 32 | Click on Submit | 'Review and adjust tasks' are submitted |
+| 33 | Tester clicks on Actions -> Hover over the created task and click on Withdraw task | Withdraw task screen is displayed |
+| 34 | Enter the reason and click on Cancel | Withdraw task screen closed without saving |
+| 35 | Tester clicks on Actions -> Hover over the created task and click on Withdraw task -> Enter the reason and click on Save | Withdraw reason is saved |
+| 36 | Click on submit | Withdraw task is submitted |
+| 37 | Tester clicks on Actions -> click on Cancel case | Cancel case screen is displayed |
+| 38 | Enter the cancellation comment and click cancel | Cancel case screen closed without saving |
+| 39 | Tester clicks on Actions -> click on Cancel case -> enter the cancellation comment and click Save | Cancellation comment is saved |
+| 40 | Click on submit | SQ case is cancelled |
+
+

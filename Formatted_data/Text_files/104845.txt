@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Home, Schedule, Calendar Management, View , Analytics |
+| 3 |  Validate the sub options | Below sub options should be reflected<br>Capacity Limitations, Capacity Used Daily, Education Waitlist, Resource Territory, Task , Engineer |
+| 4 | Click on Engineer option | Engineer screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh, New, Export buttons and list of engineers |
+| 5 | Click on New | Resource screen should be reflected with  options with OK, Apply, Cancel |
+
+

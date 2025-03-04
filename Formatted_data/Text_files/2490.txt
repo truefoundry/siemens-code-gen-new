@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br> | Rapid Response will be visible.<br> |
+| 2 | Create a private scenario using the 'Master Data Updates' scenario | Private scenario is created |
+| 3 | Then open the workbook ‘SHS Part Properties’.<br> | Workbook is opened. (Refer to the screen print for results.<br> |
+| 4 | In the data settings dialogue box select the ‘General’ worksheet. Select the Private scenario created. <br> | Workbook is opened and with the private scenario created.  |
+| 5 | In General Worksheet Is Active column has been added. | Is Active column is updated. (Refer to the screen print for results)<br> |
+
+

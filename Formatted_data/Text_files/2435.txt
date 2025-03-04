@@ -1,0 +1,10 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Open Rapid Response by clicking on the URL given above.<br>URL : https://na1.kinaxis.net/web/SIET04_QA002/<br> | Rapid Response will be visible.<br> |
+| 2 | Open the 'SHS Forecast Consumption Analysis' workbook. Use the 'Master Production Scheduling' scenario. | The 'SHS Forecast Consumption Analysis' workbook is opened, using the 'Master Production Scheduling' scenario.<br> |
+| 3 | Check that the worksheet ‘Actual/Forecast Consumption %’ defined in the ‘SHS Forecast Consumption Analysis’ workbook shows the consensus forecast, spread of the forecast , consumed and unconsumed forecast for a given period. The details and percentages of how the spread forecast is consumed is also displayed. <br> | The worksheet ‘Actual/Forecast Consumption %’ in the ‘SHS Forecast Consumption Analysis’ workbook shows the consensus forecast, spread of the forecast , consumed and unconsumed forecast for a given period.<br><br>The details and percentages of how the spread forecast is consumed is also displayed. <br> |
+| 4 | Checkt that the ‘Forecast Consumption Chart’ displays the consumption related numbers. <br><br> | ‘Forecast Consumption Chart’ is showing the consumption related numbers. <br> |
+| 5 | Check the ‘Forecast Consumption’ worksheet for the forecast for a customer or part along with the actual orders that are consuming the forecast. <br><br> | Forecast for a customer or part along with the actual orders that are consuming the forecast are shown in  the worksheet 'Forecast Consumption’.<br> |
+| 6 | Check that the worksheet shows the actual orders that are consuming the forecast in a given period along with the forecast orders. Also the quantity of the forecast that's consumed or unconsumed is displayed.<br><br> | The worksheet displays the actual orders that are consuming the forecast in a given period along with the forecast orders. Also the quantity of the forecast that's consumed or unconsumed are shown.<br> |
+
+

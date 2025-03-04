@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View Option | Below options should be reflected <br>Education Waitlist<br>Task<br>Engineer<br>Education Skills<br>Assignent |
+| 4 | Click on Assignment | Assignment List screen should be displayed with Search bar, Manage Filters, Sorting , Refresh, New and Export Options. |
+| 5 | Click on Manage Filter | Filters Management - Non-availability popup screen should be displayed |
+| 6 | Select the existing Non-availabilityfilter folder and Click on Rename | Selected Filter folder should be able to Rename. |
+| 7 | Click on save | Rename folder should be saved. |
+
+

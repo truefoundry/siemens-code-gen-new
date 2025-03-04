@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD Application and Click on Schedule button | Schedule screen should be reflected with Tasks, Clipboard, Gantt, Map, Working on Domain options |
+| 2 | Click on Gantt option | Gantt Filters, Sort, Change Gantt resolution, Change the start date of the Gantt Settings, Search Resources, List of Resources should be reflected |
+| 3 | Click on Resource and District sortby Name icon | Gantt Sorting window popup should be displayed with select columns and Sort by fields along with sort and cancel button |
+| 4 | Select Column from the Select Columns fields and Drag and drop the selected columns to sort by fields | Validate the Selected columns are listed in the sort by fields and which are drag and drop from select columns |
+
+

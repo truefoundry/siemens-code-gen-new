@@ -1,0 +1,32 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal | Landing page is displayed |
+| 2 | <br>Click on tile "Report an issue with an order or delivery"<br> | Page with details for reporting an issue is opened - Part 1. Personal information |
+| 3 | Enter data in to following fields:- Name - name of logged user, not possible to modify<br>- E-Mail - email of logged user, not possible to modify<br>- Mobile<br>- Country<br>- State<br>- Preferred language<br><br>For reference check attached screenshot | User is able to enter information in specified fields |
+| 4 | Click "Next" button | Page with details for reporting an issue is opened - Part 2. Request information |
+| 5 | Enter data in to following fields:- Request type - Possible to select one from the list("Order Issue", "Question about Account", "Invoice inquiry", "Question about Order")<br>- Subject<br>- Reason<br>- Classification<br>- Siemens Healthineers Team<br>- Sold To<br>- Ship to<br>- Puchase Order or Order Number - add multiple entries by clicking on "+ Add Order Number"<br>- Additional E-Mail - add multiple entries by clicking on "+ Add E-Mail"<br><br>For reference check attached screenshot | User is able to enter information in specified fields |
+| 6 | In section Attachments click on icon "Browse files", select files that will be attached to this issue and click "Open" | Icon with name of each individual file is created in section Attachments |
+| 7 | Drag and drop file from your computer in to section Attachments | Icon with name of file is created in section Attachments |
+| 8 | Click "Next" button | Page with details for reporting an issue is opened - 3. Check your information |
+| 9 | Verify that the content of fields on the screenFor reference check attached screenshot | Values of the fields are the same as were entered in step 3 and 5 |
+| 10 | Check the checkbox "Mark as urgent" | Checkboxes can be checked.<br><br> |
+| 11 | Click "Save + Submit" button | Popup with following text is diplayed:Save & Submit Request<br>Are you sure you want to submit this request? You will not be able to make any changes after submission<br><br>For reference check attached screenshot |
+| 12 | Click "Yes, submit" button | Popup with following test is diplayed:Congratulations! Your issue has been reported.<br><br>For reference check attached screenshot<br> |
+| 13 | Click "Go back to the dashboard" button | Landing page is displayed |
+| 14 | Verify that notification was not sent to email addresses menitoned in fields E-Mail and Additional E-Mail . For reference check attached screenshot . | Notification email was not received by email addresses menitoned in fields E-Mail and Additional E-Mail |
+| 15 | Click on tile "Show me my Requests" | Page with dashboard with all requests created by the user is opened on tab My Dashboard . For reference check attached screenshot . |
+| 16 | Click on tab "Created Requests" | Page with list of all requests created by the user is opened on tab My Dashboard For reference check attached screenshot<br> |
+| 17 | Enter request ID or part of Subject in to search field | Only requests matching search conditions are displayed |
+| 18 | Click on filtered request | Request detail page is opened on Comment tabFor reference check attached screenshot<br> |
+| 19 | Verify content of fields on the screenFor reference check attached screenshot<br> | Reason from step 5 is used as 1st comment |
+| 20 | Enter text, add attachment and submit new comment by clicking ">" icon | New comment is added |
+| 21 | Select tab "Request Information" and verify content of fields on the screenFor reference check attached screenshot<br> | Values of the fields are the same as were entered in step 3 and 5 |
+| 22 | Select tab "Requestor Information" and verify content of fields on the screenFor reference check attached screenshot<br> | Values of the fields are the same as were entered in step 3 and 5 |
+| 23 | Select tab "Request Overview" and verify content of fields on the screenFor reference check attached screenshot<br> | Values of the fields are the same as were entered in step 3 and 5 |
+| 24 | Click on button "Back" | Page with dashboard with all requests created by the user is opened on tab My Dashboard |
+| 25 | Click on tab "Created Requests" and click on your request created in previous steps | Request detail page is opened on Comment tabFor reference check attached screenshot<br> |
+| 26 | Select tab "Request Information" and click on the button "Delete" | Popup with following text is diplayed:Delete Request<br>Request will be removed from your list of saved requests.<br><br>For reference check attached screenshot |
+| 27 | Click "Confirm" button | Notification about successful operation is displayed on the bottom of the screen. User is redirecrted to Landing page |
+| 28 | Click on tile "Show me my Requests" and open tab "Created Requests" | Order selected in step 25 is no longer visible in the list. |
+
+

@@ -1,0 +1,15 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL: https://na1.kinaxis.net/web/siet04_ga002/saml2<br>Open Rapid Response by clicking on the URL given<br>above. | Rapid Response window will open.<br> |
+| 2 | Open the "SHS S&OP Forecast Item Management" workbook.<br> | "SHS S&OP Forecast Item Management" workbook opens<br> |
+| 3 | In the data settings from the left select:                                                                                                    <br>Worksheet: Define Forecast Item Level<br> Scenario: S&OP Candidate<br>Part: All Parts<br>Sites: All Sites<br> | Able to use the data settings<br> |
+| 4 | The private scenario needs to be created using the S&OP Candidate scenario. Having created the private scenario make sure that the workbook is opened using the newly created private scenario. | Able to view created private scenario<br> |
+| 5 | Click on the data settings and go to the hierarchy option <br> | Able to view hierachy options |
+| 6 | Select from “SHS Product” options<br> | able to view SHS Product options<br> |
+| 7 | Check that the records are visible in the ‘Forecast Item Configuration’ worksheet<br> | records are visible |
+| 8 | Click on the icon under outlier column | outlier venue is visible |
+| 9 | The 'SHS S&OP Data Cleansing' workbook will open to the 'Outliers' worksheet.<br> | outliers workhseet opens |
+| 10 | Clicking on the graph icon for the part whose outlier needs to be adjusted opens the ‘Outlier Chart' worksheet on the bottom panel | The outliers chart is visible<br> |
+| 11 | Adjust the demand by typing a value into the 'Demand Adjustment' column for a part of your selection. Save the changes and review the 'Outlier Chart' worksheet. | Value update is possible and changes are visible in the 'Outlier Chart' worksheet. |
+
+

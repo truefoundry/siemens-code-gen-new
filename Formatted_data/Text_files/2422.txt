@@ -1,0 +1,18 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | URL : https://na1.kinaxis.net/web/SIET04_QA002/<br>Open Rapid Response by clicking on the URL given above.<br> | Rapid Response will be visible. |
+| 2 | Create a private scenario using the 'S&OP Candidate scenario' | Private scenario using the 'S&OP Candidate scenario' was created successfully |
+| 3 | Then open the workbook ‘SHS S&OP Consensus Demand Planning’.<br> | Able to open the workbook. |
+| 4 | In the data settings dialogue box select the ‘Consensus Demand Plan – Units summary’ worksheet. Select the ‘S&OP Candidate’ scenario. For testing purposes, the scenario 1897 was created<br><br> | Able to make selections using the data settings. |
+| 5 | In the data settings dialogue box , select the tab hierarchy.<br>Click on “Add hierarchy” and select one of the available hierarchies. In this test we will use SHS customer<br><br> | Able to make selection using the hierarchy |
+| 6 | Check if data shows up in the worksheet and view the numbers in the 'Unconstrained Demand Plan' line. | Able to view data.<br> |
+| 7 | We can see the Unconstrained demand Plan is the sum of the different forecast streams<br> | The 'Unconstrained Demand Plan' shows up correctly. |
+| 8 | When we add an adjustment, the adjustment is added to the initial value. <br> | Able to add adjustment, and after adding adjustment the 'Unconstrained Demand Plan' should show correct numbers<br> |
+| 9 | We can create assumptions by clicking on the create assumption button <br><br> | Able to open the assumption dialogue box.<br> |
+| 10 | In the assumption we can note the reason of the adjustment, the status of the assumption, the period on which this assumption is valid and the assignee<br><br> | Able to add entries in the dialogue window<br> |
+| 11 | On the assumption line we can see how many assumptions are related to each bucket. When clicking on the hyperlink, the details of the assumptions are displayed  <br><br> | Able to view the assumption<br> |
+| 12 | Please note that adjustments and assumptions can be recorded at different levels. <br>For instance, previous adjustment was recorded at country (Germany) level. <br>We can add adjustments at stream level. <br>To do so, select the relevant customer on the SHS Customer hierarchy. In this case, we will use 909 - AT<br><br> | Able to add assumptions at different levels<br> |
+| 13 | Check that the adjustment displayed at this level is the portion that corresponds to this customer. <br><br> | modify the adjustment at this level and add an assumption is possible<br> |
+| 14 | Go back to the aggregated view for all customers and check that the adjustments are considered at this level as well.  <br><br> | adjustments are applied<br> |
+
+

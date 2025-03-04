@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen<br>Search Field<br>Home<br>Schedule<br>Calendar Management<br>Views<br>Analytics |
+| 3 | Click on View | Below options should be reflected <br>Education Waitlist<br>Task<br>Engineer<br>Education Skills<br>Assignent |
+| 4 | Click on Education Waitlist | Education Waitlist screen should be reflected with Search Bar, Manage Filter, Sorting, Refresh,New,Export buttons and list of EducationWaitlist |
+| 5 | Click on any of the education waitlist item from the list and do some changes , Click on Apply and Ok button | Edited Education Waitlist details is displayed |
+
+

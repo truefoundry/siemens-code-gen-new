@@ -1,0 +1,9 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Launch CAD application and login to the application | Home screen should be reflected |
+| 2 | Click on menu button | Below options should be reflected on the left side of the screen |
+| 3 | Click on Calendar Management | Calendar and Resources section are reflected |
+| 4 | Click on Resources | Search Bar, Manage Filter, Sorting, Refresh, New, Export button should be reflected with list of resources calendar schedule |
+| 5 | Click on any of the resource item from the list | Resource schedule screen should be reflected |
+
+

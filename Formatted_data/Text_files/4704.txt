@@ -1,0 +1,12 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Login to Rapid Response Web version<br> | Able to login SHS Rapid Response Instance |
+| 2 | Create a new scenario,  Name: Stat_Forecast under "S&OP Candidate" Scenario | New scenario is created |
+| 3 | Click on Resources Icon from the Left Pane and open workbook <br>'SHS S&OP Forecast Item Management​'<br> | Able to open the workbook and a data setting window pops up |
+| 4 | In Data Settings, make the following selections:<br>Worksheet: "Define Forecast Item Level"<br>Under General:<br>Scenario: "Stat_forecast"  ( Private scenario that was created)<br>Filter: "All Part" <br>Site: "All Sites"<br><br>rest of the data settings leave as default<br><br>Hierarchy Settings - SHS Product<br> | The ' SHS S&OP Forecast Item Management​' workbook opens with the selected Data settings<br> |
+| 5 | Run command ' Generate and Save forecast'  and confirm the pop up to generate the forecast<br> | Command run is completed.<br>Forecast is generated<br> |
+| 6 | Click on Resources Icon from the Left Pane and open workbook <br>'SHS S&OP Consensus Demand Planning​'<br> | Able to open the workbook and a data setting window pop up |
+| 7 | In Data Settings, make the following selections:<br>Worksheet: "Consensus Demand Plan - Units Summary"<br>Under General:<br>Scenario: "Stat_forecast"  ( Private scenario that was created)<br>Filter: "All Part" <br>Site: "All Sites"<br>Bucket After Planning date: "36 "- "Month"<br><br>rest of the data settings leave as default<br><br>Hiearchy Settings - SHS Product<br> | Able to open the workbook and view the full plan cycle of 36 months |
+| 8 | Verify the statistical forecast quantities with other categories and add adjustments to the demand quantities  in the "Consensus Demand Plan - Unit Summary" <br> | Able to verify the forecast quantities |
+
+

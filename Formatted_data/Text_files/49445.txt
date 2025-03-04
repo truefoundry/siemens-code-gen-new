@@ -1,0 +1,8 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Tester opens "Manage CFT" in left side menu | Manage CFT screen opens |
+| 2 | Select any user in Reassign From field -> Click on Clear search criteria | Selected user will be removed |
+| 3 | Select any user in Reassign From field -> Search for suppliers | Supplier list should be displayed |
+| 4 | Select any supplier in the list -> Select any user in 'Reassign to' -> Click on Reassign | Operation completed successfully |
+
+
