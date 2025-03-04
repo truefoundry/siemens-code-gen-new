@@ -140,6 +140,9 @@ if __name__ == "__main__":
         logger = logging.getLogger(__name__)
         
         generated_code, results = run_prompt_inference(config)
+        output_path = Path(config["paths"]["data"]["prompt_output"]) / "generated_code.java"
+        ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) / "838.java"
+        evaluate_code(output_path, ground_truth_path)
         logger.info("Generation Results: %s", results)
         print("Generation Results:", results)
     except Exception as e:

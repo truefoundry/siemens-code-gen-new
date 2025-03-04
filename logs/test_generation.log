@@ -362,4 +362,13 @@
 2025-03-04 15:24:36,994 - __main__ - INFO - Response generated with 8 source documents
 2025-03-04 15:24:36,994 - __main__ - INFO - Source documents: ['fate.core.PlatformConnectors.jira.testcase.txt', 'fate.core.PlatformConnectors.jira.testcaseresult.txt', 'TestScriptSteps.txt', 'StepItem.txt', 'fate.core.PlatformConnectors.jira.testcycle.txt', 'Uses of Package fate.core.PlatformConnectors.jira.testcase.txt', 'IResultPlatformHandler.txt', 'DirectoryControl.txt']
 2025-03-04 15:25:41,941 - absl - INFO - Using default tokenizer.
+<<<<<<< HEAD
 >>>>>>> 1980f98 (added print)
+=======
+2025-03-04 15:28:22,285 - __main__ - INFO - Starting prompt-based code generation
+2025-03-04 15:28:23,350 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 15:28:53,847 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/generated_code.java
+2025-03-04 15:28:53,847 - __main__ - ERROR - Error in prompt inference pipeline: [Errno 21] Is a directory: 'Formatted_data/Ground_Truths'
+2025-03-04 15:28:53,847 - root - ERROR - Error running prompt inference: [Errno 21] Is a directory: 'Formatted_data/Ground_Truths'
+2025-03-04 15:29:13,338 - absl - INFO - Using default tokenizer.
+>>>>>>> b152310 (--)
