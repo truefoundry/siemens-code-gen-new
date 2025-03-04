@@ -1,4 +1,81 @@
+            substep_prompt = substep_prompt.replace("{step}", step)
+            substep_prompt = substep_prompt.replace("{plan}", plan)
+            substep_prompt = substep_prompt.replace("{step_index}", str(step_index + 1))
+            substep_prompt = substep_prompt.replace("{substep_index}", str(i + 1))
+            
+            # Generate code using the language model
+            messages = [
+                {"role": "system", "content": "You are an expert Python developer. Generate clean, efficient, and well-documented code."},
+                {"role": "user", "content": substep_prompt}
+            ]
+            
+            response = get_messages(self.llm, messages, self.config.get("model", {}).get("temperature", 0.2))
+            
+            # Extract code blocks from the response
+            code_blocks = re.findall(r'```(?:python)?\s*(.*?)```', response, re.DOTALL)
+            
+            if code_blocks:
+                code = code_blocks[0].strip()
+            else:
+                # If no code blocks found, use the entire response
+                code = response.strip()
+            
+            all_code.append(code)
+            
+            # Save the code for this substep
+            substep_output_path = os.path.join(self.output_dir, f"step_{step_index+1}_substep_{i+1}_code.py")
+            with open(substep_output_path, "w") as f:
+                f.write(f"# Code for Step {step_index+1}, Substep {i+1}:\n# {substep}\n\n{code}")
+        
+        # Combine all substep code
+        combined_code = "\n\n".join(all_code)
+        
+        # Save the combined code for this step
+        step_output_path = os.path.join(self.output_dir, f"step_{step_index+1}_code.py")
+        with open(step_output_path, "w") as f:
+            f.write(f"# Code for Step {step_index+1}:\n# {step}\n\n{combined_code}")
+        
+        return combined_code
+
+    def _combine_substeps(
+        self,
+        steps: List[str], 
+        substeps_code: List[str]
+    ) -> str:
+        """
+        Combine code from substeps into coherent step implementations.
+        
+        Args:
+            steps (List[str]): List of test case steps
+            substeps_code (List[str]): List of code generated for each step's substeps
+            
+        Returns:
+            str: Combined and coherent code for all steps
+            
+        Side effects:
+            Saves the combined code to a file in the output directory
+        """
+        if self.logger:
+            self.logger.info("Combining substep code into coherent step implementations")
 from utils import load_config, load_prompt, setup_logging
+        
+        # Prepare the context for combining code
+        context = "Test Case Steps:\n"
+        for i, step in enumerate(steps):
+            context += f"Step {i+1}: {step}\n\n"
+        
+        context += "\nCode for each step:\n"
+        for i, code in enumerate(substeps_code):
+            context += f"--- Step {i+1} Code ---\n{code}\n\n"
+        
+        # Prepare the prompt for combining code
+        combine_prompt = self.prompts.get("execution", "")
+        if not combine_prompt:
+            combine_prompt = "Combine the following code snippets into a coherent implementation:\n\n{context}\n\nEnsure the code is well-structured, removes redundancies, and maintains all functionality."
+        
+        combine_prompt = combine_prompt.replace("{context}", context)
+        
+        # Generate combined code using the language model
 from prompt_inference import get_messages, generate_code, create_llm_client
 from rag_llamaindex import create_index, generate_response
 import os
@@ -216,8 +293,41 @@ class StepwisePredictor:
             if self.logger:
                 self.logger.info(f"Creating plan for step {i+1}: {step[:50]}...")
                 
-            plan_text = generate_single_plan(step, i, self.llm, self.prompts, self.config)
+            plan_text = self._generate_single_plan(step, i)
+        messages = [
+            {"role": "system", "content": "You are an expert Python developer. Combine code snippets into clean, efficient, and well-structured implementations."},
+            {"role": "user", "content": combine_prompt}
+        ]
+        
+        response = get_messages(self.llm, messages, self.config.get("model", {}).get("temperature", 0.2))
+        
+        # Extract code blocks from the response
+        code_blocks = re.findall(r'```(?:python)?\s*(.*?)```', response, re.DOTALL)
+        
+        if code_blocks:
+            combined_code = code_blocks[0].strip()
+        else:
+            # If no code blocks found, use the entire response
+            combined_code = response.strip()
+        
+        # Save the combined code
+        combined_output_path = os.path.join(self.output_dir, "combined_steps_code.py")
+        with open(combined_output_path, "w") as f:
+            f.write(f"# Combined Code for All Steps\n\n{combined_code}")
             plans.append(plan_text)
+        
+        return combined_code
+
+    def _refine_steps(
+        self,
+        steps: List[str], 
+        code: str
+    ) -> str:
+        """
+        Refine the combined step implementations for correctness and efficiency.
+        
+        Args:
+            steps (List[str]): List of test case steps
             
             plan_output_path = os.path.join(self.output_dir, f"plan_{i+1}.txt")
             with open(plan_output_path, "w") as f:
@@ -252,25 +362,40 @@ class StepwisePredictor:
             if self.logger:
                 self.logger.info(f"Generating code for step {i+1}: {step[:50]}...")
                 
-            substeps = parse_plan_into_substeps(plan)
-            step_code = generate_code_for_substeps(
-                step, plan, substeps, i, self.llm, self.prompts, 
-                self.config, self.output_dir, self.logger
-            )
+            substeps = self._parse_plan_into_substeps(plan)
+            step_code = self._generate_code_for_substeps(step, plan, substeps, i)
+            code (str): Combined code from all steps
+            
+        Returns:
+            str: Refined code implementation
+            
+        Side effects:
+            Saves the refined code to a file in the output directory
+        """
+        if self.logger:
+            self.logger.info("Refining step implementations for correctness and efficiency")
             substeps_code.append(step_code)
             
         # Combine and refine code
-        step_code = combine_substeps(steps, substeps_code, self.llm, self.prompts, 
-                                   self.config, self.output_dir, self.logger)
-        refined_code = refine_steps(steps, step_code, self.llm, self.prompts, 
-                                  self.config, self.output_dir, self.logger)
-        combined_code = combine_into_test_case(steps, refined_code, self.llm, 
-                                             self.prompts, self.config, self.output_dir, self.logger)
-        final_code = optimize_final_code(combined_code, self.llm, self.prompts, 
-                                       self.config, self.output_dir, self.logger)
+        step_code = self._combine_substeps(steps, substeps_code)
+        refined_code = self._refine_steps(steps, step_code)
+        combined_code = self._combine_into_test_case(steps, refined_code)
+        
+        # Prepare the context for refining code
+        context = "Test Case Steps:\n"
+        for i, step in enumerate(steps):
+            context += f"Step {i+1}: {step}\n\n"
+        
+        context += f"\nCurrent Implementation:\n{code}\n\n"
+        final_code = self._optimize_final_code(combined_code)
         
         return final_code
     
+        
+        # Prepare the prompt for refining code
+        refine_prompt = self.prompts.get("refinement", "")
+        if not refine_prompt:
+            refine_prompt = "Refine the following code implementation to ensure it correctly implements all test case steps:\n\n{context}\n\nFocus on:\n1. Correctness - Does it implement all steps correctly?\n2. Error handling - Are edge cases handled?\n3. Code quality - Is the code clean and maintainable?\n4. Performance - Can any operations be optimized?"
     def predict(self) -> str:
         """
         Execute the complete stepwise prediction process.
@@ -381,6 +506,89 @@ def parse_plan_into_substeps(plan: str) -> List[str]:
     # Try to find numbered steps (1., 2., etc.)
     numbered_pattern = re.compile(r'(?:^|\n)(\d+\.?\s+[^\n]+)')
     matches = numbered_pattern.findall(plan)
+        
+        refine_prompt = refine_prompt.replace("{context}", context)
+        
+        # Generate refined code using the language model
+        messages = [
+            {"role": "system", "content": "You are an expert Python developer. Refine code implementations for correctness, robustness, and efficiency."},
+            {"role": "user", "content": refine_prompt}
+        ]
+        
+        response = get_messages(self.llm, messages, self.config.get("model", {}).get("temperature", 0.2))
+        
+        # Extract code blocks from the response
+        code_blocks = re.findall(r'```(?:python)?\s*(.*?)```', response, re.DOTALL)
+        
+        if code_blocks:
+            refined_code = code_blocks[0].strip()
+        else:
+            # If no code blocks found, use the entire response
+            refined_code = response.strip()
+        
+        # Save the refined code
+        refined_output_path = os.path.join(self.output_dir, "refined_code.py")
+        with open(refined_output_path, "w") as f:
+            f.write(f"# Refined Code Implementation\n\n{refined_code}")
+        
+        return refined_code
+
+    def _combine_into_test_case(
+        self,
+        steps: List[str], 
+        code: str
+    ) -> str:
+        """
+        Combine refined code into a complete test case implementation.
+        
+        Args:
+            steps (List[str]): List of test case steps
+            code (str): Refined code implementation
+            
+        Returns:
+            str: Complete test case implementation
+            
+        Side effects:
+            Saves the test case implementation to a file in the output directory
+        """
+        if self.logger:
+            self.logger.info("Combining refined code into a complete test case")
+        
+        # Prepare the context for creating a test case
+        context = "Test Case Steps:\n"
+        for i, step in enumerate(steps):
+            context += f"Step {i+1}: {step}\n\n"
+        
+        context += f"\nRefined Implementation:\n{code}\n\n"
+        
+        # Prepare the prompt for creating a test case
+        test_case_prompt = self.prompts.get("prompt", "")
+        if not test_case_prompt:
+            test_case_prompt = "Create a complete test case implementation from the following refined code:\n\n{context}\n\nEnsure the test case:\n1. Has proper setup and teardown\n2. Clearly implements each step\n3. Includes assertions to verify expected results\n4. Has clear documentation"
+        
+        test_case_prompt = test_case_prompt.replace("{context}", context)
+        
+        # Generate test case using the language model
+        messages = [
+            {"role": "system", "content": "You are an expert Python test developer. Create comprehensive test cases that verify all requirements."},
+            {"role": "user", "content": test_case_prompt}
+        ]
+        
+        response = get_messages(self.llm, messages, self.config.get("model", {}).get("temperature", 0.2))
+        
+        # Extract code blocks from the response
+        code_blocks = re.findall(r'```(?:python)?\s*(.*?)```', response, re.DOTALL)
+        
+        if code_blocks:
+            test_case_code = code_blocks[0].strip()
+        else:
+            # If no code blocks found, use the entire response
+            test_case_code = response.strip()
+        
+        # Save the test case code
+        test_case_output_path = os.path.join(self.output_dir, "test_case.py")
+        with open(test_case_output_path, "w") as f:
+            f.write(f"# Complete Test Case Implementation\n\n{test_case_code}")
     
     if matches:
         substeps = [match.strip() for match in matches]
