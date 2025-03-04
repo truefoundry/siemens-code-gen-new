@@ -118,16 +118,16 @@ def run_prompt_inference(config: dict) -> tuple:
         
         generated_code = generate_code(llm, messages, str(output_path), config)
         
-        # Ensure ground truth directory exists
-        ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
-        if not ground_truth_path.exists():
-            logger.warning(f"Ground truth directory does not exist: {ground_truth_path}")
-            ground_truth_path.mkdir(parents=True, exist_ok=True)
+        # # Ensure ground truth directory exists
+        # ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
+        # if not ground_truth_path.exists():
+        #     logger.warning(f"Ground truth directory does not exist: {ground_truth_path}")
+        #     ground_truth_path.mkdir(parents=True, exist_ok=True)
             
-        results = evaluate_code(output_path, ground_truth_path)
+        # results = evaluate_code(output_path, ground_truth_path)
         
         logger.info("Code generation completed successfully")
-        return generated_code, results
+        return generated_code
         
     except Exception as e:
         logger.error(f"Error in prompt inference pipeline: {str(e)}")
