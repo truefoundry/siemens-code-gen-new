@@ -5,6 +5,9 @@ from rag_llamaindex import create_index, generate_response
 from prompt_inference import run_prompt_inference
 import os
 from llama_index.core import VectorStoreIndex
+import zipfile
+import io
+from datetime import datetime
 load_dotenv()
 
 def sidebar(config):
@@ -174,6 +177,58 @@ def update_config_paths(config, uploaded_file, input_prompt_path):
     os.makedirs("data/prompt_inference", exist_ok=True)
     return config
 
+def create_download_zip(generation_type):
+    """Create a zip file containing all generated code files for download"""
+    zip_buffer = io.BytesIO()
+    
+    with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+        # Define the directory based on generation type
+        source_dir = f"data/{'rag' if generation_type == 'RAG' else 'prompt_inference'}"
+        
+        # Add all files from the directory to the zip
+        if os.path.exists(source_dir):
+            for root, _, files in os.walk(source_dir):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    # Add file to zip with relative path
+                    arcname = os.path.relpath(file_path, source_dir)
+                    zip_file.write(file_path, arcname)
+    
+    zip_buffer.seek(0)
+    return zip_buffer
+
+def create_download_button(generation_type: str):
+    """
+    Creates and displays a download button for generated code files
+    
+    Args:
+        generation_type: Type of generation ("RAG" or "Prompt")
+    """
+    zip_buffer = create_download_zip(generation_type)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    st.download_button(
+        label="📥 Download All Generated Code",
+        data=zip_buffer,
+        file_name=f"generated_code_{generation_type.lower()}_{timestamp}.zip",
+        mime="application/zip"
+    )
+
+def cleanup_output_directories(current_files, generation_type):
+    """
+    Clean up output directories to keep only files related to current selection
+    
+    Args:
+        current_files: List of currently selected/uploaded files
+        generation_type: Type of generation ("RAG" or "Prompt")
+    """
+    output_dir = f"data/{'rag' if generation_type == 'RAG' else 'prompt_inference'}"
+    if os.path.exists(output_dir):
+        current_base_names = {os.path.splitext(f)[0] for f in current_files}
+        for file in os.listdir(output_dir):
+            file_base_name = os.path.splitext(file)[0]
+            if file_base_name not in current_base_names:
+                os.remove(os.path.join(output_dir, file))
+
 def main():
     config = load_config()
     st.title("Test Case Generation")
@@ -200,6 +255,10 @@ def main():
                     st.error(f"Error creating index: {str(e)}")
 
     if uploaded_files:
+        # Clean up output directories based on current selection
+        current_files = os.listdir("uploaded_files")
+        cleanup_output_directories(current_files, config["generation_type"])
+        
         # Run experiments
         if config["generation_type"] == "RAG":
             if st.session_state.rag_index is not None:
@@ -216,6 +275,9 @@ def main():
                                 st.write("Generated Code:")
                                 st.code(response.response, language='java')
                                 st.write(f"Reference texts: {source_names}")
+                        
+                        # Add download button after generation is complete
+                        create_download_button("RAG")
             else:
                 st.warning("Please create an index first before generating code.")
         elif config["generation_type"] == "Prompt":
@@ -225,9 +287,12 @@ def main():
                             st.write(f"Generating code for {uploaded_file}")
                             input_prompt_path = f"uploaded_files/{uploaded_file}"
                             config = update_config_paths(config, uploaded_file, input_prompt_path)
-                            response= run_prompt_inference(config)
+                            response = run_prompt_inference(config)
                             st.write(f"Code generated for {uploaded_file}")
                             st.write(response)
+                        
+                        # Add download button after generation is complete
+                        create_download_button("Prompt")
                         st.success("Code generation complete!")
 
 if __name__ == "__main__":
