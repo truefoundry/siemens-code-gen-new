@@ -75,11 +75,11 @@ def generate_response(config: dict, index: VectorStoreIndex):
         context_window=16384,
     )
     
-    # Load and format prompt
+    # Load and format prompt using the dynamic input path
     base_prompt = load_prompt(
         config["system"]["prompt_paths"]["base_case"],
         config["system"]["prompt_paths"]["few_shot_case"],
-        config["paths"]["prompts"]["input"], 
+        config["paths"]["input_prompt_path"],  # Use dynamic input path
     )
     formatted_prompt = format_java_prompt(base_prompt)
     
@@ -99,8 +99,8 @@ def generate_response(config: dict, index: VectorStoreIndex):
     logger.info(f"Response generated with {len(source_texts)} source documents")
     logger.info(f"Source documents: {source_names}")
     
-    # Save response
-    output_path = Path(config["paths"]["data"]["rag_output"]) 
+    # Save response using dynamic output path
+    output_path = Path(config["paths"]["output_file_rag"])  # Use dynamic output path
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     with open(output_path, "w") as f:
@@ -138,10 +138,11 @@ if __name__ == "__main__":
     print("response : " , response)
 
 
-    # Evaluate results
-    ground_truth_path = Path(config["paths"]["data"]["ground_truth"]) 
-    output_path = Path(config["paths"]["data"]["rag_output"])
+    # Update paths for evaluation
+    ground_truth_path = Path(config["paths"]["ground_truth_file"])  # Use dynamic ground truth path
+    output_path = Path(config["paths"]["output_file_rag"])  # Use dynamic output path
     
+    # Evaluate results
     evaluate_code(ground_truth_path, output_path)
     
     logger.info("Test generation completed")

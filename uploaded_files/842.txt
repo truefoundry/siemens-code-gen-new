@@ -1,0 +1,11 @@
+| Step | Action | Expected Result |
+|------|--------|------------------|
+| 1 | Log in to Digital Customer Portal as Admin | Landing page is displayed |
+| 2 | Click "Admin" icon on top ribbon | Page with 3 options for admins is displayed |
+| 3 | Verify that page contains following tiles:- User Management<br>- Escalation Criteria<br>- Admin Ruleset | Page contains tiles:- User Management<br>- Escalation Criteria<br>- Admin Ruleset |
+| 4 | Click on tab "User Management" | User management page is displayed with list of all users |
+| 5 | Enter GID, part of User name or e-mail in to search field | Only users matching search conditions are displayed |
+| 6 | Click "Edit" button | Popup with user details, assigned roles and teams is displayedFor reference check attached screenshot<br> |
+| 7 | Click "Upate User" button | User management page is dipslayed users matching search conditions |
+
+

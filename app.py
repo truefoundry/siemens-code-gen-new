@@ -163,10 +163,15 @@ def generate_code_and_display(config: dict, index: VectorStoreIndex):
         st.error(f"Error generating code: {str(e)}")
 
 def update_config_paths(config, uploaded_file, input_prompt_path):
+    base_name = uploaded_file.replace('.txt', '')
     config["paths"]["input_prompt_path"] = input_prompt_path
-    config["paths"]["output_file_rag"] = f"data/rag/{uploaded_file.replace('.txt', '.java')}"
-    config["paths"]["output_file_prompt"] = f"data/prompt_inference/{uploaded_file.replace('.txt', '.java')}"
-    config["paths"]["ground_truth_file"] = f"Formatted_data/Ground_Truths/{uploaded_file.replace('.txt', '.java')}"
+    config["paths"]["output_file_rag"] = f"data/rag/{base_name}.java"
+    config["paths"]["output_file_prompt"] = f"data/prompt_inference/{base_name}.java"
+    config["paths"]["ground_truth_file"] = f"Formatted_data/Ground_Truths/{base_name}.java"
+    
+    # Ensure output directories exist
+    os.makedirs("data/rag", exist_ok=True)
+    os.makedirs("data/prompt_inference", exist_ok=True)
     return config
 
 def main():
@@ -205,10 +210,12 @@ def main():
                             input_prompt_path = f"uploaded_files/{uploaded_file}"     
                             config = update_config_paths(config, uploaded_file, input_prompt_path)
                             response, source_texts, source_names = generate_code_and_display(config, st.session_state.rag_index)
-                            st.write(response.response)
-                            #st.write(source_texts)
-                            st.write(f"Reference texts: {source_names}")
-                        
+                            
+                            # Display results in an expander for better organization
+                            with st.expander(f"Results for {uploaded_file}", expanded=True):
+                                st.write("Generated Code:")
+                                st.code(response.response, language='java')
+                                st.write(f"Reference texts: {source_names}")
             else:
                 st.warning("Please create an index first before generating code.")
         elif config["generation_type"] == "Prompt":
