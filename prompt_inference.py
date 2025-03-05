@@ -106,15 +106,15 @@ def run_prompt_inference(config: dict) -> str:
         base_prompt = load_prompt(
             config["system"]["prompt_paths"]["base_case"],
             config["system"]["prompt_paths"]["few_shot_case"],
-            config["paths"]["prompts"]["input"], 
+            config["paths"]["input_prompt_path"],
         )
         
         # Setup LLM and generate code
         llm = create_llm_client(config)
         messages = get_messages(base_prompt, config)
         
-        # Ensure output directory exists
-        output_path = Path(config["paths"]["data"]["prompt_output"])
+        # Use the dynamically set output path
+        output_path = Path(config["paths"]["output_file_prompt"])
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
         generated_code = generate_code(llm, messages, str(output_path), config)
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         logger = logging.getLogger(__name__)
         
         generated_code = run_prompt_inference(config)
-        output_path = Path(config["paths"]["data"]["prompt_output"]) 
+        output_path = Path(config["paths"]["output_file_prompt"]) 
         ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
         evaluate_code(output_path, ground_truth_path)
         logger.info("Generation Results: %s", generated_code)
