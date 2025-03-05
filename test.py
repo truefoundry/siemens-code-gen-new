@@ -69,3 +69,80 @@ try:
     
 except requests.exceptions.HTTPError as http_error:
     print("HTTP error occurred:", http_error)
+
+
+from langchain.schema import HumanMessage, SystemMessage
+from langchain_communi   import ChatOpenAI
+
+llm = ChatOpenAI(
+    model="openai-main/o3-mini",
+    temperature=0.7,
+    max_tokens=256,
+    model_kwargs={
+        "top_p": 0.8,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+    },
+    streaming=True,
+    api_key=os.getenv("TFY_API_KEY_INTERNAL"),
+    base_url=os.getenv("TFY_BASE_URL"),
+    extra_headers={
+        "X-TFY-METADATA": '{"tfy_log_request":"true"}',
+    }
+)
+
+messages = [
+    SystemMessage(content="You are an AI bot."),
+    HumanMessage(content="Enter your prompt here"),
+]
+
+stream = llm.stream(input=messages)
+for chunk in stream:
+    print(chunk.content)
+
+
+
+from openai import OpenAI
+
+# Click on "Generate API Key" button to create one now
+client = OpenAI(api_key=os.getenv("TFY_API_KEY_EO"), base_url=os.getenv("TFY_BASE_URL"))
+stream = client.chat.completions.create(
+    messages = [
+            {"role": "system", "content": "You are an AI bot."},
+            {"role": "user", "content": "Enter your prompt here"},
+    ],
+    model= "openai-main/o3-mini",
+    stream=True,
+    frequency_penalty=0,
+    presence_penalty=0,
+    stop=["</s>"],
+    extra_headers={
+        "X-TFY-METADATA": '{"tfy_log_request":"true"}'
+    }
+)
+for chunk in stream:
+    if chunk.choices and len(chunk.choices) > 0 and chunk.choices[0].delta.content is not None:
+        print(chunk.choices[0].delta.content, end="")
+
+
+from langchain.schema import HumanMessage, SystemMessage
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    model="openai-main/o3-mini",
+    streaming=True,
+    api_key=os.getenv("TFY_API_KEY_EO"),
+    base_url=os.getenv("TFY_BASE_URL"),
+    extra_headers={
+        "X-TFY-METADATA": '{"tfy_log_request":"true"}',
+    }
+)
+
+messages = [
+    SystemMessage(content="You are an AI bot."),
+    HumanMessage(content="Enter your prompt here"),
+]
+
+stream = llm.stream(input=messages)
+for chunk in stream:
+    print(chunk.content)

@@ -1,38 +1,51 @@
 from langchain.schema import HumanMessage, SystemMessage
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
 import logging
 from pathlib import Path
 from evals import evaluate_code
 from utils import load_config, load_prompt, format_java_prompt, validate_file_size, setup_logging
+from openai import OpenAI
 
 load_dotenv()
 
-def create_llm_client(config: dict) -> ChatOpenAI:
+def create_llm_client(config: dict, use_internal_api: bool = True) -> ChatOpenAI:
     """
     Create and configure the LLM client using config parameters.
     
     Args:
         config: Dictionary containing LLM configuration
+        use_internal_api: Whether to use internal API key (True) or external API key (False)
         
     Returns:
         ChatOpenAI: Configured LLM client
     """
-    return ChatOpenAI(
-        model=config["llm"]["models"]["main"]["name"],
-        temperature=config["system"]["model_config"]["temperature"],
-        max_tokens=config["system"]["model_config"]["max_tokens"],
-        model_kwargs={
-            "top_p": config["system"]["model_config"]["top_p"],
-            "presence_penalty": config["system"]["model_config"]["presence_penalty"],
-            "frequency_penalty": config["system"]["model_config"]["frequency_penalty"],
-        },
-        streaming=True,
-        api_key=os.getenv("TFY_API_KEY_INTERNAL"),
-        base_url=os.getenv("TFY_BASE_URL"),
-        max_retries=config["system"]["model_config"]["max_retries"]
-    )
+    api_key = os.getenv("TFY_API_KEY_INTERNAL") if use_internal_api else os.getenv("TFY_API_KEY_EO")
+    
+    client_config = {
+        "model": config["llm"]["models"]["main"]["name"],
+        "streaming": True,
+        "api_key": api_key,
+        "base_url": os.getenv("TFY_BASE_URL"),
+        "extra_headers": {
+            "X-TFY-METADATA": '{"tfy_log_request":"true"}'
+        }
+    }
+    
+    if use_internal_api:
+        client_config.update({
+            "temperature": config["system"]["model_config"]["temperature"],
+            "max_tokens": config["system"]["model_config"]["max_tokens"],
+            "model_kwargs": {
+                "top_p": config["system"]["model_config"]["top_p"],
+                "presence_penalty": config["system"]["model_config"]["presence_penalty"], 
+                "frequency_penalty": config["system"]["model_config"]["frequency_penalty"]
+            },
+            "max_retries": config["system"]["model_config"]["max_retries"]
+        })
+        
+    return ChatOpenAI(**client_config)
 
 def get_messages(prompt: str, config: dict) -> list:
     """
@@ -106,15 +119,15 @@ def run_prompt_inference(config: dict) -> str:
         base_prompt = load_prompt(
             config["system"]["prompt_paths"]["base_case"],
             config["system"]["prompt_paths"]["few_shot_case"],
-            config["paths"]["input_prompt_path"],
+            config["paths"]["prompts"]["input_prompt_path"],
         )
         
         # Setup LLM and generate code
-        llm = create_llm_client(config)
+        llm = create_llm_client_o3(config)
         messages = get_messages(base_prompt, config)
         
         # Use the dynamically set output path
-        output_path = Path(config["paths"]["output_file_prompt"])
+        output_path = Path(config["paths"]["data"]["prompt_output"])
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
         generated_code = generate_code(llm, messages, str(output_path), config)
@@ -141,7 +154,7 @@ if __name__ == "__main__":
         logger = logging.getLogger(__name__)
         
         generated_code = run_prompt_inference(config)
-        output_path = Path(config["paths"]["output_file_prompt"]) 
+        output_path = Path(config["paths"]["data"]["prompt_output"]) 
         ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
         evaluate_code(output_path, ground_truth_path)
         logger.info("Generation Results: %s", generated_code)

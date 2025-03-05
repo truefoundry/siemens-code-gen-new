@@ -522,3 +522,32 @@
 2025-03-05 13:04:56,593 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
 2025-03-05 13:05:02,504 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/embeddings "HTTP/1.1 200 OK"
 >>>>>>> dev
+2025-03-05 16:55:55,363 - utils - INFO - Loaded planning prompt from config
+2025-03-05 16:55:55,363 - utils - INFO - Loaded code_generation prompt from config
+2025-03-05 16:55:55,363 - utils - INFO - Loaded execution prompt from config
+2025-03-05 16:55:55,363 - utils - INFO - Loaded refinement prompt from config
+2025-03-05 16:55:55,363 - utils - INFO - Loaded prompt prompt from config
+2025-03-05 16:55:55,363 - utils - INFO - Loaded few_shot_examples prompt from config
+2025-03-05 16:56:13,822 - utils - INFO - Loaded planning prompt from config
+2025-03-05 16:56:13,823 - utils - INFO - Loaded code_generation prompt from config
+2025-03-05 16:56:13,823 - utils - INFO - Loaded execution prompt from config
+2025-03-05 16:56:13,823 - utils - INFO - Loaded refinement prompt from config
+2025-03-05 16:56:13,823 - utils - INFO - Loaded prompt prompt from config
+2025-03-05 16:56:13,823 - utils - INFO - Loaded few_shot_examples prompt from config
+2025-03-05 17:09:44,181 - utils - INFO - Parsing test case steps from prompt
+2025-03-05 17:09:44,181 - utils - INFO - Successfully parsed 0 test case steps
+2025-03-05 19:25:48,161 - __main__ - INFO - Starting prompt-based code generation
+2025-03-05 19:25:48,162 - __main__ - ERROR - Error in prompt inference pipeline: 'input_prompt_path'
+2025-03-05 19:26:26,845 - __main__ - INFO - Starting prompt-based code generation
+2025-03-05 19:26:26,845 - __main__ - ERROR - Error in prompt inference pipeline: 'input_prompt_path'
+2025-03-05 19:28:07,375 - __main__ - INFO - Starting prompt-based code generation
+2025-03-05 19:28:07,431 - __main__ - ERROR - Error in prompt inference pipeline: 'output_file_prompt'
+2025-03-05 19:28:43,514 - __main__ - INFO - Starting prompt-based code generation
+2025-03-05 19:28:43,553 - __main__ - ERROR - Error in prompt inference pipeline: 'output_file_prompt'
+2025-03-05 19:28:47,577 - __main__ - INFO - Starting prompt-based code generation
+2025-03-05 19:28:47,619 - __main__ - ERROR - Error in prompt inference pipeline: 'output_file_prompt'
+2025-03-05 19:29:57,507 - __main__ - INFO - Starting prompt-based code generation
+2025-03-05 19:30:14,480 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-05 19:30:23,309 - __main__ - INFO - Successfully generated and saved code to data/prompt_inference/838.java
+2025-03-05 19:30:23,310 - __main__ - INFO - Code generation completed successfully
+2025-03-05 19:30:40,686 - absl - INFO - Using default tokenizer.

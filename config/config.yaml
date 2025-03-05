@@ -93,7 +93,7 @@ llm:
   # LLM model configurations
   models:
     main:
-      name: "openai-main/gpt-4o"
+      name: "openai-main/o3-mini"
       version: "latest"
       api_version: "2024-02"
     embedding:
@@ -121,7 +121,7 @@ paths:
   
   prompts:
     dir: "prompts"  # Directory containing prompt files
-    input: "Formatted_data/Text_files/838.txt"
+    input_prompt_path: "Formatted_data/Text_files/838.txt"
     formatted: "Formatted_data"
 
 logging:

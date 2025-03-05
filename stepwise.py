@@ -671,6 +671,30 @@ class StepwisePredictor:
         
         return optimized_code
 
+def main():
+    config = load_config()
+    predictor = StepwisePredictor(config)
+    # Load prompts and templates
+    prompts = predictor._load_prompts()
+    
+    # Parse test case steps
+    steps = predictor.parse_steps(prompt=config["paths"]["prompts"]["input"])
+    # Generate step-by-step plans
+    plans = predictor.generate_plans(steps=steps, prompts=prompts)
+    
+    # Generate code for each step
+    code_segments = predictor.generate_code(plans=plans, prompts=prompts)
+    
+    # Combine substeps into larger steps
+    combined_steps = predictor.combine_substeps(code_segments=code_segments)
+    
+    # Refine and optimize steps
+    refined_code = predictor.refine_steps(combined_steps=combined_steps)
+    
+    # Combine into final test case
+    final_code = predictor.combine_into_test_case(refined_code=refined_code)
+
+
 # Usage
 if __name__ == "__main__":
     config = load_config()
