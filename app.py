@@ -25,7 +25,7 @@ def sidebar(config):
     with st.expander("LLM Settings", expanded=True):
         model = st.selectbox(
             "Model",
-            options=["openai-main/gpt-4o"],
+            options=["openai-main/gpt-4o", "openai-main/gpt-4o-mini"],
             index=0
         )
         temperature = st.slider(
