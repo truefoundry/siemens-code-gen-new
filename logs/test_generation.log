@@ -541,3 +541,39 @@
 2025-03-05 21:52:41,962 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
 2025-03-05 21:53:04,948 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
 2025-03-05 21:53:04,948 - prompt_inference - INFO - Code generation completed successfully
+2025-03-05 21:59:36,668 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:01:40,175 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:03:07,318 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:03:30,429 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:03:47,371 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:04:43,928 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-05 22:04:43,930 - prompt_inference - INFO - Prompt loading completed in 0.00 seconds
+2025-03-05 22:04:43,996 - prompt_inference - INFO - LLM setup completed in 0.07 seconds
+2025-03-05 22:04:44,914 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-05 22:05:10,953 - prompt_inference - INFO - Code generation completed in 26.96 seconds
+2025-03-05 22:05:10,954 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
+2025-03-05 22:05:10,954 - prompt_inference - INFO - Code generation and saving completed in 26.96 seconds
+2025-03-05 22:05:10,955 - prompt_inference - INFO - Total prompt inference time: 27.03 seconds
+2025-03-05 22:06:36,865 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:07:04,380 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:07:24,512 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:07:51,668 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:09:20,042 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:10:15,221 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:10:45,991 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:11:22,174 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-05 22:12:02,981 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:17:21,769 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:17:22,290 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:17:45,396 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:18:05,414 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:18:06,523 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:19:00,368 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:19:14,887 - prompt_inference - INFO - Starting prompt-based code generation
+2025-03-06 08:19:14,888 - prompt_inference - INFO - Prompt loading completed in 0.00 seconds
+2025-03-06 08:19:14,951 - prompt_inference - INFO - LLM setup completed in 0.06 seconds
+2025-03-06 08:19:16,336 - httpx - INFO - HTTP Request: POST https://llm-gateway.truefoundry.com/api/inference/openai/chat/completions "HTTP/1.1 200 OK"
+2025-03-06 08:19:33,698 - prompt_inference - INFO - Code generation completed in 18.75 seconds
+2025-03-06 08:19:33,701 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
+2025-03-06 08:19:33,701 - prompt_inference - INFO - Code generation and saving completed in 18.75 seconds
+2025-03-06 08:19:33,701 - prompt_inference - INFO - Total prompt inference time: 18.81 seconds

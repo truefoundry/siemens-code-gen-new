@@ -4,6 +4,8 @@ import os
 import logging
 from pathlib import Path
 from typing import Dict, Optional
+from functools import lru_cache
+import time
 
 def setup_logging(config: dict) -> logging.Logger:
     """
@@ -26,17 +28,42 @@ def setup_logging(config: dict) -> logging.Logger:
     )
     return logging.getLogger(__name__)
 
+@lru_cache(maxsize=1)
 def load_config(config_path: str = "config/config.yaml") -> Dict:
-    """Load configuration from YAML file"""
+    """
+    Load and cache configuration from YAML file
+    
+    Args:
+        config_path: Path to configuration file
+        
+    Returns:
+        Dict: Configuration dictionary
+    """
+    start_time = time.time()
     try:
         with open(config_path, "r") as f:
             config = yaml.safe_load(f)
             # Setup logging immediately after loading config
             setup_logging(config)
+            logging.getLogger(__name__).info(f"Config loaded in {time.time() - start_time:.2f} seconds")
             return config
     except Exception as e:
         print(f"Error loading config from {config_path}: {str(e)}")
         raise
+
+@lru_cache(maxsize=50)
+def load_file_content(file_path: str) -> str:
+    """
+    Load and cache file content
+    
+    Args:
+        file_path: Path to file
+        
+    Returns:
+        str: File content
+    """
+    with open(file_path, "r") as f:
+        return f.read()
 
 def load_prompt(prompt_path: str, few_shot_path: Optional[str] = None, input_path: Optional[str] = None) -> str:
     """
@@ -49,41 +76,47 @@ def load_prompt(prompt_path: str, few_shot_path: Optional[str] = None, input_pat
     Returns:
         str: Combined prompt text
     """
+    start_time = time.time()
+    logger = logging.getLogger(__name__)
+    
     try:
-        with open(prompt_path, "r") as f:
-            prompt = f.read()
+        # Use cached file loading
+        prompt = load_file_content(prompt_path)
             
         if input_path:
-            with open(input_path, "r") as f:
-                input_text = f.read()
-                prompt += "\n" + input_text
+            input_text = load_file_content(input_path)
+            prompt += "\n" + input_text
         
         if few_shot_path:
-            with open(few_shot_path, "r") as f:
-                few_shot_text = f.read()
-                prompt += "\n" + few_shot_text
+            few_shot_text = load_file_content(few_shot_path)
+            prompt += "\n" + few_shot_text
         
         # Add standard output format
         prompt += "\n\n```Output: java\n\n```"
+        
+        logger.debug(f"Prompt loaded in {time.time() - start_time:.2f} seconds")
         return prompt
         
     except Exception as e:
-        logging.error(f"Error loading prompt from {prompt_path}: {str(e)}")
+        logger.error(f"Error loading prompt from {prompt_path}: {str(e)}")
         raise
 
-def get_test_case_files(base_path: str, file_types: list = None) -> Dict[str, str]:
+@lru_cache(maxsize=5)
+def get_test_case_files(base_path: str, file_types_tuple: tuple = None) -> Dict[str, str]:
     """
     Get all test case file paths recursively from directory.
     
     Args:
         base_path: Base directory to search
-        file_types: List of supported file extensions (from config)
+        file_types_tuple: Tuple of supported file extensions (from config)
     
     Returns:
         Dict[str, str]: Dictionary mapping test case names to file paths
     """
-    if file_types is None:
+    if file_types_tuple is None:
         file_types = [".java", ".txt"]
+    else:
+        file_types = list(file_types_tuple)
         
     test_cases = {}
     base_path = Path(base_path)
@@ -141,14 +174,20 @@ def validate_file_size(file_path: str, max_size: int) -> bool:
 
 if __name__ == "__main__":
     # Load configuration and setup logging
+    start_time = time.time()
     config = load_config()
     logger = logging.getLogger(__name__)
+    logger.info(f"Config loaded in {time.time() - start_time:.2f} seconds")
     
     # Get test cases with validation
+    test_case_start_time = time.time()
+    # Convert list to tuple for caching
+    file_types_tuple = tuple(config["validation"]["supported_file_types"])
     test_cases = get_test_case_files(
         config["paths"]["data"]["test_cases"],
-        config["validation"]["supported_file_types"]
+        file_types_tuple
     )
+    logger.info(f"Test cases loaded in {time.time() - test_case_start_time:.2f} seconds")
     
     logger.info(f"Found {len(test_cases)} test cases")
     for name, path in test_cases.items():

@@ -8,7 +8,16 @@ from llama_index.core import VectorStoreIndex
 import zipfile
 import io
 from datetime import datetime
+import concurrent.futures
+from functools import lru_cache
+import time
+
 load_dotenv()
+
+@lru_cache(maxsize=1)
+def load_cached_config():
+    """Cache the config loading to avoid repeated disk reads"""
+    return load_config()
 
 def sidebar(config):
     st.header("Configuration")
@@ -117,12 +126,16 @@ def upload_files():
     # Handle uploaded files first
     current_files = set()
     if uploaded_files:
-        for uploaded_file in uploaded_files:
-            if uploaded_file is not None:
-                file_name = uploaded_file.name
-                current_files.add(file_name)
-                with open(f"uploaded_files/{file_name}", "wb") as f:
-                    f.write(uploaded_file.getbuffer())
+        # Process all file uploads in parallel
+        def save_uploaded_file(uploaded_file):
+            file_name = uploaded_file.name
+            with open(f"uploaded_files/{file_name}", "wb") as f:
+                f.write(uploaded_file.getbuffer())
+            return file_name
+            
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            file_names = list(executor.map(save_uploaded_file, uploaded_files))
+            current_files.update(file_names)
     
     # Handle sample files
     for sample_file in selected_samples:
@@ -136,10 +149,12 @@ def upload_files():
     # Remove files that are no longer selected or uploaded
     existing_files = set(os.listdir("uploaded_files"))
     files_to_remove = existing_files - current_files
-    for file_name in files_to_remove:
-        file_path = os.path.join("uploaded_files", file_name)
-        if os.path.exists(file_path):
-            os.remove(file_path)
+    
+    # Remove files in parallel
+    if files_to_remove:
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            executor.map(lambda file_name: os.remove(os.path.join("uploaded_files", file_name)), 
+                        files_to_remove)
     
     # Return both uploaded files and selected samples
     all_files = (uploaded_files if uploaded_files else []) + selected_samples
@@ -151,31 +166,64 @@ def generate_code_and_display(config: dict, index: VectorStoreIndex):
     
     Args:
         config: Dictionary containing configuration parameters
-        uploaded_files: List of uploaded files
         index: VectorStoreIndex for RAG generation
     """
     try:
+        # Debug information (console only)
+        print(f"Debug: generate_code_and_display called with generation_type: {config['generation_type']}")
+        print(f"Debug: Config paths: {config['paths']}")
+        
         if config["generation_type"] == "RAG":
+            print(f"Debug: Calling generate_response with index type: {type(index)}")
             response, source_texts, source_names = generate_response(config, index)
+            print(f"Debug: generate_response returned successfully")
             return response, source_texts, source_names
         elif config["generation_type"] == "Prompt":
+            print(f"Debug: Calling run_prompt_inference")
             response = run_prompt_inference(config)
+            print(f"Debug: run_prompt_inference returned successfully")
             return response
-        st.success("Code generation complete!")
+        
+        # If we get here, no valid generation type was specified
+        print(f"Warning: No valid generation type specified: {config['generation_type']}")
+        st.warning(f"No valid generation type specified. Please select either 'RAG' or 'Prompt'.")
+        
+        # Return empty values to avoid errors
+        if config["generation_type"] == "RAG":
+            return None, [], []
+        else:
+            return None
+            
     except Exception as e:
-        st.error(f"Error generating code: {str(e)}")
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"Error in generate_code_and_display: {str(e)}")
+        print(f"Error details: {error_details}")
+        st.error(f"Error generating code. Please check the logs for details.")
+        
+        # Return empty values to avoid errors
+        if config["generation_type"] == "RAG":
+            return None, [], []
+        else:
+            return None
 
 def update_config_paths(config, uploaded_file, input_prompt_path):
+    """Update config paths for a specific file"""
     base_name = uploaded_file.replace('.txt', '')
-    config["paths"]["input_prompt_path"] = input_prompt_path
-    config["paths"]["output_file_rag"] = f"data/rag/{base_name}.java"
-    config["paths"]["output_file_prompt"] = f"data/prompt_inference/{base_name}.java"
-    config["paths"]["ground_truth_file"] = f"Formatted_data/Ground_Truths/{base_name}.java"
+    
+    # Create a copy of the config to avoid modifying the original
+    updated_config = config.copy()
+    
+    updated_config["paths"] = config["paths"].copy()
+    updated_config["paths"]["input_prompt_path"] = input_prompt_path
+    updated_config["paths"]["output_file_rag"] = f"data/rag/{base_name}.java"
+    updated_config["paths"]["output_file_prompt"] = f"data/prompt_inference/{base_name}.java"
+    updated_config["paths"]["ground_truth_file"] = f"Formatted_data/Ground_Truths/{base_name}.java"
     
     # Ensure output directories exist
     os.makedirs("data/rag", exist_ok=True)
     os.makedirs("data/prompt_inference", exist_ok=True)
-    return config
+    return updated_config
 
 def create_download_zip(generation_type):
     """Create a zip file containing all generated code files for download"""
@@ -224,13 +272,108 @@ def cleanup_output_directories(current_files, generation_type):
     output_dir = f"data/{'rag' if generation_type == 'RAG' else 'prompt_inference'}"
     if os.path.exists(output_dir):
         current_base_names = {os.path.splitext(f)[0] for f in current_files}
+        files_to_remove = []
+        
+        # Collect files to remove
         for file in os.listdir(output_dir):
             file_base_name = os.path.splitext(file)[0]
             if file_base_name not in current_base_names:
-                os.remove(os.path.join(output_dir, file))
+                files_to_remove.append(os.path.join(output_dir, file))
+        
+        # Remove files in parallel
+        if files_to_remove:
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                executor.map(os.remove, files_to_remove)
+
+def process_file_rag(uploaded_file, config, index, progress_placeholder, results_placeholder):
+    """Process a single file using RAG approach"""
+    progress_placeholder.write(f"Generating code for {uploaded_file}")
+    start_time = time.time()
+    
+    try:
+        # Debug information (console only)
+        print(f"Debug: Processing file {uploaded_file}")
+        print(f"Debug: Config type: {type(config)}")
+        print(f"Debug: Index type: {type(index)}")
+        
+        input_prompt_path = f"uploaded_files/{uploaded_file}"     
+        updated_config = update_config_paths(config, uploaded_file, input_prompt_path)
+        
+        # More debug information (console only)
+        print(f"Debug: Updated config paths")
+        print(f"Debug: Input path: {updated_config['paths']['input_prompt_path']}")
+        
+        response, source_texts, source_names = generate_code_and_display(updated_config, index)
+        
+        # Check if the output file exists and read its content
+        output_file_path = updated_config["paths"]["output_file_rag"]
+        if os.path.exists(output_file_path):
+            with open(output_file_path, 'r') as f:
+                generated_code = f.read()
+        else:
+            generated_code = response.response if hasattr(response, 'response') else str(response)
+        
+        # Display results in an expander for better organization
+        with results_placeholder.expander(f"Results for {uploaded_file}", expanded=True):
+            st.write("Generated Code:")
+            st.code(generated_code, language='java')
+            if source_names:
+                st.write(f"Reference texts: {source_names}")
+            st.write(f"Generation time: {time.time() - start_time:.2f} seconds")
+        
+        return response
+    except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"Error processing {uploaded_file}: {str(e)}")
+        print(f"Error details: {error_details}")
+        progress_placeholder.error(f"Error processing {uploaded_file}: {str(e)}")
+        return None
+
+def process_file_prompt(uploaded_file, config, progress_placeholder, results_placeholder):
+    """Process a single file using Prompt approach"""
+    progress_placeholder.write(f"Generating code for {uploaded_file}")
+    start_time = time.time()
+    
+    try:
+        # Debug information (console only)
+        print(f"Debug: Processing file {uploaded_file}")
+        print(f"Debug: Config type: {type(config)}")
+        
+        input_prompt_path = f"uploaded_files/{uploaded_file}"
+        updated_config = update_config_paths(config, uploaded_file, input_prompt_path)
+        
+        # More debug information (console only)
+        print(f"Debug: Updated config paths")
+        print(f"Debug: Input path: {updated_config['paths']['input_prompt_path']}")
+        
+        response = run_prompt_inference(updated_config)
+        
+        # Check if the output file exists and read its content
+        output_file_path = updated_config["paths"]["output_file_prompt"]
+        if os.path.exists(output_file_path):
+            with open(output_file_path, 'r') as f:
+                generated_code = f.read()
+        else:
+            generated_code = response
+        
+        # Display results in an expander for better organization
+        with results_placeholder.expander(f"Results for {uploaded_file}", expanded=True):
+            st.write("Generated Code:")
+            st.code(generated_code, language='java')
+            st.write(f"Generation time: {time.time() - start_time:.2f} seconds")
+        
+        return response
+    except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"Error processing {uploaded_file}: {str(e)}")
+        print(f"Error details: {error_details}")
+        progress_placeholder.error(f"Error processing {uploaded_file}: {str(e)}")
+        return None
 
 def main():
-    config = load_config()
+    config = load_cached_config()
     st.title("Test Case Generation")
 
     # Initialize session state for index if it doesn't exist
@@ -248,11 +391,15 @@ def main():
     if config["generation_type"] == "RAG":
         if st.button("Create Index"):
             with st.spinner("Creating index..."):
+                start_time = time.time()
                 try:
                     st.session_state.rag_index = create_index(config)
-                    st.success("Index created successfully!")
+                    st.success(f"Index created successfully in {time.time() - start_time:.2f} seconds!")
                 except Exception as e:
-                    st.error(f"Error creating index: {str(e)}")
+                    print(f"Error creating index: {str(e)}")
+                    import traceback
+                    print(traceback.format_exc())
+                    st.error(f"Error creating index. Please check the logs for details.")
 
     if uploaded_files:
         # Clean up output directories based on current selection
@@ -263,18 +410,34 @@ def main():
         if config["generation_type"] == "RAG":
             if st.session_state.rag_index is not None:
                 if st.button("Generate Code"):
+                    # Create placeholders for progress and results
+                    progress_placeholder = st.empty()
+                    results_placeholder = st.container()
+                    
                     with st.spinner("Generating code..."):
-                        for uploaded_file in os.listdir("uploaded_files"):
-                            st.write(f"Generating code for {uploaded_file}")
-                            input_prompt_path = f"uploaded_files/{uploaded_file}"     
-                            config = update_config_paths(config, uploaded_file, input_prompt_path)
-                            response, source_texts, source_names = generate_code_and_display(config, st.session_state.rag_index)
-                            
-                            # Display results in an expander for better organization
-                            with st.expander(f"Results for {uploaded_file}", expanded=True):
-                                st.write("Generated Code:")
-                                st.code(response.response, language='java')
-                                st.write(f"Reference texts: {source_names}")
+                        # Get list of files to process
+                        files_to_process = os.listdir("uploaded_files")
+                        
+                        # Process files sequentially for now to debug the issue
+                        for uploaded_file in files_to_process:
+                            try:
+                                progress_placeholder.write(f"Processing {uploaded_file}...")
+                                response = process_file_rag(
+                                    uploaded_file, 
+                                    config, 
+                                    st.session_state.rag_index,
+                                    progress_placeholder,
+                                    results_placeholder
+                                )
+                                if response:
+                                    progress_placeholder.success(f"Successfully processed {uploaded_file}")
+                                else:
+                                    progress_placeholder.error(f"Failed to process {uploaded_file}")
+                            except Exception as e:
+                                import traceback
+                                print(f"Error processing {uploaded_file}: {str(e)}")
+                                print(traceback.format_exc())
+                                progress_placeholder.error(f"Error processing {uploaded_file}. Please check the logs for details.")
                         
                         # Add download button after generation is complete
                         create_download_button("RAG")
@@ -282,18 +445,37 @@ def main():
                 st.warning("Please create an index first before generating code.")
         elif config["generation_type"] == "Prompt":
             if st.button("Generate Code"):
+                # Create placeholders for progress and results
+                progress_placeholder = st.empty()
+                results_placeholder = st.container()
+                
                 with st.spinner("Generating code..."):
-                        for uploaded_file in os.listdir("uploaded_files"):
-                            st.write(f"Generating code for {uploaded_file}")
-                            input_prompt_path = f"uploaded_files/{uploaded_file}"
-                            config = update_config_paths(config, uploaded_file, input_prompt_path)
-                            response = run_prompt_inference(config)
-                            st.write(f"Code generated for {uploaded_file}")
-                            st.write(response)
-                        
-                        # Add download button after generation is complete
-                        create_download_button("Prompt")
-                        st.success("Code generation complete!")
+                    # Get list of files to process
+                    files_to_process = os.listdir("uploaded_files")
+                    
+                    # Process files sequentially for now to debug the issue
+                    for uploaded_file in files_to_process:
+                        try:
+                            progress_placeholder.write(f"Processing {uploaded_file}...")
+                            response = process_file_prompt(
+                                uploaded_file, 
+                                config,
+                                progress_placeholder,
+                                results_placeholder
+                            )
+                            if response:
+                                progress_placeholder.success(f"Successfully processed {uploaded_file}")
+                            else:
+                                progress_placeholder.error(f"Failed to process {uploaded_file}")
+                        except Exception as e:
+                            import traceback
+                            print(f"Error processing {uploaded_file}: {str(e)}")
+                            print(traceback.format_exc())
+                            progress_placeholder.error(f"Error processing {uploaded_file}. Please check the logs for details.")
+                    
+                    # Add download button after generation is complete
+                    create_download_button("Prompt")
+                    st.success("Code generation complete!")
 
 if __name__ == "__main__":
     main()

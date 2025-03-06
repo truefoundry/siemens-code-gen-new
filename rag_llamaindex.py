@@ -10,6 +10,8 @@ import logging
 from utils import load_config, load_prompt, format_java_prompt
 from dotenv import load_dotenv
 from pathlib import Path
+from functools import lru_cache
+import time
 
 load_dotenv()
 
@@ -23,6 +25,22 @@ def setup_logging(config: dict):
     )
     return logging.getLogger(__name__)
 
+# Cache the embedding model setup to avoid recreating it for each request
+@lru_cache(maxsize=1)
+def get_embedding_model(model_name, api_key, api_base):
+    """Get cached embedding model to avoid recreating it for each request"""
+    return OpenAIEmbedding(
+        model_name=model_name,
+        api_key=api_key,
+        api_base=api_base
+    )
+
+# Cache document loading to avoid reloading for each index creation
+@lru_cache(maxsize=1)
+def load_documents(directory_path):
+    """Load and cache documents from a directory"""
+    return SimpleDirectoryReader(directory_path).load_data()
+
 def create_index(config: dict):
     """
     Create vector index from documents
@@ -33,19 +51,43 @@ def create_index(config: dict):
         VectorStoreIndex: Created index
     """
     logger = logging.getLogger(__name__)
+    start_time = time.time()
     
-    # Setup embedding model
-    Settings.embed_model = OpenAIEmbedding(
-        model_name=config["llm"]["models"]["embedding"]["name"],
-        api_key=os.getenv("TFY_API_KEY_EO"),
-        api_base=os.getenv("TFY_BASE_URL")
+    # Setup embedding model using cached function
+    Settings.embed_model = get_embedding_model(
+        config["llm"]["models"]["embedding"]["name"],
+        os.getenv("TFY_API_KEY_EO"),
+        os.getenv("TFY_BASE_URL")
     )
     
-    # Load and index documents
-    documents = SimpleDirectoryReader(config["paths"]["data"]["extracted_texts"]).load_data()
+    # Load and index documents using cached function
+    documents = load_documents(config["paths"]["data"]["extracted_texts"])
+    logger.info(f"Documents loaded in {time.time() - start_time:.2f} seconds")
+    
+    # Create index
+    index_start_time = time.time()
     index = VectorStoreIndex.from_documents(documents)
+    logger.info(f"Index created in {time.time() - index_start_time:.2f} seconds")
     
     return index
+
+# Cache LLM creation to avoid recreating it for each request
+@lru_cache(maxsize=1)
+def get_llm(model, api_key, api_base, system_prompt, temperature, top_p, presence_penalty, frequency_penalty, max_tokens):
+    """Get cached LLM to avoid recreating it for each request"""
+    return OpenAILike(
+        model=model,
+        api_key=api_key,
+        api_base=api_base,
+        is_chat_model=True,
+        system_prompt=system_prompt,
+        temperature=temperature,
+        top_p=top_p,
+        presence_penalty=presence_penalty,
+        frequency_penalty=frequency_penalty,
+        max_tokens=max_tokens,
+        context_window=16384,
+    )
 
 def generate_response(config: dict, index: VectorStoreIndex):
     """
@@ -58,38 +100,43 @@ def generate_response(config: dict, index: VectorStoreIndex):
         tuple: (response, source_texts, source_names)
     """
     logger = logging.getLogger(__name__)
+    start_time = time.time()
     
-    # Setup LLM with system prompt
-    Settings.llm = OpenAILike(
-        model=config["llm"]["models"]["main"]["name"],
-        #api_key=os.getenv("OPENAI_API_KEY"),
-        api_key=os.getenv("TFY_API_KEY_INTERNAL"),
-        api_base=os.getenv("TFY_BASE_URL"),
-        is_chat_model=True,
-        system_prompt=load_prompt(config["system"]["prompt_paths"]["system_default"]),
-        temperature=config["system"]["model_config"]["temperature"],
-        top_p=config["system"]["model_config"]["top_p"],
-        presence_penalty=config["system"]["model_config"]["presence_penalty"],
-        frequency_penalty=config["system"]["model_config"]["frequency_penalty"],
-        max_tokens=config["system"]["model_config"]["max_tokens"],
-        context_window=16384,
+    # Setup LLM with system prompt using cached function
+    system_prompt = load_prompt(config["system"]["prompt_paths"]["system_default"])
+    Settings.llm = get_llm(
+        config["llm"]["models"]["main"]["name"],
+        os.getenv("TFY_API_KEY_INTERNAL"),
+        os.getenv("TFY_BASE_URL"),
+        system_prompt,
+        config["system"]["model_config"]["temperature"],
+        config["system"]["model_config"]["top_p"],
+        config["system"]["model_config"]["presence_penalty"],
+        config["system"]["model_config"]["frequency_penalty"],
+        config["system"]["model_config"]["max_tokens"]
     )
+    logger.info(f"LLM setup completed in {time.time() - start_time:.2f} seconds")
     
     # Load and format prompt using the dynamic input path
+    prompt_start_time = time.time()
     base_prompt = load_prompt(
         config["system"]["prompt_paths"]["base_case"],
         config["system"]["prompt_paths"]["few_shot_case"],
         config["paths"]["input_prompt_path"],  # Use dynamic input path
     )
     formatted_prompt = format_java_prompt(base_prompt)
+    logger.info(f"Prompt formatting completed in {time.time() - prompt_start_time:.2f} seconds")
     
-    # Query and get response
+    # Create query engine with optimized settings
+    query_start_time = time.time()
     query_engine = index.as_query_engine(
         similarity_top_k=config["llm"]["rag"]["similarity_top_k"],
         verbose=True
     )
-    response = query_engine.query(formatted_prompt)
     
+    # Query and get response
+    response = query_engine.query(formatted_prompt)
+    logger.info(f"Query execution completed in {time.time() - query_start_time:.2f} seconds")
     
     # Extract source information
     source_nodes = response.source_nodes
@@ -106,6 +153,7 @@ def generate_response(config: dict, index: VectorStoreIndex):
     with open(output_path, "w") as f:
         f.write(str(response))
 
+    logger.info(f"Total response generation time: {time.time() - start_time:.2f} seconds")
     return response, source_texts, source_names
 
 def run_rag(config: dict):
@@ -132,8 +180,13 @@ if __name__ == "__main__":
     logger.info("Starting test generation process")
     
     # Run RAG pipeline
+    start_time = time.time()
     index = create_index(config)
+    logger.info(f"Index creation time: {time.time() - start_time:.2f} seconds")
+    
+    response_start_time = time.time()
     response, source_texts, source_names = generate_response(config, index)
+    logger.info(f"Response generation time: {time.time() - response_start_time:.2f} seconds")
     
     print("response : " , response)
 

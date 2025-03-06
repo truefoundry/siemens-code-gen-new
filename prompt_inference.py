@@ -6,12 +6,46 @@ import logging
 from pathlib import Path
 from evals import evaluate_code
 from utils import load_config, load_prompt, format_java_prompt, validate_file_size, setup_logging
+from functools import lru_cache
+import time
 
 load_dotenv()
 
-def create_llm_client(config: dict) -> ChatOpenAI:
+@lru_cache(maxsize=1)
+def create_llm_client(model, temperature, max_tokens, top_p, presence_penalty, frequency_penalty, max_retries) -> ChatOpenAI:
     """
-    Create and configure the LLM client using config parameters.
+    Create and cache the LLM client using config parameters.
+    
+    Args:
+        model: Model name
+        temperature: Temperature parameter
+        max_tokens: Maximum tokens
+        top_p: Top p parameter
+        presence_penalty: Presence penalty
+        frequency_penalty: Frequency penalty
+        max_retries: Maximum retries
+        
+    Returns:
+        ChatOpenAI: Configured LLM client
+    """
+    return ChatOpenAI(
+        model=model,
+        temperature=temperature,
+        max_tokens=max_tokens,
+        model_kwargs={
+            "top_p": top_p,
+            "presence_penalty": presence_penalty,
+            "frequency_penalty": frequency_penalty,
+        },
+        streaming=True,
+        api_key=os.getenv("TFY_API_KEY_INTERNAL"),
+        base_url=os.getenv("TFY_BASE_URL"),
+        max_retries=max_retries
+    )
+
+def get_llm_from_config(config: dict) -> ChatOpenAI:
+    """
+    Get LLM client from config, using cached function.
     
     Args:
         config: Dictionary containing LLM configuration
@@ -19,20 +53,28 @@ def create_llm_client(config: dict) -> ChatOpenAI:
     Returns:
         ChatOpenAI: Configured LLM client
     """
-    return ChatOpenAI(
-        model=config["llm"]["models"]["main"]["name"],
-        temperature=config["system"]["model_config"]["temperature"],
-        max_tokens=config["system"]["model_config"]["max_tokens"],
-        model_kwargs={
-            "top_p": config["system"]["model_config"]["top_p"],
-            "presence_penalty": config["system"]["model_config"]["presence_penalty"],
-            "frequency_penalty": config["system"]["model_config"]["frequency_penalty"],
-        },
-        streaming=True,
-        api_key=os.getenv("TFY_API_KEY_INTERNAL"),
-        base_url=os.getenv("TFY_BASE_URL"),
-        max_retries=config["system"]["model_config"]["max_retries"]
+    return create_llm_client(
+        config["llm"]["models"]["main"]["name"],
+        config["system"]["model_config"]["temperature"],
+        config["system"]["model_config"]["max_tokens"],
+        config["system"]["model_config"]["top_p"],
+        config["system"]["model_config"]["presence_penalty"],
+        config["system"]["model_config"]["frequency_penalty"],
+        config["system"]["model_config"]["max_retries"]
     )
+
+@lru_cache(maxsize=10)
+def get_system_prompt(system_prompt_path: str) -> str:
+    """
+    Load and cache system prompt.
+    
+    Args:
+        system_prompt_path: Path to system prompt
+        
+    Returns:
+        str: System prompt content
+    """
+    return load_prompt(system_prompt_path)
 
 def get_messages(prompt: str, config: dict) -> list:
     """
@@ -45,7 +87,7 @@ def get_messages(prompt: str, config: dict) -> list:
     Returns:
         list: List of messages for the LLM
     """
-    system_prompt = load_prompt(config["system"]["prompt_paths"]["system_default"])
+    system_prompt = get_system_prompt(config["system"]["prompt_paths"]["system_default"])
     return [
         SystemMessage(content=system_prompt),
         HumanMessage(content=prompt),
@@ -65,9 +107,12 @@ def generate_code(llm: ChatOpenAI, messages: list, output_path: str, config: dic
         str: Generated code content
     """
     logger = logging.getLogger(__name__)
+    start_time = time.time()
     
     try:
+        # Generate code
         generated_code = llm.invoke(messages).content
+        logger.info(f"Code generation completed in {time.time() - start_time:.2f} seconds")
         
         # Ensure output directory exists
         output_dir = Path(output_path).parent
@@ -100,34 +145,34 @@ def run_prompt_inference(config: dict) -> str:
     """
     logger = logging.getLogger(__name__)
     logger.info("Starting prompt-based code generation")
+    start_time = time.time()
     
     try:
         # Load and validate prompts
+        prompt_start_time = time.time()
         base_prompt = load_prompt(
             config["system"]["prompt_paths"]["base_case"],
             config["system"]["prompt_paths"]["few_shot_case"],
             config["paths"]["input_prompt_path"],
         )
+        logger.info(f"Prompt loading completed in {time.time() - prompt_start_time:.2f} seconds")
         
         # Setup LLM and generate code
-        llm = create_llm_client(config)
+        llm_start_time = time.time()
+        llm = get_llm_from_config(config)
         messages = get_messages(base_prompt, config)
+        logger.info(f"LLM setup completed in {time.time() - llm_start_time:.2f} seconds")
         
         # Use the dynamically set output path
         output_path = Path(config["paths"]["output_file_prompt"])
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
+        # Generate code
+        code_start_time = time.time()
         generated_code = generate_code(llm, messages, str(output_path), config)
+        logger.info(f"Code generation and saving completed in {time.time() - code_start_time:.2f} seconds")
         
-        # # Ensure ground truth directory exists
-        # ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
-        # if not ground_truth_path.exists():
-        #     logger.warning(f"Ground truth directory does not exist: {ground_truth_path}")
-        #     ground_truth_path.mkdir(parents=True, exist_ok=True)
-            
-        # results = evaluate_code(output_path, ground_truth_path)
-        
-        logger.info("Code generation completed successfully")
+        logger.info(f"Total prompt inference time: {time.time() - start_time:.2f} seconds")
         return generated_code
         
     except Exception as e:
@@ -140,7 +185,10 @@ if __name__ == "__main__":
         config = load_config()
         logger = logging.getLogger(__name__)
         
+        start_time = time.time()
         generated_code = run_prompt_inference(config)
+        logger.info(f"Total prompt inference time: {time.time() - start_time:.2f} seconds")
+        
         output_path = Path(config["paths"]["output_file_prompt"]) 
         ground_truth_path = Path(config["paths"]["data"]["ground_truth"])
         evaluate_code(output_path, ground_truth_path)
