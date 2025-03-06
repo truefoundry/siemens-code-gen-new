@@ -317,8 +317,17 @@ def process_file_rag(uploaded_file, config, index, progress_placeholder, results
         with results_placeholder.expander(f"Results for {uploaded_file}", expanded=True):
             st.write("Generated Code:")
             st.code(generated_code, language='java')
+            
+            # Add source names as before
             if source_names:
                 st.write(f"Reference texts: {source_names}")
+            
+            # Always show context/source texts
+            if source_texts and len(source_texts) > 0:
+                st.write("### Source Texts Used for Generation")
+                for i, (text, name) in enumerate(zip(source_texts, source_names)):
+                    st.markdown(f"**Source {i+1}: {name}**")
+            
             st.write(f"Generation time: {time.time() - start_time:.2f} seconds")
         
         return response

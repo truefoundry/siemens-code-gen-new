@@ -23,61 +23,51 @@ public class TC05_Landing_Page_Content_Check {
             tc.addStepInfo("Landing page is Displayed", true, tc.button.exists(EButton.CONTACT),
                     new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 2: Check top ribbon content
-            tc.stepEvaluator.reset();
-            tc.stepEvaluator
-                    .add(() -> tc.ribbon.exists(ERibbon.SIEMENS_LOGO), "Siemens logo not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.MY_DIGITAL_LAB_ASSISTANT), "My Digital Lab Assistant not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.CONTACT_ICON), "Contact icon not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.LANGUAGE_ICON), "Language icon not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.SETTINGS_ICON), "Settings icon not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.NOTIFICATION_BELL_ICON), "Notification bell icon not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.NAME_SHORTCUT_ICON), "Name shortcut icon not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.LOGGED_IN_USER_NAME), "Logged in user name not found")
-                    .add(() -> tc.ribbon.exists(ERibbon.ADMIN_ICON), "Admin icon not found");
-            tc.addStepInfo("Landing page top ribbon content is according to screenshot", "ok", tc.stepEvaluator.eval(),
+            // Step 2: Verify top ribbon content
+            boolean isTopRibbonCorrect = tc.ribbon.containsIcons(
+                    EIcon.SIEMENS_LOGO, EIcon.MY_DIGITAL_LAB_ASSISTANT, EIcon.CONTACT, 
+                    EIcon.LANGUAGE, EIcon.SETTINGS, EIcon.NOTIFICATION_BELL, 
+                    EIcon.NAME_SHORTCUT, EIcon.LOGGED_IN_USER, EIcon.ADMIN);
+            tc.addStepInfo("Landing page top ribbon content is according to screenshot", true, isTopRibbonCorrect,
                     new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 3: Check tile content
-            tc.stepEvaluator.reset();
-            tc.stepEvaluator
-                    .add(() -> tc.tile.exists(ETile.REPORT_AN_ISSUE), "Tile 'Report an issue with an order or delivery' not found")
-                    .add(() -> tc.tile.exists(ETile.SHOW_ME_MY_REQUESTS), "Tile 'Show me my Requests' not found")
-                    .add(() -> tc.tile.exists(ETile.QUESTION_ABOUT_ORDER), "Tile 'Question about an order or eSupport assistance' not found")
-                    .add(() -> tc.tile.exists(ETile.QUESTION_ABOUT_ACCOUNT), "Tile 'Question about my Account' not found")
-                    .add(() -> tc.tile.exists(ETile.REQUEST_ALLOCATION), "Tile 'Request Allocation or Saturday Delivery (SET Request)' not found");
-            tc.addStepInfo("Landing page tile content is according to screenshot", "ok", tc.stepEvaluator.eval(),
+            // Step 3: Verify tile content
+            boolean areTilesCorrect = tc.tile.containsTiles(
+                    ETile.REPORT_AN_ISSUE, ETile.SHOW_ME_MY_REQUESTS, 
+                    ETile.QUESTION_ABOUT_ORDER, ETile.QUESTION_ABOUT_ACCOUNT, 
+                    ETile.REQUEST_ALLOCATION);
+            tc.addStepInfo("Landing page tile content is according to screenshot", true, areTilesCorrect,
                     new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 4: Click on tile 'Report an issue with an order or delivery'
+            // Step 4: Click on tile "Report an issue with an order or delivery"
             tc.tile.open(ETile.REPORT_AN_ISSUE);
             WaitFor.condition(() -> tc.page.exists(EPage.REPORT_ISSUE_DETAILS));
-            tc.addStepInfo("Page with details for reporting an issue is opened", true, tc.page.exists(EPage.REPORT_ISSUE_DETAILS),
-                    new ComparerOptions().takeScreenShotPlatform());
+            tc.addStepInfo("Page with details for reporting an issue is opened", true, 
+                    tc.page.exists(EPage.REPORT_ISSUE_DETAILS), new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 5: Click on tile 'Show me my Requests'
+            // Step 5: Click on tile "Show me my Requests"
             tc.tile.open(ETile.SHOW_ME_MY_REQUESTS);
             WaitFor.condition(() -> tc.page.exists(EPage.REQUESTS_DASHBOARD));
-            tc.addStepInfo("Page with dashboard with all requests created by the user is opened", true, tc.page.exists(EPage.REQUESTS_DASHBOARD),
-                    new ComparerOptions().takeScreenShotPlatform());
+            tc.addStepInfo("Page with dashboard with all requests created by the user is opened", true, 
+                    tc.page.exists(EPage.REQUESTS_DASHBOARD), new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 6: Click on tile 'Question about an order or eSupport assistance'
+            // Step 6: Click on tile "Question about an order or eSupport assistance"
             tc.tile.open(ETile.QUESTION_ABOUT_ORDER);
             WaitFor.condition(() -> tc.page.exists(EPage.REPORT_ISSUE_DETAILS));
-            tc.addStepInfo("Page with details for reporting an issue is opened", true, tc.page.exists(EPage.REPORT_ISSUE_DETAILS),
-                    new ComparerOptions().takeScreenShotPlatform());
+            tc.addStepInfo("Page with details for reporting an issue is opened", true, 
+                    tc.page.exists(EPage.REPORT_ISSUE_DETAILS), new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 7: Click on tile 'Question about my Account'
+            // Step 7: Click on tile "Question about my Account"
             tc.tile.open(ETile.QUESTION_ABOUT_ACCOUNT);
             WaitFor.condition(() -> tc.page.exists(EPage.REPORT_ISSUE_DETAILS));
-            tc.addStepInfo("Page with details for reporting an issue is opened", true, tc.page.exists(EPage.REPORT_ISSUE_DETAILS),
-                    new ComparerOptions().takeScreenShotPlatform());
+            tc.addStepInfo("Page with details for reporting an issue is opened", true, 
+                    tc.page.exists(EPage.REPORT_ISSUE_DETAILS), new ComparerOptions().takeScreenShotPlatform());
 
-            // Step 8: Click on tile 'Request Allocation or Saturday Delivery (SET Request)'
+            // Step 8: Click on tile "Request Allocation or Saturday Delivery (SET Request)"
             tc.tile.open(ETile.REQUEST_ALLOCATION);
             WaitFor.condition(() -> tc.browser.getCurrentUrl().contains("SalesEfficiencyTool"));
-            tc.addStepInfo("User is redirected to external Sales Efficiency tool page", true, tc.browser.getCurrentUrl().contains("SalesEfficiencyTool"),
-                    new ComparerOptions().takeScreenShotPlatform());
+            tc.addStepInfo("User is redirected to external Sales Efficiency tool page", true, 
+                    tc.browser.getCurrentUrl().contains("SalesEfficiencyTool"), new ComparerOptions().takeScreenShotPlatform());
         });
     }
 }

@@ -577,3 +577,5 @@
 2025-03-06 08:19:33,701 - prompt_inference - INFO - Successfully generated and saved code to data/prompt_inference/838.java
 2025-03-06 08:19:33,701 - prompt_inference - INFO - Code generation and saving completed in 18.75 seconds
 2025-03-06 08:19:33,701 - prompt_inference - INFO - Total prompt inference time: 18.81 seconds
+2025-03-06 08:37:59,801 - utils - INFO - Config loaded in 0.00 seconds
+2025-03-06 08:41:24,142 - utils - INFO - Config loaded in 0.00 seconds
