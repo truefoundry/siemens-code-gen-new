@@ -25,7 +25,7 @@ def sidebar(config):
     with st.expander("LLM Settings", expanded=True):
         model = st.selectbox(
             "Model",
-            options=["gpt-4o"],
+            options=["openai-main/gpt-4o"],
             index=0
         )
         temperature = st.slider(
@@ -51,7 +51,7 @@ def sidebar(config):
         with st.expander("RAG Settings", expanded=True):
             embedding_model = st.selectbox(
                 "Embedding Model",
-                options=["text-embedding-3-large", "text-embedding-3-small"],
+                options=["openai-main/text-embedding-3-large", "openai-main/text-embedding-3-small"],
                 index=0
             )
             similarity_top_k = st.slider(
