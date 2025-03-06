@@ -11,6 +11,7 @@ from datetime import datetime
 import concurrent.futures
 from functools import lru_cache
 import time
+import copy
 
 load_dotenv()
 
@@ -34,8 +35,8 @@ def sidebar(config):
             value=config["system"]["model_config"]["temperature"],
             step=0.1
         )
-        config["llm"]["model"] = model
-        config["system"]["temperature"] = temperature
+        config["llm"]["models"]["main"]["name"] = model
+        config["system"]["model_config"]["temperature"] = temperature
 
     with st.expander("Approach Settings", expanded=True):
         generation_type = st.selectbox(
@@ -57,12 +58,12 @@ def sidebar(config):
                 "Similarity Top K",
                 min_value=1,
                 max_value=20,
-                value=8,
+                value=config["llm"]["rag"]["similarity_top_k"],
                 step=1
             )
 
-            config["llm"]["embedding_model"] = embedding_model
-            config["llm"]["similarity_top_k"] = similarity_top_k
+            config["llm"]["models"]["embedding"]["name"] = embedding_model
+            config["llm"]["rag"]["similarity_top_k"] = similarity_top_k
     return config
 
 def upload_files():
@@ -211,10 +212,10 @@ def update_config_paths(config, uploaded_file, input_prompt_path):
     """Update config paths for a specific file"""
     base_name = uploaded_file.replace('.txt', '')
     
-    # Create a copy of the config to avoid modifying the original
-    updated_config = config.copy()
+    # Create a deep copy of the config to avoid modifying the original
+    updated_config = copy.deepcopy(config)
     
-    updated_config["paths"] = config["paths"].copy()
+    # Update only the paths that need to be changed
     updated_config["paths"]["input_prompt_path"] = input_prompt_path
     updated_config["paths"]["output_file_rag"] = f"data/rag/{base_name}.java"
     updated_config["paths"]["output_file_prompt"] = f"data/prompt_inference/{base_name}.java"
@@ -296,8 +297,18 @@ def process_file_rag(uploaded_file, config, index, progress_placeholder, results
         print(f"Debug: Config type: {type(config)}")
         print(f"Debug: Index type: {type(index)}")
         
+        # Log the current configuration values
+        print(f"Debug: Current temperature: {config['system']['model_config']['temperature']}")
+        print(f"Debug: Current embedding model: {config['llm']['models']['embedding']['name']}")
+        print(f"Debug: Current similarity_top_k: {config['llm']['rag']['similarity_top_k']}")
+        
         input_prompt_path = f"uploaded_files/{uploaded_file}"     
         updated_config = update_config_paths(config, uploaded_file, input_prompt_path)
+        
+        # Log the updated configuration values
+        print(f"Debug: Updated temperature: {updated_config['system']['model_config']['temperature']}")
+        print(f"Debug: Updated embedding model: {updated_config['llm']['models']['embedding']['name']}")
+        print(f"Debug: Updated similarity_top_k: {updated_config['llm']['rag']['similarity_top_k']}")
         
         # More debug information (console only)
         print(f"Debug: Updated config paths")
@@ -349,8 +360,16 @@ def process_file_prompt(uploaded_file, config, progress_placeholder, results_pla
         print(f"Debug: Processing file {uploaded_file}")
         print(f"Debug: Config type: {type(config)}")
         
+        # Log the current configuration values
+        print(f"Debug: Current temperature: {config['system']['model_config']['temperature']}")
+        print(f"Debug: Current model: {config['llm']['models']['main']['name']}")
+        
         input_prompt_path = f"uploaded_files/{uploaded_file}"
         updated_config = update_config_paths(config, uploaded_file, input_prompt_path)
+        
+        # Log the updated configuration values
+        print(f"Debug: Updated temperature: {updated_config['system']['model_config']['temperature']}")
+        print(f"Debug: Updated model: {updated_config['llm']['models']['main']['name']}")
         
         # More debug information (console only)
         print(f"Debug: Updated config paths")
